@@ -1,0 +1,89 @@
+<mxfile host="www.draw.io" modified="2020-03-05T21:36:59.538Z" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36" etag="NvOwt6EXhivsZDdlPg9y" version="12.8.1" type="github">
+  <diagram id="7u2jFZsIr4gWWlFjd8qA" name="supervised">
+    <mxGraphModel dx="1662" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-2" value="$$\mathbf{x}_i$$" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;jettySize=auto;orthogonalLoop=1;verticalAlign=bottom;" parent="1" source="bj_X7EHBgDcYaUWoQlPC-3" target="bj_X7EHBgDcYaUWoQlPC-4" edge="1">
+          <mxGeometry x="0.5" y="41" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="120" />
+              <mxPoint x="220" y="120" />
+            </Array>
+            <mxPoint x="-40" y="31" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.154;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#006600;" parent="1" source="bj_X7EHBgDcYaUWoQlPC-3" target="bj_X7EHBgDcYaUWoQlPC-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-3" value="Data &lt;br&gt;Generator" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.847;entryY=-0.024;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#006600;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="bj_X7EHBgDcYaUWoQlPC-4" target="bj_X7EHBgDcYaUWoQlPC-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-4" value="Target&lt;br&gt;Function&lt;br&gt;$$f: \cal{X} \rightarrow \cal{Y}$$&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-5" value="$$\mathbf{y}_i$$" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;jettySize=auto;orthogonalLoop=1;verticalAlign=bottom;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="120" as="sourcePoint" />
+            <mxPoint x="440" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#006600;" parent="1" source="bj_X7EHBgDcYaUWoQlPC-6" target="bj_X7EHBgDcYaUWoQlPC-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-27" value="$$\mathbf w^*$$" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;fontColor=#006600;" parent="bj_X7EHBgDcYaUWoQlPC-26" vertex="1" connectable="0">
+          <mxGeometry x="-0.2667" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-6" value="Learning Algorithm&lt;br&gt;$$\mathbf w^*_{ML}= \mathtt{argmax}_{\mathbf w} p_{model}(\mathbf y| \mathbf x;\mathbf w) \\ = D_{KL}(\hat p_{data} || p_{model})$$&lt;br&gt;$$\mathbf w^*_{MAP}= \mathtt{argmax}_{\mathbf w} p_{model}(\mathbf w |&amp;nbsp;\mathbf x, \mathbf y)$$" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="280" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;jettySize=auto;orthogonalLoop=1;align=center;" parent="1" source="bj_X7EHBgDcYaUWoQlPC-11" target="bj_X7EHBgDcYaUWoQlPC-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-11" value="Hypothesis Set&lt;br&gt;$$\cal{H}$$&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="510" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-12" value="Final Hypothesis&lt;br&gt;$$g \mbox{~} f $$&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="325" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#006600;" parent="1" source="bj_X7EHBgDcYaUWoQlPC-13" target="bj_X7EHBgDcYaUWoQlPC-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-13" value="Sampling&amp;nbsp;&lt;br&gt;$$p_{data}(\mathbf x, \mathbf y) = p_{data}(\mathbf y| \mathbf x) p_{data}(\mathbf x) \rightarrow \hat p_{data}(\mathbf x, \mathbf y)$$" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#006600;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="180" y="175" width="260" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-14" value="$$\mathbf{\hat{y}_i}$$" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;verticalAlign=top;align=center;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry x="-0.1429" y="-6" relative="1" as="geometry">
+            <mxPoint x="640" y="363" as="sourcePoint" />
+            <mxPoint x="710" y="363" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="363" />
+              <mxPoint x="640" y="363" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-15" value="$$p_{data}(\mathbf x)$$" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="170" y="120" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-16" value="$$p_{data}(\mathbf y | \mathbf x)$$" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="420" y="120" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-20" value="$$p_{model}(\mathbf x , \mathbf y ; \mathbf w)$$" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="340" y="470" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-28" value="$$p_{model}(\mathbf y , \mathbf x ; \mathbf w^*)$$" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="670" y="340" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bj_X7EHBgDcYaUWoQlPC-30" value="$$\hat p_{data}(\mathbf x, \mathbf y)$$" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="320" y="240" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
