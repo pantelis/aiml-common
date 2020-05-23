@@ -1,7 +1,7 @@
 ---
 title: Online Prediction 
 weight: 93
-draft: true
+draft: false
 ---
 
 # Online Prediction
@@ -13,14 +13,14 @@ To understand the motion prediction subsystem, we can use an example. Our ego ag
 
 Via the perception subsystem our agent the moment it predicts that the other agent is slowing down (indicating perhaps also its intention to turn right), it can start turning left long before the other agent's manuever is completed, improving its efficiency / utility - after all the average speed may be one of the desirable metrics. 
 
-Thinking probabilistically, we need to maintain a _belief_, that was introduced in the [PGM]({{<ref "../../../pgm/pgm-intro">}}) chapter, regarding the location of the turning-right agent. This belief will change over time as its updated with new observation (evidence).
+Thinking probabilistically, we need to maintain a _belief_, that was introduced in the [PGM]({{<relref "../../pgm/pgm-intro">}}) chapter, regarding the location of the turning-right agent. This belief will change over time as its updated with new observation (evidence).
 
 ![turn-prediction-prob](images/turn-prediction-prob.png#center)
 *Changing belief over time regarding the possible trajectories of the other agent. At time 0, the probabilities for the two trajectories are the prior probabilities determined from historical data.*
 
 ## Prediction with Model vs ML-driven approaches
 
-Already we have used offline maps that provide the static world that the agent operates in to do [route planning]({{<ref "../../search">}}). Such maps are constructed automatically from aerial imaging and information from the agent's perception systems is used to simultaneously localize the ego agent and map its surroundings (a function called SLAM). In this section we continue to assume that such maps exists and we now need to determine how we capture the presence of dynamic objects on such maps. 
+Already we have used offline maps that provide the static world that the agent operates in to do [route planning]({{<relref "../../planning/search">}}). Such maps are constructed automatically from aerial imaging and information from the agent's perception systems is used to simultaneously localize the ego agent and map its surroundings (a function called SLAM). In this section we continue to assume that such maps exists and we now need to determine how we capture the presence of dynamic objects on such maps. 
 
 We assume that the sensing and perception subsystems provide the following information for each dynamic object (other agent). 
 

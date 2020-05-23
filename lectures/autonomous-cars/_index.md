@@ -10,8 +10,8 @@ In this section we treat planning approaches that dominate in real-world motion 
 
 |  Approach  |  Description   |     
 | --- | --- | 
-|  Modular Pipeline  |  We have seen the modular architecture in [the PGM chapter]({{<ref "../../pgm/pgm-intro">}}) where sensors, perception, planning and control subsystems work together to achieve the task at hand. |
-|  End-to-End Pipeline |  In end-to-end approach the entire pipeline of transforming sensory inputs to driving commands is treated as a single learning task. We have seen this example in [the introductory chapter]({{<ref "../../ai-intro/course-introduction">}}) where Imitation Learning (IL) was used to determine from only pixel input the steering and acceleration controls of a vehicle. Apart from IL, Reinforcement Learning (RL) can also be used in a simulator setting to transfer the learned optimal policy in the real-world. |
+|  Modular Pipeline  |  We have seen the modular architecture in [the PGM chapter]({{<relref "../pgm/pgm-intro">}}) where sensors, perception, planning and control subsystems work together to achieve the task at hand. |
+|  End-to-End Pipeline |  In end-to-end approach the entire pipeline of transforming sensory inputs to driving commands is treated as a single learning task. We have seen this example in [the introductory chapter]({{<relref "../ai-intro/course-introduction">}}) where Imitation Learning (IL) was used to determine from only pixel input the steering and acceleration controls of a vehicle. Apart from IL, Reinforcement Learning (RL) can also be used in a simulator setting to transfer the learned optimal policy in the real-world. |
 
 ![planning-approaches](images/planning-approaches.png#center)
 *Modular vs End-to-End pipeline for real-world motion planning*
