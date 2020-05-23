@@ -55,3 +55,13 @@ Git is the defacto standard when it comes to code version control. Learning basi
 As we have discussed in the class you need to be able to publish your work in Github so you need to create a Github account. Then you will use the git client for your operating system to interact with github and iterate on your projects.  You may be using Kaggle or Colab hosted notebooks but the underlying technology that powers such web-frontends when it comes to committing the code and seeing version numbers in your screen is git.
 
 In addition, almost no data science project starts in vacuum - there is almost always software that will be checked out of Github that you will need to modify. 
+
+## How to work with a github repository in Colab
+
+1. Fork the desired repository if this is not yours. For example go to https://github.com/ageron/handson-ml2 and press the Fork button. 
+2. After forking you should see the repository appearing in your account. 
+3. Click the green button `Clone or dowload`, click Use HTTPS and copy the field with the location of the repo your forked. 
+4. Go to https://colab.research.google.com/ and login with your NJIT gmail account
+5. In the window that pops up select Github. Accept the requested additional permission request for your NJIT gmail account. After Github and Colab connects you will be able to see the forked repo from your drop down menu of Repository. You will also see all the notebooks that start with a number e.g 01_the_machine_learning_landscape.ipynb. The number indicates the chapter number. 
+6. Select to open the 01-*.ipynb notebook by clicking on it. You should see the notebook in your own colab account. Any change will be persisted in your github. 
+7. Run the first cell. If you havent used Notebooks before, people with little programming experience will fall in love with them especially at this stage where you dont need to type new code. For a tutorial on how to use the notebooks in colab or in general open and run the notebook [Welcome to Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb).
