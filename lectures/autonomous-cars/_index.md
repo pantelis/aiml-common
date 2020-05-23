@@ -1,10 +1,10 @@
 ---
-title: Autonomous Agent Planning Application
+title: Autonomous Cars
 weight: 98
 draft: true
 ---
 
-# Autonomous Agent Planning Application
+# Autonomous Cars
 
 In this section we treat planning approaches that dominate in real-world motion planning. We focus on autonomous mobile agents (self driving cars) as an example subdomain that we are all familiar with. There are [two main schools of thought in motion planning](https://arxiv.org/pdf/2003.06404.pdf) irrespectively of the Markovian assumptions regarding the transition or measurement models. 
 
