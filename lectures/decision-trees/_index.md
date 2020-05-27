@@ -75,7 +75,7 @@ Lets see the three recursions of the algorithm as shown below.
 This brings up the question of how we select the test spec parameters $x_k$ and $\theta_k$ to minimize a certain metric that is dependent on the type of the problem we deal with - classification or regression. 
 
 ### Selecting the feature $x_k$ to split
-To gauge which feature we will choose split requires a review of certain [probabilistic concepts](common/lectures/ml-math/probability) namely the concept of entropy. We can develop on top of entropy the concept of information gain that is pictorially explained using an example as shown below
+To gauge which feature we will choose split requires a review of certain [probabilistic concepts](common/lectures/ml-math/info-theory) namely the concept of entropy. We can develop on top of entropy the concept of information gain that is pictorially explained using an example as shown below
 
 ![information-gain-example](images/information-gain.png)
 *Information gain for two possible splits*

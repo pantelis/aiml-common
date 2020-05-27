@@ -1,9 +1,28 @@
 ---
-title: Lecture 2a - The Learning Problem 
+title: The Learning Problem 
 weight: 30
 ---
 
 # The Learning Problem
+
+## Chapter Flow
+
+The flow of topics that we cover:
+
+{{< mermaid align="left" theme="dark" >}}
+graph TB;
+    A([Basic Probability Concepts]) --> B(Conditional Probability) 
+    B --> C(Supervised Learning)
+    C --> D(Other forms of learning)
+    click A "../ml-math/probability"
+{{< /mermaid >}}
+
+After reading this chapter you should feel familiar with the following ideas and concepts:
+
+1. What are the statistical distributions behind supervised learning. 
+2. What is the hypothesis and hypothesis set. 
+3. What is a supervised learning algorithm tries to do.
+4. What are the other forms of learning from data.  
 
 ## The Supervised Learning Problem Statement
 

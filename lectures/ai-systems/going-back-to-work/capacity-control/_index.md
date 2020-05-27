@@ -1,61 +1,66 @@
 ---
-title: Capacity Control
+title: Resource Occupancy Control Algorithms
 weight: 142
 draft: true
 ---
 
-# Capacity Control
+# Resource Occupancy Control Algorithms
 
-## Assumptions
+## Problem Statement 
 
-To simplify the problem, 
+To describe the problem more formally, we will use the following terms and notations
 
-1. The departure times cannot change dynamically. This means that if the actual demand is lower than the predicted demand when the scheduling decision took place, the departure time stays fixed. Employees / customers can extend their departure by sending another request via the messaging app but this is an independent reservation and is not unaccounted for the decision policy. 
-   
-2. Although this can be very useful for stores and co-working spaces, there is no attempt to flatten the demand curve by distributing accepts among geographically separated facilities of the same legal entity (e.g. Home Depot stores). We will extend treatment to network capacity control that implements load balancing. 
-
-3. There is no semantic consideration of the enterprise business type in the decision making algorithm. For example, we do not consider special circumstances such as theaters and other sports venues as they control the reservations and seating on their own to maintain social distancing. 
-   
-4. There is no dynamic tracking of traffic within the building. The system is not designed (although it can be extended via video surveillance and other worker localization technologies) to consider worker mobility and congestion events from people dont adhering to social distancing guidelines. 
-
-5. There are no fairness considerations. One can go ahead and book multiple time slots by sending messages one after the other to the system. This is an important limitation but can be easily addressed in practice and will unnecessarily complicate the policy.
-
-6. There are no risk considerations in the decision making process. A user that requests a reservation that lives far away and travels via public transportation (higher risk of infecting others) has equal chances to a user that lives next to the requested address (lower risk). 
-
-## Terminology and Notation
+### Terminology and Notation
 
 | Term   | Definition  |
 | --- | --- |
-|  Host   | A host can be an enterprise, building owner, space owner, school etc. A host is the account owner of the SaaS app  and via access rights she can adjust the total available capacity and other parameters that affect the policy. |
-| Site | A host is responsible for the management of multiple sites. A site can be a building. |
-| Resource | A site has multiple resources that are managed by the application. A resource can be a floor or a room where multiple workers need to use at the same time. A room can also be an open floor plan.  |
-|  Worker   | The worker is a person that requests admission in the physical space of the host.  |
-| Group | A group os a number of workers that request joint admission. | 
-|  $C$   |  Maximum available capacity / occupancy per site resource.  $C$ is a single knob at the disposal of either the host or is controlled by federal or local governments based on the safe occupancy limits of each site / resource. These limits are well documented in the license that many hosts need to obtain for them to legally operate.  $C$obviously varies from host to host. |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
-|     |     |
+| Host (ID) | A host can be an enterprise, building owner, space owner, school etc. A host is the account owner of the SaaS app  and via access rights she can adjust the total available capacity and other parameters that affect the policy. |
+| Site (ID) | A host is responsible for the management of multiple sites. A site can be a building. |
+| Resource (ID) | A site has multiple resources that are managed by the application. A resource can be a floor or a room where multiple actors need to use at the same time.  |
+| Resource Type | A resource is associated with a resource type based on a set of attributes. For example, a resource can be of type 'classroom' or 'open floor plan'. | 
+| Actor (ID) | An actor is a person that requests admission in the physical space managed by the host. Each host is assumed that is associated with an identity management system that uniquely identifies all actors (e.g. students) or can assign temporary actor identities to ephemeral actors (e.g. customers). |
+| Actor Type | An actor has an associated type that is an attribute that can qualify differentiating treatment by the system. |
+| Agent | The agent is the AI system that makes the admission decision |  
+| Group | A list of actors that request joint admission. | 
+|  $C_r$   |  Maximum available capacity / occupancy per site per resource.  $C_r$ is determined by the host based on square footage of the resource and the social distancing guidelines the federal / local governments impose. As the guidelines are time varying, $C_r$ is also time varying and this further qualifies the problem as sequential. $C_r$ is effectively dependent on a fictitious single knob that results into a distinct $C_r$ for each resource. |
 
-## Revenue Management for Capacity Control
 
-In this section we outline a capacity control policy that is routinely used in various industries (airlines, car rentals, hospitality) to make reservations towards perishable capacity-constrained resources. 
+### Problem Assumptions
 
-Each host is assumed that is organized according to an org chart - a tree structure that lists  _actors_ and in the problem we are addressing here we include the customers/students as workers. For an organization to operate successfully certain workers in this tree must enjoy guaranteed admission. In a office setting for example, certain workers whose function is to preserve security are essential. Note that each host can impose via the SaaS app, admission dependencies between workers. Some businesses must be able to admit an worker only if there are admission for others. For example, there is no point to admit far more customers into a store if the necessary cashiers are not in place. Similarly at a university setting, there is no point of admitting student workers if faculty and TA workers needed for a scheduled class are not admitted. 
+To simplify the problem,
 
-For the reasons above, we establish the notion of _actor class_ such as manager, employee, student. The _minimum_ number of classes we can have is two eg. faculty class and student class. 
+1. The departure times cannot change dynamically. This means that if the actual demand is lower than the predicted demand when the scheduling decision took place, the departure time stays fixed. Employees / customers can extend their departure by sending another request via the messaging app but this is an independent reservation and is not unaccounted for the decision policy. 
+   
+2. Although this can be very useful for stores and co-working spaces, there is no attempt to flatten the demand curve by distributing accepts among geographically separated resources of the same legal entity (e.g. apparel store chain). We will extend the algorithm to implement load balancing at a later stage.
+ 
+3. Note that for campus settings, where the resources are classrooms, although they are geographically separated, they are part of a campus and we need to account for admissions across such resources, to enable actors to be admitted into as many resources as it is possible and fair for the day. This is not conflicting with (2) where the actor extracts the same utility if she is admitted to the specific store or the other nearby. 
+
+4. There is no semantic consideration of the host type in the decision making algorithm. For example, we do not consider special circumstances such as theaters and other sports venues as they control the reservations and seating on their own to maintain social distancing. These hosts are usually not dealing with sequential decision processes in the sense that actors arriving for each event and they are not expected to arrive for the same event in the future. 
+   
+5. There is no dynamic tracking of changing density of actors within the resource. This is important for large resources such as office buildings or campuses where social distancing can be maintained for some resources (e.g classrooms) but not in the same way as others e.g. cafeterias / common spaces. The system will be extended via video surveillance and other actor localization / counting technologies, to consider actor mobility and congestion events from people dont adhering to social distancing guidelines. 
+
+6. The system must be fair. If one sends multiple reservations requests one after the other to the system for a resource, the decision maker must be able to detect such attempts to game the system and fairly assign the resources across time. 
+
+7. There are no risk (also known as actor cost) considerations in the decision making process. An actor that requests a reservation that lives far away and travels via public transportation (higher risk of infecting others) has equal chances to another that lives next to the requested address (lower risk). Similarly, an actor that requests multiple reservations during the day posses greater risk to another that doesn't. For example a commuting student that reserves multiple resources e.g. corresponding to different classes throughout the day. This is a simplifying assumption for now that will be revisited in the future to account for actor risk(s). 
+
+
+## Single Resource Capacity Control 
+
+In this section we outline a capacity control policy that is routinely used in various industries (airlines, car rentals, hospitality) to make reservations towards perishable a capacity-constrained resource. 
+
+For an organization to operate successfully certain actors in their identity management system / database must enjoy guaranteed admission. In a office setting for example, certain actors whose function is associated with physical security or IT are essential. Note that each host can impose, admission dependencies between actors. Some businesses must be able to admit an actor only if there are admissions for others. For example, there is no point to admit far more customers into a store if the necessary cashiers are not in place. Similarly at a university setting, there is no point of admitting student actors if faculty and TA actors needed for a scheduled class are not admitted. 
+
+For the reasons above, we establish the notion of _actor class_ such as manager, employee, student. The _minimum_ number of classes we can have is two eg. faculty class and student class and the treatment here is tutorial-like for this simple case. We will at the end treat the n-class problem as well as the capacity control for multiple resources. 
 
 
 ### Two Class Model
 
-Let us assume that we are interested in allocating a resource of capacity $C$, to two different types of workers.Each type is assigned a price that workers will need to pay for one unit of this resource. Note that this payment is fictitious - it just represents the _value_ of each worker type to the organization. Let $p_d$/$D_d$ and $p_f$/$D_f$ represent the prices and demands for the discounted / full-price types respectively. The assumptions behind our model are:
-
+Let us assume that we are interested in allocating a resource of capacity $C$, to two different types of actors.Each type is assigned a price that actors will need to 'pay' for one unit of this resource. Note that this payment is fictitious - it just represents the _value_ of each actor to the organization. Let $p_d$/$D_d$ and $p_f$/$D_f$ represent the prices and demands for the discounted / full-price actor types respectively. The assumptions behind our model are:
 
 * $p_d < p_f$
 * $D_d$ and $D_f$ are independent random variables i.e. $p(D_d|D_f) = p(D_d)$.
-* The type d demand arrives before type-f demand. This time-element is not important at this point.
+
+The type $d$ demand arrives before type $f$ demand. This time dependency is not important and in practice it has been shown that does not result into significant deviations from optimality. 
 
 Our aim is to find the a-priori protection level $y$ that represents the resource units that will be reserved for allocation to the type $f$ traffic. 
 
@@ -79,7 +84,7 @@ The expected fictitious revenue from the occupied resources will be
 
 $$\mathbb E \\{ p_d  S_d + p_f  S_f \\}$$ 
 
-where the expectation is taken over the random demands of the two types. It represents the _return_ to the establishment from the physical presence of all admitted workers. If we maximize revenue over the protection level $y$, we obtain 
+where the expectation is taken over the random demands of the two types. It represents the _return_ to the establishment from the physical presence of all admitted actors. If we maximize revenue over the protection level $y$, we obtain 
 
 $$
 V_d(C) = \max_{0 \le y \le C} \mathbb E \\{p_d  S_d + p_f  S_f \\}  = \max_{0 \le y \le C} \mathbb E \\{p_d  \min (C-y,D_d) + p_f \min \left( \max(y,C-D_d),D_f \right) \\} 
@@ -90,7 +95,7 @@ Intuitively, the ratio of the prices $r=\frac{p_d}{p_f}$ can help us determine s
 Let us assume now that we set a fixed price ratio $r$ that is not close to these two extremes, and we then look at the remaining factors that can determine $y$ for optimal revenue. From the expressions above that factor seems to be the shape of the tail of the demand function for type $f$ i.e. $p(D_f > y)$. This is because we can only have the revenue for the capacity we reserved, if the associated demand is there i.e. if $D_f > y$. In the next section we describe one technique based on Dynamic Programming (DP) that can be used to calculate the optimal reservation/protection limit. 
 
 
-## Dynamic Programming Solution
+### Dynamic Programming Solution
 
 To use a dynamic programming problem formulation, we need to define the variables at the beginning of the two periods involved. The first period is defined as the point just before the type $d$  demand is observed i.e. when the available capacity is C and we define the value function $V_d(C)$ that represents the optimal expected revenue starting with $C$ units of capacity. Apparently an upper bound of this value function is $V_d(C) \le p_f C$, and this is obtained when we protect all the available capacity for type $f$.
 
@@ -147,7 +152,7 @@ Note that the marginal value $V_f(x)$ itself reduces with remaining capacity $x$
 {{</details>}}
 
 
-### Calculating the Optimal Protection Limit and Maximum Revenue
+#### Calculating the Optimal Protection Limit and Maximum Revenue
 
 The optimal $y$, denoted by $y^*$ can now be found as,
 
@@ -179,7 +184,7 @@ $$\mathbb E \\{V_f(\max(0,C-D_d))\\} = \sum_{j=0}^C V_f(C-j) p(D_d = j)$$
 
 Then, starting from $W(0,C)$ we can calculate $W(1,C)$ and iterate until all $W(y^\*,C)$ are calculated. 
 
-### Calculation of the Spill Rate
+#### Calculation of the Spill Rate
 
 The spill rate is defined as the portion of type $f$ traffic that is rejected given the revenue maximizing optimal protection level $y^\*$. Class $f$ is rejected when the corresponding demand exceeds the available capacity. From the previous sections we know that the available capacity if $C_f = C - \min (C_d,D_d) = \max(y^*,C-D_d)$. Then, type $f$ will be rejected with probability (the spill probability) equal to,
 
@@ -194,7 +199,7 @@ $$p(D_f \ge y^\*) < \frac{p_d}{p_f}$$
 When the demand for the type $d$ is large, then the spill rate will get very close to the ratio $\frac{p_d}{p_f}$.
 
 
-### Comparative Statics
+#### Comparative Statics
 
 If we assume that the demand distribution $D_f$ is Normal i.e. $N(\mu_f,\sigma_f)$, from the previous section we know that the optimal protection limit can be found as the solution of the equation,
 
@@ -209,7 +214,7 @@ Such protection limit makes intuitive sense in that for a demand function that i
 
 It is also evident that when $\sigma_f$ is large, the protection level deviates further from the mean. So when we observe protection levels that are around the mean, we can conclude that either the variance is small or the price ratio is close to $\frac{1}{2}$.
 
-### Dependent Demands
+#### Dependent Demands
 
 Demand variables may be dependent due to a variety of factors. Suppose that traffic of type $d$ after rejection can decide to pay the price of type $f$ traffic and place itself in the queue for type $f$ resources. The rejected type $d$ traffic is given by,
 

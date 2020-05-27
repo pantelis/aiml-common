@@ -1,5 +1,5 @@
 ---
-title: Lecture 2c - Linear Classification
+title: Linear Classification
 weight: 40
 ---
 

@@ -5,9 +5,29 @@ weight: 8
 
 # Logistic Regression
 
-Logistic regression is used in machine learning extensively - every time we need to provide probabilistic semantics to an outcome e.g. predicting the risk of developing a given disease (e.g. diabetes; coronary heart disease), based on observed characteristics of the patient (age, sex, body mass index, results of various blood tests, etc.), whether an voter will vote for a given party, predicting the probability of failure of a given process, system or product, predicting a customer's propensity to purchase a product or halt a subscription, predicting the likelihood of a homeowner defaulting on a mortgage. Conditional random fields, an extension of logistic regression to sequential data, are used in Natural Language Processing (NLP).
+Logistic regression is used in machine learning extensively - every time we need to provide probabilistic semantics to an outcome e.g. predicting the risk of developing a given disease (e.g. diabetes; coronary heart disease), based on observed characteristics of the patient (age, sex, body mass index, results of various blood tests, etc.), whether an voter will vote for a given party, predicting the probability of failure of a given process, system or product, predicting a customer's propensity to purchase a product or halt a subscription, predicting the likelihood of a homeowner defaulting on a mortgage. Conditional random fields, an extension of logistic regression to sequential data, are also used in Natural Language Processing (NLP).
+
+## Odds and the Logistic Sigmoid
+
+If $\sigma$ is a probability of an event, then the ratio $\frac{\sigma}{1-\sigma}$ is the corresponding *odds*, the ratio of the event  occurring divided by not occurring. For example, if a race horse runs 100 races and wins 25 times and loses the other 75 times, the probability of winning is 25/100 = 0.25 or 25%, but the odds of the horse winning are 25/75 = 0.333 or 1 win to 3 loses. In the binary classification case, the log odds is given by 
+
+$$ \mathtt{logit}(\sigma) = \alpha = \ln \frac{\sigma}{1-\sigma} = \ln \frac{p(\mathcal{C}_1|\mathbf{x})}{p(\mathcal{C}_2|\mathbf{x})}$$
+
+What is used in ML though is the logistic function of any number $\alpha$ that is given by the inverse logit:
+
+$$\mathtt{logistic}(\alpha) = \sigma(\alpha) = \mathtt{logit}^{-1}(\alpha) =  \frac{1}{1 + \exp(-\alpha)} = \frac{\exp(\alpha)}{ \exp(\alpha) + 1}$$
+
+and is plotted below. It maps its argument to the "probability" space [0,1]. 
+
+![logistic sigmoid](images/Figure4.9.png)
+*Logistic sigmoid (red)*
+
+The sigmoid function satisfies the following symmetry:
+
+$$\sigma(-\alpha) = 1 - \sigma(\alpha)$$
 
 ## Binary case
+
 If we consider the two class problem, we can write the posterior probability as,
 
 $$p(\mathcal{C}_1|\mathbf{x}) = \frac{p(\mathbf{x}|\mathcal{C}_1) p(\mathcal{C}_1)}{p(\mathbf{x}|\mathcal{C}_1) p(\mathcal{C}_1) + p(\mathbf{x}|\mathcal{C}_2) p(\mathcal{C}_2)} = \frac{1}{1 + \exp(-\alpha)} = \sigma(\alpha)$$
@@ -43,3 +63,4 @@ Minimizing the error function with respect to $\mathbf{w}$ by taking its gradien
 $$\nabla L = \sum_{i=1}^m (\hat{y}_i - y_i) x_i$$
 
 that defines the batch gradient decent algorithm. We can then readily convert this algorithm to SGD by considering mini-batch updates.
+

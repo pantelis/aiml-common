@@ -1,4 +1,5 @@
 ---
-title: Lecture 2b - Regression 
+title: Regression 
 weight: 40
 ---
+

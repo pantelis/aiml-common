@@ -19,6 +19,34 @@ $$f(x, y) = \frac{x + \sigma(y)}{\sigma(x) + (x+y)^2}$$
 
 The computational graph of this function is shown below.  Its instructive to print this graph and pencil in all calculations for both this example and others in the backpropagation section. You may need to review derivative tables from Calculus e.g. http://cs231n.stanford.edu/handouts/derivatives.pdf 
 
+One derivative that we will be using that is not often listed is the derivative of the sigmoid function. The sigmoid derivative can be obtained as follows:
+
+Consider
+$$
+f(x)=\dfrac{1}{\sigma(x)} = 1+e^{-x}
+.
+$$
+Then, on the one hand, the chain rule gives
+$$
+f'(x)
+= \frac{d}{dx} \biggl( \frac{1}{\sigma(x)} \biggr)
+= -\frac{\sigma'(x)}{\sigma(x)^2}
+,
+$$
+and on the other hand,
+$$
+f'(x)
+= \frac{d}{dx} \bigl( 1+e^{-x} \bigr)
+= -e^{-x}
+= 1-f(x)
+= 1 - \frac{1}{\sigma(x)}
+= \frac{\sigma(x)-1}{\sigma(x)}
+$$
+
+Equating the two expressions we finally obtain,
+
+$$\sigma'(x) = \sigma(x)(1-\sigma(x))$$ 
+
 ![backpropagation-function-example](images/backpropagation-function-example.png)
     
 ### Forward Pass
