@@ -1,5 +1,5 @@
 ---
-title: Identifying and Correcting for Fairness
+title: Identifying Bias and Correcting for Fairness
 ---
 
 #  Identifying Bias and Correcting for Fairness
