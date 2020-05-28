@@ -11,8 +11,7 @@ The flow of topics that we cover:
 
 {{< mermaid align="left" theme="dark" >}}
 graph TB;
-    A([Basic Probability Concepts]) --> B(Conditional Probability) 
-    B --> C(Supervised Learning)
+    A(Basic Probability Concepts) --> C(Supervised Learning)
     C --> D(Other forms of learning)
     click A "../ml-math/probability"
 {{< /mermaid >}}

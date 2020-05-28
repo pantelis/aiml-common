@@ -2,8 +2,6 @@
 title: Introduction to Classification
 ---
 
-
-
 # Introduction to Classification 
 
 There are three broad classes of methods for determining the parameters $\mathbf{w}$ of a linear classifier:
@@ -47,10 +45,7 @@ Let us define an experiment from P positive instances and N negative instances f
 ![Confusion Matrix](images/confusion-matrix.png)
 *Confusion Matrix ([Wikipedia](https://en.wikipedia.org/wiki/Receiver_operating_characteristic))*
 
-For an instructional [example](https://www.kaggle.com/uciml/iris) of determining the confusion matrix of classification models using scikit-learn see the Iris case study.
-
-
-
+Go through an instructional [example](https://www.kaggle.com/uciml/iris) of determining the confusion matrix of classification models using scikit-learn. 
 
 
 > NOTE: The [Probabilistic Programming & Bayesian Methods for Hackers](http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/) book is one of the best resources out there containing practical python examples. In addition they have been recoded recently to work in [Tensorflow Probability](https://medium.com/tensorflow/an-introduction-to-probabilistic-programming-now-available-in-tensorflow-probability-6dcc003ca29e) an industrial-strength framework that can bring together Deep Learning and domain-specific probabilistic modeling. The book cant match the rigorousness of Bishop's book but it offers a good treatment on problems and use cases and should be considered complimentary.
