@@ -57,31 +57,14 @@ Are $x$ and $y$ in the example above independent ?
 
 {{< /hint >}}
 
-## Probability Rules
-
-These rules are the equivalent of the primitive calculus operations in the probability space. 
-
-
-
-
-## Bayes Theorem
-
-The Bayesian theorem is the cornerstone of probabilistic modeling. If $\mathbf{\theta}$ denotes the unknown parameters, $D$ denotes the dataset and $\mathcal{H}$ denotes the hypothesis space  - the model we have seen in [the learning problem]({{<ref "../../learning-problem">}}) chapter.
-
-$$ P(\mathbf{\theta} | D, \mathcal{H}) =  \frac{P( D | \mathbf{\theta}, \mathcal{H}) P(\mathbf{\theta} | \mathcal{H}) }{ P(D|\mathcal{H})} $$
-
-The Bayesian framework allows the introduction of priors from a wide variety of sources (experts, other data, past posteriors, etc.) For example,a medical patient is exhibiting symptoms x, y and z. There are a number of diseases that could be causing all of them, but only a single disease is present. A doctor (the expert) has beliefs about which disease, but a second doctor may have slightly different beliefs.
-
-> NOTE: The [Probabilistic Programming & Bayesian Methods for Hackers](http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/) book is one of the best resources out there containing practical python examples. In addition they have been recoded recently to work in [Tensorflow Probability](https://medium.com/tensorflow/an-introduction-to-probabilistic-programming-now-available-in-tensorflow-probability-6dcc003ca29e) an industrial-strength framework that can bring together Deep Learning and domain-specific probabilistic modeling. The book cant match the rigorousness of Bishop's book but it offers a good treatment on problems and use cases and should be considered complimentary.
-
 ## Multi-variate Gaussian distribution
 
-Perhaps the only distribution that is worth knowing and remembering its form is the Multi-variate Normal as it has widespread applicability in data science. 
+Perhaps the only distribution that is worth knowing and remembering its form is the multivariate Normal as it has widespread applicability in data science. 
 
 $$f_{\mathbf X}(x_1,\ldots,x_k) = \frac{\exp\left(-\frac 1 2 ({\mathbf x}-{\boldsymbol\mu})^\mathrm{T}{\boldsymbol\Sigma}^{-1}({\mathbf x}-{\boldsymbol\mu})\right)}{\sqrt{(2\pi)^n|\boldsymbol\Sigma|}}$$
 where where <${\mathbf x}$ is a real 'n'-dimensional column vector and $|\boldsymbol\Sigma|\equiv \operatorname{det}\boldsymbol\Sigma$ is the determinant of $\boldsymbol\Sigma$. 
 
-Apart from the definition, you need to connect the geometric interpretation of the bivariate Gaussian distribution to the eigendecomposition in the linear algebra lecture as shown below:
+Apart from the definition, we will connect the geometric interpretation of the bivariate Gaussian distribution to the eigendecomposition in the linear algebra lecture as shown below:
 
 ![bivariate-Gaussian](images/Figure2.7.png)
 
