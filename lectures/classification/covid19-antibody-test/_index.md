@@ -11,7 +11,7 @@ You are a member of a data science team of a screening (test) site and the gover
 To plan "back to work" actions at the state level, one of the  metrics you need to estimate is the probability of a patient having antibodies given a positive $s$ test result. This is the probability $p(antibody | s=+)$.  
 
 1. The facility is in a town where 1% of subjects have antibodies (and therefore 99% do not).
-2. The [test kits are from a vendor](https://www.evaluate.com/vantage/articles/analysis/spotlight/covid-19-antibody-tests-face-very-specific-problem) and have the following characteristics: 80% of antibody test kits detect antibodies when they are present (and therefore 20% miss it). 9.6% of test kits detect antibodies when they are not there (and therefore 90.4% correctly return a negative result).
+2. The [test kits are from a vendor](https://www.evaluate.com/vantage/articles/analysis/spotlight/covid-19-antibody-tests-face-very-specific-problem) and have the following characteristics: 80% of antibody test kits detect antibodies when they are present (and therefore 20% miss it). 9.6% of test kits detect antibodies when they are not there (and therefore 90.4% correctly return a negative result). Some vendors quote [these](https://en.wikipedia.org/wiki/Sensitivity_and_specificity) metrics. 
 
 This is a classic application of the Bayes theorem:
 
