@@ -71,7 +71,8 @@ Apart from the definition, we will connect the geometric interpretation of the b
 Such geometric interpretations will be very useful when we study dimensionality reduction via Principal Component Analysis (PCA).
 
 ## Book Chapters
- From Ian Goodfellow's book:
+
+For an overview of probability concepts see Ian Goodfellow's book:
+
 <iframe src="https://www.deeplearningbook.org/contents/prob.html" width="800" height="1200"></iframe>
 
-We will go through the main points during the lecture and treat also [MacKay's book (Chapter 2)](https://www.inference.org.uk/itprnn/book.pdf) that is also instructive and a much better in introducing probability concepts. If you are a visual learner, [the visual information theory](http://colah.github.io/posts/2015-09-Visual-Information/#fn4) blog post is also a good starting point. 

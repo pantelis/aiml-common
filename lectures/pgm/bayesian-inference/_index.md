@@ -1,14 +1,23 @@
 ---
-title: Inference in Graphical Models 
+title: Bayesian Inference 
 weight: 82
 draft: false
 ---
 
-# Inference in Graphical Models 
+#  Bayesian Inference
+
+## Bayes Theorem
+
+The Bayesian theorem is the cornerstone of probabilistic modeling and ultimately governs what models we can construct inside the _learning algorithm_ of the previous section. If $\mathbf{w}$ denotes the unknown parameters, $\mathtt{data}$ denotes the dataset and $\mathcal{H}$ denotes the hypothesis set.
+
+$$ p(\mathbf{w} | \mathtt{data}, \mathcal{H}) =  \frac{P(  \mathtt{data} | \mathbf{w}, \mathcal{H}) P(\mathbf{w} | \mathcal{H}) }{ P(  \mathtt{data} | \mathcal{H})} $$
+
+The Bayesian framework allows the introduction of _priors_ from a wide variety of sources (experts, other data, past posteriors, etc.) For example,a medical patient is exhibiting symptoms x, y and z. There are a number of diseases that could be causing all of them, but only a single disease is present. A doctor (the expert) has beliefs about which disease, but a second doctor may have slightly different beliefs.
+
 
 ## Bayesian Linear Regression
 
-The [PGM representation]({{<ref "../pgm-intro">}}) should not feel foreign - lets consider the simplest possible example of a graphical model and see how it connects to concepts we have seen before. Any joint distribution $p(\bm x, y)$ can be decomposed using the product rule (we drop the data qualifier) 
+The Probabilistic Graphical Model is a representation that is extensively used in probabilistic reasoning. Lets consider the simplest possible example of a graphical model and see how it connects to concepts we have seen before. Any joint distribution $p(\bm x, y)$ can be decomposed using the product rule (we drop the data qualifier) 
 
 $$p(\bm x, y) = p(\bm x) p(y|\bm x)$$
 
@@ -24,7 +33,9 @@ $$p(x|y) = \frac{p(y|x)p(x)}{p(y)}$$
 
 where using the sum rule we know $p(y) = \sum_{x'} p(y|x') p(x')$. This is a very innocent but very powerful concept. 
 
-To see why lets consider an _online_ learning problem where the underlying target function is $p_{data}(x, \mathbf a) = a_0 + a_1 x + n$ - this is the equation of the line. In this example its parametrized with $a_0=-0.3, a_1=0.5$ and $n \in \mathcal N(0, \sigma=0.2)$. To match the simple inference exercise that we just saw, we draw the equivalent PGM
+## Online Bayesian Regression
+
+To see why lets consider an _online_ learning problem where the underlying target function is $p_{data}(x, \mathbf w) = w_0 + w_1 x + n$ This is the equation of a line. In this example its parametrized with $a_0=-0.3, a_1=0.5$ and $n \in \mathcal N(0, \sigma=0.2)$. To match the simple inference exercise that we just saw, we draw the equivalent PGM
 
 <img src="images/Figure8.3.png" width="250" align="center">
 
@@ -46,6 +57,7 @@ with $\alpha = 0.2$. We starts in row 1 with this prior and at this point there 
 In the [linear regression]({{<ref "../../regression/linear-regression">}}) section we have seen a simple supervised learning problem that is specified via a joint distribution $\hat{p}_{data}(\bm x, y)$ and are asked to fit the model parameterized by the weights $\mathbf w$ using ML. Its important to view pictorially perhaps the most important effect of Bayesian update: 
 
 * In ML the $\mathbf{w}$ is treated as a known quantity with an estimate $\hat{\mathbf{w}}$ that has a mean and variance resulting from the distribution of $y$.  
+  
 *  In the Bayesian setting, we are integrating over the distribution of $\mathbf{w}$ given the data i.e. we are not making a point estimate of $\mathbf{w}$ but we marginalize out $\mathbf{w}$. 
 $$p(\mathbf{w}|y) = \frac{p(y|\mathbf{w}) p(\mathbf{w})}{\int p(y|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}$$ 
    *  We get at the end a posterior (predictive) distribution rather than a point estimate. As such it can capture the effects of sparse data producing more uncertainty via its covariance in areas where there are no data as shown in the following example which is exactly the same sinusoidal dataset fit with Bayesian updates and Gaussian basis functions.
@@ -57,8 +69,8 @@ $$p(\mathbf{w}|y) = \frac{p(y|\mathbf{w}) p(\mathbf{w})}{\int p(y|\mathbf{w}) p(
 
 ML frameworks have been enhanced recently to deal with Bayesian approaches and approximations that make such approaches feasible for both classical and deep learning. TF.Probability and PyTorch Pyro are examples of such enhancements. 
 
-<!-- ## Bayesian update for discrete problems
+## Bayesian update for discrete problems
 
 <iframe src="https://nbviewer.jupyter.org/github/pantelis/cs634-notebooks/blob/master/Bayesian_update_coin_flip.ipynb" width="900" height="1200"></iframe>
 
-This example is instructive beyond the habit of having coin flip examples in every textbook in probability theory and statistics. It is useful to understand the conjugate prior distribution being discussed in Bishop's section 2.1.1 and Figure 3 that the code above replicates.  Armed with this understanding, we can now treat the Bayesian update for linear regression as described in the [linear regression section](/docs/lectures/regression/linear-regression). -->
+HINT: This example is deeper than coin-flipping.  

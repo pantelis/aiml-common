@@ -49,15 +49,6 @@ $$\mathtt{data} = \\{ (\mathbf{x}_1, y_1), \dots, (\mathbf{x}_m, y_m) \\}$$
  2. Algorithms
  3. Objective function (Cost)
 
-### Bayes Theorem
-
-The Bayesian theorem is the cornerstone of probabilistic modeling and ultimately governs what models we can construct inside the _learning algorithm_ of the previous section. If $\mathbf{w}$ denotes the unknown parameters, $\mathtt{data}$ denotes the dataset and $\mathcal{H}$ denotes the hypothesis set.
-
-$$ p(\mathbf{w} | \mathtt{data}, \mathcal{H}) =  \frac{P(  \mathtt{data} | \mathbf{w}, \mathcal{H}) P(\mathbf{w} | \mathcal{H}) }{ P(  \mathtt{data} | \mathcal{H})} $$
-
-The Bayesian framework allows the introduction of _priors_ from a wide variety of sources (experts, other data, past posteriors, etc.) For example,a medical patient is exhibiting symptoms x, y and z. There are a number of diseases that could be causing all of them, but only a single disease is present. A doctor (the expert) has beliefs about which disease, but a second doctor may have slightly different beliefs.
-
-
 A couple of examples of supervised learning are shown below:
 
 ![usps](images/usps.png)
