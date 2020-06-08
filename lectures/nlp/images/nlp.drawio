@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-06-08T14:53:54.602Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="OpezL8zUIdBlSfKIaqC4" version="12.9.11" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-06-08T21:12:11.871Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="SfJ-R8ro7fu-bAKjMlhl" version="12.9.11" type="github" pages="3">
   <diagram id="bD53E8nyOGbHJpfK05qM" name="architecture">
-    <mxGraphModel dx="911" dy="891" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1527" dy="925" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -103,7 +103,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6sm1DrqpV83sRdd_OU5I-6" value="REWARD&lt;br&gt;INFERENCE" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="6sm1DrqpV83sRdd_OU5I-6" value="INTERACTION&lt;br&gt;REWARD&lt;br&gt;INFERENCE" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="160" y="160" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
