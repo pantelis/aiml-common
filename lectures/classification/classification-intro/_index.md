@@ -45,6 +45,8 @@ Let us define an experiment from P positive instances and N negative instances f
 ![Confusion Matrix](images/confusion-matrix.png)
 *Confusion Matrix ([Wikipedia](https://en.wikipedia.org/wiki/Receiver_operating_characteristic))*
 
+Its important to be able to plot the two distributions (positive and negative) and be able to tell what areas belong to the rates that improve the performance of the classifier (TNR=blue and TPR=red) and what areas belong to rates that are a detriment to the classifier (FNR=light blue and FPR=peach).
+
 Go through an instructional [example](https://www.kaggle.com/uciml/iris) of determining the confusion matrix of classification models using scikit-learn. 
 
 > NOTE: The [Probabilistic Programming & Bayesian Methods for Hackers](http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/) book is one of the best resources out there containing practical python examples. In addition they have been recoded recently to work in [Tensorflow Probability](https://medium.com/tensorflow/an-introduction-to-probabilistic-programming-now-available-in-tensorflow-probability-6dcc003ca29e) an industrial-strength framework that can bring together Deep Learning and domain-specific probabilistic modeling. 
