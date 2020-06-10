@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-06-10T16:07:16.281Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="2CW9aTKW1R920xT252U7" version="13.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-06-10T16:10:11.943Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="9dJ3qS1pH_2rTPVaTsiV" version="13.2.1" type="github">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1527" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -27,9 +27,6 @@
             <mxPoint x="727" y="540" as="sourcePoint" />
             <mxPoint x="727" y="690" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="IR8gEMqMYILpRB2Ss4oT-10" value="Admission Barcode" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/free-e-commerce-linear/1024/scanning-barcode-128.png" parent="DVUXWdo4HBKXd4HaU4E6-1" vertex="1">
-          <mxGeometry x="280" y="408.5" width="34" height="34" as="geometry" />
         </mxCell>
         <mxCell id="LEx7qD2o24YmSId129aY-2" value="" style="shape=flexArrow;endArrow=classic;html=1;strokeColor=#000000;startArrow=block;" parent="DVUXWdo4HBKXd4HaU4E6-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -70,7 +67,7 @@
             <mxPoint x="5" y="-19.5" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ki2Zh7Pq-nfiL1ydGcVm-6" value="Confirmation" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.calendar;" vertex="1" parent="DVUXWdo4HBKXd4HaU4E6-1">
+        <mxCell id="ki2Zh7Pq-nfiL1ydGcVm-6" value="Calendar &lt;br&gt;Confirmation" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.calendar;" vertex="1" parent="DVUXWdo4HBKXd4HaU4E6-1">
           <mxGeometry x="190" y="412.5" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ki2Zh7Pq-nfiL1ydGcVm-9" value="&amp;nbsp;Native Web Apps" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="DVUXWdo4HBKXd4HaU4E6-1">
@@ -78,6 +75,9 @@
         </mxCell>
         <mxCell id="ki2Zh7Pq-nfiL1ydGcVm-10" value="" style="html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon;prIcon=api" vertex="1" parent="DVUXWdo4HBKXd4HaU4E6-1">
           <mxGeometry x="703" y="446" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="ki2Zh7Pq-nfiL1ydGcVm-11" value="Confirmation &lt;br&gt;QR Code" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/qr-code.png" vertex="1" parent="DVUXWdo4HBKXd4HaU4E6-1">
+          <mxGeometry x="260" y="405" width="50" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
