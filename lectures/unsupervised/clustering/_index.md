@@ -27,12 +27,12 @@ We go over each data point $\mathbf x_i$ and we assign it to the closest custer 
 
 Mathematically this means determining:
 
-$$r_{ik} = \begin{cases}1, & \text{if } k = \arg \min_j ||\mathbf x_i - \mathbf \mu_j||^2\\ 0, & \text{otherwise. } \end{cases}$$
+$$r_{ik} = \begin{cases}1, & \text{if } k = \arg \min_j ||\mathbf x_i - \mathbf \mu_j||^2\\\\ 0, & \text{otherwise. } \end{cases}$$
 
 ### Step 2
 In the second step we move each cluster center to the average of the data points assigned to that cluster. Mathematically this is:
 
-$$ \mathbf \mu_k = \frac{\sum_i r_{ik} \mathbf x_i}{\sum_i r_ik}$$
+$$ \mathbf \mu_k = \frac{\sum_i r_{ik} \mathbf x_i}{\sum_i r_{ik}}$$
 
 ![k-means-algorithm-example](images/Figure9.1c.png)
 *Iteration 1, Step-2: Moving the cluster centers to the mean of the data points assigned to each cluster*
