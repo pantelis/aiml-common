@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-06-15T20:20:10.248Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36" etag="6oJAj1XnXurE_4mbkNWH" version="13.2.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-06-15T20:21:08.495Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36" etag="w9UqRLvXRGVMnyNj3v0f" version="13.2.4" type="github" pages="3">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
-    <mxGraphModel dx="1282" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1042" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="DVUXWdo4HBKXd4HaU4E6-0" />
         <mxCell id="DVUXWdo4HBKXd4HaU4E6-1" parent="DVUXWdo4HBKXd4HaU4E6-0" />
@@ -126,8 +126,8 @@
         <mxCell id="O6MYa030lRG6c-xs35VH-14" value="&lt;font&gt;&lt;font style=&quot;font-size: 12px&quot; color=&quot;#AE4132&quot;&gt;&lt;b&gt;Backend&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;It sends booking confirmation to a subset of students selected by a policy (algorithm).&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;strokeColor=none;fillColor=#EEEEEE;align=center;arcSize=12;verticalAlign=top;whiteSpace=wrap;html=1;fontSize=12;spacing=3;shadow=0;" parent="O6MYa030lRG6c-xs35VH-1" vertex="1">
           <mxGeometry x="495" y="400" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="O6MYa030lRG6c-xs35VH-15" value="&lt;font&gt;&lt;font style=&quot;font-size: 12px&quot; color=&quot;#23445D&quot;&gt;&lt;b&gt;App&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Confirmed students 24h before class starts, take the health pledge and receive barcode and calendar notice.&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;strokeColor=none;fillColor=#EEEEEE;align=center;arcSize=12;verticalAlign=top;whiteSpace=wrap;html=1;fontSize=12;spacing=3;shadow=0;" parent="O6MYa030lRG6c-xs35VH-1" vertex="1">
-          <mxGeometry x="175" y="505" width="180" height="70" as="geometry" />
+        <mxCell id="O6MYa030lRG6c-xs35VH-15" value="&lt;font&gt;&lt;font style=&quot;font-size: 12px&quot; color=&quot;#23445D&quot;&gt;&lt;b&gt;App&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Confirmed students 24h before class starts, take the health pledge and receive barcode and calendar confirmation.&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;strokeColor=none;fillColor=#EEEEEE;align=center;arcSize=12;verticalAlign=top;whiteSpace=wrap;html=1;fontSize=12;spacing=3;shadow=0;" parent="O6MYa030lRG6c-xs35VH-1" vertex="1">
+          <mxGeometry x="150" y="505" width="205" height="75" as="geometry" />
         </mxCell>
         <mxCell id="O6MYa030lRG6c-xs35VH-16" value="&lt;font&gt;&lt;font color=&quot;#12aab5&quot;&gt;&lt;b&gt;App&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Professor scans the students&#39; barcode&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: x-small&quot;&gt;at the beginning of the class.&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;strokeColor=none;fillColor=#EEEEEE;align=center;arcSize=12;verticalAlign=top;whiteSpace=wrap;html=1;fontSize=12;spacing=3;shadow=0;" parent="O6MYa030lRG6c-xs35VH-1" vertex="1">
           <mxGeometry x="600" y="505" width="180" height="70" as="geometry" />
