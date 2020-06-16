@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-06-16T15:22:38.525Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="dxi0Y_JPdljprq7REc5t" version="13.2.4" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2020-06-16T15:34:54.427Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="s2UOM7cSJ7D_pDyNJLcK" version="13.2.4" type="github" pages="5">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1042" dy="678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -204,17 +204,17 @@
       <root>
         <mxCell id="KMY4CzMLG-l6zkBM7bU9-0" />
         <mxCell id="KMY4CzMLG-l6zkBM7bU9-1" parent="KMY4CzMLG-l6zkBM7bU9-0" />
-        <mxCell id="KMY4CzMLG-l6zkBM7bU9-7" value="" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=mxgraph.infographic.cylinder;fillColor=#f8cecc;strokeColor=#b85450;shadow=0;align=left;labelPosition=right;spacingLeft=10;fontStyle=1;" vertex="1" parent="KMY4CzMLG-l6zkBM7bU9-1">
-          <mxGeometry x="130" y="120" width="100" height="430" as="geometry" />
+        <mxCell id="KMY4CzMLG-l6zkBM7bU9-7" value="" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=mxgraph.infographic.cylinder;fillColor=#f8cecc;strokeColor=#b85450;shadow=0;align=left;labelPosition=right;spacingLeft=10;fontStyle=1;rotation=90;" vertex="1" parent="KMY4CzMLG-l6zkBM7bU9-1">
+          <mxGeometry x="310" y="110" width="100" height="430" as="geometry" />
         </mxCell>
-        <mxCell id="KMY4CzMLG-l6zkBM7bU9-3" value="" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=mxgraph.infographic.cylinder;fillColor=#d5e8d4;strokeColor=#82b366;shadow=0;align=left;labelPosition=right;spacingLeft=10;fontStyle=1;" vertex="1" parent="KMY4CzMLG-l6zkBM7bU9-1">
-          <mxGeometry x="130" y="400" width="100" height="150" as="geometry" />
+        <mxCell id="KMY4CzMLG-l6zkBM7bU9-3" value="" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=mxgraph.infographic.cylinder;fillColor=#d5e8d4;strokeColor=#82b366;shadow=0;align=left;labelPosition=right;spacingLeft=10;fontStyle=1;rotation=90;" vertex="1" parent="KMY4CzMLG-l6zkBM7bU9-1">
+          <mxGeometry x="170" y="250" width="100" height="150" as="geometry" />
         </mxCell>
         <mxCell id="KMY4CzMLG-l6zkBM7bU9-12" value="&lt;span style=&quot;font-weight: 700 ; text-align: left&quot;&gt;$$K$$&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="KMY4CzMLG-l6zkBM7bU9-1">
-          <mxGeometry x="160" y="180" width="40" height="20" as="geometry" />
+          <mxGeometry x="490" y="315" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="KMY4CzMLG-l6zkBM7bU9-13" value="&lt;span style=&quot;font-weight: 700 ; text-align: left&quot;&gt;$$C$$&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="KMY4CzMLG-l6zkBM7bU9-1">
-          <mxGeometry x="160" y="430" width="40" height="20" as="geometry" />
+          <mxGeometry x="220" y="310" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
