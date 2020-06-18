@@ -13,3 +13,5 @@ Now, head over to the [competition page](https://www.kaggle.com/c/new-york-city-
 
 If you find that the runtime environment in Colab with the dataset of the competition has memory issues, please consider sampling the dataset to a smaller number of rows. The original dataset is 55M rows and the starter code reduced this to 10M rows. Colab is constantly upgrading its hardware so this may not be needed.
 
+You may find the visualizations and data exploration shown [here](https://toddwschneider.com/posts/analyzing-1-1-billion-nyc-taxi-and-uber-trips-with-a-vengeance/) useful.
+

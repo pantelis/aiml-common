@@ -4,7 +4,7 @@ title: Random Forests
 
 # Random Forests
 
-Random forests is a popular and very strong ML algorithm that belongs to what is called _ensemble learning_ methods. As the name implies they use many classification [tree]({{<ref "../decision-trees">}}) learners to improve on their generalization ability. Each of the trees is sometimes labeled as a *weak learner* - when grouped together they form the strong learner. 
+As the name implies forests use many [tree-based]({{<ref "../../decision-trees">}}) learners to improve on their generalization ability. Each of the trees is sometimes called a *weak learner*. When combined together they form the strong learner. 
 
 A key aspect of decision forests is the fact that its component trees are all _randomly different_ from one another. This leads to de-correlation between the individual tree predictions and, in turn, to improved generalization. Forest randomness also helps achieve high robustness with respect to noisy data. Obviously all these weak learners will ultimately be fed with some permutation the same data so its not that we have a perfect de-correlation and this limits the performance of the aggregation. 
 
