@@ -5,8 +5,7 @@ draft: false
 
 # Dynamic COVID-19 Spreading Control via Permissive Population Mobility Policies
 
-![mobility-control](images/mobility-control.png#center)
-
+![berlin](images/berlin.png#center)
 
 In this project, imagine that a pandemic hit NYC (imagine that) and that your local government wants to implement controls to all residents and visitors. As you can imagine in a free society imposing blanket rules can only degrade the already bad psychological state of the residents and can also be ineffective. People may not adhere to such rules. 
 
@@ -16,8 +15,7 @@ The mayor contacts your data science organization and asks for help.
 
 You and the other data scientists in your org need to come up with an answer quickly and you start sketching an architecture as shown below:
 
-![taxi-dropoffs-map](images/taxi-dropoffs-map.png#center)
-
+![mobility-control](images/mobility-control.png#center)
 
 You sit down and write a brief summary explaining the solution. 
 
