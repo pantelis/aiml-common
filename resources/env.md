@@ -3,12 +3,11 @@ title: Your Programming Environment
 draft: false
 ---
 
-
 # Your Programming Environment
 
 ## Computational Environments
 
-### Google Colab (Option 1)
+### Google Colaboratory (Option 1)
 
 This course will be using Jupyter notebooks and we will be using the **free** CPU/GPU resources provided by [Google Colab](https://colab.research.google.com). The good news is that you have an account in Google Colab as most of you have your university gmail account. Please note if you login to colab with your university account you get to use the almost unlimited Gdrive storage facility. You will need Google Colab for all your projects so that you can demonstrate that your results can be replicated.  In addition Colab has many [features](https://colab.research.google.com/notebooks/basic_features_overview.ipynb) that come handy. 
 
