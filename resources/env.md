@@ -15,6 +15,7 @@ This course will be using Jupyter notebooks and we will be using the **free** CP
 
 You can use Kaggle as an alternative to Colab for all your projects. You guessed it right - all the projects in this course are in fact Kaggle competitions.  You can login with your gmail account. You can install by following the directions [here](https://github.com/Kaggle/kaggle-api) the Kaggle command line interface (CLI).  Not only you will get to compete (your ranking relative to others does not matter per se), but as you improve your knowledge over time you can revisit these competitions and see how your score improves.  There is one catch though - Colab offers more GPU time and it comes with a 2nd tier of service for a few dollars per month. This can be handy for the heavier projects.  
 
+
 ### On your own (Option 3)
 
 I heavily borrowed from Geron's book for the following. 
