@@ -28,7 +28,6 @@ The following are your options with 1 being the highest priority.
    
 > [Numpy Cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf)
 
-In any case, this is the effectively "official" documentation on Pandas: 
-[Pandas: powerful Python data analysis toolkit](https://pandas.pydata.org/pandas-docs/stable/pandas.pdf)
+4. This is the "official" documentation on Pandas:  [Pandas: powerful Python data analysis toolkit](https://pandas.pydata.org/pandas-docs/stable/pandas.pdf)
 
 We should also mentioned [Leetcode](https://leetcode.com/) as this is perhaps the most popular destination for anyone that wishes to use the skills learned here to launch a software engineering career in tech. It helps you answer all coding-based interview questions. 
