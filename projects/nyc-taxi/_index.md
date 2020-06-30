@@ -15,3 +15,5 @@ If you find that the runtime environment in Colab with the dataset of the compet
 
 You may find the visualizations and data exploration shown [here](https://toddwschneider.com/posts/analyzing-1-1-billion-nyc-taxi-and-uber-trips-with-a-vengeance/) useful.
 
+Happy Coding !
+
