@@ -16,7 +16,7 @@ The usual eight steps of the data and model training pipeline as shown below.
 
 During the class we will go through [notebook 2](https://github.com/ageron/handson-ml2/blob/master/02_end_to_end_machine_learning_project.ipynb). You just click the Open in Colab icon to load it to your Colab environment but it is highly recommended to fork the repo as described in the [development environment]({{<relref "../../resources/environment">}}) section. 
 
-We are going to go critically through the code, asking questions such as below (far more will be asked during the lecture) but not before creating a topological map of code to pipeline stage in our minds. 
+We are going to go critically through the code, asking questions such as those below (far more will be asked during the lecture) but not before creating a topological map of code to pipeline stage in our minds. 
 
 1. Is the dataset appropriate for training?
 
