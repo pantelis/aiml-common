@@ -4,7 +4,7 @@ title: Linear Algebra for Machine Learning
 
 # Linear Algebra for Machine Learning
 
-The corresponding chapter of Ian Goodfellow's Deep Learning is essentially the background you need.
+The corresponding chapter of Ian Goodfellow's Deep Learning book is what you partially need to know as data scientists at a graduate level but arguably if you are just starting you ought to know 2.1-2.5. 
 
 <iframe src="https://www.deeplearningbook.org/contents/linear_algebra.html" width="800" height="1200"></iframe>
 

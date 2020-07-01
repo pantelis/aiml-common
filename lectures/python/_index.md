@@ -1,9 +1,9 @@
 ---
-title: Numerical Python (Numpy/Scipy) and Pandas
+title: Learn Python
 weight: 1
 ---
 
-# Numerical Python (Numpy/Scipy and Pandas) 
+# Learn Python
 
 Below is a list of recommended resources that will teach you quickly Python. 
 
