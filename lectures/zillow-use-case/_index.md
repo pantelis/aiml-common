@@ -23,7 +23,9 @@ We are going to go critically through the code, asking questions such as those b
 ![California-housing-histograms](images/california-housing-histograms.png)
 
 > Any unexpected ranges, any range heterogeneity, any clipping?
+> 
 > Do we face long-tails?
+> 
 > What options do we have to glean the data?
 
 2. What will happen if we remove the following line from the ```split_train_set``` function?
