@@ -78,6 +78,8 @@ Training for large vocabularies can be quite computationally intensive. This [se
 
 At the end of training we are then able to store the matrix $\mathbf W$ and load it during the parsing stage of the NLP pipeline.  
 
+For a more hands on treatment on word2vec see the blog posts by Chris McCormick [cite](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/).
+
 [^1]: The other method is called Continuous Bag of Words (CBOW) and its the reverse of the skip-gram method: it predicts the center word from the words around it. Skip-gram works well with small corpora and rare terms while CBOW shows higher accuracies for frequent words and is faster to train [ref](https://www.manning.com/books/natural-language-processing-in-action). 
 
 [^2]: You don't come across papers with 10K citations very often. 
