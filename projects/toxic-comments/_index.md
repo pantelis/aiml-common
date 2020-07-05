@@ -2,6 +2,8 @@
 title: Toxic Comment Classification
 ---
 
+# Toxic Comment Classification
+
 ![toxic-comment](images/toxic-comment.jpg#center)
 
 
