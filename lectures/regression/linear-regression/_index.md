@@ -53,17 +53,9 @@ Lets reflect on the MSE and how model complexity gives raise to various generali
 
 $$MSE = \mathbb{E}[\hat{y}_i - y_i)^2] = \mathrm{Bias}(\hat{y}_i)^2 + \mathrm{Var}(\hat{y}_i)$$
 
-which means that the [MSE captures both bias and variance](https://en.wikipedia.org/wiki/Mean_squared_error) of the estimated target variables and as shown in the plots above, increasing model capacity can really increase the variance of $\hat{y}$. We have seen that as the $\mathbf{w}$ is trying to exactly fit, or memorize, the data, it minimizes the bias (in fact for model complexity M=9 the bias is 0) but it also exhibits significant variability that is itself translated to $\hat{y}$. Although the definition of model *capacity* is far more rigorous, we will broadly associate complexity with capacity and borrow the figure below from Ian Goodfellow's book to demosntrate the tradeoff between bias and variance. What we have done with regularization is to find the $\lambda$ that minimized generalization error aka. find the optimal model capacity. 
+which means that the [MSE captures both bias and variance](https://en.wikipedia.org/wiki/Mean_squared_error) of the estimated target variables and as shown in the plots above, increasing model capacity can really increase the variance of $\hat{y}$. We have seen that as the $\mathbf{w}$ is trying to exactly fit, or memorize, the data, it minimizes the bias (in fact for model complexity M=9 the bias is 0) but it also exhibits significant variability that is itself translated to $\hat{y}$. Although the definition of model *capacity* is far more rigorous, we will broadly associate complexity with capacity and show the figure below [cite]() to demosntrate the tradeoff between bias and variance. What we have done with regularization is to find the $\lambda$ that minimized generalization error aka. find the optimal model capacity. 
 
 ![generalization-error-vs-capacity](images/generalization-capacity.png)
 *As capacity increases (x-axis), bias (dotted) tends to decrease and variance(dashed) tends to increase, yielding another U-shaped curve for generalization error (bold curve). If we vary capacity along one axis, there is an optimal capacity, with underﬁtting when the capacity is below this optimum and overﬁtting when it is above.*
 
 
-## OLS as Maximum Likelihood Estimation$^*$
-
-[These notes](https://www.cs.indiana.edu/~predrag/classes/2016fallb365x/ols.pdf) summarize the Maximum Likelihood approach and are provided here as they are more expansive compared to textbooks at this level and at the same time do make the connection to the [Linear Algebra background you should have]({{<ref "../../ml-math/linear-algebra">}}).  
-
-![Figure3.2-bishop](images/Figure3.2.png)
-*Geometrical Interpretation of Ordinary Least Squares (OLS)*
-
-> Notes with marked with $^*$ can be treated as optional and skipped when you first read this chapter. 
