@@ -19,3 +19,12 @@ This lecture is mostly to walk through the python implementation of an end to en
 4. Review basic probability from the syllabus reading list - I will go through this on Monday as well. 
 
 
+## The Learning Problem 
+
+This is a very important lecture and you need to 
+
+1. Focus understanding the block diagram that is associated with the supervised learning setting. 
+2. Go through the sinusoidal dataset example and make sure you can map the process there to the block diagram. 
+3. Understand key terms such as overfitting and regularization. 
+4. For those that don't have background in random variables, make sure you run the notebooks / code associated with the ISL Chapter 2 and the chapters mentioned in the syllabus in the GRUS book. 
+
