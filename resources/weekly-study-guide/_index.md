@@ -28,3 +28,9 @@ This is a very important lecture and you need to
 3. Understand key terms such as overfitting and regularization. 
 4. For those that don't have background in random variables, make sure you run the notebooks / code associated with the ISL Chapter 2 and the chapters mentioned in the syllabus in the GRUS book. 
 
+## Linear Regression and Classification
+
+1. Revisit the regression sinusoidal relationship between x and y and understand what is needed to be learned (the three ingredients for ML are mentioned in the learning problem page). 
+2. Make sure you go through the code of GRUS chapter 14 (there was a typo in the syllabus that has been corrected).
+3. Spend some time with the Gaussian distribution  and understand how it enters classification and regression problems (in one and two dimensions).
+
