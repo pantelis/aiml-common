@@ -34,3 +34,9 @@ This is a very important lecture and you need to
 2. Make sure you go through the code of GRUS chapter 14 (there was a typo in the syllabus that has been corrected).
 3. Spend some time with the Gaussian distribution  and understand how it enters classification and regression problems (in one and two dimensions).
 
+##  Prepare for the midterm
+
+1. Read the notes and the reading list column of the syllabus up to 7/10 (including). 
+2. How to read the notes? Spend most of your time on graphs / plots and trying to understand why they behave the way the do.
+3. There will be no computational problem in the exam. 
+
