@@ -18,9 +18,16 @@ Work on object detection spans 20 years and is impossible to cover every algorit
 As expected, since 2014, deep learning has surpassed classical ML in the detection competitions - we therefore focus only on such architectures. More specifically we will be focusing on the so called _two stage_ detectors that employ two key ingredients: 
 
 1. Recognition using _regions_ that we will explain shortly. 
-2. [CNNs]({{<ref "../../cnn/cnn-intro">}}) that we covered earlier. 
+2. [CNNs]({{<ref "../../cnn/cnn-intro">}}) that we have covered earlier. 
 
-Object detection, involves three main stages: the feature extraction stage, the classification stage and the detection or localization stage. In the literature the feature and classification stages are counted as one, called the classification stage and people refer to such architecture as _two stage. 
+Object detection, involves three main stages: the feature extraction stage, the classification stage and the detection or localization stage. In the literature the feature and classification stages are counted as one, called the classification stage and people refer to such architecture as _two stage_. 
 
-We also need to insert an additional requirement: to be able to detect objects in almost real time (20 frames per second) - a significant subset of what we call mission critical applications require it. Therefore will focus a specific family that is considered to be the canonical CNN architecture for detection - the family of Region CNNs.  
 
+## Object Detection Algorithms (Graduate-level Only)
+
+We also need to insert an additional requirement: to be able to detect objects in almost real time (20 frames per second) - a significant subset of what we call mission critical applications require it. Therefore will focus a specific family that is considered to be the canonical CNN architecture for object detection - the family of Region CNNs. 
+
+| Detectors    | Description    |
+| --- | --- |
+|  RCNN   |  [Region-based CNN Detection]({{<ref "../rcnn">}})   |
+|  Faster RCNN |   [Faster Region-based CNN Detection]({{<ref "../faster-rcnn">}})  |
