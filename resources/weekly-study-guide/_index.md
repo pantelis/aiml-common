@@ -19,3 +19,24 @@ This lecture is mostly to walk through the python implementation of an end to en
 4. Review basic probability from the syllabus reading list - I will go through this on Monday as well. 
 
 
+## The Learning Problem 
+
+This is a very important lecture and you need to 
+
+1. Focus understanding the block diagram that is associated with the supervised learning setting. 
+2. Go through the sinusoidal dataset example and make sure you can map the process there to the block diagram. 
+3. Understand key terms such as overfitting and regularization. 
+4. For those that don't have background in random variables, make sure you run the notebooks / code associated with the ISL Chapter 2 and the chapters mentioned in the syllabus in the GRUS book. 
+
+## Linear Regression and Classification
+
+1. Revisit the regression sinusoidal relationship between x and y and understand what is needed to be learned (the three ingredients for ML are mentioned in the learning problem page). 
+2. Make sure you go through the code of GRUS chapter 14 (there was a typo in the syllabus that has been corrected).
+3. Spend some time with the Gaussian distribution  and understand how it enters classification and regression problems (in one and two dimensions).
+
+##  Prepare for the midterm
+
+1. Read the notes and the reading list column of the syllabus up to 7/10 (including). 
+2. How to read the notes? Spend most of your time on graphs / plots and trying to understand why they behave the way the do.
+3. There will be no computational problem in the exam. 
+

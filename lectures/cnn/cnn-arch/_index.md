@@ -57,7 +57,7 @@ In the class we will go through the example below.
 
 ![2d-convolution-example](images/2d-convolution-example.png#center)
 
-There are two steps involved. Notice that the number of input feature maps is $M_{l-1} = 2$, while the number of output feature maps is $M_{l}=3$. We therefore have three filters of spatial dimension $[3x3]$ and depth dimension of 2.  In the first step each of the three filters generates a correlation result for each of the 2 input feature maps.
+There are two steps involved. Notice that the number of input feature maps is $M_{l-1} = 2$, while the number of output feature maps is $M_{l}=3$. We therefore have three filters of spatial dimension $[3 \times 3]$ and depth dimension of 2.  In the first step each of the three filters generates a correlation result for each of the 2 input feature maps.
 
 $z(i,j) = \sum_u^{height} \sum_v^{width} x(i+u, j+v) w(u,v)$
 
@@ -156,4 +156,6 @@ When we have **multiple** $M_l$ layers of size 1 x 1 x $M_{l-1}$ then, effective
 
 ## Known CNN Architectures
 
-A summary of well known CNN networks are [here](https://towardsdatascience.com/neural-network-architectures-156e5bad51ba) article with [this](https://medium.com/@culurciello/analysis-of-deep-neural-networks-dcf398e71aae) update as a reference. This summary will be important to you as a starting point to develop your own understanding of very well known CNNs and after you read the corresponding papers in arxiv you will be able to recall key design patterns and why those patterns came to be. 
+A summary of well known CNN networks are [here](https://towardsdatascience.com/neural-network-architectures-156e5bad51ba) article with [this](https://medium.com/@culurciello/analysis-of-deep-neural-networks-dcf398e71aae) update as a reference. This summary will be important to you as a starting point to develop your own understanding of very well known CNNs. After you read the corresponding papers in [arxiv](https://arxiv.org/archive/cs) you will be able to recall key design choices / patterns. 
+
+For a instructive example of using CNNs in image processing see [this notebook](https://www.tensorflow.org/tutorials/images/cnn).
