@@ -21,6 +21,7 @@ In late May 2020 doctors tried to point its behavior e.g in [CNN](https://www.cn
 
 The prior probability $p(antibody)$ that the doctor in the clip above called prevalence. Plugging the numbers, you get: 
 
-$$p(a | s=+) = \frac{p(s=+| a)p(a)}{p(s=+)} = \frac{p(s=+|a)p(a)}{p(s=+|a)p(a)+p(s=+|not-a)p(not-a} = 7.7\%$$
+$$p(a | s=+) = \frac{p(s=+| a)p(a)}{p(s=+)} = \frac{p(s=+|a)p(a)}{p(s=+|a)p(a)+p(s=+|not-a)p(not-a) = 7.7\%$$
 
-This is amazing - only 7.7% of the people that get tested positive for antibodies do have them.  The number of false positives is very high. Can you guess what is happens when the same test kit is applied to Brooklyn (the epicenter of the epicenter in NYC) where the prior is much higher? 
+This is amazing - only 7.7% of the people that get tested positive for antibodies do have them.  The number of false positives is very high. Can you guess what is happens when the same test kit is applied to Brooklyn (the epicenter of the epicenter in NYC) where the prior is much higher? More specific to epidemiological problems is the fact that [test sensitivity may be secondary to frequency and turn-around time](https://www.medrxiv.org/content/10.1101/2020.06.22.20136309v2.article-info?referringSource=articleShare). 
+
