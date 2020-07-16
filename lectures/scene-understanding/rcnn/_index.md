@@ -73,7 +73,7 @@ Each of these proposals can be fed into a CNN (e.g. [ResNet]({{<ref "../feature-
 
 Using these features we use a binary [SVM classifier]({{<ref "../../classification/svm">}}) that produces a positive or negative on whether this feature contains the class of interest or not. We train a separate binary SVM classifier per class (binary classification). 
 
-The sharing of features allows us to parctically aggregate into a matrix all features of all regions (2000 x 4096) we well as aggregate the SVM weights into another matrix (4096 x K), where K is the number of classes we have trained for, and do this combined operation via a matrix-matrix product. 
+The sharing of features allows us to practically aggregate into a matrix all features of all regions (2000 x 4096) we well as aggregate the SVM weights into another matrix (4096 x K), where K is the number of classes we have trained for, and do this combined operation via a matrix-matrix product. 
 
 After the scoring of each proposed region by the SVM we apply a greedy [Non-Maximum Suppression (NMS) algorithm](https://arxiv.org/pdf/1704.04503.pdf) _for each class_ independently, that _rejects_ a region if it has an Intersection over Union (IoU) metric higher than a threshold with a higher scoring region. This threshold was empirically determined to be 0.3 for the task outlined in the paper. But it is expected to be a hyperparameter in practice. 
 
