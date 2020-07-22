@@ -40,3 +40,17 @@ This is a very important lecture and you need to
 2. How to read the notes? Spend most of your time on graphs / plots and trying to understand why they behave the way the do.
 3. There will be no computational problem in the exam. 
 
+## Trees
+
+1. Make sure you understand what entropy is and what does it offer during the decision tree algorithm.
+2. Make sure you can solve computational problems involving simple decision trees.
+3. Develop the intuition of how random forests learn and predict during the test phase. 
+4. Do not spend considerable amount of time in *gradient* boosting 
+
+## Neural Networks
+
+1. Understand the architecture of a single neuron. 
+2. Study the perceptron algorithm and see how SGD is embedded into it. 
+3. Play with Tensorflow playground to appreciate what all the parameters are doing. 
+4. Conceptually understand what backpropagation is providing to the SGD algorithm.
+5. Understand what  CNNs introduce that DNNs could not do efficiently from the perspective of processing unstructured data such as images. 
