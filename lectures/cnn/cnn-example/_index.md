@@ -1,14 +1,14 @@
 ---
-title: CNN Sizing
+title: CNN Example
 weight: 65
 draft: false
 ---
 
-# CNN Sizing
+# CNN Example
 
 Sizing is an exercise that will help you how to specify hyperparameters in ```tf.keras``` such as the height, width, depth of filters, feature map sizes etc. Sizing is needed so that you can stitch all the layers together correctly. 
 
-## Sizing Example
+## Sizing 
 
 We will use an toy network for such exercise. 
 

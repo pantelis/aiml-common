@@ -82,4 +82,4 @@ At the end of training we are then able to store the matrix $\mathbf W$ and load
 
 [^2]: You don't come across papers with 10K citations very often. 
 
-
+As quoted by Noah Smith [cite](https://arxiv.org/abs/1902.06006), the notable disadvantage of reduced-dimensionality vectors is that the individual dimensions are no longer interpretable features that can be mapped back to intuitive building blocks contributing to the word’s meaning.   The word’s meaning is distributed across the whole vector;  for this reason,  these vectors are sometimes called _distributed representations_.
