@@ -90,9 +90,8 @@ This technique employs the previous ratings to learn a model in order to improve
 
 Examples of these techniques include 
 
-* Dimensionality Reduction
+* Dimensionality Reduction such as Principal Component Analysis (PCA)
 * Matrix Factorization such as Singular Value Decomposition (SVD), 
-* Latent Semantic,  
 * Regression and Clustering. 
 
-Model-based techniques analyze the user-item matrix to identify relations between items; they use these relations to compare the list of top-N recommendations. Model based techniques resolve the sparsity problems associated with recommendation systems.
+Model-based techniques analyze the _user-item matrix to identify relations between items_; they use these relations to compare the list of top-N recommendations. Model based techniques resolve the sparsity problems associated with recommendation systems.

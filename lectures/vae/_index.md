@@ -1,12 +1,12 @@
 ---
 title: Generative Modeling and Continuous Variational Auto Encoders (VAE)
-draft: true
+draft: false
 weight: 220
 ---
 
 # Generative Modeling and  Continuous Variational Auto Encoders (VAE)
 
-We have seen in the treatment of [CNNs]({{<ref "../../cnn/cnn-intro" >}}) that they can generate features that are suitable for the classification or regression task at hand using the labels to guide the maximization of the log-likelihod function. Here we are looking at the problem where we need features that are suitable for generating data from the input distribution without necessarily having labels. In this setting we will look deeper into a major family of variational inference: the VAE. Variational Autoencoders (VAEs) are popular generative models being used in many different domains, including collaborative filtering, image compression, reinforcement learning, and generation of music and sketches.
+We have seen in the treatment of [CNNs]({{<ref "../cnn/cnn-intro" >}}) that they can generate features that are suitable for the classification or regression task at hand using the labels to guide the maximization of the log-likelihod function. Here we are looking at the problem where we need features that are suitable for generating data from the input distribution without necessarily having labels. In this setting we will look deeper into a major family of variational inference: the VAE. Variational Autoencoders (VAEs) are popular generative models being used in many different domains, including collaborative filtering, image compression, reinforcement learning, and generation of music and sketches.
 
 ## Generative Modeling and Approximate Inference
 
@@ -17,18 +17,18 @@ In generative modeling we want to model the generative distribution of the obser
 Take for example a set of images that depict a pendulum excited by a force. We would like to generative the successive frames of the pendulum swinging behavior and we do so we are assisted by a set of latent variables $\mathbf z$ that represent the underlying laws of physics. Generative modeling is especially well suited for 
 
 1. Testing out hypotheses about the underlying rules that generated the observed data. Such rules can also offer interpretable models. 
-2. Ability to capture causal relationships, since the ability of a factor to generate data very close to the ones observed offers a strong indication of such relationship.
+2. Ability to capture causal relationships, since the ability of a factor to generate data very close to the ones observed, offers a strong indication of such relationship.
 3. Semi-supervised classification where the generated data are very close to already labeled data and therefore can improve classification model accuracy. 
 
 One of the main methods of generative approximate inference is _variational inference_ and VAE is a modified instantiation of such inference and it involves: (a) deep latent variable models and (b) inference models both learned using stochastic gradient descent. Before we go deeper into what VAE is, its worth motivating the discussion as to why it came to be the solution to the generative problem we face.   
 
-In probabilistic modeling we usually make use of latent variables $\mathbf z$, variables that are not observed but can be used to build suitable representational constraints in our models, and a set of parameters $\theta$ that parametrize the latent variable model $p(\mathbf x, \mathbf z | \mathbf \theta)$. Since, 
+In probabilistic modeling, we usually make use of latent variables $\mathbf z$, variables that are not observed but can be used to build suitable representational constraints in our models, and a set of parameters $\theta$ that parametrize the latent variable model $p(\mathbf x, \mathbf z | \mathbf \theta)$. Since, 
 
 $$p(\mathbf x | \mathbf \theta) =  \sum_{\mathbf z} p(\mathbf x, \mathbf z | \mathbf \theta) $$
 
-to generate new data whose marginal is ideally identical to the true but unknown target distribution we need to be able to sample from $p(\mathbf x, \mathbf z | \mathbf \theta)$.
+to generate new data whose marginal is, ideally, identical to the true but unknown target distribution we need to be able to sample from $p(\mathbf x, \mathbf z | \mathbf \theta)$.
 
-The introduction of the latent variables can be represented as directed graph abd we have seen in the [probabilistic graphical models]({{<ref "../../pgm/pgm-intro">}}) introduction, the representation as directed graph allows the factorization of the joint distribution 
+The introduction of the latent variables can be represented as directed graph and we have seen in the [probabilistic graphical models]({{<ref "../pgm/pgm-intro">}}) introduction, the representation as directed graph allows the factorization of the joint distribution 
 
 $$p(\mathbf x_1, \mathbf x_2, \dots, \mathbf x_M | \mathbf \theta) = \prod_{j=1}^M p(\mathbf x_j | Pa(\mathbf x_j))$$
 
@@ -57,7 +57,7 @@ and let the DNN implement the mapping
 $$ \mathbf \eta = f_{DNN}(\mathbf z)$$
 $$p(\mathbf x, \mathbf \theta) = p(\mathbf x | \mathbf \eta, \mathbf \theta)$$
 
-However we are facing the following situation: _Even with DNNs aka when we let the DNN "design" the right feature coordinates in the latent space [^2], we are still facing an intractable computationally model in trying to estimate the marginal distribution $p(\mathbf x | \mathbf \theta)$_.  
+However we are facing the following situation: _Even with DNNs when we use DNN to automatically "design" the right feature coordinates in the latent space [^2], we are still facing an intractable computationally model in trying to estimate the marginal distribution $p(\mathbf x | \mathbf \theta)$_.  
 
 [^2]: Note that the features that the DNN captures are not interpretable as the intuitively understood features that humans consider. For the MNIST dataset for example, humans will consider the slant of each digit, thinner strokes etc.
 
@@ -89,7 +89,7 @@ $$q(\mathbf z| \mathbf x ; \mathbf \phi) = N(\mathbf z; \bm \mu, \textsf{diag} \
 
 The $DNN_{enc}$ implements amortized variational inference, that is, it estimates the posterior parameters over a batch of datapoints and this offers significant boost in the parameter learning. 
 
-Following the treatment in our [background probability chapter]({{<ref "../../ml-math/info-theory" >}}), we have met the concept of relative entropy or KL divergence that measures the "distance" between two distributions referenced on one of them. 
+During the treatment of [entropy]({{<ref "../entropy" >}}), we have met the concept of relative entropy or KL divergence that measures the "distance" between two distributions referenced on one of them. 
 
 $$KL(q||p)= \mathbb{E}[\log q(\mathbf x) - \ln p(\mathbf x)] = - \sum_{\mathbf x} q(\mathbf x) \log \frac{p(\mathbf x)}{q(\mathbf x)}$$
 
