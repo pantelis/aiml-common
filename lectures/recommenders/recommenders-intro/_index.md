@@ -1,5 +1,5 @@
 ---
-index: Recommender System Introduction
+index: Recommenders Introduction
 ---
 
 # Recommender System Introduction
@@ -53,7 +53,7 @@ This algorithm has many advantages over the user-based collaborative filtering.
 * The algorithm scales to hundreds of millions of users and tens of millions of items without sampling or other techniques that can reduce the quality of the recommendations.
 * The algorithm updates immediately on new information about a person’s interests. Finally, the recommendations can be explained in an intuitive way as arising from a list of items the customer remembers purchasing.
 
-#### Measuring similarity with the Pearson correlation coefficient [[cite](https://en.wikipedia.org/w/index.php?title=Pearson_correlation_coefficient&oldid=968081798)]
+#### Measuring similarity with the [Pearson correlation coefficient](https://en.wikipedia.org/w/index.php?title=Pearson_correlation_coefficient&oldid=968081798)
 
 The sample Pearson's correlation coefficient $r_{xy}$ for $n$ paired data $(x_i,y_i)$ consisting of $n$ pairs, $r_{xy}$ is defined as:
 
