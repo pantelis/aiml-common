@@ -33,7 +33,7 @@ title: Study Guide for Deep Learning ML
 |   NLP  |  1. What are the stages of an NLP pipeline / what each stage is responsible for. | 
 | | 2. You may be given a small corpus and asked how word representations are constructed. |
 | | 3. Understand the advantages of RNN over DNNs. |
-|  |  Recommender Systems  |  1. Understand SVD as a general method for dimensionality reduction.   |
+|  Recommender Systems  |  1. Understand SVD as a general method for dimensionality reduction.   |
 |   | Understand what are the differences between PCA and SVD with it comes to dimensionality reduction. |
 
 
