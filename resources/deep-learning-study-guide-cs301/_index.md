@@ -1,8 +1,8 @@
 ---
-title: Study Guide for Deep Learning ML
+title: Study Guide
 ---
 
-# Study Guide for Deep Learning
+# Study Guide 
 
 **General guidelines**
 
