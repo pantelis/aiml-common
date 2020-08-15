@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-15T19:26:42.912Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="sRfXsdlJrtfhOT7bnlCk" version="13.6.2" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2020-08-15T19:26:59.014Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="kYDfnizEbpTLc2YuJInL" version="13.6.2" type="github" pages="11">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1033" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -744,19 +744,19 @@
       <root>
         <mxCell id="rf5ODVBPq4XwQQXXjjs7-0" />
         <mxCell id="rf5ODVBPq4XwQQXXjjs7-1" parent="rf5ODVBPq4XwQQXXjjs7-0" />
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="ZX4G_oAsIuQUq_lqn_FB-1" target="ZX4G_oAsIuQUq_lqn_FB-6">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="qjYLJ9gzuZlU0wXqVZ5q-1" target="qjYLJ9gzuZlU0wXqVZ5q-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-1" value="Calculate Average Offered Occupancy&lt;br&gt;&lt;br&gt;\(\bar \alpha \)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-1" value="Calculate Average Offered Occupancy&lt;br&gt;&lt;br&gt;\(\bar \alpha \)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
           <mxGeometry x="560" y="280" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="ZX4G_oAsIuQUq_lqn_FB-5" target="ZX4G_oAsIuQUq_lqn_FB-6">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="qjYLJ9gzuZlU0wXqVZ5q-5" target="qjYLJ9gzuZlU0wXqVZ5q-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="ZX4G_oAsIuQUq_lqn_FB-5" target="ZX4G_oAsIuQUq_lqn_FB-7">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="qjYLJ9gzuZlU0wXqVZ5q-5" target="qjYLJ9gzuZlU0wXqVZ5q-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" target="ZX4G_oAsIuQUq_lqn_FB-8">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" target="qjYLJ9gzuZlU0wXqVZ5q-8">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="420" y="220" as="sourcePoint" />
             <Array as="points">
@@ -765,16 +765,16 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-5" value="Calculate Offered Occupancy per Student&lt;br&gt;\(\alpha \)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-5" value="Calculate Offered Occupancy per Student&lt;br&gt;\(o\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
           <mxGeometry x="360" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-6" value="Calculate Fairness Metric&lt;br&gt;$$\phi = \frac{o}{\bar \alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-6" value="Calculate Fairness Metric&lt;br&gt;$$\phi = \frac{o}{\bar \alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
           <mxGeometry x="360" y="280" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-7" value="Calculate No-Show Metric&lt;br&gt;$$\nu = \frac{n}{\alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-7" value="Calculate No-Show Metric&lt;br&gt;$$\nu = \frac{n}{o}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
           <mxGeometry x="200" y="280" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="ZX4G_oAsIuQUq_lqn_FB-8" value="Calculate Cancellation Metric&lt;br&gt;$$\kappa = \frac{k}{\alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+        <mxCell id="qjYLJ9gzuZlU0wXqVZ5q-8" value="Calculate Cancellation Metric&lt;br&gt;$$\kappa = \frac{k}{o}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
           <mxGeometry x="40" y="280" width="120" height="90" as="geometry" />
         </mxCell>
       </root>
