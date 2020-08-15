@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-15T10:01:03.762Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="Gj09NFquUmEkesxgOT-m" version="13.6.2" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2020-08-15T13:02:22.790Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="1ZYavK_m5_Udl9h4YaVz" version="13.6.2" type="github" pages="7">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1251" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -83,7 +83,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uDixLBJ5sf7AJKXVnIRn" name="flow">
-    <mxGraphModel dx="1251" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1033" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="O6MYa030lRG6c-xs35VH-0" />
         <mxCell id="O6MYa030lRG6c-xs35VH-1" parent="O6MYa030lRG6c-xs35VH-0" />
@@ -214,7 +214,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fTwF6scq5quUJbGASzu6" name="constraints">
-    <mxGraphModel dx="1251" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1033" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="bBXJQ6xIGlWF0ZMnjHXn-0" />
         <mxCell id="bBXJQ6xIGlWF0ZMnjHXn-1" parent="bBXJQ6xIGlWF0ZMnjHXn-0" />
@@ -248,6 +248,99 @@
         </mxCell>
         <mxCell id="fEST4_GUfuOnKdDzPDQq-3" value="Scheduling&lt;br&gt;Algorithm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="bBXJQ6xIGlWF0ZMnjHXn-1">
           <mxGeometry x="400" y="120" width="120" height="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="TzXMQWx_cxW-cmr4PHUs" name="Page-7">
+    <mxGraphModel dx="1033" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+      <root>
+        <mxCell id="NhEwePKI68XPqRHUYixD-0" />
+        <mxCell id="NhEwePKI68XPqRHUYixD-1" parent="NhEwePKI68XPqRHUYixD-0" />
+        <mxCell id="NhEwePKI68XPqRHUYixD-36" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="190" y="500" width="410" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-6" target="NhEwePKI68XPqRHUYixD-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-6" target="NhEwePKI68XPqRHUYixD-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-6" target="NhEwePKI68XPqRHUYixD-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-6" value="START" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="375" y="20" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-8" target="NhEwePKI68XPqRHUYixD-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-8" value="Initialize User &lt;br&gt;Table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="200" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-11" target="NhEwePKI68XPqRHUYixD-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-11" value="Initialize Resource Table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="480" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-14" target="NhEwePKI68XPqRHUYixD-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-14" value="Join User and Resource Tables" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="340" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-19" target="NhEwePKI68XPqRHUYixD-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-19" value="Parallelize&amp;nbsp;&lt;br&gt;Scheduling Problem&lt;br&gt;(optional)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="340" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-21" target="NhEwePKI68XPqRHUYixD-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-21" value="Assign to resource \(r\) the top \(C\) users out of \(K\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="325" y="740" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-22" value="Initialize Policy Parameters" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="340" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-24" target="NhEwePKI68XPqRHUYixD-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-24" value="At \(t=0\) assign an initial score \(s_0\) to all \(K\) users if the user table does not provide it" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="325" y="410" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-25" target="NhEwePKI68XPqRHUYixD-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-25" value="Calculate the utility \(U_{t,k}\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="325" y="520" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-29" target="NhEwePKI68XPqRHUYixD-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-29" value="Rank the partitioned user table in ascending order according to utility \(U_{t,k}\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="325" y="630" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="NhEwePKI68XPqRHUYixD-1" source="NhEwePKI68XPqRHUYixD-32" target="NhEwePKI68XPqRHUYixD-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="895" />
+              <mxPoint x="240" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-35" value="Obtain the latest&lt;br&gt;scores of K users" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NhEwePKI68XPqRHUYixD-34">
+          <mxGeometry x="0.0367" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-32" value="Apply the deprioritization function &lt;br&gt;$$s_{t+1}=f_p(s_t)$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="325" y="860" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NhEwePKI68XPqRHUYixD-39" value="Repeat until the end of the horizon T" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="NhEwePKI68XPqRHUYixD-1">
+          <mxGeometry x="200" y="930" width="130" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
