@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-15T17:06:15.746Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="lA-jsGvyDgjhYN18TT9y" version="13.6.2" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2020-08-15T18:23:28.332Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="dk-955PnlQxktdt5GAsy" version="13.6.2" type="github" pages="10">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1033" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -609,7 +609,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="oJCDKvgg74jDGeVBgx6X" name="main-alg-patent">
-    <mxGraphModel dx="1033" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+    <mxGraphModel dx="1251" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
       <root>
         <mxCell id="20rGsO5V3G8m_sOsWsM3-0" />
         <mxCell id="20rGsO5V3G8m_sOsWsM3-1" parent="20rGsO5V3G8m_sOsWsM3-0" />
@@ -727,6 +727,35 @@
         </mxCell>
         <mxCell id="72BXkegsswPrxzCG36Xz-35" value="214" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.callout;linkText=;textSize=17;textColor=#666666;callDir=NE;callStyle=line;fontSize=17;fontColor=#666666;align=right;verticalAlign=top;strokeColor=#666666;" parent="20rGsO5V3G8m_sOsWsM3-1" vertex="1">
           <mxGeometry x="475" y="800" width="200" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="s68ZHa3nCUTxWpboljR3" name="Page-10">
+    <mxGraphModel dx="1251" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+      <root>
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-0" />
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-1" parent="rf5ODVBPq4XwQQXXjjs7-0" />
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="rf5ODVBPq4XwQQXXjjs7-3" target="rf5ODVBPq4XwQQXXjjs7-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-3" value="Calculate Average Occupancy&lt;br&gt;\(\bar \alpha \)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+          <mxGeometry x="560" y="295" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="rf5ODVBPq4XwQQXXjjs7-4" target="rf5ODVBPq4XwQQXXjjs7-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="rf5ODVBPq4XwQQXXjjs7-4" target="rf5ODVBPq4XwQQXXjjs7-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-4" value="Calculate Occupancy per Student&lt;br&gt;\(\alpha \)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+          <mxGeometry x="360" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-5" value="Calculate Fairness Metric&lt;br&gt;$$\phi = \frac{\alpha}{\bar \alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+          <mxGeometry x="360" y="280" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-8" value="Calculate Missed Metric&lt;br&gt;$$\mu = \frac{m}{\alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+          <mxGeometry x="200" y="280" width="120" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
