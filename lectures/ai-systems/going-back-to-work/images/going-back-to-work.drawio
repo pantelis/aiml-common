@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-15T19:02:22.281Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="3e5mOwaJ_QH-eWjupP4N" version="13.6.2" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2020-08-15T19:06:01.698Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="118DLI-PdtqT5M1RlF3f" version="13.6.2" type="github" pages="11">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1033" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -405,6 +405,9 @@
         <mxCell id="Ef5rtAms_GWakdCEV3gy-2" value="Presence&amp;nbsp;&lt;br&gt;Verification&lt;br&gt;Function" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="bBXJQ6xIGlWF0ZMnjHXn-1">
           <mxGeometry x="685" y="180" width="110" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="YOvtfvTHpheNgZ3fokFw-0" value="Booking &lt;br&gt;Function" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="bBXJQ6xIGlWF0ZMnjHXn-1">
+          <mxGeometry x="685" y="320" width="110" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -510,6 +513,12 @@
         </mxCell>
         <mxCell id="AVYQ8YgASc5CtdClENTU-9" value="110" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.callout;linkText=;textSize=17;textColor=#666666;callDir=NE;callStyle=line;fontSize=17;fontColor=#666666;align=right;verticalAlign=top;strokeColor=#666666;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
           <mxGeometry x="700" y="100" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5QxJny5IfTigkYtK_1Aq-0" value="Booking &lt;br&gt;Function" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
+          <mxGeometry x="685" y="320" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5QxJny5IfTigkYtK_1Aq-2" value="115" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.callout;linkText=;textSize=17;textColor=#666666;callDir=NE;callStyle=line;fontSize=17;fontColor=#666666;align=right;verticalAlign=top;strokeColor=#666666;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
+          <mxGeometry x="770" y="240" width="110" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
