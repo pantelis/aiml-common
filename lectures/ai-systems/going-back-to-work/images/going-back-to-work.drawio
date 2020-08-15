@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-15T18:30:37.071Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="CN5UKzg41iUAMtEv4yVn" version="13.6.2" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2020-08-15T18:31:09.257Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="JOjBZqanzaYhGo-qbDhx" version="13.6.2" type="github" pages="10">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1033" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -739,8 +739,8 @@
         <mxCell id="rf5ODVBPq4XwQQXXjjs7-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="rf5ODVBPq4XwQQXXjjs7-3" target="rf5ODVBPq4XwQQXXjjs7-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rf5ODVBPq4XwQQXXjjs7-3" value="Calculate Average Occupancy&lt;br&gt;\(\bar \alpha \)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
-          <mxGeometry x="560" y="295" width="120" height="60" as="geometry" />
+        <mxCell id="rf5ODVBPq4XwQQXXjjs7-3" value="Calculate Average Occupancy&lt;br&gt;&lt;br&gt;\(\bar \alpha \)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rf5ODVBPq4XwQQXXjjs7-1">
+          <mxGeometry x="560" y="280" width="120" height="90" as="geometry" />
         </mxCell>
         <mxCell id="rf5ODVBPq4XwQQXXjjs7-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rf5ODVBPq4XwQQXXjjs7-1" source="rf5ODVBPq4XwQQXXjjs7-4" target="rf5ODVBPq4XwQQXXjjs7-5">
           <mxGeometry relative="1" as="geometry" />
