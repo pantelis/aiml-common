@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-15T13:23:25.107Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="OmY-SSmoL_Qqsn1sOPP9" version="13.6.2" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2020-08-15T14:19:16.052Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="WV6pxpsvulOJ0SxEI7PI" version="13.6.2" type="github" pages="9">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1251" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -290,7 +290,7 @@
             <mxPoint x="5" y="-4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="23Bl_Q69HBVPup4M_r0B-7" value="Scheduling&lt;br&gt;Algorithm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
+        <mxCell id="23Bl_Q69HBVPup4M_r0B-7" value="Controller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
           <mxGeometry x="400" y="120" width="120" height="320" as="geometry" />
         </mxCell>
         <mxCell id="23Bl_Q69HBVPup4M_r0B-8" value="100" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.callout;linkText=;textSize=17;textColor=#666666;callDir=NW;callStyle=line;fontSize=17;fontColor=#666666;align=left;verticalAlign=top;strokeColor=#666666;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
@@ -304,6 +304,12 @@
         </mxCell>
         <mxCell id="23Bl_Q69HBVPup4M_r0B-11" value="103" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.callout;linkText=;textSize=17;textColor=#666666;callDir=NE;callStyle=line;fontSize=17;fontColor=#666666;align=right;verticalAlign=top;strokeColor=#666666;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
           <mxGeometry x="520" y="240" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pIKPtrpvNNGyG9sFSJ9t-0" value="Scheduling Function" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
+          <mxGeometry x="405" y="320" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pIKPtrpvNNGyG9sFSJ9t-1" value="104" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.callout;linkText=;textSize=17;textColor=#666666;callDir=NE;callStyle=line;fontSize=17;fontColor=#666666;align=right;verticalAlign=top;strokeColor=#666666;" vertex="1" parent="HzReiiJI8yFML3IlunLQ-1">
+          <mxGeometry x="515" y="340" width="200" height="10" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
