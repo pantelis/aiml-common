@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-15T14:22:16.001Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="w6TCbTm_Bx24L0WK6sD3" version="13.6.2" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2020-08-15T16:06:25.554Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="OqhduNAEXcv4G52gu-mw" version="13.6.2" type="github" pages="9">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1251" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -248,6 +248,18 @@
         </mxCell>
         <mxCell id="fEST4_GUfuOnKdDzPDQq-3" value="Scheduling&lt;br&gt;Algorithm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="bBXJQ6xIGlWF0ZMnjHXn-1">
           <mxGeometry x="400" y="120" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="gmpsWvnRdM0jYUYvAgK4-0" value="Controller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="bBXJQ6xIGlWF0ZMnjHXn-1">
+          <mxGeometry x="400" y="120" width="120" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="gmpsWvnRdM0jYUYvAgK4-1" value="Scheduling Function" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="bBXJQ6xIGlWF0ZMnjHXn-1">
+          <mxGeometry x="405" y="320" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gmpsWvnRdM0jYUYvAgK4-2" value="Utility &lt;br&gt;Function" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="bBXJQ6xIGlWF0ZMnjHXn-1">
+          <mxGeometry x="405" y="380" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gmpsWvnRdM0jYUYvAgK4-3" value="Prioritization&lt;br&gt;Function" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="bBXJQ6xIGlWF0ZMnjHXn-1">
+          <mxGeometry x="405" y="170" width="110" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
