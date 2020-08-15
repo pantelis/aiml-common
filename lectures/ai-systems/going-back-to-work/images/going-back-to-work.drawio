@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-08-15T19:19:38.316Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="IobWeJE1oP5KQA9CPcrQ" version="13.6.2" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2020-08-15T19:23:31.816Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="F_XqHnV9ANHcUyQBCzlL" version="13.6.2" type="github" pages="11">
   <diagram id="6UR49E0zUCKmJUAcSpAE" name="architecture">
     <mxGraphModel dx="1033" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -797,7 +797,7 @@
         <mxCell id="Xi26-QLsU5c5As1nIJEO-4" value="Calculate Offered Occupancy per Student&lt;br&gt;\(\alpha \)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UBEtA1ZTtIDgjpQC32qm-1">
           <mxGeometry x="360" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Xi26-QLsU5c5As1nIJEO-5" value="Calculate Fairness Metric&lt;br&gt;$$\phi = \frac{\alpha}{\bar \alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UBEtA1ZTtIDgjpQC32qm-1">
+        <mxCell id="Xi26-QLsU5c5As1nIJEO-5" value="Calculate Fairness Metric&lt;br&gt;$$\phi = \frac{o}{\bar \alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UBEtA1ZTtIDgjpQC32qm-1">
           <mxGeometry x="360" y="280" width="120" height="90" as="geometry" />
         </mxCell>
         <mxCell id="Xi26-QLsU5c5As1nIJEO-6" value="Calculate No-Show Metric&lt;br&gt;$$\nu = \frac{n}{\alpha}$$" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UBEtA1ZTtIDgjpQC32qm-1">
