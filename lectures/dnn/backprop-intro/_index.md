@@ -17,7 +17,7 @@ Our goal is to compute the components of the gradient of the function  $\nabla f
 
 $$f(x, y) = \frac{x + \sigma(y)}{\sigma(x) + (x+y)^2}$$
 
-The computational graph of this function is shown below.  Its instructive to print this graph and pencil in all calculations for both this example and others in the backpropagation section. You may need to review derivative tables from Calculus e.g. http://cs231n.stanford.edu/handouts/derivatives.pdf 
+The computational graph of this function is shown below.  Its instructive to print this graph and pencil in all calculations for both this example and others in the backpropagation section. You may need to review derivative tables such as [these](https://en.wikibooks.org/wiki/Calculus/Tables_of_Derivatives). Graduate-level classes will use in later lectures [Jacobians](http://cs231n.stanford.edu/handouts/derivatives.pdf) for tensors.
 
 One derivative that we will be using that is not often listed is the derivative of the sigmoid function. The sigmoid derivative can be obtained as follows:
 

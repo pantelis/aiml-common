@@ -22,7 +22,7 @@ Lets assume that you are a data scientist working on a dating site and you are a
 
 $$\mathtt{data} = \\{ (\mathbf{x}_1, y_1), \dots, (\mathbf{x}_m, y_m) \\}$$
 
-| Weight    | Smart    | Polite    | Fit    | Attractive    |
+| Weight    | Smart    | Polite    | Fit    | _Attractive_    |
 | --- | --- | --- | --- | --- |
 |  180   | no    |  no   | no    | no   |
 |  150  |  yes   |  yes   | no    | no    |

@@ -39,7 +39,11 @@ In a hypothetical example of a joint distribution with $K=7$ random variables,
 
 <img src="images/Figure8.2.png" width="250" align="center">
 
-_PGM governing the joint distribution $p(x_1, x_2, ..., x_7)=p(x_1)p(x_2)p(x_3)p(x_4|x_1, x_2, x_3)p(x_5|x_1, x_3) p(x_6|x_4)p(x_7|x_4, x_5)$_
+*PGM governing a 7 variable joint distribution* 
+
+The joint distribution according to the figure above can be factorized as:
+
+$$p(x_1, x_2, ..., x_7)=p(x_1)p(x_2)p(x_3)p(x_4|x_1, x_2, x_3)p(x_5|x_1, x_3) p(x_6|x_4)p(x_7|x_4, x_5)$$
 
 In general, 
 
