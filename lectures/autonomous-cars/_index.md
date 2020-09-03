@@ -1,17 +1,22 @@
 ---
 title: Autonomous Cars
-weight: 98
-draft: true
 ---
 
 # Autonomous Cars
 
-In this section we treat planning approaches that dominate in real-world motion planning. We focus on autonomous mobile agents (self driving cars) as an example subdomain that we are all familiar with. There are [two main schools of thought in motion planning](https://arxiv.org/pdf/2003.06404.pdf) irrespectively of the Markovian assumptions regarding the transition or measurement models. 
+In this section we treat examples that combine deep learning based perceptive tasks and real-world motion planning. If you as an aspiring data scientist wonder which application theme to specialize on, look no further than  **mission critical** industries - they are the drivers of the economy of every country.  The **robotics / self-driving cars** domain requires the design of advanced agents that perceive the environment using noisy sensors, make decisions under uncertainty, actuate a host of electronics to execute decisions, all while communicate with humans in natural language or sense driver psychological / physiological state. A real world manifestation of the above architecture is shown below. 
+
+![carla-system](images/carla-system.png#center)
+_Example of an agent (Udacity's CARLA serf-driving car) in the late 2010s_
+
+![carla-car](images/carla-car.png#center)
+
+There are [two main schools of thought](https://arxiv.org/pdf/2003.06404.pdf) in this subdomain. 
 
 |  Approach  |  Description   |     
 | --- | --- | 
-|  Modular Pipeline  |  We have seen the modular architecture in [the PGM chapter]({{<relref "../pgm/pgm-intro">}}) where sensors, perception, planning and control subsystems work together to achieve the task at hand. |
-|  End-to-End Pipeline |  In end-to-end approach the entire pipeline of transforming sensory inputs to driving commands is treated as a single learning task. We have seen this example in [the introductory chapter]({{<relref "../ai-intro/course-introduction">}}) where Imitation Learning (IL) was used to determine from only pixel input the steering and acceleration controls of a vehicle. Apart from IL, Reinforcement Learning (RL) can also be used in a simulator setting to transfer the learned optimal policy in the real-world. |
+|  Modular Pipeline  |  In the modular architecture in here sensors, perception, planning and control subsystems that work together to achieve the task at hand. |
+|  End-to-End Pipeline |  In end-to-end approach the entire pipeline of transforming sensory inputs to driving commands is treated as a single learning task. This is what we also call Imitation Learning (IL) and is used to determine from only pixel input the steering and acceleration controls of a vehicle. Apart from IL, Reinforcement Learning (RL) can also be used in a simulator setting to transfer the learned optimal policy in the real-world. |
 
 ![planning-approaches](images/planning-approaches.png#center)
 *Modular vs End-to-End pipeline for real-world motion planning*
@@ -40,3 +45,5 @@ Having said that, modular architectures are working fine as long as the represen
 *There are potentially tens of scenarios each with a different decision making process (reasoning) involving kids playing with balls*
 
 Take for example, the case where the perception system detects children playing on the side of the road and a ball suddenly rolling onto the road - a decision to slam the brakes would have been prudent in a residential street but very risky in a higher speed road where e.g. changing the lane would be more prudent to avoid a rear end collision. The context of decision making is complex and the end to end pipeline approach if there are enough data (supervised or reinforcing) can _generalize_ to cover cases that were not designed in. As there is a single task, the degrees of freedom of the end to end pipeline are spent in _learning_ the right attentional representations and the right decisions at the expense of interpretability.
+
+### 

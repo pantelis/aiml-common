@@ -1,9 +1,9 @@
 ---
-title: The Perceptron
+title: The Neuron (Perceptron)
 weight: 7
 ---
 
-# The Perceptron
+# The Neuron (Perceptron)
 
 ![Frank-Rosenblatt](images/frankrosenblatt.png#center)
 *Frank Rosenblatt*
@@ -16,7 +16,11 @@ The perceptron algorithm invented 60 years ago by Frank Rosenblatt in Cornell Ae
 
 ![real-neuron](images/real-neuron.png#center)
 
+![perceptron-architecture-2](images/perceptron-architecture-2.png#center)
+*Model of a single neuron. Note that in this course we use the conventions of the GCB book for notations of number of features $n$ (dimensions) and number of examples $m$. This figure has them flipped.*
+
 ![perceptron-architecture](images/perceptron-architecture.png#center)
+*Model of a single neuron (compressed). Notation alignment: $I \rightarrow n$*
 
 A single neuron has a number $n$ of  inputs $x_i$ (note the figure is not compatible with this notation) and one output which we will here call $\hat{y}$. Associated with each input is a weight $w_i$ ($i = 1 ,\ldots, n$). The additional parameter $w_0$ of the neuron called a bias which we may view as being the weight associated with an input $x_0$ that is permanently set to 1. The single neuron is a *feedforward* device -- the connections 
 are directed from the inputs to the output of the neuron.  Feedforward neural networks are called Multi-Layer Perceptrons (MLPs). 

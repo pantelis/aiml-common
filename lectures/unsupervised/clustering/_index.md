@@ -7,7 +7,7 @@ weight: 10
 
 Up to now in this lecture series we have seen parametric models using in regression and classification. The complexity of such models was not very high despite the heany sometimes math. Most models we have seen took the form $\mathbf w^T \phi(\mathbf x)$. Now we switch to a very frequently met case where we dont have any labels $y$. Most of the treatment here is from Bishop section 9.1 - the equivalent section in Tan's book is section 7.2. 
 
-Suppose we have a data set $D=\\{ \mathbf x_1,...,\mathbf x_m\\}$ consisting of $m$ observations of a random n-dimensional Euclidean variable $\mathbf x$. Our goal is to partition the data set into some number $K$ of clusters, where we shall suppose for the moment that the value of $K$ is given.  Intuitively, we might think of a cluster as comprising a group of data points whose inter-point distances are small compared with the distances to points outside of the cluster.  This is shown in the figure below.
+Suppose we have a data set $D=\{ \mathbf x_1,...,\mathbf x_m\}$ consisting of $m$ observations of a random n-dimensional Euclidean variable $\mathbf x$. Our goal is to partition the data set into some number $K$ of clusters, where we shall suppose for the moment that the value of $K$ is given.  Intuitively, we might think of a cluster as comprising a group of data points whose inter-point distances are small compared with the distances to points outside of the cluster.  This is shown in the figure below.
 
 ![k-means-algorithm-example](images/Figure9.1a.png)
 

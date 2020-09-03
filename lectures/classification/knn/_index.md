@@ -40,7 +40,7 @@ In a sightly more formal setting, and to be able to address far more complex dec
 *k=1*
 
 ![knn-dataset](images/Figure2.27a.png#center)
-*Closest data points for k=3*
+*Closest data points for k=3$
 
 The algorithm effectively positions a *sphere* on the data point we want to classify whose radius is large as the it needs to be to enclose $k$ closest points irrespectively of their class. Obviously for the dimensions of the examples above, the sphere is a circle. As expected, we see that $k$ affects the degree of smoothing, so that small $k$ produces many small regions of each class, whereas large $k$ leads to fewer larger regions. In essence the algorithm for $k>1$, considers a majority vote between the $k$ closest points to the point we need to classify with ties broken at random.  
 
