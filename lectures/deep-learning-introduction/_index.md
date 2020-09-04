@@ -61,3 +61,6 @@ We observe that shallow models in this context overﬁt at around 20 million par
 ![object-detection-accuracy-over-time](images/object-detection-accuracy-over-time.png#center)
 *Rapid improvements in performance over the last few years for the VOC and the popular Microsoft COCO datasets*
 
+## Playground 
+
+For a live demo of the performance of shallow neural networks see the separable datasets in [Tensorflow Playground](https://playground.tensorflow.org)

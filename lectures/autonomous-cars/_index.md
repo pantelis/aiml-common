@@ -1,8 +1,8 @@
 ---
-title: Autonomous Cars
+title: Autonomous Agents
 ---
 
-# Autonomous Cars
+# Autonomous Agents
 
 In this section we treat examples that combine deep learning based perceptive tasks and real-world motion planning. If you as an aspiring data scientist wonder which application theme to specialize on, look no further than  **mission critical** industries - they are the drivers of the economy of every country.  The **robotics / self-driving cars** domain requires the design of advanced agents that perceive the environment using noisy sensors, make decisions under uncertainty, actuate a host of electronics to execute decisions, all while communicate with humans in natural language or sense driver psychological / physiological state. A real world manifestation of the above architecture is shown below. 
 
@@ -45,5 +45,3 @@ Having said that, modular architectures are working fine as long as the represen
 *There are potentially tens of scenarios each with a different decision making process (reasoning) involving kids playing with balls*
 
 Take for example, the case where the perception system detects children playing on the side of the road and a ball suddenly rolling onto the road - a decision to slam the brakes would have been prudent in a residential street but very risky in a higher speed road where e.g. changing the lane would be more prudent to avoid a rear end collision. The context of decision making is complex and the end to end pipeline approach if there are enough data (supervised or reinforcing) can _generalize_ to cover cases that were not designed in. As there is a single task, the degrees of freedom of the end to end pipeline are spent in _learning_ the right attentional representations and the right decisions at the expense of interpretability.
-
-### 
