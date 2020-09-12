@@ -19,6 +19,7 @@ You can use Kaggle as an alternative to Colab for all your projects. You guessed
 I heavily borrowed from Geron's book "Hands-on ML with Scikit Learn and TF" for the following.  Please note that the [AWS Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/ubuntu18-04.html) may not require installation or they may require update to the required version of TF/Pytorch.  
 
 #### Setup Anaconda Python
+
 When using Anaconda, you need to create an isolated Python environment dedicated to this course. This is recommended as it makes it possible to have a different environment for each project, with potentially different libraries and library versions:
 
     $ conda create -n p37 python=3.7 anaconda
