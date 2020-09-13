@@ -2,7 +2,7 @@
 title: Forward Search Algorithms
 ---
 
-# Forward Search
+# Forward Search Algorithms
 
 Given an initial node (initial state) $s_I$ and the destination (goal state) $s_G$ that is reached after potentially a finite number of actions (if a solution exist), we develop here a forward search algorithm whose pseudo-code is from [Steven LaValle's book - Chapter 2](http://planning.cs.uiuc.edu/)
 
@@ -70,7 +70,7 @@ In BFS the lifting of the starting state $s$, partitions the graph into layers: 
 ![breadth-first-2](images/breadth-first-2.png#center)
 *Queue contents during BFS and the BFS search tree assuming alphabetical order. Can you explain the BFS search tree? Is the BFS search tree a shortest-path tree?* 
  
-#### Dijkstra's Algorithm
+### Dijkstra's Algorithm
 
 Breadth-first search finds shortest paths in any graph whose edges have unit length. Can we adapt it to a more general graph G = (V, E) whose edge lengths $l(e)$ are positive integers? These lengths effectively represent the cost of traversing the edge. fHere is a simple trick for converting G into something BFS can handle: break G’s long edges into unit-length pieces, by introducing “dummy” nodes as shown next.
 

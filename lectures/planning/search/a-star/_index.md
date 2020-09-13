@@ -1,8 +1,8 @@
 ---
-title: A* Algorithm
+title: The A* Algorithm
 ---
 
-# A* Algorithm
+# The A* Algorithm
 
 Dijkstra's algorithm is very much related to the _Uniform Cost Search_ algorithm and in fact logically they are equivalent as the algorithm explores uniformly all nodes that have the same PastCost. In the Astar algorithm, we start using the fact that we _know_ the end state and therefore attempt to find methods that bias the exploration towards it. 
 
