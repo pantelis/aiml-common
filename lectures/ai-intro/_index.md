@@ -7,6 +7,7 @@ weight: 20
 
 The flow of topics that we cover:
 
+
 {{< mermaid align="center" theme="dark" >}}
 graph TB;
     A(Course Introduction) --> B(Systems Approach to AI) 
