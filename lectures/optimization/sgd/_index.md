@@ -16,7 +16,7 @@ $$\bm w^* = \argmax_w L(\bm w)$$
 As the simplest possible example the following figure show the simplest possible objective function and what an optimization algorithm is doing. 
 
 ![derivative](images/derivative.png#center)
-*Gradient descent. An illustration of how the gradient descent algorithm uses the derivatives of a function to follow the function downhill to a minimum. The derivative is the slope of the tangent line at (x,f(x)), while the difference quotient is the slope of the not-quite-tangent line that runs through (x+h,f(x+h)). As h gets smaller and smaller, the not-quite-tangent line gets closer and closer to the tangent line.*
+*Gradient descent. An illustration of how the gradient descent algorithm uses the derivatives of a function to follow the function downhill to a minimum*
 
 The global minimum of such nicely convex function can be obtained by solving the following equation for $w$: 
 
@@ -65,7 +65,7 @@ which necessitates going over the whole dataset at each iteration. This would be
 
 The main advantage of Mini-batch GD over Stochastic GD is that you can get a performance boost from hardware optimization of matrix operations, especially when using GPUs.
 
-## Digging further (graduate-level students only)
+## Digging further
 
 For an overview of optimization theory please go through Ian Goodfellow's chapter 4 below. Stochastic gradient descent is treated also in section 5.9.
 

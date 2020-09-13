@@ -6,7 +6,9 @@ draft: false
 
 # Introduction to Scene Understanding
 
-In the previous chapters we have treated the perception subsystem mainly from starting the first principles that govern supervised learning to algorithms that enable classical as well as deep learning machines. Now we are synthesizing these algorithms to pipelines that can potentially enable the holly grail of perception - our understanding of the scene. As discussed in the [introduction to computer vision]({{<ref "../../cnn/cnn-intro">}}), humans has a unique to interpret scenes based on their ability to infer (reason) what they _dont_ see. This is the reason why the scene understanding involves far more than just perception. In this chapter we will cover algorithms that allow us to detect objects in an image. Object detection is demonstrated in this short video clip:
+In the previous chapters we have treated the perception subsystem mainly from starting the first principles that govern supervised learning to algorithms that enable classical as well as deep learning machines. Now we are synthesizing these algorithms to pipelines that can potentially enable the holly grail of perception - our understanding of the scene. As discussed in the [introduction to computer vision]({{<ref "../../cnn/cnn-intro">}}), humans has a unique to interpret scenes based on their ability to infer (reason) what they _dont_ see. This is the reason why the scene understanding involves far more than just perception. In this chapter we will cover algorithms that allow us to:
+
+1. Detect objects in an image. Object detection is demonstrated in this short video clip that shows the end result of the algorithm. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WZmSMkK9VuA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -21,7 +23,7 @@ $$y = p_{data}(x)$$
 
 We try to come up with a function approximation to the true function $p_{data}$ that maps the image $x$ to the location of the bounding box $y$. We can uniquely represent the bounding box by the (x,y) coordinates of its upper left corner and its width and height $[x,y,w,h]$. Being a regression problem, as $y$ is a floating point vector, we can use well known loss functions e.g. CE $≡$ MSE where the error is the Euclidean distance between the coordinates of the true bounding box and the estimated bounding box. However, the regression approach does not work well in practice and has been superceded by the algorithms described later in this chapter. 
 
-1. Assign semantic labels to each pixel in this image. 
+2. Assign semantic labels to each pixel in this image. 
 
 ![semantic-segmentation](images/semantic-segmentation.png#center)
 *Sementic Segmentation in medical, robotic and sports analytics applications*
@@ -53,11 +55,7 @@ Common perception tasks that the dataset can be used for, include:
 * **Panoptic Segmentation Task**: Scene segmentation, unifying semantic and instance segmentation tasks. Task is across thing and stuff classes. 
 * **Image Captioning Task**: Describing with natural language text the image. This task ended in 2015. Image captioning is very important though and [other datasets](https://www.aclweb.org/anthology/P18-1238.pdf) exists to supplement the curated COCO captions. 
   
-Even in a world with so much data, the curated available datasets that can be used to train models are by no means enough to solve scene understanding problems in any domain. 
-
-* First, datasets are geared towards competitions that supposedly can advance the science but in many instances leaderboards become "academic exercises" where 0.1% mean accuracy improvement can win the competition but definitely does not contribute to the progress in the field. The double digit improvements can and these discoveries create clusters of implementations and publications around them that fine tune them. One of these discoveries is the [RCNN architecture]({{<ref "../faster-rcnn">}}) section that advanced the accuracy metric by almost 30%. 
-
-* Secondly, the scene understanding problems that ML engineers will face in the field, e.g. in industrial automation or drug discovery, involve _domain specific_ classes of objects. Although we cant directly use curated datasets, engineers can use  _transfer learning_, worthy of a chapter by itself, where a dataset is used to train a model for a given task whose weights can be reused to train a model for fairly similar task.
+Even in a world with so much data, the curated available datasets that can be used to train models are by no means enough to solve AI problems in any domain. First, datasets are geared towards competitions that supposedly can advance the science but in many instances deaderboards become "academic exercises" where 0.1% mean accuracy improvement can win the competition but definitely does not progress AI. The double digit improvements can and these discoveries create clusters of implementations and publications around them that fine tune them. One of these discoveries is the RCNN architecture described in the [object detection]({{<ref "../object-detection">}}) section that advanced the accuracy metric by almost 30%. Secondly, the scene understanding problems that AI engineers will face in the field, e.g. in industrial automation or drug discovery, involve _domain specific_ classes of objects. Although we cant directly use curated datasets, engineers can  _transfer learning_, worthy of a chapter by itself, where a dataset is used to train a model for a given task whose weights can be reused to train a model for fairly similar task.
 
 
 ## Detection/Segmentation Task Evaluation

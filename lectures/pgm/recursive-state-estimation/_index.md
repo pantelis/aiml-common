@@ -18,7 +18,7 @@ Such expansion, will allow us to form using the Bayes rule, perhaps one of the m
 
 ## Bayes Filter
 
-We are introducing this algorithm, by considering a embodied agent (a robot) that moves in an environment characterized by being _partially observed_. 
+We are introducing this algorithm, by considering a embodied agent (a robot) that moves in an environment characterized by the [so called Environment Type 4 in the taxonomy presented in the agent chapter]({{<ref "../../ai-intro/agents">}}). 
 
 ![belief](images/belief.png#center)
 *Agent belief and environment interactions*

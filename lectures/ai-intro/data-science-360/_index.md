@@ -6,9 +6,9 @@ draft: false
 
 # Data Science 360
 
-_What are the disciplines that need to cross fertilize to get a system that possesses intelligence?_
+_What are the disciplines that we need to cross fertilize to get a system that possesses intelligence?_
 
-Lets start with a diagram that show not only the disciplines but also a way of working for the many specialists involved.
+Lets start with a diagram that show not only the disciplines but also _a way of working_ for the many specialists involved.
 
 ![axes-ml-development](images/axes-ml-development.svg)
 
@@ -20,11 +20,4 @@ Engineers look at the neuroscience/psychology axis,  map discoveries to points i
 
 This counter-clockwise circular multidisciplinary iteration acts as a positive feedback loop accelerating the progress in the AI space.
 
-In this course we will be focusing on the *methods/models* and *frameworks* axis and understand what these models can offer us and how we can apply them in synthesizing an system that can possess intelligence at least for a domain of interest. Data Mining and ML is a substantial subset of AI today and is useful to be able to distinguish the two fields. 
-
-![ml-ai-categorization](images/ml-ai-categorization.png#center)
-
-Almost all machine learning algorithms depend heavily on the **representation** of the data they are given.  Each piece of, relevant to the problem, information that is included in the representation is known as a **feature**. Today's ML approaches such as deep learning actually **learn** the most suitable representations for the task at hand (still with a some help from experts) - an example is shown in the picture below. 
-
-![Hierarchical Features](images/hierarchical-features-classification.png#center)
-*Hierarchical Feature Learning*
+In this course we will be focusing on the *methods/models* and *frameworks* axis and understand what these models can offer us and how we can apply them in synthesizing an system that can possess intelligence at least for a domain of interest. 

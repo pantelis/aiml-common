@@ -5,24 +5,6 @@ weight: 30
 
 # The Learning Problem
 
-## Chapter Flow
-
-The flow of topics that we cover:
-
-{{< mermaid align="left" theme="dark" >}}
-graph TB;
-    A(Basic Probability Concepts) --> C(Supervised Learning)
-    C --> D(Other forms of learning)
-    click A "../ml-math/probability"
-{{< /mermaid >}}
-
-After reading this chapter you should feel familiar with the following ideas and concepts:
-
-1. What are the statistical distributions behind supervised learning. 
-2. What is the hypothesis and hypothesis set. 
-3. What is a supervised learning algorithm tries to do.
-4. What are the other forms of learning from data.  
-
 ## The Supervised (Inductive) Learning Problem Statement
 
 Let us start with a classic formal definition of the supervised learning problem.
@@ -45,7 +27,6 @@ $$\mathtt{data} = \\{ (\mathbf{x}_1, y_1), \dots, (\mathbf{x}_m, y_m) \\}$$
  
  The ability to optimally *predict*, according to a criterion, when observing data that we have _never seen before_, the _test set_, is called **generalization**.  Note that in the literature supervised learning is also called _inductive_ learning. Induction is reasoning from observed training cases to general rules (e.g. the final hypothesis function), which are then applied to the test cases. 
  
- 
  In summary, to learn we need three components:
 
  1. Data that may be stored or streaming in.
@@ -54,18 +35,11 @@ $$\mathtt{data} = \\{ (\mathbf{x}_1, y_1), \dots, (\mathbf{x}_m, y_m) \\}$$
 
 A couple of examples of supervised learning are shown below:
 
-![usps](images/usps.png)
+![usps](images/usps.png#center)
 *Examples from the MNIST training dataset used for classification*
 
-![home-prices-area](images/home-prices-area.png)
-*Birdseye view of home prices - Zillow predicts prices for similar homes in the same market. This is a regression problem.*
-
-## Unsupervised Learning 
-
-In unsupervised learning, we present a training set $\{ \mathbf{x}_1, \dots, \mathbf{x}_m \}$  without labels. The most common unsupervised learning method is clustering. We construct a partition of the data into a number of $K$ **clusters**, such that a suitably chosen loss function is minimized for a *different* set of input data (test).
-
-![unsupervised](images/unsupervised.png)
-*Clustering showing two classes and the exemplars per class*
+![home-prices-area](images/home-prices-area.png#center)
+*Zillow predicts prices for similar homes in the same market. This is a regression problem.*
 
 ## Semi-supervised Learning 
 
@@ -75,8 +49,13 @@ Semi-supervised learning stands between the supervised and unsupervised methods.
 
 In many practical settings we simply cannot afford to label /annotate all $\mathbf x$ for very large $m$, and we need to select the ones that greedily result into the biggest performance metric gain (e.g. accuracy).  Deciding what examples $x$ to label for learning the final hypothesis function is called  [Active learning](https://towardsdatascience.com/active-learning-tutorial-57c3398e34d).  Active learning is useful if the complexity of the underlying target function is localized – labels of some data points are more informative than others.
 
+## Unsupervised Learning 
+
+In unsupervised learning, we present a training set $\{ \mathbf{x}_1, \dots, \mathbf{x}_m \}$  without labels. The most common unsupervised learning method is clustering. We construct a partition of the data into a number of $K$ **clusters**, such that a suitably chosen loss function is minimized for a *different* set of input data (test).
+
+![unsupervised](images/unsupervised.png)
+*Clustering showing two classes and the exemplars per class*
+
 ## Reinforcement Learning
 
 In reinforcement learning, a teacher is not providing a label (as in supervised learning) but rather a reward that judges whether the agent's action results on favorable environment states. In reinforcement learning we can learn end-to-end mappings from perceptions to actions. 
-
-

@@ -49,7 +49,7 @@ So what is the more formal description of the word2vec algorithm? We will focus 
 
 The algorithm starts with all word embeddings in our corpus being random vectors. 
 
-It then iteratively goes through each position $t$ in each sentence and for the center word at that location $w_t$ we predict the outside words $w_{t+j}$ where $j$ is over a window of size $C = |\\{ j: -m \le j \le m \\}|-1$ around $w_t$. In other words we need to calculate the probability $p(w_{t+j}|w_t)$ and in each iteration we adjust the word vectors to maximize this probability. 
+It then iteratively goes through each position $t$ in each sentence and for the center word at that location$w_t$ we predict the outside words $w_{t+j}$ where $j$ is over a window of size $C = |\\{ j: -m \le j \le m \\}|-1$ around $w_t$. In other words we need to calculate the probability $p(w_{t+j}|w_t)$ and in each iteration we adjust the word vectors to maximize this probability. 
 
 So for example, the meaning of `banking` is predicting the context (the words around it) in which `banking` occurs across our corpus.  The term _prediction_ remind us the discussion we had in the [linear regression]({{<ref "../../regression">}}) section and the maximum likelihood principle. Therefore the objective is to minimize the negative log likelihood that is,
 
@@ -84,4 +84,4 @@ For a more hands on treatment on word2vec see the blog posts by Chris McCormick 
 
 [^2]: You don't come across papers with 10K citations very often. 
 
-As quoted by Noah Smith [cite](https://arxiv.org/abs/1902.06006), the notable disadvantage of reduced-dimensionality vectors is that the individual dimensions are no longer interpretable features that can be mapped back to intuitive building blocks contributing to the word’s meaning.   The word’s meaning is distributed across the whole vector;  for this reason,  these vectors are sometimes called _distributed representations_.
+

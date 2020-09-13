@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="768px" height="452px" viewBox="-0.5 -0.5 768 452" content="&lt;mxfile host=&quot;embed.diagrams.net&quot; modified=&quot;2020-08-30T16:43:20.361Z&quot; agent=&quot;5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36&quot; etag=&quot;iDbp9H32o7ZthKdGml-0&quot; version=&quot;13.6.5&quot; pages=&quot;3&quot;&gt;&lt;diagram id=&quot;te-XHUhBgwkecHyh0O5V&quot; name=&quot;ai-approaches&quot;&gt;7Zhdb9owFIZ/DZed8k24BNq1u5jUAdK0Syc+Saw5NnIcPvbr5xCnxJiuQyNiUnuDnNfJcfw+J/YxI39e7h4FWhdfOQY68hy8G/n3I88bB7H6bYR9K4TjqBVyQXAruUdhSX6BFh2t1gRDZdwoOaeSrE0x5YxBKg0NCcG35m0Zp+aoa5SDJSxTRG31O8GyaNU4dI76E5C86EZ2Hd1Tou5mLVQFwnzbk/yHkT8XnMu2Ve7mQBvvOl+S++RxvsLL7NtDNPlRltPJgt61wT5f8sjLFAQwed3QXht6g2it/dJzlfvOQGB42nBQVylFVUXSkT8rZEmV4KrmX76cngRgA5d+1UfgJUixVzdsj5A6RkWPT6cJoEiSjQkZ6VzJX8K9jPDMiXo9z9l1mCefXD1XndhB7JhRKl6LFPSDfWPfjnUaSiKRg7RCqUZv7kfpQO4Civ4HxX+mOJ68HWtgjIGFcVULwnKlraCSNlNK1SqqLmbbgkhYrlHa9GzVOm7CzQilc065ODznZ1nmpQ3/Sgr+E3o9OEqiMLo4HTYgJOz+mBBd79hy2e+SoZczrncmaU5p9PPDQHGp76Hl+1NdIqakZxAZF6qtjD11X81YmjabdjLO4MR7LSFKctZ8iMpcUPqs8Y+oLWuqO0qCMX2Nq+A1w9DMxxkQlGd/WqFjgwrOcPKG4hRZnL5gQPRdc4rsD+rmnMYWpxkUaEO4uMNCrfbsnTEK7DUvvjGi2N5qCl4343rOAlDF2WHfiWiDJRGqlTetD3zm9nQrfBML35znjBxKKc/RZ7grVQsYQZydrRaiNIYkG7RacAzfJ7euFLpDbc/45Z5SnpOqvF55FqdwvjxL4jAIB91N3P/NcNcyfKFODJw12/7p6jTNgV2vSsYhxDg4hyH2Ej8asko+xTBkiawuj39htCeZ4/9A/sNv&lt;/diagram&gt;&lt;diagram id=&quot;-eUFYHI1WHWqF55BRZ-L&quot; name=&quot;ai-system&quot;&gt;7VjbcpswEP0aP9YDCGz86EvSWzrjxp1c+tKRQQFNBaJCtqFf35URd8dtkrrNg/MQa4+WXbTnLEIM0DzK3gqchJ+4T9jAMvxsgBYDyxrbLvxXQF4AznhUAIGgfgGZNbCiP4kGDY1uqE/SlqPknEmatEGPxzHxZAvDQvBd2+2Bs3bWBAekB6w8zProLfVlWKCuY9T4O0KDsMxsGnomwqWzBtIQ+3zXgNDFAM0F57IYRdmcMFW7si7MmcbvbYeJafI1uA7f3PwIl2+KYJdPuaRagiCx/LuhrSL0FrONrpdeq8zLAsKyEzWMskAJZBh4yZBkUuB0uIarvoUkwwGPB2gWyoiBownDB8rYnDMu9jGQjdzx5QJwCOFTWEVzbuSiiynMpVLw76SciXkMWWdbIiQFNq/wmrAlT6mkKtdizaXkUcNhymigJiRPAMXa8iAXgXCzPyyhLrUKSrKGgHRJ3xIeESlycNGzlTrySj+FvavFhkpJhQ2hWaUCsRZ4UMWuSYSB5vEJnKIepwtCEkCuCBYxjYOBNWJwF7O1gFGgRqvNOs1TSaIe+1AG2ab2IE1NvjXUo6DLVER9X6WZ7UIqySrBnsq5A5EBJvgm9olapnFC9sxRmz1gpceefYi8U3Fn97hbCr7Ga8poCsVTJPJA/Z4Z1EzYbQbdfvv9UwJHvyXwmuCUn9uwRaLTJhGN/zOL4wOPUI+maus5k6Zn7ddGmtsj7ZYLeFu0jP1L7bnjGuQ56JVtfJMeeSt4W/HCPmXwiyNVqXidJnv7Ei5UT1mmaDRWnG3PXDcbdfzftsiba+rfLxD66H+5vbpbff7wQOsFHDlzkNifqrNfXWgfp+G+UmabKKiVyO90BffGvTKGjlnNLrLm9CJvWksiKKxKUVeAPhwe9X1wIUMOJxvMLmp05m3EtroRklG5Tz60xtpU6c2hYZR2nV0ZecPo5m5rDk5Gl/A3mVQz5fF18mStpHwjPHLETzMgsQjIsXjaT1XpqPIa0nIOSKvEBGFY0m37pH5IbzrDklNY7qNv76h7pCrWra9qHo07gaqPFTqQbXYCFYXpBQKN4rzhliiH9PEbRp1OtJDb6aYiYt1bVU2f32794+AL2u1xjdaNCL2A2s04qT2e0oyPtNrYbfaaMTTs5/Za2VHOuaO0QA2rJVCzuwn8aUd1lW6jE3XUpPP5ZWQcvS/b7HZgy/80Hdg/1J+kA1+6S7wSDVrdV1P7mRq07e724Pybp7r7Ik2BWX9TLtzrD/Po4hc=&lt;/diagram&gt;&lt;diagram id=&quot;HvRXn1DFC31V9MFwUFsH&quot; name=&quot;non-nlp-agent-architecture&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 78.12 407 L 78.12 13.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 78.12 8.12 L 81.62 15.12 L 78.12 13.37 L 74.62 15.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 78.12 407 L 751.75 407" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 757 407 L 750 410.5 L 751.75 407 L 750 403.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <ellipse cx="198.12" cy="317" rx="60" ry="40" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 317px; margin-left: 139px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Turing Test
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="198" y="321" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Turing Test
+                </text>
+            </switch>
+        </g>
+        <rect x="178.12" y="427" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 437px; margin-left: 179px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Human Performance
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="198" y="441" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Human...
+                </text>
+            </switch>
+        </g>
+        <rect x="638.12" y="427" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 437px; margin-left: 639px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Ideal Performance
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="658" y="441" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Ideal...
+                </text>
+            </switch>
+        </g>
+        <rect x="8.12" y="307" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 317px; margin-left: 9px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Behavior-driven
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="28" y="321" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Behavi...
+                </text>
+            </switch>
+        </g>
+        <rect x="8.12" y="47" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 57px; margin-left: 9px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Thought Reasoning
+                                <br/>
+                                driven
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="28" y="61" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Though...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="189" cy="57" rx="60" ry="40" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 57px; margin-left: 130px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Cognitive Model
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="189" y="61" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Cognitive Model
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="629" cy="57" rx="60" ry="40" fill="#f8cecc" stroke="#b85450" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 57px; margin-left: 570px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Syllogism
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="629" y="61" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Syllogism
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="629" cy="317" rx="60" ry="40" fill="#d5e8d4" stroke="#82b366" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 317px; margin-left: 570px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Rational
+                                <br/>
+                                Agent
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="629" y="321" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Rational...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

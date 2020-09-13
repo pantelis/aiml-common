@@ -14,25 +14,25 @@ This course will be using Jupyter notebooks and we will be using the **free** CP
 
 You can use Kaggle as an alternative to Colab for all your projects. You guessed it right - all the projects in this course are in fact Kaggle competitions.  You can login with your gmail account. You can install by following the directions [here](https://github.com/Kaggle/kaggle-api) the Kaggle command line interface (CLI).  Not only you will get to compete (your ranking relative to others does not matter per se), but as you improve your knowledge over time you can revisit these competitions and see how your score improves.  There is one catch though - Colab offers more GPU time and it comes with a 2nd tier of service for a few dollars per month. This can be handy for the heavier projects.  
 
+### On your own machine or  AWS EC2 (Option 3)
 
-### On your own (Option 3)
-
-I heavily borrowed from Geron's book for the following. 
+I heavily borrowed from Geron's book "Hands-on ML with Scikit Learn and TF" for the following.  Please note that the [AWS Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/ubuntu18-04.html) may not require installation or they may require update to the required version of TF/Pytorch.  
 
 #### Setup Anaconda Python
+
 When using Anaconda, you need to create an isolated Python environment dedicated to this course. This is recommended as it makes it possible to have a different environment for each project, with potentially different libraries and library versions:
 
-    $ conda create -n p36 python=3.6 anaconda
-    $ conda activate py36
+    $ conda create -n p37 python=3.7 anaconda
+    $ conda activate py37
 
-This creates a fresh Python 3.6 environment called `py36` (you can change the name if you want to), and it activates it. This environment contains all the scientific libraries that come with Anaconda. This includes all the libraries we will need (NumPy, Matplotlib, Pandas, Jupyter and a few others), except for TensorFlow, so let's install it:
+This creates a fresh Python 3.7 environment called `py37` (you can change the name if you want to), and it activates it. This environment contains all the scientific libraries that come with Anaconda. This includes all the libraries we will need (NumPy, Matplotlib, Pandas, Jupyter and a few others), except for TensorFlow, so let's install it:
 
-    $ conda install -n py36 -c conda-forge tensorflow
-    $ conda install -n py36 -c conda-forge tensorflow-gpu (if you have a computer with an NVIDIA GPU which is a must have).
+    $ conda install -n py37 -c conda-forge tensorflow
+    $ conda install -n py37 -c conda-forge tensorflow-gpu (if you have a computer with an NVIDIA GPU which is a must have).
 
-This installs the latest version of TensorFlow available for Anaconda (which is usually *not* the latest TensorFlow version) in the `py36` environment (fetching it from the `conda-forge` repository). Next, you can optionally install Jupyter extensions. These are useful to have nice tables of contents in the notebooks, but they are not required.
+This installs the latest version of TensorFlow available for Anaconda (which is usually *not* the latest TensorFlow version) in the `py37` environment (fetching it from the `conda-forge` repository). Next, you can optionally install Jupyter extensions. These are useful to have nice tables of contents in the notebooks, but they are not required.
 
-    $ conda install -n py36 -c conda-forge jupyter_contrib_nbextensions
+    $ conda install -n py37 -c conda-forge jupyter_contrib_nbextensions
 
 If you want to use the Jupyter extensions (optional, they are mainly useful to have nice tables of contents), you first need to install them:
 

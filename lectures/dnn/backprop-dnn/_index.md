@@ -59,9 +59,7 @@ Tensorflow can create a computational graph from the DNN model specification (py
 
 <!-- ## Performance of DNNs
 
-### Impact of depth on Performance
 
-![accuracy-vs-depth](images/accuracy-vs-depth.png)
 
 ### Regularization
 

@@ -33,7 +33,7 @@ $H(p) = - [p \ln p + (1-p) \ln(1-p)]$
 
 As you can see the maximum entropy is when the outcome is most unpredictable i.e. when a 1 can show up with uniform probability (in this case equal probability to a 0). Entropy has widespread implications as it measures our uncertainty in terms of the length of the message/code that we need to communicate the outcome across. Taking to the limit if we were certain about an event (deterministic outcome) we would need 0 bits or require to send any message at all. 
 
-## Relative entropy or KL divergence (Graduate-level only)
+## Relative entropy or KL divergence
 
 In the [learning problem statement]({{<relref "../learning-problem">}}), it is evident that the job of the learning algorithm is to come up with a final hypothesis that is close to the *unknown* target function. We therefore need to have a metric that compares two probability distributions $\{P(x),Q(x)\}$ in terms of their "distance" from each other (the quotes will be explained shortly). This is given by the quantity known as *relative entropy* or *KL divergence*. 
 

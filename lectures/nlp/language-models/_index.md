@@ -152,7 +152,7 @@ while True:
   ```
   {{</details>}}
 
-More concretely, to train an language model we need a big corpus of text which is a sequence of words $\mathbf x_1, ..., \mathbf x_{T}$ where T is the number of words / tokens in the corpus. Every time step we feed one word at a time to the RNN and compute the output probability distribution $\mathbf \hat y_t$, which by construction is a _conditional_ probability distribution of every word in the dictionary given the words we have seen so far. The loss function at time step $t$ is the classic cross entropy loss between the predicted probability distribution and the distribution that corresponds to the one-hot encoded true next word. 
+More concretely, to train an language model we need a big corpus of text which is a sequence of words $\mathbf x_1, ..., \mathbf x_{T}$ where T is the number of words / tokens in the corpus. Every time step we feed one word at a time to the RNN and and compute the output probability distribution $\mathbf \hat y_t$, which by construction is a _conditional_ probability distribution of every word in the dictionary given the words we have seen so far. The loss function at time step $t$ is the classic cross entropy loss between the predicted probability distribution and the distribution that corresponds to the one-hot encoded true next word. 
 
 $$J_t(\theta) = CE(\hat  \mathbf y_t, \mathbf y_t) = - \sum_{w \in T} \mathbf y_t^{(w)} \log \hat \mathbf y_t^{(w)} = \log \hat \mathbf y_t^{(w)}$$ 
 

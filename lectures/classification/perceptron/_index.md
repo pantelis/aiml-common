@@ -1,9 +1,9 @@
 ---
-title: The Perceptron
+title: The Neuron (Perceptron)
 weight: 7
 ---
 
-# The Perceptron
+# The Neuron (Perceptron)
 
 ![Frank-Rosenblatt](images/frankrosenblatt.png#center)
 *Frank Rosenblatt*
@@ -16,7 +16,11 @@ The perceptron algorithm invented 60 years ago by Frank Rosenblatt in Cornell Ae
 
 ![real-neuron](images/real-neuron.png#center)
 
+![perceptron-architecture-2](images/perceptron-architecture-2.png#center)
+*Model of a single neuron. Note that in this course we use the conventions of the GCB book for notations of number of features $n$ (dimensions) and number of examples $m$. This figure has them flipped.*
+
 ![perceptron-architecture](images/perceptron-architecture.png#center)
+*Model of a single neuron (compressed). Notation alignment: $I \rightarrow n$*
 
 A single neuron has a number $n$ of  inputs $x_i$ (note the figure is not compatible with this notation) and one output which we will here call $\hat{y}$. Associated with each input is a weight $w_i$ ($i = 1 ,\ldots, n$). The additional parameter $w_0$ of the neuron called a bias which we may view as being the weight associated with an input $x_0$ that is permanently set to 1. The single neuron is a *feedforward* device -- the connections 
 are directed from the inputs to the output of the neuron.  Feedforward neural networks are called Multi-Layer Perceptrons (MLPs). 
@@ -69,6 +73,3 @@ The updated weights are immediately applied to a pair in the training set, and s
 The perceptron is a linear classifier, therefore it will never get to the state with all the input vectors classified correctly if the training set D is not linearly separable, i.e. if the positive examples cannot be separated from the negative examples by a hyperplane. In this case, no "approximate" solution will be gradually approached under the standard learning algorithm, but instead learning will fail completely. Even in the case of linearly separable datasets, the algorithm may exhibit significant variance while it is executing as previously correctly classified examples may "fall" into the wrong decision region by an update that considers a currently misclassified example. 
 
 Further, the perceptron solution will depend on the initial choices of the parameters as well as the order of the training dataset presented. [Support Vector Machines]({{<ref "../svm">}}) avoid such pitfalls which can motivate the question why we insisted on learning the perceptron algorithm: **both architecturally and the functionally the linear combination of features followed by a non-linearity is the fundamental building block of far more complicated neural networks.** 
-
-### Perceptron performance
-For a live demo of perceptron performance see the single neuron example for separable datasets in [Tensorflow Playground](https://playground.tensorflow.org)

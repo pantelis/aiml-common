@@ -83,3 +83,5 @@ integrating two independent estimates should make the robot more certain than ea
 estimate in isolation. After moving down the hallway, the robot’s uncertainty in its
 position increases again, since the tracker continues to incorporate motion uncertainty
 into the robot’s belief. 
+
+During the lecture we will go through a white board single dimensional problem solved via a specific parametrization of the Bayes filter with Gaussians - this filter has a famous name: Kalman filter. 
