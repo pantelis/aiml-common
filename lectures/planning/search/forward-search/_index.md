@@ -4,7 +4,7 @@ title: Forward Search Algorithms
 
 # Forward Search Algorithms
 
-Given an initial node (initial state) $s_I$ and the destination (goal state) $s_G$ that is reached after potentially a finite number of actions (if a solution exist), we develop here a forward search algorithm whose pseudo-code is from [Steven LaValle's book - Chapter 2](http://planning.cs.uiuc.edu/)
+Given an initial state $s_I$ (that can be represented in a graph by an initial node) and the goal state $s_G$ (represented by a destination node) that is reached after potentially a finite number of actions (if a solution exist), we develop here a forward search algorithm whose pseudo-code is from [Steven LaValle's book - Chapter 2](http://planning.cs.uiuc.edu/)
 
 <pre id="forward-search" style="display:hidden;">
     \begin{algorithm}
