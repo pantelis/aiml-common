@@ -15,7 +15,7 @@ Let us start with a classic formal definition of the supervised learning problem
 
 The description below is taken from Vadimir Vapnik's classic book [Statistical Learing Theory](https://www.amazon.com/Statistical-Learning-Theory-Vladimir-Vapnik/dp/0471030031), albeit with some enhancements on terminology to make it more in line with our needs. 
 
-The generator is a source of situations that determines the environment in which the target function (he calls it supervisor) and the learning algorithm act.  Here we consider the simplest environment: the data generator generates the vectors $\mathbf{x} \in \mathcal{X}$ independently and identically distributed (i.i.d.) according to some unknown (but fixed) probability distribution function $p(\mathbf{x})$.
+The generator is a source of situations that determines the environment in which the target function (he calls it supervisor) and the learning algorithm act.  Here we consider the simplest environment: the data generator generates the vectors $\mathbf{x} \in \mathcal{X}$ independently and identically distributed (i.i.d.) according to some unknown (but fixed) probability distribution function $p_{data}(\mathbf{x})$.
 
 The vector $\mathbf x$ are inputs to the target function (or operator); the target function returns the output values $y \in \mathcal{Y}$. The target function which transforms the vectors $\mathbf{x}$ into values $y$,  is **unknown** but we know that it exists and does not change. The target function effectively returns the output $y$ on the vector $\mathbf x$ according to  a conditional distribution function $p(y | \mathbf x)$.  
 
@@ -29,33 +29,8 @@ $$\mathtt{data} = \\{ (\mathbf{x}_1, y_1), \dots, (\mathbf{x}_m, y_m) \\}$$
  
  In summary, to learn we need three components:
 
- 1. Data that may be stored or streaming in.
- 2. Algorithms
- 3. Objective function (Cost)
+ 1. Data that may be stored (batch) or streamed (online).
+ 2. Learning algorithm that optimizes an objective function 
+ 3. Hypothesis set
 
-A couple of examples of supervised learning are shown below:
 
-![usps](images/usps.png#center)
-*Examples from the MNIST training dataset used for classification*
-
-![home-prices-area](images/home-prices-area.png#center)
-*Zillow predicts prices for similar homes in the same market. This is a regression problem.*
-
-## Semi-supervised Learning 
-
-Semi-supervised learning stands between the supervised and unsupervised methods. In semi-supervised learning we combine a small amount of labeled data with a large amount of unlabeled data during training. Semi-supervised learning can be achieved with either inductive or _transductive learning_. Transduction was introduced by Vladimir Vapnik in the 1990s, motivated by his view that transduction is preferable to induction since, according to him, induction requires solving a more general problem (inferring a function) before solving a more specific problem (computing outputs for new cases). 
-
-## Active Learning
-
-In many practical settings we simply cannot afford to label /annotate all $\mathbf x$ for very large $m$, and we need to select the ones that greedily result into the biggest performance metric gain (e.g. accuracy).  Deciding what examples $x$ to label for learning the final hypothesis function is called  [Active learning](https://towardsdatascience.com/active-learning-tutorial-57c3398e34d).  Active learning is useful if the complexity of the underlying target function is localized – labels of some data points are more informative than others.
-
-## Unsupervised Learning 
-
-In unsupervised learning, we present a training set $\{ \mathbf{x}_1, \dots, \mathbf{x}_m \}$  without labels. The most common unsupervised learning method is clustering. We construct a partition of the data into a number of $K$ **clusters**, such that a suitably chosen loss function is minimized for a *different* set of input data (test).
-
-![unsupervised](images/unsupervised.png)
-*Clustering showing two classes and the exemplars per class*
-
-## Reinforcement Learning
-
-In reinforcement learning, a teacher is not providing a label (as in supervised learning) but rather a reward that judges whether the agent's action results on favorable environment states. In reinforcement learning we can learn end-to-end mappings from perceptions to actions. 

@@ -1,12 +1,10 @@
 ---
-title: Entropy-based Optimization 
+title: Entropy
 ---
 
-# Entropy-based Optimization 
+# Entropy
 
 In this section we take a closer look into the _algorithm_ block of the [learning problem]({{<relref "../learning-problem">}}). This block implements the underlying optimization problem that produces the weights in regression and classification settings. Any optimization problem requires an objective function and as it turns out in the supervised setting (and not only) there is a whole theory, called _information theory_ pioneered by Claude Shannon at Bell Labs, that guides us in our search to find the best $p_{model}$ but also in a myriad other things. The important elements of this theory are reviewed here. 
-
-## Entropy
 
 ![holland-tunnel](images/holland-tunnel.jpg#center)
 *Value of information: `Low Manhattan-bound traffic flow in Holland tunnel on Monday morning`*
@@ -35,9 +33,9 @@ As you can see the maximum entropy is when the outcome is most unpredictable i.e
 
 ## Relative entropy or KL divergence
 
-In the [learning problem statement]({{<relref "../learning-problem">}}), it is evident that the job of the learning algorithm is to come up with a final hypothesis that is close to the *unknown* target function. We therefore need to have a metric that compares two probability distributions $\{P(x),Q(x)\}$ in terms of their "distance" from each other (the quotes will be explained shortly). This is given by the quantity known as *relative entropy* or *KL divergence*. 
+In many settings we need to have a metric that compares two probability distributions $\{P(x),Q(x)\}$ in terms of their "distance" from each other (the quotes will be explained shortly). This is given by the quantity known as *relative entropy* or *KL divergence*. 
 
-$KL(P||Q)= \mathbb{E}[\ln P(x) - \ln Q(x)]$
+$$KL(P||Q)= \mathbb{E}[\ln P(x) - \ln Q(x)]$$
 
 If the two distributions are identical, $KL=0$ - in general however $KL(P||Q) \ge 0$. One key element to understand is that $KL$ is not a true distance metric as its asymmetric. 
 

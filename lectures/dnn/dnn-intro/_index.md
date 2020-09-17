@@ -45,6 +45,7 @@ There are several possible but we limit the discussion just three here.
     The RELU is very inexpensive to compute compared to sigmoid and it offers the following benefit that has to do with sparsity: Imagine an MLP  with random initialized weights to zero mean ( or normalised ). Almost 50\% of the network yields 0 activation because of the characteristic of RELU. This means a fewer neurons are firing (sparse activation) making the the network lighter and more efficient.  On the other hand for negative $a$, the gradient can go towards 0 and the weights will not get adjusted during descent. 
 
 ## Softmax Output units
+
 The softmax output unit is a generalization of the sigmoid for problems with more than two classes. 
 
 $$\text{softmax}(\mathbf z)_i = \arg \max_i \frac{\exp (z_i)}{\sum_i \exp(z_i)}$$
@@ -52,3 +53,19 @@ $$\text{softmax}(\mathbf z)_i = \arg \max_i \frac{\exp (z_i)}{\sum_i \exp(z_i)}$
 where $i$ is over the number of inputs of the softmax function.
 
 From a neuroscientiﬁc point of view, it is interesting to think of the softmax as a way to create a form of competition between the units that participate in it: the softmax outputs always sum to 1 so an increase in the value of one unit necessarily corresponds to a decrease in the value of others. This is analogous to the lateral inhibition that is believed to exist between nearby neurons in the cortex. At the extreme (when the diﬀerence between the maximal and the others is large in magnitude) it becomes a form of winner-take-all(one of the outputs is nearly 1, and the others are nearly 0).
+
+
+## Cross Entropy (CE) loss and Softmax saturation
+
+The CE or the negative log-likelihood that originate from the application of the maximum likelihood principle offer in practice certain advantages during the learning of deep neural networks. Given that the gradient must be large enough to act as a guiding beam during SGD,  we need to avoid situations that the output units result in flat responses (saturate). Since softmax involves exponentials, it saturates when for example the differences between inputs become extreme, the CE or negative log likelihood helps as the log undoes the exponential terms.
+
+To see that 
+
+{{<tabs "softmax">}}
+    {{<tab "TF">}}  
+    [Softmax](https://www.tensorflow.org/api_docs/python/tf/nn/softmax) 
+    [ReLU](https://www.tensorflow.org/api_docs/python/tf/nn/relu)
+    {{</tab>}}
+{{<tab "PyTorch">}} {{/tab}}
+{{</tabs>}}
+

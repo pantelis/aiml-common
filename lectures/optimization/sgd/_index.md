@@ -65,6 +65,7 @@ which necessitates going over the whole dataset at each iteration. This would be
 
 The main advantage of Mini-batch GD over Stochastic GD is that you can get a performance boost from hardware optimization of matrix operations, especially when using GPUs.
 
+
 ## Digging further
 
 For an overview of optimization theory please go through Ian Goodfellow's chapter 4 below. Stochastic gradient descent is treated also in section 5.9.
