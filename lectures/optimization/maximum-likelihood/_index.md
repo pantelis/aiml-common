@@ -46,3 +46,4 @@ The attractiveness of the ML solution is that the CE (also known as log-loss) is
 Please follow the whiteboard discussion associated with Section 5.5.1 and consider the following figure for assistance to visualize what is going on.
 
 ![conditional-model-gaussian](images/conditional-model-gaussian.png#center)
+
