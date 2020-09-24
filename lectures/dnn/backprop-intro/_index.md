@@ -47,8 +47,9 @@ Equating the two expressions we finally obtain,
 
 $$\sigma'(x) = \sigma(x)(1-\sigma(x))$$ 
 
-![backpropagation-function-example](images/backpropagation-function-example.png)
-    
+![backpropagation-example-loss](images/backprop-example-loss.drawio.svg#center)
+
+
 ### Forward Pass
 In the forward pass, the algorithm works bottom up (or left to right depending how the computational graph is represented) and calculates the values of all "gates" (gates are the elementary functions that synthesize the function) of the graph and stores their values into variables as they will be used by the backwards pass. There are eight values stored in this specific example. 
 
@@ -113,7 +114,4 @@ The **add gate** always takes the gradient on its output and distributes it equa
 
 The **multiply gate** is a little less easy to interpret. Its local gradients are the input values (except switched), and this is multiplied by the gradient on its output during the chain rule. Notice that if one of the inputs to the multiply gate is very small and the other is very big, then the multiply gate will do something slightly non intuitive: it will assign a relatively huge gradient to the small input and a tiny gradient to the large input. Note that in linear classifiers where the weights are dot producted $w^Tx_i$ (multiplied) with the inputs, this implies that the scale of the data has an effect on the magnitude of the gradient for the weights. For example, if you multiplied all input data examples $x_i$ by 1000 during preprocessing, then the gradient on the weights will be 1000 times larger, and you’d have to lower the learning rate by that factor to compensate. This is why preprocessing matters a lot, sometimes in subtle ways! And having intuitive understanding for how the gradients flow can help you debug some of these cases.
 
-In neural networks we will also meet the max gate (ReLU) and its instructive to outline here its effect on the flow.
-
-The **max gate** routes the gradient. Unlike the add gate which distributed the gradient unchanged to all its inputs, the max gate distributes the gradient (unchanged) to exactly one of its inputs (the input that had the highest value during the forward pass). This is because the local gradient for a max gate is 1.0 for the highest value, and 0.0 for all other values.
 

@@ -1,10 +1,8 @@
 ---
-title: Pipelines of Intelligence
-weight: 3
-draft: false
+title: ML Pipelines 
 ---
 
-# Pipelines of Intelligence
+# ML Pipelines 
 
 As we have seen from the syllabus, this course approaches the subject from an applied perspective - this means teaching concepts but at the same time looking how these concepts are applied in the industry to solve real world problems. In this respect here we take an architecture driven approach, presenting the components in a form of a software stack but also how the components are mechanized in what we call **Pipelines** to provide the required utility to applications. For a complete overview of real world ML pipelines used today we will go through [this paper that describes a production grade pipeline](http://stevenwhang.com/tfx_paper.pdf).
 
