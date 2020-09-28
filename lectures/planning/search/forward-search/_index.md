@@ -70,6 +70,7 @@ In BFS the lifting of the starting state $s$, partitions the graph into layers: 
 ![breadth-first-2](images/breadth-first-2.png#center)
 *Queue contents during BFS and the BFS search tree assuming alphabetical order. Can you explain the BFS search tree? Is the BFS search tree a shortest-path tree?* 
  
+
 ### Dijkstra's Algorithm
 
 Breadth-first search finds shortest paths in any graph whose edges have unit length. Can we adapt it to a more general graph G = (V, E) whose edge lengths $l(e)$ are positive integers? These lengths effectively represent the cost of traversing the edge. fHere is a simple trick for converting G into something BFS can handle: break G’s long edges into unit-length pieces, by introducing “dummy” nodes as shown next.
