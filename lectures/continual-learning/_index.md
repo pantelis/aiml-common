@@ -47,4 +47,21 @@ The aforementioned widely accepted as explanatory functions of the brain learnin
 2. **Dynamic architectures** (b/c) that allocate additional neural resources to capture the new knowledge 
 3. **CLS-based** approaches. 
 
+## Continual Learning Tutorial
 
+The following video is well received as an introductory treatment on the subject. 
+
+[![Continual Learning and Catastrophic Forgetting](https://img.youtube.com/vi/vjaq03IYgSk/0.jpg#center)](https://www.youtube.com/watch?v=vjaq03IYgSk)
+_Continual Learning and Catastrophic Forgetting Tutorial - click to watch on youtube_
+
+<!-- ## Relationship between Continual and Meta Learning
+
+<div id="presentation-embed-38930881"></div>
+<script src='https://slideslive.com/embed_presentation.js'></script>
+<script>
+    embed = new SlidesLiveEmbed('presentation-embed-38930881', {
+        presentationId: '38930881',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script> -->

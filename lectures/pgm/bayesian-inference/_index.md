@@ -24,12 +24,12 @@ $$p(\mathbf{w}|y) = \frac{p(y|\mathbf{w}) p(\mathbf{w})}{\int p(y|\mathbf{w}) p(
    
    *  We get at the end a posterior (predictive) distribution rather than a point estimate. As such it can capture the effects of sparse data producing more uncertainty via its covariance in areas where there are no data as shown in the following example which is exactly the same sinusoidal dataset fit with Bayesian updates and Gaussian basis functions.
 
-![Figure3.8a-bishop](images/Figure3.8a.png)
-![Figure3.8b-bishop](images/Figure3.8b.png)
-![Figure3.8c-bishop](images/Figure3.8c.png)
-![Figure3.8d-bishop](images/Figure3.8d.png)
 
-ML frameworks have been enhanced recently to deal with Bayesian approaches and approximations that make such approaches feasible for both classical and deep learning. TF.Probability and PyTorch Pyro are examples of such enhancements. 
+<img src="images/Figure3.8a.png" width="40%"> <img src="images/Figure3.8a.png" width="40%">
+<img src="images/Figure3.8c.png" width="40%"> <img src="images/Figure3.8d.png" width="40%">
+
+
+ML frameworks have been enhanced recently to deal with Bayesian approaches and approximations that make such approaches feasible for both classical and deep learning. **TF.Probability** and **PyTorch Pyro** are examples of such enhancements. 
 
 
 <!-- ## Bayesian Linear Regression
@@ -69,9 +69,19 @@ with $\alpha = 0.2$. We starts in row 1 with this prior and at this point there 
 *Instructive example of Bayesian learning as data points are streamed into the learner. Notice the dramatic improvement in the posterior the moment the 2nd data point arrives. Why is that?*
 
 
+## Bayesian Regression implementation
+
+Notice in the notebook the two of the three broad benefits of the Bayesian approach:
+
+* Compatibility with online learning - online learning does not mean necessarily that the data arrive over the 'wire' but it means that we can consider few data at a time. 
+* Adjustment of the predictive uncertainty (cov) to the sparsity of the data.
+* Incorporation of external beliefs / opinions that can be naturally expressed probabilistically. 
+
+<iframe src="https://nbviewer.jupyter.org/github/pantelis/PRML/blob/master/notebooks/ch03b_Bayesian_Regression.ipynb" width="900" height="1200"></iframe>
+
 
 ## Bayesian update for discrete problems
 
 <iframe src="https://nbviewer.jupyter.org/github/pantelis/cs634-notebooks/blob/master/Bayesian_update_coin_flip.ipynb" width="900" height="1200"></iframe>
 
-HINT: This example is deeper than coin-flipping.  
+

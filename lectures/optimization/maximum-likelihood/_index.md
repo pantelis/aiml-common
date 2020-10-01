@@ -35,15 +35,23 @@ It is now instructive to go over an example to understand that even the plain-ol
 
 ## Learning conditional models - $\hat p_{model}(\mathbf y | \mathbf x; \mathbf w)$
 
-Cross entropy is in fact a very generic objective (loss) function that is applicable to any learning problem that uses maximum likelihood to estimate a model.  The discussion in the marginal distribution  is equivalently applicable to the conditional distribution $p_{model}(\mathbf y | \mathbf x, \mathbf w)$ which governs supervised learning, $y$ being the symbol of the label / target variable. Therefore all machine learning software frameworks offer excellent APIs on CE calculation.
+Cross entropy is in fact a very generic objective (loss) function that is applicable to any _supervised learning_ problem that uses maximum likelihood to estimate a model.  The discussion in the marginal distribution  is equivalently applicable to the conditional distribution $p_{model}(\mathbf y | \mathbf x, \mathbf w)$ which governs supervised learning, $y$ being the symbol of the label / target variable. Therefore all machine learning software frameworks offer excellent APIs on CE calculation.
 
 $$ L(\mathbf w) = - \mathbb{E_{\mathbf x, \mathbf y \sim \hat p_{data}}}  \log p_{model}(\mathbf y | \mathbf x; \mathbf w)$$
 
 The attractiveness of the ML solution is that the CE (also known as log-loss) is general and we _don't need to re-design it_ when we change the model.   
 
-### Example: 
+### Example and implementation
 
-Please follow the whiteboard discussion associated with Section 5.5.1 and consider the following figure for assistance to visualize what is going on.
+Please follow the whiteboard discussion associated with Section 5.5.1 of the textbook and [these notes](https://www.cs.indiana.edu/~predrag/classes/2016fallb365x/ols.pdf)  and consider the following figure for assistance to visualize the relationship of $p_{data}$ nd $p_{model}$. 
 
 ![conditional-model-gaussian](images/conditional-model-gaussian.png#center)
+_Please replace the y-axis target variable $t$ with $y$. The green dashed line shows the mean of the $p_{model}$ distribution._
+
+The following notebook is instructive of what ML is calculating is going on for the dataset we have seen before. Note that this notebook reveals also the large swings that the $\mathbf w$ takes to fit the model for larger capacities. Please vary $M$ in the code to observe the dynamic range of the weights of the model.
+
+![w-star-various-capacities](images/w-star-various-capacities.png#center)
+_Optimal $\mathbf w$ for various model capacities_
+
+<iframe src="https://nbviewer.jupyter.org/github/pantelis/PRML/blob/master/notebooks/ch03_Linear_Models_for_Regression.ipynb" width="900" height="1200"></iframe>
 

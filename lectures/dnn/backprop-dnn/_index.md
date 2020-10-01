@@ -6,7 +6,7 @@ draft: false
 
 # Backpropagation in Deep Neural Networks
 
-Following the [introductory]({{<ref "../backprop-intro">}}) section, we have seen that backpropagation is a procedure that involves the repetitive application of the chain rule, let us look more specifically its application to neural networks and the gates that we usually meet there. In DNNs we are dealing with vectors, matrices and in general tensors and therefore its required to review first how we can expand on the template above for these data types.
+Following the [introductory]({{<ref "../backprop-intro">}}) section, we have seen that backpropagation is a procedure that involves the repetitive application of the chain rule. Let us now treat its application to neural networks and the gates that we usually meet there. In DNNs we are dealing with vectors, matrices and in general [tensors](https://www.tensorflow.org/guide/tensor) and therefore its required to review first how we can expand on the template above for these data types.
 
 ![backpropagation-dnn](images/backpropagation-dnn.png#center)
 

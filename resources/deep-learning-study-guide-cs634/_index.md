@@ -25,7 +25,7 @@ title: Study Guide for Deep Learning ML
 | Topic    |  What to pay attention to   |
 | --- | --- |
 |  The learning problem  |  1. Understand how this diagram applies to deep learning.  |
-| Backpropagation | 1. Yoiu may be given a simple network and ask to backpropagate it | 
+| Backpropagation | 1. You may be given a simple network and ask to backpropagate it | 
 |  Scene Understanding   |  1. Understand the Bayesian filter and its elements |
 | | 2. Study the computational problem in the RSE section of the notes very well. | 
 | | 3. Be prepared to answer questions around localization / tracking. |
