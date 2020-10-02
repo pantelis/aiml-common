@@ -20,17 +20,19 @@ $$ = \argmax_{\mathbf w} \sum_{i=1}^m \log p_{model}(\mathbf x^{(i)}; \mathbf w)
 $$ = \argmax_{\mathbf w} \frac{1}{m} \sum_{i=1}^m \log p_{model}(\mathbf x^{(i)}; \mathbf w)$$
 $$ = \argmax_{\mathbf w} \mathbb{E}_{\mathbf{x} \sim \hat p_{data}} \log p_{model}(\mathbf x; \mathbf w)$$
 
-From the last expression it is evident that in ML estimation two distributions are involved: $\hat p_{data}$ and $p_{model}$. The ML estimator minimizes the distance between the two empirical distributions therefore the KL divergence since.  
+From the last expression it is evident that in ML estimation two distributions are involved: $\hat p_{data}$ and $p_{model}$. We can also make use of our intuition that a good estimator would minimize the distance between the two empirical distributions therefore the KL divergence:  
 
 $$KL( \hat p_{data} || p_{model} ) = \mathbb{E}_{\mathbf x  \sim \hat p_{data}} \[\log \hat p_{data}(\mathbf x) - \log p_{model}(\mathbf x, \mathbf w) \]$$ 
 
-The term on the left is independent of the model and therefore we only need to minimize the cost function:
+The 1st term is independent of the model and therefore we see that the KL and the ML estimator expressions are _identical_ except from the sign. Therefore we conclude that _minimizing KL divergence, maximizes the likelihood function_. From information theory we know that the KL divergence and  the cross entropy (CE) are related via the expression
 
-$$ L(\mathbf w) = - \mathbb{E_{\mathbf x \sim \hat p_{data}}}  \log p_{model}(\mathbf x, \mathbf w)$$
+$$CE = H(\hat p_{data}, p_{model}) = KL( \hat p_{data} || p_{model} ) + H(\hat p_{data})$$
 
-Based on the last expression **minimizing the KL divergence, is equivalent in minimizing cross-entropy (CE)**. 
+Given that $\hat p_{data}$ is given in supervised learning, $H(\hat p_{data})$ is constant and therefore we can conclude that in this case, CE is equivalent to the KL i.e. **minimizing the KL divergence, is equivalent in minimizing cross-entropy (CE)**. Therefore the expression the only need to minimize which we will call the CE cost function (also known as log loss) is:
 
-It is now instructive to go over an example to understand that even the plain-old mean squared error (MSE), the objective that is common in the regression setting, falls under the same umbrella - its the cross entropy between $\hat p_{data}$ and a Gaussian model. 
+$$ L(\mathbf w) = CE = - \mathbb{E_{\mathbf x \sim \hat p_{data}}}  \log p_{model}(\mathbf x, \mathbf w)$$
+ 
+It is now instructive to go over an example to understand that even the plain-old mean squared error (MSE), the objective that is common in the regression setting, falls under the same umbrella - its the cross entropy between $\hat p_{data}$ and a Gaussian model. See example in section 5.5.1.
 
 
 ## Learning conditional models - $\hat p_{model}(\mathbf y | \mathbf x; \mathbf w)$
