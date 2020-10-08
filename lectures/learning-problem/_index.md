@@ -33,4 +33,3 @@ $$\mathtt{data} = \\{ (\mathbf{x}_1, y_1), \dots, (\mathbf{x}_m, y_m) \\}$$
  2. Learning algorithm that optimizes an objective function 
  3. Hypothesis set
 
-

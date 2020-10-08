@@ -64,11 +64,12 @@ Perhaps the only distribution that is worth knowing and remembering its form is 
 $$f_{\mathbf X}(x_1,\ldots,x_k) = \frac{\exp\left(-\frac 1 2 ({\mathbf x}-{\boldsymbol\mu})^\mathrm{T}{\boldsymbol\Sigma}^{-1}({\mathbf x}-{\boldsymbol\mu})\right)}{\sqrt{(2\pi)^n|\boldsymbol\Sigma|}}$$
 where where <${\mathbf x}$ is a real 'n'-dimensional column vector and $|\boldsymbol\Sigma|\equiv \operatorname{det}\boldsymbol\Sigma$ is the determinant of $\boldsymbol\Sigma$. 
 
-Apart from the definition, we will connect the geometric interpretation of the bivariate Gaussian distribution to the eigendecomposition in the linear algebra lecture as shown below:
+You can [generate](http://hosting.astro.cornell.edu/~cordes/A6523/GeneratingCorrelatedRandomVariables.pdf) correlated Gaussian distributions from white gaussian random variables as shown below.  This can be useful in multiple settings. Foe example you can synthesize training examples where there is correlation between features. You can also explain what happens in successive layers of a neural network when a correlated input is propagated through. 
 
-![bivariate-Gaussian](images/Figure2.7.png)
+![correlated-gaussians](images/correlated-gaussians.png#center)
+_Correlated Gaussians_
 
-Such geometric interpretations will be very useful when we study dimensionality reduction via Principal Component Analysis (PCA).
+
 
 ## Book Chapters
 

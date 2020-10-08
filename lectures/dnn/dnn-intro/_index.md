@@ -37,7 +37,7 @@ where the sigmoid activation function
        
 $$g(a) = \sigma(a) = \frac{1}{1+e^{-a}}  \hspace{0.3in} \sigma(a) \in (0,1)$$
 
-Towards either end of the sigmoid function, the $\sigma(a)$ values tend to respond much less to changes in a **vanishing gradients**. The neuron refuses to learn further or is drastically slow. What saves the situation is the log loss that undoes the exp of the sigmoid. 
+Towards either end of the sigmoid function, the $\sigma(a)$ values tend to respond much less to changes in a **vanishing gradients**. The neuron refuses to learn further or learns drastically slower that it could. What saves the situation is the log loss that undoes the exp of the sigmoid but this is the case for the final layers -this is the reason why normalization is usually used in each layer.  
 
 #### Softmax Units
 

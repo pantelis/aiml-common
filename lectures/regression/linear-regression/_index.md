@@ -58,6 +58,10 @@ which means that the [MSE captures both bias and variance](https://en.wikipedia.
 ![generalization-error-vs-capacity](images/generalization-capacity.png)
 *As capacity increases (x-axis), bias (dotted) tends to decrease and variance(dashed) tends to increase, yielding another U-shaped curve for generalization error (bold curve). If we vary capacity along one axis, there is an optimal capacity, with underﬁtting when the capacity is below this optimum and overﬁtting when it is above.*
 
+## Bias and Variance Decomposition during the training process
+
+Apart from the composition of the generalization error for various model capacities,  it is interesting to make some general comments regarding the decomposition of the generalization error (also known as empirical risk) during training. Early in training the bias is large because the network output is far from the design function. The variance is very small because the data has had little influence yet. Late in training the bias is small because the network has learned the underlying function. However if train for too long then the network will also have learned the noise specific to the dataset (overfitting). In such case the variance will be large because the noise varies between training and test datasets. 
+
 
 ## Implementing linear regression
 

@@ -31,13 +31,12 @@ $$CE = H(\hat p_{data}, p_{model}) = KL( \hat p_{data} || p_{model} ) + H(\hat p
 Given that $\hat p_{data}$ is given in supervised learning, $H(\hat p_{data})$ is constant and therefore we can conclude that in this case, CE is equivalent to the KL i.e. **minimizing the KL divergence, is equivalent in minimizing cross-entropy (CE)**. Therefore the expression the only need to minimize which we will call the CE cost function (also known as log loss) is:
 
 $$ L(\mathbf w) = CE = - \mathbb{E_{\mathbf x \sim \hat p_{data}}}  \log p_{model}(\mathbf x, \mathbf w)$$
- 
-It is now instructive to go over an example to understand that even the plain-old mean squared error (MSE), the objective that is common in the regression setting, falls under the same umbrella - its the cross entropy between $\hat p_{data}$ and a Gaussian model. See example in section 5.5.1.
 
+Cross entropy is a very generic objective (loss) function that is applicable to any _supervised learning_ problem that uses maximum likelihood to estimate a model.  
 
 ## Learning conditional models - $\hat p_{model}(\mathbf y | \mathbf x; \mathbf w)$
 
-Cross entropy is in fact a very generic objective (loss) function that is applicable to any _supervised learning_ problem that uses maximum likelihood to estimate a model.  The discussion in the marginal distribution  is equivalently applicable to the conditional distribution $p_{model}(\mathbf y | \mathbf x, \mathbf w)$ which governs supervised learning, $y$ being the symbol of the label / target variable. Therefore all machine learning software frameworks offer excellent APIs on CE calculation.
+The discussion in the marginal distribution  is equivalently applicable to the conditional distribution $p_{model}(\mathbf y | \mathbf x, \mathbf w)$ which governs supervised learning, $y$ being the symbol of the label / target variable. Therefore all machine learning software frameworks offer excellent APIs on CE calculation.
 
 $$ L(\mathbf w) = - \mathbb{E_{\mathbf x, \mathbf y \sim \hat p_{data}}}  \log p_{model}(\mathbf y | \mathbf x; \mathbf w)$$
 
@@ -45,7 +44,7 @@ The attractiveness of the ML solution is that the CE (also known as log-loss) is
 
 ### Example and implementation
 
-Please follow the whiteboard discussion associated with Section 5.5.1 of the textbook and [these notes](https://www.cs.indiana.edu/~predrag/classes/2016fallb365x/ols.pdf)  and consider the following figure for assistance to visualize the relationship of $p_{data}$ nd $p_{model}$. 
+It is now instructive to go over an example to understand that even the plain-old mean squared error (MSE), the objective that is common in the regression setting, falls under the same umbrella - its the cross entropy between $\hat p_{data}$ and a Gaussian model. Please follow the whiteboard discussion associated with Section 5.5.1 of the textbook and [these notes](https://www.cs.indiana.edu/~predrag/classes/2016fallb365x/ols.pdf)  and consider the following figure for assistance to visualize the relationship of $p_{data}$ nd $p_{model}$. 
 
 ![conditional-model-gaussian](images/conditional-model-gaussian.png#center)
 _Please replace the y-axis target variable $t$ with $y$. The green dashed line shows the mean of the $p_{model}$ distribution._
