@@ -6,6 +6,13 @@ draft: false
 
 # Feature Extraction via Residual Networks
 
+In the figure below we plot the evolution of depth in CNN architectures. Notice the big jump due to the introduction of the ResNet architecture. 
+
+![evolution-of-depth](images/evolution-of-depth.png#center)
+_Evolution of depth in CNN architectures. (Circa 2018)_ 
+
+The aim of this section is to provide an alternative view as to why ResNets seem to be able to accommodate much deeper architecture while performing even better that existing architectures for the same depth (e.g. ResNet-18).
+
 ## The ResNet Architecture
 
 ![resnet-vgg](images/resnet-vgg.png#center)

@@ -51,13 +51,13 @@ In the figure below the authors of [this](https://arxiv.org/abs/1603.07285) pape
   </tr>
 </table>
 
-In general though in practice we are dealing with **volumes** due to the multiple feature maps & kernels  involved. Its important to understand the figure below. Its a direct extension to the single feature map figure above. The difference is that each neuron in each feature map of layer $l$ is connected to all neurons of the corresponding receptive field of layer $l-1$ just as before but now these connections extend to all feature maps of layer $l-1$. in other words we connect each neuron in the feature map of layer $l$ to the corresponding receptive volume (3D array) of neurons in the layer below. 
+In general though in practice we are dealing with **volumes** due to the multiple feature maps & kernels  involved. Its important to understand the figure below. Its a direct extension to the single feature map figure above. The difference is that each neuron in each feature map of layer $l$ is connected to all neurons of the corresponding receptive field of layer $l-1$ just as before but now these connections extend to all feature maps of layer $l-1$. **In other words we connect each neuron in the feature map of layer $l$ to the corresponding receptive volume (3D array) of neurons in the layer below.** 
 
 In the class we will go through the example below.
 
 ![2d-convolution-example](images/2d-convolution-example.png#center)
 
-There are two steps involved. Notice that the number of input feature maps is $M_{l-1} = 2$, while the number of output feature maps is $M_{l}=3$. We therefore have three filters of spatial dimension $[3x3]$ and depth dimension of 2.  In the first step each of the three filters generates a correlation result for each of the 2 input feature maps.
+There are two steps involved. Notice that the number of input feature maps is $M_{l-1} = 2$, while the number of output feature maps is $M_{l}=3$. We therefore have three filters of spatial dimension $[height, width]=[3 \times 3]$ and depth dimension of 2.  In the first step each of the three filters generates a correlation result for each of the 2 input feature maps.
 
 $z(i,j) = \sum_u^{height} \sum_v^{width} x(i+u, j+v) w(u,v)$
 
@@ -65,7 +65,7 @@ In the second step we sum over the correlations for each of the three filters se
 
 $z(i,j,k_l) = \sum_u^{height} \sum_v^{width} \sum_{k_{l-1}=1}^{M_i} x(i+u, j+v, k_{l-1}) w(u, v, k_{l-1}, k_l)$
 
-The figure below illustrates the input feature map to output feature map mapping expressed directly i.e. without the intermediate step of the example above. 
+The figure below illustrates the input feature map to output feature map mapping directly i.e. without the intermediate step of the example above. 
 
 ![convnet-multiple-feature-maps](images/convnet-feature-maps.png#center)
 *Convolutional layers with multiple feature maps. We can see the receptive field of each column of neurons of the next layer. Each column is produced by performing multiple convolutions (or cross correlation operations) between the volume below and each of the filters.*
@@ -78,14 +78,16 @@ In each layer we can have in other words, as was shown in the example above, inp
 
 ### Zero Padding
 
-Each feature map "pixel" that results from the above convolution is followed by a RELU non-linearity i.e. RELU is applied element-wise. Few words about padding. There are two types: **same padding** where we add zeros at the edges of the picture and **valid padding** where we dont. The reason we pad with zeros is to maintain the original spatial dimensions from one convolution layer to the next. If we dont very soon we can end up with deep architectures with just a one "pixel". 
+Each feature map "pixel" that results from the above convolution is followed by a RELU non-linearity i.e. RELU is applied element-wise. Few words about padding. There are two types: **same padding** where we add zeros at the edges of the picture and **valid padding** where we dont. The reason we pad with zeros is to maintain the original spatial dimensions from one convolution layer to the next. If we dont, very soon we can end up with deep architectures with just a one "pixel". 
 
 Lets see a complete [animated example](http://cs231n.github.io/assets/conv-demo/index.html) that includes padding. You can press the toggle movement button to stop the animation and do the calculations with pencil and paper. 
 
 <iframe src="http://cs231n.github.io/assets/conv-demo/index.html" width="100%" height="700px;"></iframe>
 source: CS231n
 
-The output spatial dimension (assuming square) is in general given by $⌊ \frac{i+2p-k}{s} ⌋ + 1$, where $p$ is the amount of passing,  $k$ is the square kernel size, $s$ is the stride. In the animation above, $p=1, k=3, s = 2$. 
+**Each output spatial dimension (height is shown here) is in general given by $⌊ \frac{height+2p-k}{s} ⌋ + 1$, where $p$ is the amount of padding,  $k$ is the square kernel size, $s$ is the stride. In the animation above, $p=1, k=3, s = 2$.**  In yet another example of sizing - output depth is a function of the number of kernels but the spatial dimensions depend as the equation above specified on stride, padding and kernel size (usually square). 
+
+![sizing-example](images/sizing-example.png#center)
 
 ## What the convolution / operation offers
 
@@ -93,10 +95,10 @@ There are two main consequences of the convolution operation: sparsity and param
 
 ####  Sparsity
 
-In DNNs, every output unit interacts with every input unit. Convolutional networks, however, typically have sparse interactions(also referred to as sparse connectivity or sparse weights). This is accomplished by making the kernel smaller than the input as shown in the figure above. For example,when processing an image, the input image might have thousands or millions of pixels, but we can detect small, meaningful features such as edges with kernels that occupy only tens or hundreds of pixels. 
+In DNNs, every output unit interacts with every input unit. Convolutional networks, however, typically have sparse interactions(also referred to as sparse connectivity or sparse weights). This is accomplished by making the kernel smaller than the input as shown in the figure above. For example,when processing an image, the input image might have thousands or millions of pixels, but we can detect small, meaningful features such as edges with kernels that have much smaller receptive fields. 
 
 ![cnn-sparsity](images/cnn-sparsity.png#center)
-*Sparse connectivity, viewed from below. We highlight one input unit,$x_3$, and highlight the output units in that are aﬀected by this unit. (Top) When is formed by convolution with a kernel of width 3, only three outputs are aﬀected by x. (Bottom)When is formed by matrix multiplication, connectivity is no longer sparse, so all the outputs are aﬀected by $x_3$.*
+*For a specific input unit,$x_3$, we mark the output units in that are aﬀected by this unit. (Top) When is formed by convolution with a kernel of width 3, only three outputs are aﬀected by x. (Bottom)When is formed by matrix multiplication, connectivity is no longer sparse, so all the outputs are aﬀected by $x_3$.*
 
 #### Parameter sharing
 
@@ -109,13 +111,11 @@ The particular form of parameter sharing causes the layer to have a property cal
 
 As explained [here](https://datascience.stackexchange.com/questions/16060/what-is-the-difference-between-equivariant-to-translation-and-invariant-to-tr) this should not be confused with **invariance to translation**. The later means that a translation of input features does not change the outputs at all. So if your pattern 0,3,2,0,0 on the input results in 0,1,0 in the output, then the pattern 0,0,3,2,0 would also lead to 0,1,0. 
 
-For feature maps in convolutional networks to be useful, they typically need both equivariance and invariance in some balance. The equivariance allows the network to generalise edge, texture, shape detection in **different** locations. The invariance allows precise location of the detected features to matter less. These are two complementary types of generalization for many image processing tasks.
+For feature maps in convolutional networks to be useful, they typically need both equivariance and invariance in some balance. The equivariance allows the network to generalize edge, texture, shape detection in **different** locations. The invariance allows precise location of the detected features to matter less. These are two complementary types of generalization for many image processing tasks.
 
-In a nutshell in images, these properties ensure that the CNN that is trained to detect an object, can do its job irrespective on where the object is located in the image. 
+In a nutshell, in images, these properties ensure that the CNN that is trained to detect an object, can do its job irrespective on where the object is located in the image. 
 
-## Dimensionality Reduction
-
-### Pooling Layer
+## Pooling
 
 Pooling was introduced to reduce redundancy of representation and reduce the number of parameters, recognizing that precise location is not important for object detection.
 
@@ -132,11 +132,14 @@ Despite receiving ample treatment in Ians Goodfellows' book, pooling has fallen 
 * Datasets are so big that we're more concerned about under-fitting.
 * Dropout is a much better regularizer.
 * Pooling results in a loss of information - think about the max-pooling operation as an example shown in the figure below. 
+* [All convolutional networks](https://arxiv.org/pdf/1412.6806.pdf) where the pooling is replaced by a CNN with larger stride can do better. 
 
 ![pooling](images/pooling.png#center)
 *Max pooling layer (2 × 2 pooling kernel, stride 2, no padding)*
 
-To further understand the latest reservations against pooling in CNNs, see [this](https://medium.com/ai%C2%B3-theory-practice-business/understanding-hintons-capsule-networks-part-i-intuition-b4b559d1159b) summary of Hinton's **capsules** concept. Capsules are not in scope for this course and by extension for the final test. 
+{{<hint info>}}
+To further understand the latest reservations against pooling in CNNs, see [this](https://medium.com/ai%C2%B3-theory-practice-business/understanding-hintons-capsule-networks-part-i-intuition-b4b559d1159b) summary of Hinton's **capsules** concept. 
+{{</hint>}}
 
 ### 1x1 Convolutional layer 
 
@@ -156,4 +159,5 @@ When we have **multiple** $M_l$ layers of size 1 x 1 x $M_{l-1}$ then, effective
 
 ## Known CNN Architectures
 
-A summary of well known CNN networks are [here](https://towardsdatascience.com/neural-network-architectures-156e5bad51ba) article with [this](https://medium.com/@culurciello/analysis-of-deep-neural-networks-dcf398e71aae) update as a reference. This summary will be important to you as a starting point to develop your own understanding of very well known CNNs and after you read the corresponding papers in arxiv you will be able to recall key design patterns and why those patterns came to be. 
+A summary of well known CNN networks are [here](https://towardsdatascience.com/neural-network-architectures-156e5bad51ba) article with [this](https://medium.com/@culurciello/analysis-of-deep-neural-networks-dcf398e71aae) update as a reference. This summary will be important to you as a starting point to develop your own understanding of very well known CNNs. After you read the corresponding papers in arxiv you will be able to recall key design patterns and why those patterns came to be. 
+
