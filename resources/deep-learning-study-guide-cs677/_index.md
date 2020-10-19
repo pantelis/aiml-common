@@ -22,6 +22,8 @@ title: Study Guide for CS677
 5. Smartphones will be allowed only at the end to scan your write ups and upload them into canvas. To scan you need to use CamScanner or GeniousScan or any other app of your choice that can generate PDF files of your scans. in your smartphones. 
 6. At the end of the exam you will upload into the corresponding Canvas assignment your pdf file(s) **AND** send then by email to the TA. You need to use your University email account for that. 
 
+**Topics**
+
 | Topic    |  What to pay attention to   |
 | --- | --- |
 |  The learning problem   |  1. Understand the block diagram of supervised problem with the math.  |
