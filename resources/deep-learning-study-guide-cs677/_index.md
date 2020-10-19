@@ -1,8 +1,8 @@
 ---
-title: Study Guide for Classical ML
+title: Study Guide for CS677 
 ---
 
-# Study Guide for Classical ML
+# Study Guide for Midterm
 
 **General guidelines**
 
@@ -24,12 +24,12 @@ title: Study Guide for Classical ML
 
 | Topic    |  What to pay attention to   |
 | --- | --- |
-|  The learning problem   |  1. Understand the block diagram without the math.   2. Review the various forms of learning.  |
-|   Linear Regression  | 2.  Understand the three ingredients needed for learning 2. Understand what is regularization and how overfiting is manifested.    |
-|   Classification  |  1. Understand the problem setting and especially the metrics.    |
-|   Bayesian Statistics  |  1. Understand the Bayes rule and how it is used in interpreting test outcomes.  |
-|   Optimization  |  1. Pay close attention how the gradient descent works and its behavior as it searches the space of weights.      |
-|     | 1. Be prepared to answer questions related to all the methods. For example in the figure why the boundary of the decision tree is the way it is. |
-| | ![decision-boundary](images/decision-boundary.png)   |
+|  The learning problem   |  1. Understand the block diagram of supervised problem with the math.  |
+| ML Estimation | 1. Understand what ML estimation is doing and be prepared to answer questions as to how it differs from the Bayesian setting. | 
+|  Linear Regression  | 1. Understand what is regularization and how over-fitting is manifested.   |
+|  Classification  |  1. Understand the problem setting and especially the classification metrics.   |
+|  Back-propagation | 1. You may be given a simple network and ask to back-propagate it. | 
+|  Optimization  |  1. Pay close attention how the gradient descent works and its behavior as it searches the space of weights. |   
+| CNNs | 1. Understand the architecture elements and how they help in the learning process.  2. Understand how ResNets differ with earlier architectures such as VGG16 | 
 
 

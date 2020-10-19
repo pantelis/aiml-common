@@ -33,7 +33,7 @@ The above graph decomposes as follows:
 $$p(z_t|s_{0:t}, z_{1:t}, a_{1:t})=p(z_t|s_t)$$ 
 $$p(s_t|s_{1:t-1}, z_{1:t}, a_{1:t})=p(s_t|s_{t-1}, a_t)$$
 
-In the following we will use $z_{t_1:t_2}$ to represent sensing estimates of the perception subsystem acquired between $t_1$ and $t_2$. The measurement or sensor model is given by the conditional probability distribution $p(z_t|x_t)$. Note a couple of important points: as measurements arrive over time, the knowledge of the agent increases and there may not be dependency on time for the measurement model. 
+In the following we will use $z_{t_1:t_2}$ to represent sensing estimates of the perception subsystem acquired between $t_1$ and $t_2$. The measurement or sensor model is given by the conditional probability distribution $p(z_t|s_t)$. Note a couple of important points: as measurements arrive over time, the knowledge of the agent increases and there may not be dependency on time for the measurement model. 
 
 We will also use the conditional probability to represent the state transition $p(s_t | s_{t-1}, a_t)$ where $a_t$ is the control action variable that the agent executes causing a state change in the environment. By convention, we execute first a control action $a_1$ and then measure $z_1$. 
 

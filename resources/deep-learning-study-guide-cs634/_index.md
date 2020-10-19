@@ -1,5 +1,5 @@
 ---
-title: Study Guide for Deep Learning ML
+title: Study Guide for Deep Learning 
 ---
 
 # Study Guide for Deep Learning
