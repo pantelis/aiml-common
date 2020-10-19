@@ -6,7 +6,7 @@ title: Study Guide for CS677
 
 **General guidelines**
 
-1. Study from the notes and focus on critically understanding the concepts. 
+1. Study from the notes and focus on critically understanding the concepts. Read from the two books _only_ the _whole_ sections that overlap with the notes using the syllabus as the guide.   
 2. There will be no definition questions e.g. what is a decision tree. 
 3. There will be no  mathematical derivations (all formulas needed will be given). 
 4. Some questions will be computational - make sure you have access to a calculator 
