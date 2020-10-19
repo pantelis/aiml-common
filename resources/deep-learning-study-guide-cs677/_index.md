@@ -2,7 +2,7 @@
 title: Study Guide for CS677 
 ---
 
-# Study Guide for Midterm
+# Study Guide for CS677
 
 **General guidelines**
 
