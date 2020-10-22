@@ -5,11 +5,36 @@ weight: 132
 ---
 
 # Simple RNN 
+
+The simple RNN architecture with just a single layer of neurons that receive the input $\mathbf{x}$ is shown below.
+
+![simple-rnn-single-layer](images/simple-rnn-simple-layer.png#center)
+*Simple RNN with just a single layer of $n_neurons$ mapping the input to the hidden-state at each time step*
+
+A more practical simple RNN architecture is shown below. 
+
 ![rnn-hidden-recurrence](images/rnn-hidden-recurrence.png#center)
 
 *Simple RNN with recurrences between hidden units. This architecture can compute any computable function and therefore is a [Universal Turing Machine](http://alvyray.com/CreativeCommons/BizCardUniversalTuringMachine_v2.3.pdf).* 
 
 Notice how the path from input $\bm x_{t-1}$ affects the label $\bm y_{t}$ and also the conditional independence between $\bm y$ given $\bm x$. Please note that this is not a computational graph rather one way to represent the hidden state transfer between recurrences.
+
+##  Dimensioning Simple RNNs
+
+In the table below $m$ is the number of examples in the mini-batch. 
+
+| Variable | Dimensions | 
+| --- | --- |
+| $\bm{h}_t$ | $n_{neurons} \times 1$ or $m \times n_{neurons}$| 
+| $\bm{x}_t$ | $n_{input} \times 1$ or $m \times n_{input}$ | 
+| $\bm{U}$ | $n_{neurons} \times n_{input}$ |
+| $\bm{W}$ | $n_{neurons} \times n_{neurons}$ |
+| $\bm{b}$ | $n_{neurons} \times 1$ |
+| $\bm{V}$ | $n_{output} \times n_{neurons}$ |
+| $\bm{o}$ | $n_{output} \times 1$ |
+| $\bm{c}$ | $n_{output} \times 1$ |
+
+Please note that there may be multiple layers that can be stacked on top of each other and they can individually keep a hidden state. 
 
 ## Forward Propagation 
 
@@ -43,6 +68,7 @@ In the figure above you have a hypothetical document (a sentence) that is broken
 $$- \log p_{model} (y_6|\bm x_1, \dots , \bm x_6; \bm  w)$$ 
 
 where $\bm w = \\{ \bm W, \bm U, \bm V, \bm b, \bm c \\}$. 
+
 
 ## Back-Propagation Through Time (BPTT)
 

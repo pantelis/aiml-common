@@ -45,6 +45,8 @@ $$q_t(i) =\sigma \Big( \bm W_o^T(i) \bm h_{t-1}(i) + \bm U_o^T(i) \bm x_t(i) + \
 
 Notice that if you make the output of input and output gates equal to 1.0 and the forgetting factor equal to 0.0, we are back to the simple RNN architecture. You can expect backpropagation to work similarly in LSTM albeit with more complicated expressions. 
 
+## LSTM Pseudocode
+
 {{<details "LSTM Keras Implementation - Article">}}
 
 [This](https://towardsdatascience.com/choosing-the-right-hyperparameters-for-a-simple-lstm-using-keras-f8e9ed76f046) is a standalone implementation of LSTM, paying particular attention to its hyperparameters optimization.  

@@ -8,7 +8,7 @@ weight: 131
 
 ## Sequences
 
-Data streams are everywhere in our lives. Weather station sensor data arrive in streams indexed by time,  financial trading data and obviously reading comprehension - one can think of many others. We are interested to fit sequenced data with a model and therefore we need a hypothesis set, that is rich enough for sequential tasks. In the following we use $t$ as the index variable without this implying any time semantics.
+Data streams are everywhere in our lives. Weather station sensor data arrive in streams indexed by time,  financial trading data and obviously reading comprehension - one can think of many others. **We are interested to fit sequenced data with a model and therefore we need a hypothesis set, that is rich enough for tasks that require some form of memory**. In the following we use $t$ as the index variable without necessarily implying any time semantics.
 
 _Dynamical systems_ are such rich models where the _recurrent_ state evolution can be represented as:
 
@@ -20,7 +20,7 @@ where $\bm s$ is the evolving state,  $\bm a$ is an external action or control a
 2.  The _action space_ similarly can depend on $t$
 3.  Finally, the function that maps previous states and actions to a new state can also depend on $t$
 
-So the dynamical system above has indeed offered a very profound modeling flexibility. 
+So the dynamical system above can indeed offer a very profound modeling flexibility. 
 
 ## RNN Architecture
 
@@ -42,11 +42,11 @@ RNNs have a wide variety of architectures.
 
 ![rnn-use-cases](images/rnn-use-cases.png#center)
 *From left to right, CNNs, Image Captioning, Sentiment Classification, Machine Translation, Multi-Object Tracking. RNNs are able to work with variable size input and output sequenced data.*
-
+<!-- 
 In this course will suffice to go over just two to understand what they offer in terms of their representational capacity. One significant factor that separates the architectures is the way they perform the hidden state calculation at each $t$. This is shown in the next figure.
 
 ![hidden-state-types](images/hidden-state-types.png#center)
-*Differentiating Architectures (a) DNN, (b) Simple RNN, (c) LTSM, (d) GRU*
+*Differentiating Architectures (a) DNN, (b) Simple RNN, (c) LTSM, (d) GRU* -->
 
 
 
