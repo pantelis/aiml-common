@@ -39,7 +39,7 @@ Element $i$ of the gradient is the partial derivative $\frac{\partial L}{\partia
 
 In the generic case: 
 
-$$\bm w_{k+1} = \bm w_k + \eta \nabla_{\bm w} L(\bm w_k)$$
+$$\bm w_{k+1} = \bm w_k - \eta \nabla_{\bm w} L(\bm w_k)$$
 
 where $\eta$ is the scalar learning rate that is a hyperparameter that needs to be optimized (searched over). 
 
