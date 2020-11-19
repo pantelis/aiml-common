@@ -19,8 +19,8 @@ Starting at the heart of the LSTM cell, to describe the update we will use two i
 
 $$s_t(i) = f_t(i) s_{t-1}(i) + g_t(i) \sigma \Big( \bm W^T(i) \bm h_{t-1}(i) + \bm U^T(i) \bm x_t(i) + \bm b(i) \Big)$$
 
-The parameters $\theta_{in} = \\{  \bm W, \bm U, \bm b \\}$  are the recurrent weights, input weights and bias at the input of the LSTM cell. 
-
+The parameters $\theta_{in} = \\{  \bm W, \bm U, \bm b \\}$  are the recurrent weights, input weights and bias at the input of the LSTM cell. Please note that in the above equation some authors use a $\tanh$ non-linearity to transform the input instead of sigmoid.
+ 
 The forget gate calculates the forgetting factor,
 
 $$f_t(i) =\sigma \Big( \bm W_f^T(i) \bm h_{t-1}(i) + \bm U_f^T(i) \bm x_t(i) + \bm b_f(i) \Big) $$
@@ -45,16 +45,11 @@ $$q_t(i) =\sigma \Big( \bm W_o^T(i) \bm h_{t-1}(i) + \bm U_o^T(i) \bm x_t(i) + \
 
 Notice that if you make the output of input and output gates equal to 1.0 and the forgetting factor equal to 0.0, we are back to the simple RNN architecture. You can expect backpropagation to work similarly in LSTM albeit with more complicated expressions. 
 
-## LSTM Pseudocode
 
-{{<details "LSTM Keras Implementation - Article">}}
+## Additional Resources
 
-[This](https://towardsdatascience.com/choosing-the-right-hyperparameters-for-a-simple-lstm-using-keras-f8e9ed76f046) is a standalone implementation of LSTM, paying particular attention to its hyperparameters optimization.  
-
-{{</details>}}
-
-> Additional tutorial resources on LSTMs can be found here:
-> 1. [Understanding LSTMs](https://colah.github.io/posts/2015-08-Understanding-LSTMs) 
-> 2. [Illustrated guide to LSTMs](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21)
-> 3. [Simplest possible LSTM explanation](https://www.youtube.com/watch?v=WCUNPb-5EYI)
-
+Additional tutorial resources on LSTMs can be found here:
+1. [A Critical Review of Recurrent Neural Networks for Sequence Learning](https://arxiv.org/pdf/1506.00019.pdf)
+2. [Understanding LSTMs](https://colah.github.io/posts/2015-08-Understanding-LSTMs) 
+3. [Illustrated guide to LSTMs](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21)
+4. [Simplest possible LSTM explanation video](https://www.youtube.com/watch?v=WCUNPb-5EYI)

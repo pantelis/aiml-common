@@ -104,9 +104,22 @@ $$h_1 = -0.9 h_{0} + \delta_1 = -0.9$$
 $$h_2 = -0.9 h_{1} + \delta_2 = 0.81$$
 $$h_3 = -0.9 h_{2} + \delta_3 = -0.729$$
 
-With $w=-0.9$, the h_t (called impulse response) follows a decaying exponential envelope while obviously with $w > 1.0$ it would follow an exponentially increasing envelope. Such recurrences if continue will result in vanishing or exploding responses long after the impulse showed up in the input $t=0$. 
+With $w=-0.9$, the h_t (called impulse response) follows a decaying exponential envelope while obviously with $w > 1.0$ it would follow an exponentially increasing envelope. Such recurrences if continue will result in vanishing or exploding responses long after the impulse showed up in the input $t=0$.  
 
-In a similar fashion, the RNN hidden state recurrence, in the backwards pass of backpropagation that extends from the $t=\tau$ to $t=1$ can make the gradient, when $\tau$ is large, either _vanish_ or _explode_. Instead of a scalar $w$ we have matrices $\bm W$ involved instead of $h$ we have gradients $\nabla_{\bm h_{t}}L_{t}$. This is discussed in [this](http://proceedings.mlr.press/v28/pascanu13.pdf) paper.
+Using this primitive IIR filter as an example, we can see that the weight plays a crucial role in the impulse response. In a similar fashion, the RNN hidden state recurrence, in the backwards pass of BP that extends from the $t=\tau$ to $t=1$ can make the gradient, when $\tau$ is large, either _vanish_ or _explode_. Instead of a scalar $w$ we have matrices $\bm W$ and instead of $h$ we have gradients $\nabla_{\bm h_{t}}L_{t}$. This is discussed in [this](http://proceedings.mlr.press/v28/pascanu13.pdf) paper. 
 
-Using this primitive IIR filter as an example, we can see that the weight plays a crucial role in the impulse response. This is further discussed in the [LSTM]({{<ref "../lstm">}}) section. 
- 
+
+Simplistically thinking, the gradient of the $\tanh$ non-linearity shown below, is between 0 and 1 suppressing the gradients and slowing down training. 
+
+![tanh-derivative](images/tanh-derivative.png#center)
+_Derivative of $\tanh$ non-linearity_
+
+Similar the successive application of the $W$ matrix is causing explosive gradients as simplistically (ignoring the non-linearity) the hidden state can be written as 
+
+$$\mathbf h_{t} = \mathbf W \mathbf h_{t-1}$$
+
+making after $\tau$ steps
+
+$$\mathbf h_{t} = \mathbf W^\tau \mathbf h_{0}$$
+
+If the magnitude of the eigenvalues are less than 1.0 the matrix will create vanishing gradients as it is involved in the $\nabla_{\bm h_{t}}L_{t}$ expression (see equations in section 10.2.2 in the textbook).  This issue is addressed using the [LSTM]({{<ref "../lstm">}}) type of cells. 
