@@ -43,6 +43,9 @@ $$ \phi_t = \sum_j \alpha_{t,j}h_j$$
 
 Intuitively, this vector captures the relevant contextual information from the original sentence for the t-th step of the decoder.
 
+![attention-example](images/attention-example.png#center)
+_Example of attention mechanism in NMT_
+
 <!-- 
 ![seq2seq-attention](images/seq2seq-attention-step1.png#center)
 *Attention in seq2seq neural machine translation - time step 1*
