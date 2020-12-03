@@ -15,12 +15,20 @@ $$p(\mathbf x_{t+1} | \mathbf x_1, ..., \mathbf x_t)$$
 ![language-model-google-search](images/language-model-google-search.png#center)
 *Language Model Example*
 
-How we can build language models though. One approach is to slide a window around the context we are interested in. 
+How we can build language models though ?
+
+<!-- One approach is to slide a window around the context we are interested in. 
 
 ![dnn-language-model](images/dnn-language-model.png#center)
-*DNN language model - fixed sliding window around the context. The embeddings of each word (e.g. word2vec vectors) are represented by the blue layer and are being transformed via the weight matrix $\mathbf W$ to a hidden layer and from there via another transformation to a probability distribution. How do we determine the sliding window size? How to deal with the size of $\mathbf W$?*
+*DNN language model - fixed sliding window around the context. The embeddings of each word (e.g. word2vec vectors) are represented by the blue layer and are being transformed via the weight matrix $\mathbf W$ to a hidden layer and from there via another transformation to a probability distribution. How do we determine the sliding window size? How to deal with the size of $\mathbf W$?* -->
 
-To avoid the issues associated with the DNN, we will use the [RNN]({{<ref "../../rnn">}}) architectures we have seen in another chapter.  This is shown next for a toy example where the vocabulary is ['h','e','l','o']. where the tokens are single letters represented in the input with a one-hot encoded vector. 
+
+We will use the [RNN]({{<ref "../../rnn">}}) architectures as shown next for a simple example:
+
+![rnn-language-model](images/rnn-language-model-words.png#center)
+_RNN Language Model. Note the different notation and certain replacements must be made: $W_h → W$, $W_e \rightarrow U$, $U → V$_
+
+where the vocabulary is ['h','e','l','o']. where the tokens are single letters represented in the input with a one-hot encoded vector. 
 
 ![rnn-language-model](images/rnn-language-model.png#center)
 *RNN language model example - training [ref](https://www.youtube.com/watch?v=6niqTuYFZLQ&t=521s). Note that in practice in the place of the on-hot encoded word vectors we will have word embeddings.*
