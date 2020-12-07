@@ -5,7 +5,7 @@ draft: false
 
 # Boosting
 
-In this chapter we treating _adaptive boosting_ and _gradient_boosting_ that learn using _ensembles_ of many weak learners to produce a stronger learner.  In contrast to other ensemble methods though such as random forests, boosting methods, train predictors _sequentially_ rather than parallel. 
+In this chapter we are treating _adaptive boosting_ and _gradient_boosting_ that use _ensembles_ of many weak learner, to produce a stronger learner.  In contrast to other ensemble methods though such as random forests, boosting methods, train predictors _sequentially_ rather than parallel. 
 
 ## Adaptive Boosting (AdaBoost)
 
@@ -16,7 +16,7 @@ If we imagine a sequence of weak learners like in random forests, boosting start
 
 <!-- Note that the figure shows multiple instances of weak learners - this is not necessarily a real implementation but a conceptual depiction.  -->
 
-Let see how AdaBoost functions using an example based on [this article](https://towardsdatascience.com/machine-learning-part-17-boosting-algorithms-adaboost-in-python-d00faac6c464).
+Lets see how AdaBoost functions using an example based on [this article](https://towardsdatascience.com/machine-learning-part-17-boosting-algorithms-adaboost-in-python-d00faac6c464).
 
 Lets assume that you are a data scientist working on a dating site and you are asked to develop an algorithm that classifies whether a profile is attractive or not.  The dataset you are given is shown below.  This is of course a fictitious dataset - there is no way that someone will put in their profile that they are _not_ smart or polite.  
 
@@ -35,9 +35,11 @@ $$\mathtt{data} = \\{ (\mathbf{x}_1, y_1), \dots, (\mathbf{x}_m, y_m) \\}$$
 
 We assume that the label $y \in \{+1, -1}$ instead of 0 or 1 with loss of generality. This is a binary classification problem but the method is equally applicable to multi-class problems. 
 
-AdaBoost calls a given weak learner repeatedly in a series of rounds $t=1, \dots, T$, each weak learner is denoted by $h_t$ where $h$ comes from the weak hypothesis that each learner evaluates. In this example case, we can elect a hypothesis set from the family of decision trees and the specific hypothesis we will use is a decision tree with single split (depth = 1) called decision stump. 
+AdaBoost calls a given weak learner repeatedly in a series of rounds $t=1, \dots, T$, each weak learner is denoted by $h_t$ - the weak hypothesis that each learner evaluates. In this example case, we can elect a hypothesis set from the family of decision trees and the specific hypothesis we will use is a decision tree with single split (depth = 1) called decision stump. 
 
-One of the main ideas of the AdaBoost is to maintain a distribution of _weights_ over the training set. In each round, the weights of incorrectly classified examples are increased so that the _weak learner is forced to focus on the hard examples_ in the training set. The size of the weight vector equals $m$, the number of _examples_ we are given. The weight of training example $i$ on round $t$ is denoted $w_t(i)$.  Initially, all weights are set equally,
+One of the main ideas of the AdaBoost is to maintain a distribution of _weights_ over the training set. In each round, the weights of incorrectly classified examples are increased so that the _weak learner is forced to focus on the hard examples_ in the training set. The size of the weight vector equals $m$, the number of _examples_ we are given. The weight of training example $i$ on round $t$ is denoted $w_t(i)$. 
+
+Initially, all weights are set equally,
 
 $$w_0(i)=\frac{1}{m}$$
 
