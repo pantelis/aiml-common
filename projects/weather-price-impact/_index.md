@@ -6,7 +6,7 @@ title: Weather Impact on NYC Taxi Fare
 
 This project is a continuation in part of the [NYC taxi fare prediction] and asks a simple but not so straightforward to answer question:
 
-> Everything else being equal (ceteris-paribus)  how much more should people expect to pay when the weather is bad?
+> Everything else being equal (ceteris-paribus)  how much additional far should people expect to pay when the weather is bad?
 
 Some of the reasons why this question may be challenging , although there are notebooks in Kaggle that try to address it,  are:
 
