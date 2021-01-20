@@ -26,5 +26,4 @@ After reading this chapter you should feel familiar with the following ideas and
 3. The functional decomposition of the four pipelines needed to power a data intensive business / application. 
 4. The complexity behind a real world data pipeline and its tradeoffs (CAP theorem) 
 5. The Python language basic APIs in data science projects and a tutorial path for you to dig deeper. 
-6. How to run your first _end to end_ `pipeline that mines housing data and predicts their prices in your own cloud environment (colab). 
  
