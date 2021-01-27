@@ -4,7 +4,7 @@ title: Vectors
 
 # Vectors
 
-> Most of the material in this section was borrowed from [this excellent series of Essence of Linear Algebra youtube videos](https://www.youtube.com/watch?v=fNk_zzaMoSs) 
+> Most of the material in this section was borrowed from [this excellent series of Essence of Linear Algebra youtube videos](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) 
 
 ## The Physics, Computer Science and Math perspective on  vectors
 

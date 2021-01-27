@@ -5,7 +5,7 @@ weight: 1
 
 # Learn Python
 
-Below is a list of recommended resources that will teach you quickly Python. 
+Below is a list of recommended resources that will teach you quickly Python. You can select the right format based on your own experience on how best you learn. No matter what you do there is a good Python book to help you and use as a reference:  _Think Python by Allen B. Downey, 2nd edition_. This is an open source book. It is available without charge in HTML and PDF formats at http://greenteapress.com/wp/think-python-2e/ (Links to an external site.).
 
 ## The interactive path to learn python (preferred)
 
@@ -16,7 +16,6 @@ The following are your options with 1 being the highest priority.
 2. [Kaggle Python Course](https://www.kaggle.com/learn/python)
 
 3. [CodeAcademy Data Science Path](https://www.codecademy.com/learn/paths/data-science). Take Python modules 4-10. This course contains Numpy and Panda intro as well. 
-
 
 ## The traditional path to learn  Python
 
@@ -30,4 +29,4 @@ The following are your options with 1 being the highest priority.
 
 4. This is the "official" documentation on Pandas:  [Pandas: powerful Python data analysis toolkit](https://pandas.pydata.org/pandas-docs/stable/pandas.pdf)
 
-We should also mentioned [Leetcode](https://leetcode.com/) as this is perhaps the most popular destination for anyone that wishes to use the skills learned here to launch a software engineering career in tech. It helps you answer all coding-based interview questions. 
+We should also mention [Leetcode](https://leetcode.com/) as this is perhaps the most popular destination for anyone that wishes to use the skills learned here to launch a software engineering career in tech. It helps you answer all coding-based interview questions. 
