@@ -4,6 +4,10 @@ title: Probability Basics
 
 # Probability Basics
 
+For an overview of probability concepts see Ian Goodfellow's book:
+
+<iframe src="https://www.deeplearningbook.org/contents/prob.html" width="800" height="1200"></iframe>
+
 1. The whole purpose of probabilistic modeling is to introduce uncertainty into our problem statement. There are three types of uncertainties:
 
     * Inherent stochasticity - e.g. impact of wind in self-driving car control systems at moderate to high speed. 
@@ -71,9 +75,4 @@ _Correlated Gaussians_
 
 
 
-## Book Chapters
-
-For an overview of probability concepts see Ian Goodfellow's book:
-
-<iframe src="https://www.deeplearningbook.org/contents/prob.html" width="800" height="1200"></iframe>
 
