@@ -4,11 +4,13 @@ title: Linear Algebra for Machine Learning
 
 # Linear Algebra for Machine Learning
 
+{{<hint info>}}
+Let me introduce you MIT prof G Strang - probably the best educator in America. He has published this playlist of [youtube videos on Linear Algebra](https://www.youtube.com/watch?v=Cx5Z-OslNWE&list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k). 
+{{</hint>}}
+
 The corresponding chapter of Ian Goodfellow's Deep Learning book is what you partially need to know as data scientists at a graduate level but arguably if you are just starting you ought to know 2.1-2.5. 
 
 <iframe src="https://www.deeplearningbook.org/contents/linear_algebra.html" width="800" height="1200"></iframe>
-
-Another resource is the book with the funny title "No Bullshit Guide to Linear Algebra" by Ivan Savov.
 
 ## Key Points 
 
