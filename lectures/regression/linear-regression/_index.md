@@ -68,4 +68,4 @@ Apart from the composition of the generalization error for various model capacit
 
 This is a notebook that demonstrates the exact same example above.
 
-<iframe src="https://nbviewer.jupyter.org/github/pantelis/PRML/blob/master/notebooks/ch01_Introduction.ipynb" width="900" height="1200"></iframe>
+<iframe src="https://nbviewer.jupyter.org/github/pantelis-classes/PRML/blob/master/notebooks/ch01_Introduction.ipynb" width="900" height="1200"></iframe>
