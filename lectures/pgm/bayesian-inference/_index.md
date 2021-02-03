@@ -79,9 +79,3 @@ Notice in the notebook the two of the three broad benefits of the Bayesian appro
 
 <iframe src="https://nbviewer.jupyter.org/github/pantelis/PRML/blob/master/notebooks/ch03b_Bayesian_Regression.ipynb" width="900" height="1200"></iframe>
 
-
-## Bayesian update for discrete problems
-
-<iframe src="https://nbviewer.jupyter.org/github/pantelis/cs634-notebooks/blob/master/Bayesian_update_coin_flip.ipynb" width="900" height="1200"></iframe>
-
-
