@@ -10,7 +10,7 @@ weight: 2
 ## The Turing Test Approach
 A 5-min behavioral intelligence test, where an interrogator chats with the player and at the end it guesses if the conversation is with a human or with a programmed machine.  A Turing contest (Loebner Prize) is is held annually since 1991. 
 
-This course's projects includes the [Alexa prize](https://developer.amazon.com/alexaprize) which is _not_ a turing test. The Alexa Prize creates social bots that engage in interesting, human-like conversations, not to make them indistinguishable from a human when compared side-by-side. Social bots may have ready access to much more information than a human. 
+Competitions such as the [Alexa prize](https://developer.amazon.com/alexaprize) is _not_ a turing test. The Alexa Prize creates social bots that engage in interesting, human-like conversations, not to make them indistinguishable from a human when compared side-by-side. Social bots may have ready access to much more information than a human. 
 
 <table style="width:130%; table-layout:fixed;">
   <tr>
@@ -36,7 +36,7 @@ What capabilities we need to have to pass a turing test.
 5. Computer Vision 
 6. Robotics
 
-The last two capabilities are not needed for the verbal oriented Turing test but they are needed for what is called the *total* Turing test. According to this test, the player and the interrogator can communicate physically. For example, there is a hatch where the interrogator can pass objects to the player through. Obviously the player must have perception abilities to understand what object it is (5) and possibly a body that can manipulate the object (6). Embodied AI research is one of the hotter areas of AI today as we will see in the [Agents](./400-agents) section. 
+The last two capabilities are not needed for the verbal oriented Turing test but they are needed for what is called the *total* Turing test. According to this test, the player and the interrogator can communicate physically. For example, there is a hatch where the interrogator can pass objects to the player. Obviously the player must have perception abilities to understand what object it is (5) and possibly a body that can manipulate the object (6). Embodied AI research is one of the hotter areas of AI today as we will see in the [Agents](./400-agents) section. 
 
 ## The Cognitive Model approach 
 
