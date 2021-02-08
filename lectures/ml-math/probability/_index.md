@@ -69,6 +69,9 @@ You can [generate](http://hosting.astro.cornell.edu/~cordes/A6523/GeneratingCorr
 ![correlated-gaussians](images/correlated-gaussians.png#center)
 _Correlated Gaussians_
 
+{{<hint info>}}
+For a more extensive overview of the Gaussian distribution see [here](images/gaussian-bishop.pdf)
+{{</hint>}}
 
 
 ## References
@@ -76,3 +79,5 @@ _Correlated Gaussians_
 For an overview of probability concepts see Ian Goodfellow's book:
 
 <iframe src="https://www.deeplearningbook.org/contents/prob.html" width="800" height="1200"></iframe>
+
+
