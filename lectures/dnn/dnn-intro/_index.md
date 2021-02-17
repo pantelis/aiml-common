@@ -8,7 +8,7 @@ DNNs are the implementation of **connectionism**, the philosophy that calls for 
 
 ## Architecture 
 
-Feedforward networks consist of elementary **units** that resemble the [perceptron](../classification/perceptron). These units are stacked up into layers. 
+Feedforward networks consist of elementary **units** that resemble the logistic regression architecture. These units are stacked up into layers. 
 
 There are multiple layers:
 
@@ -18,6 +18,8 @@ There are multiple layers:
 
 Since the input to the network is trivial we focus on the hidden and output layers starting from the latter. 
 
+![hierarchical-features-classification](images/hierarchical-features-classification.png#center)
+_Example DNN Architecture_
 ### Output Layer
 
 The feedforward network provides a set of hidden features deﬁned by 
