@@ -50,5 +50,3 @@ The RPN network produces a classification score i.e. how confident we are that t
 
 ![faster-rcnn-inference-speedup](images/faster-rcnn-inference-speedup.png#center)
 
-Finally, the following curve (focus on COCO) presents the relative performance between 
-![object-detection-performance](images/object-detection-performance.png#center)

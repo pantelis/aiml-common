@@ -49,7 +49,7 @@ After the initial regions are produced, we use a greedy algorithm to iteratively
 
 First the similarities between all neighboring regions are calculated. The two most similar regions are grouped together, and new similarities are calculated between the resulting region and its neighbors. The process of grouping the most similar regions is repeated until the whole image becomes a single region.  
 
-For the similarity $s(r_i ,rj)$ between region $r_i$ and $r_j$ we apply a variety of complementary measures under the constraint that they are
+For the similarity $s(r_i ,r_j)$ between region $r_i$ and $r_j$ we apply a variety of complementary measures under the constraint that they are
 fast to compute. In effect, this means that the similarities should be based on features that can be propagated through the hierarchy, i.e.
 when merging region $r_i$ and $r_j$ into $r_t$, the features of region $r_t$ need to be calculated from the features of $r_i$ and $r_j$ without accessing the image pixels. Such feature similarities include color, texture, size, fill - we create a binary sum of such individual similarities. 
 
