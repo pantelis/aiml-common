@@ -8,7 +8,7 @@ weight: 85
 
 In [Inference in Graphical Models section]({{<ref "../bayesian-inference">}}) we have seen how sequential data belonging to just two evidential variables (captured via $p(x,y)$) can be treated by probabilistic models to infer (reason) about values of the posterior. Now we will expand on two fronts:
 
-* Introduce the concept of _state_ $s$ that encapsulates multiple random variables and consider _dynamical systems_ with non-trivial non-linear dynamics (state transition models) common in robotics, medical diagnosis and many other fields.
+* Introduce the concept of _state_ $s$ that encapsulates multiple random variables and consider _dynamical systems_ with non-trivial non-linear dynamics (state transition models) common in robotics and many other fields.
 
 * Introduce the time index $t$ explicitly in the aforementioned state evolution as represented via a graphical model. 
 
@@ -23,7 +23,9 @@ We are introducing this algorithm, by considering a embodied agent (a robot) tha
 ![belief](images/belief.png#center)
 *Agent belief and environment interactions*
 
-The state of such environment contain variables that capture dynamics such as pose (6D) that includes location and orientation, agent velocity, other objects poses, etc., as well as static state variables such as location of obstacles, walls etc. Most practical algorithms for state estimation assume that the stochastically evolving environment is not affected from state variables prior to $s_t$. This is the _Markovian_ assumption and is key in making such algorithms tractable. Note that the assumption does not constraint the actual time internal that it is impactful for the future as we are free to define anyway we want the state $s_t$. It may for example use a super-state that consists of two states in corresponding time intervals $s_t=[s_{t-1}, s_t]$.  We call this the Markov order - in this case the order is two. In the figure below you can see the PGM that corresponds to the Markov assumption. 
+The state of such environment contain variables that capture dynamics such as pose (6D) that includes location and orientation, agent velocity, other objects poses, etc., as well as static state variables such as location of obstacles, walls etc. Most practical algorithms for state estimation assume that the stochastically evolving environment is not affected from state variables prior to $s_t$. 
+
+This is the _Markovian_ assumption and is key in making such algorithms tractable. Note that the assumption does not constraint the actual time internal that it is impactful for the future as we are free to define anyway we want the state $s_t$. It may for example use a super-state that consists of two states in corresponding time intervals $s_t=[s_{t-1}, s_t]$.  We call this the Markov order - in this case the order is two. In the figure below you can see the PGM that corresponds to the Markov assumption. 
 
 ![dynamic-bayesin-network](images/dynamic-bayes-network.png#center)
 *Dynamic Bayesian Network that characterizes the Markov evolution of states, measurements and controls  - in the text we use for states the letter $s$ instead of $x$ and for actions the letter $a$ instead of $u$.* 
@@ -33,9 +35,11 @@ The above graph decomposes as follows:
 $$p(z_t|s_{0:t}, z_{1:t}, a_{1:t})=p(z_t|s_t)$$ 
 $$p(s_t|s_{1:t-1}, z_{1:t}, a_{1:t})=p(s_t|s_{t-1}, a_t)$$
 
-In the following we will use $z_{t_1:t_2}$ to represent sensing estimates of the perception subsystem acquired between $t_1$ and $t_2$. The measurement or sensor model is given by the conditional probability distribution $p(z_t|s_t)$. Note a couple of important points: as measurements arrive over time, the knowledge of the agent increases and there may not be dependency on time for the measurement model. 
+In the following we will use $z_{t_1:t_2}$ to represent sensing estimates of the perception subsystem acquired between $t_1$ and $t_2$. 
 
-We will also use the conditional probability to represent the state transition $p(s_t | s_{t-1}, a_t)$ where $a_t$ is the control action variable that the agent executes causing a state change in the environment. By convention, we execute first a control action $a_1$ and then measure $z_1$. 
+The **measurement or sensor model** is given by the conditional probability distribution $p(z_t|s_t)$. Note a couple of important points: as measurements arrive over time, the knowledge of the agent increases and there may not be dependency on time for the measurement model. 
+
+We will also use the conditional probability to represent the **state transition model** $p(s_t | s_{t-1}, a_t)$ where $a_t$ is the control action variable that the agent executes causing a state change in the environment. By convention, we execute first a control action $a_1$ and then measure $z_1$. 
 
 The belief is the _posterior_ distribution over the state $s_t$ conditioned on all past measurements and actions. 
 
