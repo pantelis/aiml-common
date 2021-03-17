@@ -20,8 +20,10 @@ $$g(\mathbf{w},x_i) = w_0 + w_1 x_i + w_2 x_i^2 + ... + w_M x_i^M$$
 
 Our job is to find $\mathbf{w}$ such that the polynomial above fits the data we are given - as we will see there are multiple hypothesis that can satisfy this requirement. To gauge our investigation, we need to define a metric, an error or loss function in fact, that is also a common metric in regression problems of this nature. This is the Mean Squared Error (MSE) function. 
 
-$$L(\mathbf{w}) = \frac{1}{2} \sum_{i=1}^m \{(g(\mathbf{w},x_i)-y_i)\}^2$$
+$$L(\mathbf{w}) = \frac{1}{2m} \sum_{i=1}^m \{(g(\mathbf{w},x_i)-y_i)\}^2$$
 
+NOTE: Please note that the factor 2.0 in the denominator is for mathematical convenience.  When we take the derivative as we need to do in the training optimization procedure this factor will cancel the factor 2.0 of the derivative. 
+. 
 ![Loss Function](images/Figure1.3.png)
 *The loss function chosen for this regression problem, corresponds to the sum of the squares of the displacements of each data point and our hypothesis. The sum of squares in the case of Gaussian errors gives raise to an (unbiased) Maximum Likelihood estimate of the model parameters. Contrast this to sum of absolute differences.*
 

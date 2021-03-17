@@ -43,12 +43,13 @@ Therefore, in this architecture there is _one_ CNN network that does not only pr
 It is doing so by sliding a window n x n over the feature map. At each sliding-window location, we simultaneously predict multiple region proposals, where the number of maximum possible proposals for each location is denoted as k. So the reg layer has 4k outputs encoding the coordinates of k boxes, and the cls layer outputs 2k scores that estimate probability of object or not object for each proposal. 
 
 The k proposals are parameterized relative to k reference boxes, which we call
-**anchor boxes**. The size can be changed but the original paper used anchor size of (128 × 128, 256 × 256, 512 × 512) and three aspect ratios (1:1, 1:2 and 2:1). An anchor is centered at the sliding window in question, and is associated with a scale and aspect ratio. By default we use 3 scales and 3 aspect ratios, yielding k = 9 anchors at each sliding position. For a feature map of a size
-W × H (typically ∼2,400), there are $W xH x k$ anchors in total.
+**anchor boxes**. The size can be changed but the original paper used anchor size of (128 × 128, 256 × 256, 512 × 512) and three aspect ratios (1:1, 1:2 and 2:1). An anchor is centered at the sliding window in question, and is associated with a scale and aspect ratio. By default we use 3 scales and 3 aspect ratios, yielding k = 9 anchors at each sliding position. For a feature map of a size $W × H$ (typically ∼2,400), there are $W \times H \times k$ anchors in total.
 
 The RPN network produces a classification score i.e. how confident we are that there is an object for each of the anchor boxes as well as the regression on the anchor box coordinates. 
 
 ![faster-rcnn-inference-speedup](images/faster-rcnn-inference-speedup.png#center)
 
-Finally, the following curve (focus on COCO) presents the relative performance between 
-![object-detection-performance](images/object-detection-performance.png#center)
+## References
+
+1. [Object Detection in 20 years: A Survey](https://arxiv.org/abs/1905.05055)
+
