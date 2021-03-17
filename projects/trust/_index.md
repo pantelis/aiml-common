@@ -13,7 +13,7 @@ https://www.youtube.com/watch?v=hUnRCxnydCc
 ## Tasks
 
 1. Wrire a 4 page tutorial on LIME method as described in [this paper](https://arxiv.org/abs/1602.04938). (20 points)
-2. Clone [this repository](https://github.com/marcotcr/lime) and replicate the results in `multi_polatiry_books` dataset with `random_forest` algorithms.  (20 points)
+2. Clone [this repository](https://github.com/marcotcr/lime) and replicate the results in [`multi_polatiry_books` dataset](https://www.cs.jhu.edu/~mdredze/datasets/sentiment/) with `random_forest` algorithms.  (20 points)
 3. Apply a classifier of your choice to the [Tubespam dataset](https://archive.ics.uci.edu/ml/datasets/YouTube+Spam+Collection) that was used in [this paper.](http://www.dt.fee.unicamp.br/~tiago/papers/TCA_ICMLA15.pdf) (20 points)
 4. Apply the LIME explainer on the classifier you implemented in the previous step for the Tubespam dataset and write a 2 page summary with your findings (40 points)
 
