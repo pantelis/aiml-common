@@ -1,6 +1,5 @@
 ---
 title: Logical Agents
-weight: 94
 draft: false
 ---
 

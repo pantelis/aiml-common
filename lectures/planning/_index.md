@@ -1,7 +1,5 @@
 ---
-title: Lecture 7 - Planning
-weight: 91
-draft: false
+title: Planning
 ---
 
 # Planning

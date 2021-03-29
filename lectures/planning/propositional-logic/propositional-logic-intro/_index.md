@@ -23,9 +23,9 @@ For example, for the sentence $\beta$ that declares that the backpack was separa
 
 ## Automated Reasoning Group in AWS
 
-Logical reasoning is not only for scene analytics. AWS was the first cloud provider to recognize its significance and the following video shows why and what they have developed in this space. 
+Logical reasoning is not only for scene analytics. AWS was the first cloud provider to recognize its significance and the following video shows why and what they have developed in this space. To the best of my knowledge this is the largest deployment of logical reasoning technology to this day. 
 
 [![The Evolution of Automated Reasoning Technology](https://img.youtube.com/vi/x6wsTFnU3eY/0.jpg#center)](https://www.youtube.com/watch?v=x6wsTFnU3eY)
 _AWS re:Inforce 2019: The Evolution of Automated Reasoning Technology at AWS_
 
-Still to _learn_ the value of logical reasoning you need to go to simpler domains / worlds than scene analytics and cloud networking - world models that are simple and instructive are the way to learn. 
+Still to _learn_ the value of logical reasoning you need to go to simpler domains / worlds than scene analytics and cloud networking - world models that are simple and instructive. 

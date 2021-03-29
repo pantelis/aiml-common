@@ -1,7 +1,5 @@
 ---
 title: Classical Planning
-draft: false
-weight: 95
 ---
 
 # Classical Planning

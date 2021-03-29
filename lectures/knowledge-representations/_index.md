@@ -15,7 +15,7 @@ https://learning.oreilly.com/videos/oreilly-strata-data/9781492050681/9781492050
   * Fuzzy search
   * Ranked results
   * Kibana provides a dashboard on top of a search engine. 
-  * 
+
 
 Original syllabus for lecture 12:
 
