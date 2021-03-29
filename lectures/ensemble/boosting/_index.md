@@ -47,9 +47,11 @@ At each round $t$ we have $n$ decision stumps each producing $\hat{\mathbf y}_t$
 
 $$\epsilon_t = \Pr [\hat y_t(i) \neq y_t(i)] = \frac{\sum_{i: \hat y_t(i) \neq y_t(i)}^m w_t(i)}{\sum_{i=1}^m w_t(i)}$$
 
-The feature and corresponding stump that offers the lower error rate, becomes the next stump in the forest and we can calculate its significance via the formula
+The decision stump that offers the lower error rate, has a much higher significance given via the formula
 
 $$\alpha_t = \eta \log \frac{1-\epsilon_t}{ϵ_t}$$
+
+where $\eta$ is a learning rate hyperparameter - if not optimized it defaults to 1.0.  
 
 Then AdaBoost updates the example weights via the equations below that boosts the weights of misclassified examples and normalizes them so that they can be interpreted as a probability distribution:
 
@@ -67,6 +69,21 @@ which can be interpreted as the weighted majority vote of the T weak hypotheses.
 ![adaboost-perf](images/adaboost-perf.png#center)
 *The first classifier gets many instances wrong, so their weights get boosted. The second classifier therefore does a better job on these instances, and so on. The plot on the right represents the same sequence of predictors, except that the learning rate is halved (i.e., the misclassified instance weights are boosted half as much at every iteration). As you can see, this sequential learning technique has some similarities with Gradient Descent, except that instead of tweaking a single predictor’s parameters to minimize a cost function, AdaBoost adds predictors to the ensemble, gradually making it better.* 
 
+A perhaps more illuminating example that shows the weight adjustments is shown below. You need to replace the $m$ with $t$ to match the notation of these notes. 
+
+![a](images/Figure14.2a.png)
+
+![b](images/Figure14.2b.png)
+
+![c](images/Figure14.2c.png)
+
+![d](images/Figure14.2d.png)
+
+![e](images/Figure14.2e.png)
+
+![f](images/Figure14.2f.png)
+
+Note that although decision stumps were used here, the method is generic to any weak learner. 
 
 ## Gradient Boosting
 
