@@ -26,71 +26,42 @@ See [this video](https://www.youtube.com/watch?v=IqYk0dFcZgc&t=2s) for more deta
 
 ## Tasks
 
-In this project you will perform certain tasks to ensure that the pod is able to perform its required robotic functionality and function as a system. The functionality is divided into four subsystems: 
-
-1. Path Planning Controller responsible for executing path planning. 
-2. Navigation Controller responsible for localization. 
-3. Logistics Controller
-4. Integration Controller. It may optionally present as it depends on your design and implementation. If it is present, it may delegated the role of an orchestrator responsible for running the demo of the whole system.
-
-The task you need to do is to implement and use the above subsystems to coordinate the transfer of pallets inside a pod. 
-
-Task 1: (25 points) Create a collision free plan. No robots should collide with each other. This task involves controllers 1 and 4. 
-
-Task 2: (75 points) Move at least 2 pallets from pallet locations to storage location with the first attempt. This task involves controllers 1, 2 and 4. 
-
-Task 3: (Extra 20 points) Simulate a demand distribution of temporal arrival rate of customer orders characterized by a random number of totes per order up top 10 totes per order and assume a customer arrival pickup time move the pallets according to the packing efficiency 
-
-Implementation-wise you can follow Track 1 or Track 2 versions of the project below. The reason why we have two tracks is to allow students that are remote and unable to participate into teams to win 100 points without having dependencies on ROS and relatively extensive compute environments. There is no free lunch for Track 2 though as some of the functionality that is readily available in Track 1 needs to ve developed in track2.  
-
-To help plan the tasks amongst the team members please use Trello (login with your nyu account) and split the project into four boards one for each controller above. Also 
-
-{{<hint alert>}}
-Note that the points are assigned per task completion and are independent on how many controllers you implemented. Therefore make the controllers initially simple and make sure you submit both completed tasks rather than spending time on the ultimate path planner and miss the deadline.  
-{{</hint>}}
-
-## Track 1 (ROS Foxy)
-
-The implementation must be resilient and therefore the system must be distributed across many nodes supported by the ROS as well as use a number of AWS managed services. Usage of AWS managed services are not required for this project.  
+In this project you will perform certain tasks to ensure that the pod is able to perform its required robotic functionality and function as a system. The implementation must be resilient and therefore the system must be distributed across many nodes supported by the ROS as well as use a number of AWS managed services. Usage of AWS managed services are not required for this project.  
 
 The Robot Operating System (ROS) is a set of software libraries and tools for building robot applications. From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project. And it’s all open source. [Here](https://docs.ros.org/en/foxy/index.html) you will find the official documentation on ROS 2, the newest version of ROS that you will use.
+ 
+ The functionality is divided into subsystems such as the planner responsible for computing a path to the goal state and other navigation control subsystems such as recovery and localization. 
 
+The task you need to do is to implement and use the above subsystems to coordinate the transfer of pallets inside a pod. For all tasks below please consult the [wiki pages](https://github.com/pantelis-robotics/aws-warehouse/wiki) as well. Students that have significant contributions to the wiki way will be considered for extra credit points.  For example, students can add Win10, mac and AWS robomaker platform details. 
 
-### Path Planning Controller
+### Task 1 (10 points) 
 
-See the Dock-Worker Robots Planning Domain and the [Improving Classical AI Planning Complexity](https://towardsdatascience.com/improving-classical-ai-planning-complexity-with-planning-graph-c63d47f87018)
+Execute the docker installation scripts in [this gude](http://jderobot.github.io/RoboticsAcademy/exercises/MobileRobots/multi_robot_amazon_warehouse/) and bring up the environment. See the wiki for details. 
 
+### Task 2 (30 points)
 
-### Navigation Subsystem
+Write the planner in python under src/exercise.  The following are the planner requirements: 
 
-For an introduction to the navigation system, see the following video:
+1. The robots must start from known locations for each delivery. Fix the location using the 2D Pose Estimate in RViz. 
 
-{{<youtube QB7lOKp3ZDQ>}}
+2. No robots should collide with each other and they should not wonder without purpose in the environment. 
 
-![architectural-diagram](images/architectural-diagram.png)
+3. Both robots must be active at the same time and carry palettes to selected destinations (goal states). 
+   
+The planner can be triggered interactively i.e. it can only start when a mouse is clicked in RViz. Each robot must move at least 2 pallets to storage location (south of the room) with the first attempt. 
 
-Localization: https://github.com/SteveMacenski/slam_toolbox
+### Task 3 (30 points)
 
+Use the symbolic planning language PDDL to write a planning controller that integrates Plansys2 and Nav2.  See the Dock-Worker Robots Planning Domain [in this post](https://towardsdatascience.com/improving-classical-ai-planning-complexity-with-planning-graph-c63d47f87018) as well as the [PlanSys2 tutorials](https://intelligentroboticslab.gsyc.urjc.es/ros2_planning_system.github.io/tutorials/docs/bt_actions.html). 
 
-### Logistics Controller
+The controller is may be triggered by an event i.e. customer arriving in the pickup hatch location. 
 
+### Task 4 (30 points)
 
-## Track 2 (Python Robotics)
+Write a markdown report where you explain your design of the planner in Task 2 and 3 as well as providing positive and negative results from the robotic delivery of the pallets. Explain the negative results and suggest ways that can be fixed if you have no time fixing these issues. 
 
-The implementation must demonstrate the tasks using the Python Robotics or any other Python library you need to. 
+{{<hint alert>}}
+To help plan the tasks amongst the team members please use Trello (login with your nyu account). Submit your trello boards with your project.  
 
-{{<hint info>}}
-You need to assume the exact same environment as given by the map of Track #1 i.e. same dimensions and the same layout of warehouse (pod), same robot physical dimensions (rather than a single point), same dimensions for each palette etc. In addition you need to block specific occupancy maps. 
+Note that the points are assigned per task completion and are relatively independent on the implementation complexity. Therefore start simple and make sure you submit all completed tasks rather than spending time on the ultimate path planner and miss the deadline.  
 {{</hint>}}
-
-
-### Motion Planning Controller
-
-
-### Navigation Subsystem
-
-You are welcomed to try various navigation libraries but you probably need [this](https://github.com/splintered-reality/py_trees) to match the flexibility of BTs used in Nav2 stack in Track#1. 
-
-
-### Logistics Controller
-
