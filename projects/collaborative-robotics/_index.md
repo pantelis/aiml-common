@@ -60,8 +60,19 @@ The controller is may be triggered by an event i.e. customer arriving in the pic
 
 Write a markdown report where you explain your design of the planner in Task 2 and 3 as well as providing positive and negative results from the robotic delivery of the pallets. Explain the negative results and suggest ways that can be fixed if you have no time fixing these issues. 
 
+#### Notes: 
+
 {{<hint alert>}}
-To help plan the tasks amongst the team members please use Trello (login with your nyu account). Submit your trello boards with your project.  
+To help plan the tasks amongst the team members please use Trello (login with your nyu account). Submit your Trello boards with your project.  
 
 Note that the points are assigned per task completion and are relatively independent on the implementation complexity. Therefore start simple and make sure you submit all completed tasks rather than spending time on the ultimate path planner and miss the deadline.  
+{{</hint>}}
+
+
+{{<hint warning "WARNING">}}
+
+Consider using AWS Robomaker for this project (ROS2 distribution). 
+
+Note to all students using AWS resources provided for this project. You are **entirely** responsible to limit the use of p2.xlarge instances that consumes on-demand 1$/h and use CPU instances when possible. Invest in understanding docker containers so you do not suffer catastrophic failures when working in a cloud environment (the norm in practice).  You are responsible for not exceeding your budget.
+
 {{</hint>}}

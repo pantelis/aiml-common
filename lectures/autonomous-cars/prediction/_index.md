@@ -1,7 +1,5 @@
 ---
-title: Online Prediction 
-weight: 93
-draft: false
+title: Prediction 
 ---
 
 # Online Prediction
@@ -13,7 +11,7 @@ To understand the motion prediction subsystem, we can use an example. Our ego ag
 
 Via the perception subsystem our agent the moment it predicts that the other agent is slowing down (indicating perhaps also its intention to turn right), it can start turning left long before the other agent's manuever is completed, improving its efficiency / utility - after all the average speed may be one of the desirable metrics. 
 
-Thinking probabilistically, we need to maintain a _belief_, that was introduced in the [PGM]({{<relref "../../pgm/pgm-intro">}}) chapter, regarding the location of the turning-right agent. This belief will change over time as its updated with new observation (evidence).
+Thinking probabilistically, we need to maintain a _belief_, that was introduced in the [PGM]({{<relref "../../pgm/pgm-intro">}}) chapter, regarding the location of the turning-right agent. This belief will change over time as its updated with new observations.
 
 ![turn-prediction-prob](images/turn-prediction-prob.png#center)
 *Changing belief over time regarding the possible trajectories of the other agent. At time 0, the probabilities for the two trajectories are the prior probabilities determined from historical data.*
@@ -26,11 +24,12 @@ We assume that the sensing and perception subsystems provide the following infor
 
 $$[id, x, y, v_x, v_y, \sigma_x, \sigma_y, \sigma_{vx} \sigma_{vy}]^T$$
 
-The prediction output will be a list of trajectories each specified by a list of $[x, y, \mathtt{yaw}, \mathtt{timestamp}]$ elements and tagged with a probability. Each trajectory has a horizon of few seconds (10-20) and typically their time resolution is 200ms. 
+The prediction output will be a list of trajectories each specified by a list of $[x, y, \mathtt{yaw}, \mathtt{timestamp}]$ elements and tagged with a probability. Each trajectory has a horizon of few (e.g. 10s) seconds and typically their time resolution is 200ms. 
 
 To estimate the probabilities of the possible trajectories we have two broad options:
 
 1. Model-based approach. In this approach, we use _process models_ to generate trajectories for each of the possible hypotheses we have. The models capture the dynamics of each agent, the rules governing how an agent must turn etc. We use the perception subsystem and an estimation algorithm to estimate the belief (posterior) that the other agent will follow each of the reference trajectories. 
+
 2. ML-based approach. In this approach, the probabilities are estimated using supervised learning methods where we need to label the observations according to the trajectory that the agent followed. We use such training data to train a model that will predict the class (trajectory ID) and the confidence (belief). 
 
 ![model-vs-data](images/model-vs-data.png#center)

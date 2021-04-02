@@ -1,24 +1,15 @@
 ---
 title: World Models 
-weight: 91
-draft: false
 ---
 
 # World Models 
 
-For each problem we can define a number of _world models_ each representing every possible state (configuration) of the environment that the agent may be in. The specific world model $m$ is, in other words, a mathematical abstraction that fixes as TRUE or FALSE each of the sentences it contains and as you understand, depending on the sentences, it may or may not correspond to reality. For example, the sentence 
+For each problem we can define a number of _world models_ each representing every possible state (configuration) of the environment that the agent may be in. 
 
-$$c = \text{"backpack is hanging from the ceiling"}$$ 
-
-may be part of a model but it does not correspond to reality and chances are that this sentence will not be _satisfied_ in many models that contain it. We denote the set of models that satisfy sentence $\alpha$ as $M(\alpha)$. We also say that $m$ is a model of $\alpha$. Now that we have defined the world model we can go back to the definition of entailment in the earlier example and write:
-
-$$ \alpha \models \beta  \iff M(\alpha) ⊆ M(\beta)$$
-
-The representation language used in the KB sentences must offer two features: clear syntax and clear meaning (semantics). 
 
 ## Wumpus World
 
-To describe both we will use a very simple world known in the literature as the Wumpus World (a cave) shown below. 
+We will use a very simple world known in the literature as the Wumpus world (a cave) shown below. 
 
 ![wumpus-world](images/wumpus-world.png#center)
 *Wumpus World. It was inspired by a video game Hunt the Wumpus by Gregory Yob in 1973. The Wumpus world is a cave which has 4/4 rooms connected with passageways. So there are total 16 rooms which are connected with each other. We have a agent who will move in this world. The cave has a room with a beast which is called Wumpus, who eats anyone who enters the room. The Wumpus can be shot by the agent, but the agent has a single arrow. There are pit rooms which are bottomless, and if agent falls in such pits, then he will be stuck there forever. The agent's goal is to find the gold and climb out of the cave without falling into pits or eaten by Wumpus. The agent will get a reward if he comes out with gold, and he will get a penalty if eaten by Wumpus or falls in the pit.*
@@ -76,13 +67,23 @@ But why this problem requires _reasoning_? Simply put, the agent needs to infer 
 | (b) |  Agent A walks to the only unvisited OK choice [2, 2]. There is no Breeze here, and since the square of the Wumpus is now known too, [2, 3] and [3, 2] are OK too. | 
 | | Agent A walks into [2, 3] and senses the Glitter there, so it grabs the gold and succeeds. |
 
-## Model-Checking Inference
+## Logical Inference
+
+### A more general reasoning case
 
 The wumpus world despite its triviality, contains some deeper abstractions that are worth summarizing. 
 
 1. Logical inference can be done via an internal representation that are sentences - their syntax and semantics we will examined next. 
    
 2. Sentences may be expressed in _natural_ language. Together with the perception and probabilistic reasoning subsystems that can generate symbols associated with a task, the natural language can be _grounded_ and inferences can be drawn in a 'soft' or probabilistic way at the symbolic level. 
+
+To return to the backpack problem, for the sentence $\beta$ that declares that the backpack was abandoned, we need to entail a sentence $\alpha$ (and we denote it as $\alpha \models \beta$) that the backpack was handed over to $\mathtt{nobody}$ and therefore justify an action to sound the security alarm. Note the direction in notation: $\alpha$ is a stronger assertion that $\beta$.
+
+The specific world model $m$ is a mathematical abstraction that fixes as TRUE or FALSE each of the sentences it contains and as you understand, depending on the sentences, it may or may not correspond to reality. We denote the set of models that _satisfy_ sentence $\alpha$ as $M(\alpha)$. We also say that $m$ is a model of $\alpha$. Now that we have defined the world model we can go back to the definition of entailment in the earlier example and write:
+
+$$ \alpha \models \beta  \iff M(\alpha) ⊆ M(\beta)$$
+
+### Model-Checking Algorithm
 
 The reasoning algorithm regarding the possible state of the environment in surrounding cells that the agent performed informally above, is called _model checking_ because it enumerates _all possible_ models to check that a sentence $a$ is supported by the KB i.e. $M(KB) ⊆ M(\alpha)$. 
 
@@ -94,7 +95,7 @@ The reasoning algorithm regarding the possible state of the environment in surro
 
 ## Propositional Logic Syntax
 
-The syntax defines the allowable sentences that can be complex. Each _atomic_ sentence consists of a single (propositional) symbol and the fixed symbols TRUE & FALSE. In BNF the atomic sentences or formulas are also called terminal elements. Complex sentences can be constructed from sentences using logical _operators_ (connectives that connect two or more sentences). In evaluating complex sentences the operator precedence shown in the figure below must be followed. 
+The PL syntax defines the allowable sentences that can be complex. Each _atomic_ sentence consists of a single (propositional) symbol and the fixed symbols TRUE & FALSE. In BNF the atomic sentences or formulas are also called terminal elements. Complex sentences can be constructed from sentences using logical _operators_ (connectives that connect two or more sentences). In evaluating complex sentences the operator precedence shown in the figure below must be followed. 
 
 ![BNF-grammar-prop-logic](images/BNF-grammar-prop-logic.png#center)
 *BNF grammar of propositional logic*
@@ -152,7 +153,7 @@ As described in the figure caption, 3 models out of the $2^7=128$ models make th
 
 Although the model checking approach was instructive, there is an issue with its complexity. Notice that if there are $n$ symbols in the KB there will be $2^n$ models, the time complexity is $O(2^n)$. 
 
-The symbolic representation together with the explosive increase in the number of sentences in the KB as time goes by, cant scale. Another approach to do entailment, potentially more efficient, is  _theorem proving_ where we are applying _inference rules_ directly to the sentences of the KB to construct a proof of the desired sentence/query. Even better, we can invest in new representations as described in the [PDDL]({{<ref "../classical-planning">}}) chapter to develop planning approaches that combine search and logic and do not suffer necessarily from the combinatorial explosion problem. 
+The symbolic representation together with the explosive increase in the number of sentences in the KB as time goes by, cant scale. Another approach to do entailment, potentially more efficient, is  _theorem proving_ where we are applying _inference rules_ directly to the sentences of the KB to construct a proof of the desired sentence/query. Even better, we can invest in new representations as described in the [PDDL]({{<ref "../../planning/classical-planning">}}) chapter to develop planning approaches that combine search and logic and do not suffer necessarily from the combinatorial explosion problem. 
 
 {{< hint info >}}
 If you need to review the BNF expressed grammar for propositional logic (as shown in the syntax above) review [part 1](https://www.youtube.com/watch?v=MMxMeX5emUA) and [part 2](https://www.youtube.com/watch?v=DiOxbYTLXX8) video tutorials. 
