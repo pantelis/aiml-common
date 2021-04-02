@@ -6,7 +6,7 @@ title: Classical Planning
 
 ## Planning Domain Definition Language (PDDL)
 
-In [propositional logic-based planning]({{<ref "../propositional-logic">}}) we have seen the combinatorial explosion problem that results from the need to include in the reasoning / inference step all possible states and actions combinations over time. To avoid such explosion, with obvious benefits to the planning efficiency, we introduce a language called Planning Domain Definition Language (PDDL) that allows for compressive expressiveness at the action space via _action schemas_ as we will see shortly. PDDL is positioned at the input of the _domain independent_ planner as shown in the figure below.
+In [propositional logic-based planning]({{<ref "../../logical-reasoning/propositional-logic">}}) we have seen the combinatorial explosion problem that results from the need to include in the reasoning / inference step all possible states and actions combinations over time. To avoid such explosion, with obvious benefits to the planning efficiency, we introduce a language called Planning Domain Definition Language (PDDL) that allows for compressive expressiveness at the action space via _action schemas_ as we will see shortly. PDDL is positioned at the input of the _domain independent_ planner as shown in the figure below.
 
 ![automated-planning](images/automated-planning.png#center)
 *Planning System: A domain-independent solver or planner takes two inputs: 1) the domain
