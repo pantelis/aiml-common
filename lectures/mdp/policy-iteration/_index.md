@@ -47,12 +47,12 @@ and in vector form,
 
 $$\mathbf{v}^{k+1} = \mathbf{\mathcal R}^\pi + \gamma \mathbf{\mathcal P}^\pi \mathbf{v}^k$$
 
-The following source code is instructive and standalone. It executes the policy evaluation for the Gridworld environment from the many that are part of the Gym RL python library. 
+The [following source code](https://becomesentient.com/mdp-dynamic-programming/) is instructive and standalone. It executes the policy evaluation for the Gridworld environment from the many that are part of the Gym RL python library. 
  
 {{< details "Policy Evaluation Python Code" "..." >}}
 
 ```python
-# this code is from https://towardsdatascience.com/reinforcement-learning-demystified-solving-mdps-with-dynamic-programming-b52c8093c919
+# this code is from https://becomesentient.com/mdp-dynamic-programming/
 
 import numpy as np 
 import gym.spaces

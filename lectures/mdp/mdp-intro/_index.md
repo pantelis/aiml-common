@@ -27,7 +27,7 @@ The following table summarizes the notation and contains useful definitions that
 | $G_t$ | _return_ - the total discounted rewards from time step $t$ - it will be qualified shortly. |
 | $\gamma$ | the discount factor $\gamma \in [0,1]$ |
 
-As the figure above indicates, the agent *perceives fully* the environment state $S_t$  (**fully observed**) via a bank of sensors. In other words the agent knows which state the environment is perfectly. 
+As the figure above indicates, the agent *perceives fully* the environment state $S_t$  (**fully observed**) via a bank of sensors. In other words the agent knows which state the environment is, perfectly. 
 
 The agent function, called **policy** $\pi$, produces an action either deterministically $a=\pi(s)$ or stochastically where the function produces a probability of actions conditioned in the current state:
 
@@ -36,6 +36,8 @@ $$\pi(a|s)=p(A_t=a|S_t=s)$$
 The policy is assumed to be stationary i.e. not change with time step $t$ and it will depend only on the state $S_t$ i.e. $A_t \sim \pi(.|S_t), \forall t > 0$
 
 This will have two effects:
+
+### State transition
 
 The first is that the action itself will change the environment state to some other state. This can be represented via the environment _state transition_ probabilistic model that generically can be written as:
 
@@ -57,7 +59,9 @@ Can you determine the state transition matrix for the 4x3 Gridworld in [MDP slid
 
 Note that Markov processes are sometimes erroneously called _memoryless_ but in any MDP above we can incorporate memory aka dependence in more than one state over time by cleverly defining the state $S_t$ as a container of a number of states. For example, $S_t = \left[ S_t=s, S_{t-1} = s^\prime \right]$ can still define an Markov transition using $S$ states. The transition model $p(S_t | S_{t-1}) = p(s_t, s_{t-1} | s_{t-1}, s_{t-2}) = p(s_t|s_{t-1}, s_{t-2})$ is called the 2nd order Markov chain. 
 
-The second effect from the action, is that it will cause the environment to send the agent a signal called (instantaneous reward $R_{t+1}$. Please note that in the literature the reward is also denoted as $R_{t}$ - this is a convention issue rather than something fundamental. The justification of the index $t+1$ is that the environment will take one step to respond to what it receives from the agent. 
+### Reward function
+
+The second effect from the action, is that it will cause the environment to send the agent a signal called _instantaneous reward_ $R_{t+1}$. Please note that in the literature the reward is also denoted as $R_{t}$ - this is a convention issue rather than something fundamental. The justification of the index $t+1$ is that the environment will take one step to respond to what it receives from the agent. 
 
 The _reward function_ tells us if we are in state $s$, what reward  $R_{t+1}$ in expectation we get when taking an action $a$. It is given by,
 

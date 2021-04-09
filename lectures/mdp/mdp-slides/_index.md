@@ -339,7 +339,7 @@ $$ U(s_{33})   =   R(s_{33}) +  \gamma (P(s_{43} | s_{33}, \rightarrow)  U(s_{43
 
 ### Policy for MDP
 
-*  If we choose action $a$ that maximizes future rewards, $U(s)$ is the maximum we can get over all possible choices of actions  and is represented as $U^{*}(s)$.
+* If we choose action $a$ that maximizes future rewards, $U(s)$ is the maximum we can get over all possible choices of actions  and is represented as $U^{*}(s)$.
 
 * We can write this as 
 $$U^*(s) = R(s) + \gamma \underset{a}{ \max} (\sum_{s^{'}} P(s^{'}| s,a)U(s'))$$
@@ -349,7 +349,9 @@ $$U^*(s) = R(s) + \gamma \underset{a}{ \max} (\sum_{s^{'}} P(s^{'}| s,a)U(s'))$$
 $$\pi^{*}(s) = \underset{a}{\arg \max}(\sum_{s^{'}} P(s^{'}| s,a)U^{*}(s^{'}))$$
 
 * Can the above $2$ be solved directly? 
+  
   * The set of $|S|$ equations for  $U^*(s)$ cannot be solved directly because they are non-linear due the presence of 'max' function.
+  
   * The set of $|S|$ equations for $\pi^*(s)$ cannot be solved directly as it is dependent on unknown $U^*(s)$.
 
 ----
@@ -370,6 +372,7 @@ $$\pi^{*}(s) = \underset{a}{\arg \max}(\sum_{s^{'}} P(s^{'}| s,a)U^{*}(s^{'}))$$
 $$V_{t+1}(s) \leftarrow R(s) + \gamma \underset{a}{ \max} \left[ \sum_{s^{'}} P(s^{'}| s,a) U_t(s^{'}) \right] \forall s \epsilon S$$ 
 
 	This step is repeated and updated
+
 * Let us apply this to the maze example.  Assume that $\gamma = 1$
 
 ![val-iter-initial](./images/val-iter-initial.png)
@@ -879,53 +882,3 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 
 
 ----
-
-#### Case Study - World Models
-
-* Goal is to learn from pixels and control a car on a racing track
-
-![](./images/car-racing.PNG)<!-- .element width="600px" -->
-
-<div style="font-size: 15px; text-align: left;">
-source: https://worldmodels.github.io/ 
-</div>
-
-
-----
-
-#### Case Study - World Models - continued
-
-
-* Model based reinforcement learning 
-* vision + memory + control
-
-![](./images/world-model-1.PNG)<!-- .element width="900px" -->
-
-<div style="font-size: 15px; text-align: left;">
-source: https://worldmodels.github.io/ 
-</div>
-
-
-
-----
-
-
-#### Case Study - World Models - continued
-
-![](./images/world-model-2.PNG)<!-- .element width="900px" -->
-
-
-
-----
-
-
-#### Case Study - World Models - continued
-
-
-
-<video data-autoplay src="./images/carracing_mistake_short.mp4"></video>
-
-
-
----
-!

@@ -24,7 +24,7 @@ Effectively this principle allows us to decompose the problem into two sub-probl
 
 $$v_*(s) = \max_a \left( \mathcal R_s^a + \gamma \sum_{s^\prime \in \mathcal S} \mathcal{P}^a_{ss^\prime} v_*(s^\prime) \right)$$
 
-As an example if I want to move optimally towards a location in the room, I can make a optimal first step and at that point I can follow the optimal policy, that I was magically given, towards the desired final location. That optimal first step, think about making it by walking backwards from the goal. We start at the end of the problem where we know the final rewards and work backwards to all the states that correct to it in our look-ahead tree. 
+As an example if I want to move optimally towards a location in the room, I can make a optimal first step and at that point I can follow the optimal policy, that I was magically given, towards the desired final location. That optimal first step, think about making it by walking backwards from the goal. We start at the end of the problem where we know the final rewards and work backwards to all the states that connect to it in our look-ahead tree. 
 
 ![value-iteration-look-ahead-tree](images/value-iteration-look-ahead-tree.png#center)
 *One step look-ahead tree representation of value iteration algorithm*
