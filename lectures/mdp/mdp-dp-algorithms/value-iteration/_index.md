@@ -42,6 +42,7 @@ Notice that we are not building an explicit policy at every iteration and also p
 ![gridworld-value-iteration](images/gridworld-value-iteration-value-only.png#center)
 *State values for an MDP with random policy (0.25 prob of taking any of the four available actions), $\gamma=1$, that rewards the agent with -1 at each transition except towards the goal states that are in the top left and bottom right corners*
 
+
 <!-- We return to the tree representation of the value iteration with DP - this will be useful when we compare the DP with other value iteration approaches. 
 
 $$V(S_t) = \mathbb E_\pi \left[R_{t+1} + \gamma V(S_{t+1}) \right]$$
