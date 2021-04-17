@@ -37,17 +37,17 @@ which can be written in a vector form as,
 
 $$\mathbf v_{k+1} = \max_a \left( \mathcal R^a + \gamma \mathcal P^a \mathbf v_k \right) $$
 
-Notice that we are not building an explicit policy at every iteration and also perhaps importantly, the intermediate value functions may _not_ correspond to a feasible policy. Before going into a more elaborate example, we can go back to the same simple world we have looked at in the [policy iteration]({{../../drl-i/drl-value}}) section and focus only on the state-value calculation using the formula above. 
+Notice that we are not building an explicit policy at every iteration and also perhaps importantly, the intermediate value functions may _not_ correspond to a feasible policy. Before going into a more elaborate example, we can go back to the same simple world we have looked at in the [policy iteration]({{<relref "../policy-iteration">}}) section and focus only on the state-value calculation using the formula above. 
 
 ![gridworld-value-iteration](images/gridworld-value-iteration-value-only.png#center)
 *State values for an MDP with random policy (0.25 prob of taking any of the four available actions), $\gamma=1$, that rewards the agent with -1 at each transition except towards the goal states that are in the top left and bottom right corners*
 
-We return to the tree representation of the value iteration with DP - this will be useful when we compare the DP with other value iteration approaches. 
+<!-- We return to the tree representation of the value iteration with DP - this will be useful when we compare the DP with other value iteration approaches. 
 
 $$V(S_t) = \mathbb E_\pi \left[R_{t+1} + \gamma V(S_{t+1}) \right]$$
 
 ![dp-value-iteration-tree](images/dp-value-iteration-tree.png#center)
-*Backup tree with value iteration based on the DP approach - Notice that we do one step look ahead but we do not sample as we do in the other value iteration approaches.* 
+*Backup tree with value iteration based on the DP approach - Notice that we do one step look ahead but we do not sample as we do in the other value iteration approaches.*  -->
 
 ## Value iteration example
 
