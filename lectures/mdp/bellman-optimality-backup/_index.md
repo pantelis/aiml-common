@@ -1,9 +1,9 @@
 ---
-title: Bellman Optimality Equations
+title: Bellman Optimality Backup
 ---
 
 
-# Bellman Optimality Equations
+# Bellman Optimality Backup
 
 ## Solving the MDP
 
@@ -35,7 +35,7 @@ $$q_*(s,a) = \mathcal R_s^a + \gamma \sum_{s^\prime \in \mathcal S} \mathcal{P}^
 
 Notice that there is no $\max$ is this expression as we have no control on the successor state - that is something the environment controls. So all we can do is average. 
 
-Now we can similarly attempt to create a _recursion_ that will lead to the **Bellman optimality equations** that effectively solve the MDP, by expanding the trees above.
+Now we can similarly attempt to create a _recursion_ that will lead to the **Bellman optimality backup equations** that effectively solve the MDP, by expanding the trees above.
 
 ![optimal-state-action-state-value-tree](images/optimal-state-action-state-value-tree.png#center)
 *Tree that represents the optimal state-value function after a two-step look ahead.*
@@ -44,7 +44,7 @@ Now we can similarly attempt to create a _recursion_ that will lead to the **Bel
 *Tree that represents the optimal action-value function after a two-step look ahead.*
 
 {{<hint danger>}}
-**Bellman Optimality Equations**
+**Bellman Optimality Backup**
 
 $$v_*(s) = \max_a \left( \mathcal R_s^a + \gamma \sum_{s^\prime \in \mathcal S} \mathcal{P}^a_{ss^\prime} v_*(s^\prime) \right)$$
 

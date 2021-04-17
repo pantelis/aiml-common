@@ -1,7 +1,7 @@
 ---
-title: Bellman Expectation Equations 
+title: Bellman Expectation Backup 
 ---
-# Bellman Expectation Equations
+# Bellman Expectation Backup
 
 ## Computing the value functions given a policy
 

@@ -1,12 +1,10 @@
 ---
-title: Value Iteration
-weight: 106
-draft: false
+title: Dynamic Programming Algorithms - Value Iteration
 ---
 
-# Value Iteration
+# Dynamic Programming Algorithms - Value Iteration
 
-In this chapter we will look at an approach called value iteration for the _control_ problem with a _known MDP_. This is similar to the [policy-based]({{<ref "../policy-iteration">}}) that we presume the reader has gone through. 
+In this section we will look at an algorithm called value iteration for the _control_ problem with a _perfectly known MDP_. This is similar to the [policy-based]({{<ref "../policy-iteration">}}) that we presume the reader has gone through. 
 
 ![value-iteration-summary](images/value-iteration-summary.png#center)
 *Summary of Value Iteration*

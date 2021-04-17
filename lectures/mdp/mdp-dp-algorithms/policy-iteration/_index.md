@@ -1,20 +1,16 @@
 ---
-title: Policy Iteration
-weight: 105
-draft: false
+title: Dynamic Programming Algorithms - Policy Iteration
 ---
 
-# Policy Iteration
+# Dynamic Programming Algorithms - Policy Iteration
 
-In this chapter we develop the so called _planning_ problem (which is RL without learning) where we are dealing with a _known MDP_. This means that we know the transition and reward functions/models of the environment and we are after the optimal policy solutions.
+In this section we develop dynamic programming algorithms for the so called _planning_ problem (which is RL without learning) where we are dealing with a _perfectly known MDP_. 
 
-## Dynamic Programming and Policy Iteration
+In the [Bellman expectation backup]({{<ref "../../bellman-expectation-backup">}}) section we have derived the equations which allowed us to efficiently compute the value function. 
 
-In the [MDP]({{<ref "../../mdp/mdp-intro">}}) chapter we have derived the Bellman expectation _backup_ equations which allowed us to efficiently compute the value function. 
+We have seen also that the  [Bellman optimality backup]({{<ref "../../bellman-optimality-backup">}})  that are non linear and need to be solved using iterative approaches - their solution will result in the optimal value function $v_*$ and the optimal policy $\pi_*$. Since the Bellman equations allow us to decompose recursively the problem into sub-problems, they in fact implement a general and exact approach called _dynamic programming_ which assumes full knowledge of the MDP.
 
-We have seen also that the Bellman optimality equations are non linear and need to be solved using iterative approaches - their solution will result in the optimal value function $v_*$ and the optimal policy $\pi_*$. Since the Bellman equations allow us to decompose recursively the problem into sub-problems, they in fact implement a general and exact approach called _dynamic programming_ which assumes full knowledge of the MDP.
-
-In the policy iteration, given the policy $\pi$, we iterate two distinct steps as shown below:
+In policy iteration, given the policy $\pi$, we iterate two distinct steps as shown below:
 
 ![policy-iteration-steps](images/policy-iteration-summary.png#center)
 *Policy iteration in solving the MDP - in each iteration we execute two steps, policy evaluation and policy improvement*
@@ -34,7 +30,7 @@ It can be shown that the policy iteration will converge to the optimal value fun
 
 The policy $\pi$ is evaluated when we have produced the state-value function $v_\pi(s)$ for all states. In other words when we know the expected discounted returns that each state can offer us. To do so we apply the Bellman expectation backup equations repeatedly in an iterative fashion. 
 
-We start at $k=0$ by initializing all state-value function (a vactor) to $v_0(s)=0$. In each iteration $k+1$ we start with the state value function of the previous iteration $v_k(s)$ and apply the Bellman expectation backup as prescribed by the one step lookahead tree below that is decorated relative to what [we have seen]({{<ref "../../mdp">}}) with the iteration information. This is called the synchronous backup formulation as we are updating all the elements of the value function vector at the same time. 
+We start at $k=0$ by initializing all state-value function (a vactor) to $v_0(s)=0$. In each iteration $k+1$ we start with the state value function of the previous iteration $v_k(s)$ and apply the Bellman expectation backup as prescribed by the one step lookahead tree below that is decorated relative to what [we have seen]({{<ref "../../bellman-expectation-backup">}}) with the iteration information. This is called the synchronous backup formulation as we are updating all the elements of the value function vector at the same time. 
 
 ![policy-evaluation-tree](images/policy-evaluation-tree.png#center)
 *Tree representation of the state-value function with one step look ahead across iterations.*
@@ -247,4 +243,3 @@ We can therefore stop early and taking the argument to the limit, do the policy 
 
 In summary, we have seen that policy iteration solves the known MDPs. In the next section we remove the known MDP assumption and deal with the first Reinforcement Learning (RL) algorithm. 
 
-> A more graphical way to understand how policy iteration functions is through [this python code](https://github.com/rlcode/reinforcement-learning/tree/master/1-grid-world/1-policy-iteration) that depicts a more elaborate gridworld. You can type ```python policy_iteration.py``` to debug and step through the code after installing the dependencies. 
