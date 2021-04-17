@@ -56,4 +56,5 @@ These equations due to the $\max$ operator are non-linear and can be solved to o
 1. They _recursively decompose_ the problem into two sub-problems: the subproblem of the next step and the optimal value function in all subsequent steps of the trajectory.
 2. They cache the optimal value functions to the sub-problems and by doing so we can reuse them as needed.
 
+Since the Bellman equations allow us to decompose recursively the problem into sub-problems, they in fact implement a general and exact approach called _dynamic programming_ that results into an optimal policy. We examine the computational aspects of such approach in a separate section. 
 

@@ -4,12 +4,12 @@ title: Dynamic Programming Algorithms - Value Iteration
 
 # Dynamic Programming Algorithms - Value Iteration
 
-In this section we will look at an algorithm called value iteration for the _control_ problem with a _perfectly known MDP_. This is similar to the [policy-based]({{<ref "../policy-iteration">}}) that we presume the reader has gone through. 
+We already have seen that in the Gridworld example in the [policy iteration section]({{<ref "../policy-iteration">}}) , we may not _need_ to reach the optimal state value function $v_*(s)$ to obtain an optimal policy to result. The value function for the $k=3$ iteration results the same policy as the policy from a far more accurate value function (large k). 
+
+We can therefore stop early and taking the argument to the limit, do the policy improvement step in _each_ iteration.  In this section we will look at an algorithm called value iteration that does that.  
 
 ![value-iteration-summary](images/value-iteration-summary.png#center)
 *Summary of Value Iteration*
-
-## Dynamic Programming and Value Iteration
 
 The basic principle behind value-iteration is the principle that underlines dynamic programming and is called the _principle of optimality_ as applied to policies. According to this principle an _optimal_ policy can be divided into two components.
 
@@ -49,7 +49,7 @@ $$V(S_t) = \mathbb E_\pi \left[R_{t+1} + \gamma V(S_{t+1}) \right]$$
 ![dp-value-iteration-tree](images/dp-value-iteration-tree.png#center)
 *Backup tree with value iteration based on the DP approach - Notice that we do one step look ahead but we do not sample as we do in the other value iteration approaches.* 
 
-### DP Value-iteration example
+## Value iteration example
 
 In example world shown below (from [here](http://i-systems.github.io/HSE545/iAI/AI/topics/05_MDP/11_MDP.html))
 
@@ -118,5 +118,6 @@ print(optPolicy)
 
 {{</details>}}
 
-> A more graphical way to understand how policy iteration functions is through [this python code](https://github.com/rlcode/reinforcement-learning/tree/master/1-grid-world/2-value-iteration) that depicts a more elaborate gridworld. You can type ```python value_iteration.py``` to debug and step through the code after installing the dependencies. 
-
+{{<hint info>}}
+In summary, we have seen algorithms  iteration solve known MDPs. In the next section we remove the known MDP assumption and deal with the first Reinforcement Learning (RL) algorithm. 
+{{<hint>}}
