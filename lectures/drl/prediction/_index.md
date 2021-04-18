@@ -1,21 +1,21 @@
 ---
 title: Model-free Prediction
-weight: 105
-draft: false
 ---
 
 # Model-free Prediction
 
 In this chapter we find optimal policy solutions when the MDP is _unknown_ and we need to _learn_ its underlying value functions - also known as the  _model free_ prediction problem.  The main idea here is to learn value functions via sampling. These methods are in fact also applicable when the MDP is known but its models are simply too large to use the approaches outlined in the  [MDP chapter]({{<ref "../../mdp">}}). The two sampling approaches we will cover here are (incremental) Monte-Carlo (MC) and Temporal Difference (TD). 
 
+**Notice that we started using capital letters for the _estimates_ of the value functions.**  
+
 ## Monte-Carlo (MC) Learning
 
-The value functions $v_π$ and $q_π$ can be estimated from experience.  For example, if an agent follows policy $\pi$ and maintains an average, for each state encountered, of the actual returns that have followed that state, then the average will converge to the state’s value,$v_π(s)$, as the number of times that state is encountered approaches infinity.  If separate averages are kept for each action taken in each state, then these averages will similarly converge to the action values,$q_π(s,a)$.  We call estimation methods of this kind _Monte Carlo_ methods because they involve averaging over many random samples of actual returns.
+The value functions $v_π$ and $q_π$ can be estimated from experience.  For example, if an agent follows policy $\pi$ and maintains an average, for each state encountered, of the actual returns that have followed that state, then the average will converge to the state’s value,$v_π(s)$, as the number of times that state is encountered approaches infinity.  If separate averages are kept for each action taken in each state, then these averages will similarly converge to the action values,$q_π(s,a)$.  We call estimation methods of this kind _Monte Carlo_ methods because they involve averaging over many random samples of returns.
 
-In the MC learning approach for every state at time $t$ we sample one complete trajectory as shown below.  
+In the MC learning approach more specifically, for every state at time $t$ we sample one complete trajectory (episode) as shown below.  
 
 ![mc-value-iteration-tree](images/mc-value-iteration-tree.png#center)
-*Backup tree with value iteration based on the MC approach. MC samples a complete trajectory to the goal node T shown with red.*
+_Backup tree with value iteration based on the MC approach. MC samples a complete trajectory to the terminating node T shown with red._
 
 There is some rationale of doing so, if we recall that the state-value function that was defined in the introductory [MDP section]({{<ref "../../mdp/mdp-intro">}}) i.e. the _expected_ return.
 
@@ -32,7 +32,7 @@ The value function is therefore approximated in _Monte-Carlo_, by the sample mea
    * Calculate the total return $S(S_t) = S(S_t) + G_t$
 2. At the end of multiple episodes, the value is estimated as $V(S_t) = S(S_t) / N(S_t)$
 
-As $N(S_t) \rightarrow ∞$ the estimate will converge to $V(S_t) \rightarrow v_\pi(s)$. **Notice that we started using capital letters for the _estimates_ of the value functions.**  
+As $N(S_t) \rightarrow ∞$ the estimate will converge to $V(S_t) \rightarrow v_\pi(s)$. 
 
 But we can also do the following trick, called _incremental mean approximation_: 
 

@@ -43,13 +43,6 @@ Notice that we are not building an explicit policy at every iteration and also p
 *State values for an MDP with random policy (0.25 prob of taking any of the four available actions), $\gamma=1$, that rewards the agent with -1 at each transition except towards the goal states that are in the top left and bottom right corners*
 
 
-<!-- We return to the tree representation of the value iteration with DP - this will be useful when we compare the DP with other value iteration approaches. 
-
-$$V(S_t) = \mathbb E_\pi \left[R_{t+1} + \gamma V(S_{t+1}) \right]$$
-
-![dp-value-iteration-tree](images/dp-value-iteration-tree.png#center)
-*Backup tree with value iteration based on the DP approach - Notice that we do one step look ahead but we do not sample as we do in the other value iteration approaches.*  -->
-
 ## Value iteration example
 
 In example world shown below (from [here](http://i-systems.github.io/HSE545/iAI/AI/topics/05_MDP/11_MDP.html))
