@@ -19,10 +19,10 @@ In policy iteration, given the policy $\pi$, we oscillate between two distinct s
 
 2. In the _policy improvement_ (also called the _control_) step we apply the greedy heuristic and elect a new policy based on the evaluation of the previous step. 
 
-This is shown below,
+This is shown below and we defer discussion on convergence until we treat later the generalized policy iteration. 
 
 ![policy-iteration-convergence](images/policy-iteration-convergence.png#center)
-*Policy and state value convergence to optimality in policy iteration. Up arrows are the evaluation steps while down arrows are the improvement steps.*
+*Policy and state value convergence to optimality in policy iteration. Up arrows are the evaluation steps while down arrows are the improvement steps. Although  the  real geometry is much more complicated than this, the diagram  suggests  what happens: Each  process  drives  the  value  function  or  policy toward one of the lines representing a solution to one of the two goals.  The goals interact because the two lines are not orthogonal.  Driving directly toward one goal causes some movement away from the other goal.  Inevitably,however, the joint process is brought closer to the overall goal of optimality.*
 
 It can be shown that the policy iteration will converge to the optimal value function $v_*(s)$ and policy $\pi_*$. 
 
@@ -41,3 +41,4 @@ The application of policy iteration to this problem results in:
 
 ![gridworld-policy-iterations](images/gridworld-policy-iterations.png#center)
 *Convergence to optimal policy via separate prediction and policy improvement iterations*
+

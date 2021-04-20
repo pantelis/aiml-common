@@ -12,7 +12,7 @@ Now that we can calculate the value functions efficiently via the Bellman expect
 $$v_*(s) = \max_\pi v_\pi(s)$$
 $$q_*(s,a) = \max_\pi q_\pi(s,a)$$
 
-If we can calculate $q_*(s,a)$ we have found the best possible action in each state of the environment. In other words we can now obtain the _optimal policy_ by maximizing over $q_*(s,a)$ - mathematically this can be expressed as,
+The $v_*(s)$ is the best possible value (expected return) we can get starting from state $s$.   The $q_*(s,a)$ is the best value (expected return) starting at state $s$ and taking an action $a$. In other words we can now obtain the _optimal policy_ by maximizing over $q_*(s,a)$ - mathematically this can be expressed as,
 
 $$\pi_*(a|s) = \begin{cases}1 & \text{if }\ a = \argmax_{a \in \mathcal A} q_*(s,a), \\\\ 
 0 & \text{otherwise}\end{cases}$$

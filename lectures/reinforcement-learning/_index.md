@@ -39,6 +39,10 @@ Suffice to say that exploring DRL algorithms is a very long journey as shown bel
 ![drl-algorithm-evolution](images/drl-algorithm-evolution.png#center)
 *DRL algorithms - taxonomy and evolution*
 
-## Further Reading
 
-See  [MDP]({{<ref "../mdp">}}) chapter. 
+
+## References
+
+1. [Spinning Up in Deep RL](https://spinningup.openai.com/en/latest/). This is a must read for all computer scientists that are getting started in the DRL practice. 
+2. [Foundations of Deep RL](https://www.amazon.com/Deep-Reinforcement-Learning-Python-Hands/dp/0135172381). Similar to the Open AI's spinning up, this is a practice oriented book. 
+3. See  [MDP]({{<ref "../mdp">}}) chapter. 

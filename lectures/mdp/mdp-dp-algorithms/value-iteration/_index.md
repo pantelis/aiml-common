@@ -29,19 +29,18 @@ As an example if I want to move optimally towards a location in the room, I can 
 
 The "start from the end" intuition behind the equation is usually applied with no consideration as to if we are at the end or not. We just do the backup inductive step for each state.  In value iteration for synchronous backups, we start at $k=0$ from the value function $v_0(s)=0.0$ and at each iteration $k+1$ for all states $s \in \mathcal{S}$ we update the $v_{k+1}(s)$ from $v_k(s)$. As the iterations progress, the value function will converge to $v_*$.
 
-The equation of value iteration is taken straight out of the Bellman optimality equation. 
+The equation of value iteration is taken straight out of the Bellman optimality equation, **by turning the later into an update rule**. 
 
 $$v_{k+1}(s) = \max_a \left( \mathcal R_s^a + \gamma \sum_{s^\prime \in \mathcal S} \mathcal{P}^a_{ss^\prime} v_k(s^\prime) \right) $$
 
-which can be written in a vector form as,
+The value iteration can be written in a vector form as,
 
 $$\mathbf v_{k+1} = \max_a \left( \mathcal R^a + \gamma \mathcal P^a \mathbf v_k \right) $$
 
-Notice that we are not building an explicit policy at every iteration and also perhaps importantly, the intermediate value functions may _not_ correspond to a feasible policy. Before going into a more elaborate example, we can go back to the same simple world we have looked at in the [policy iteration]({{<relref "../policy-iteration">}}) section and focus only on the state-value calculation using the formula above. 
+Notice that we are not building an explicit policy at every iteration and also, importantly, the intermediate value functions may _not_ correspond to a feasible policy. Before going into a more elaborate example, we can go back to the same simple world we have looked at in the [policy iteration]({{<relref "../policy-iteration">}}) section and focus only on the state-value calculation using the formula above. 
 
 ![gridworld-value-iteration](images/gridworld-value-iteration-value-only.png#center)
 *State values for an MDP with random policy (0.25 prob of taking any of the four available actions), $\gamma=1$, that rewards the agent with -1 at each transition except towards the goal states that are in the top left and bottom right corners*
-
 
 ## Value iteration example
 
