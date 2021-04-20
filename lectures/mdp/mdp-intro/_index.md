@@ -39,25 +39,24 @@ In fully observed MDP problems, the agent *perceives fully* the environment stat
 We define a Markov Decision Process as the 5-tuple $\mathcal M = <\mathcal S, \mathcal P, \mathcal R, \mathcal A, \gamma>$ that produces a sequence of experiences $(S_t, A_t, R_{t+1}), (S_{t+1}, A_{t+1}, R_{t+2}), ...$.  The MDP (event) loop is shown below:
 
 ![mdp-loop](images/mdp-loop.png)
-_This generic interface between the agent and the environment captures many problems outside of pure MDP including DRL. The environment's state in non-MDP problems can be experienced via sensor observations and the agent will build its own state estimate internally_
+_This generic interface between the agent and the environment captures many problems outside of pure MDP including RL. The environment's state in non-MDP problems can be experienced via sensor observations and the agent will build its own state estimate internally_
 
 At the beginning of each episode, the environment and the agent are reset (lines 3–4). On reset, the environment produces an initial state. Then they begin interacting—an agent produces an action given a state (line 6), then the environment produces the next state and reward given the action (line 7), stepping into the next time step. The `agent.act-env.step` cycle continues until the maximum time step $T$ is reached or the environment terminates. Here we also see a new component, `agent.update` (line 8), which encapsulates an agent’s learning algorithm. Over multiple time steps and episodes, this method collects data and performs learning internally to maximize the objective.
 
-The four foundational ingredients of MDL are: 
+The four foundational ingredients of MDP are: 
 
 1. Policy, 
 2. Reward, 
 3. Value function and 
 4. Model of the environment (optionally). 
 
-These are introduced as elements ultimately derived by the _dynamics_ of the _finite_ MDP process. 
+These are obtained from the _dynamics_ of the _finite_ MDP process. 
 
-$$p(s', r | s , a) = \Pr\{ S_t = s', R_t = r | S{t-1}=s, A_{t-1}=a \}$$
+$$p(s', r | s , a) = \Pr\\{ S_t = s', R_t = r | S_{t-1}=s, A_{t-1}=a \\}$$
 
 where $s^\prime$ simply translates in English to the successor state whatever the new state is.
 
-The dynamics probability density function maps $\mathcal{S} \times \mathcal{R} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1]$ and by marginalizing over the appropriate random variables we can get 
-
+The dynamics probability density function maps $\mathcal{S} \times \mathcal{R} \times \mathcal{S} \times \mathcal{A} \rightarrow [0,1]$ and by marginalizing over the appropriate random variables we can get the following distributions. 
 ### State transition
 
 The action that the agent takes change the environment state to some other state. This can be represented via the environment _state transition_ probabilistic model that generically can be written as:

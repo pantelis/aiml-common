@@ -33,7 +33,7 @@ The SARSA algorithm is summarized below:
 $Q(s,a)$ in practice is a table (matrix) stored in memory. Every step that we take an action we flip a "bent coin" and if "heads" comes up we take the maximum of the $Q(s,a)$ values and this will be the policy improvement for the subsequent step. If it comes up as "tails" we just pick a random action and update the policy accordingly.
 
 
-## SARSA Example
+## $Q(s,a)$ estimation Example
 
 ![td-environment](images/td-environment.jpg#center)
 

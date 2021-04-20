@@ -14,25 +14,25 @@ It took its name from the fact that during _training_ actions that resulted in g
 
 | Component | Description |
 |---|---|
-| Parametrized policy $\pi_\theta (a\|s)$ | The key idea of the algorithm is to learn a good policy, and this means doing function approximation. Neural networks are powerful and flexible function approximators, so we can represent a policy using a deep neural network (DNN) consisting of learnable parameters $\mathbf \theta$. This is often referred to as a policy network $\pi_θ$. We say that the policy is parametrized by  $\theta$. Each specific set of values of the parameters of the policy network represents a particular policy. To see why, consider $θ1 ≠ θ2$. For any given state $s$, different policy networks may output different sets of action probabilities, that is, $\pi_{θ1}(a \| s) \neq \pi_{θ2}(a \| s)$. The mappings from states to action probabilities are different so we say that $π_{θ1}$ and $π_{θ2}$ are different policies. A single DNN is therefore capable of representing many different policies.|
+| Parametrized policy $\pi_\theta (a\|s)$ | The key idea of the algorithm is to learn a good policy, and this means doing function approximation. Neural networks are powerful and flexible function approximators, so we can represent a policy using a deep neural network (DNN) consisting of learnable parameters $\mathbf \theta$. This is often referred to as a policy network $\pi_θ$. We say that the policy is parametrized by  $\theta$. Each specific set of values of the parameters of the policy network represents a particular policy. To see why, consider $θ_1 ≠ θ_2$. For any given state $s$, different policy networks may output different sets of action probabilities, that is, $\pi_{θ_1}(a \| s) \neq \pi_{θ_2}(a \| s)$. The mappings from states to action probabilities are different so we say that $π_{θ_1}$ and $π_{θ_2}$ are different policies. A single DNN is therefore capable of representing many different policies.|
 | The objective to be maximized $J(\pi_\theta)$[^1]| At this point is nothing else other than the expected discounted _return_ over policy, just like in MDP. |
-| Policy Gradient | A method for updating the policy parameters $\theta$. The policy gradient algorithm searches for a local maximum in $J(\pi_\theta)$:  $\max_\theta J(\pi_\theta)$. This is the common gradient ascent algorithm that we met in a similar form in neural network. $$\theta ← \theta + \alpha \nabla_\theta J(\pi_\theta)$$ where $\alpha$ is the learning rate.| 
+| Policy Gradient | A method for updating the policy parameters $\theta$. The policy gradient algorithm searches for a local maximum in $J(\pi_\theta)$:  $\max_\theta J(\pi_\theta)$. This is the common gradient ascent algorithm that we met in a similar form in neural networks. $$\theta ← \theta + \alpha \nabla_\theta J(\pi_\theta)$$ where $\alpha$ is the learning rate.| 
 
-Out of the three components the most complicated one is the policy gradient that can be shown to be given by the differentiable quantity: 
+Out of the three components, the most complicated one is the policy gradient that can be shown to be given by the differentiable quantity: 
 
 $$ \nabla_\theta J(\pi_\theta)= \mathbb{E}_{\pi_\theta} \left[ \nabla_\theta \log \pi_\theta (a|s) v_\pi (s) \right ]$$
 
-We understand that this expression came out of nowhere but the interested reader can find its detailed derivation in the chapter 2 of the DRL book. We can approximate the value at state $s$ with the return over many sample trajectories $\tau$ that are sampled from the policy network. 
+We understand that this expression came out of nowhere but the interested reader can find its detailed derivation in the chapter 2 of [this](https://www.amazon.com/Deep-Reinforcement-Learning-Python-Hands/dp/0135172381) reference. We can approximate the value at state $s$ with the return over many sample trajectories $\tau$ that are sampled from the policy network. 
 
 $$ \nabla_\theta J(\pi_\theta)= \mathbb{E}_{\tau \sim \pi_\theta} \left[ G_t \nabla_\theta \log \pi_\theta (a|s) \right ]$$
 
-where $G_t$ is the _return_ - a quantity we have seen earlier albeit now the return is limited by the length of each trajectory,
+where $G_t$ is the _return_ - a quantity we have seen earlier albeit now the return is limited by the length of each trajectory just like in MC method,
 
 $$G_t(\tau) = \sum_{k=0}^{T-1}\gamma^k R_{t+1+k}$$
 
 The $\gamma$ is usually a hyper-parameter that we need to optimize usually iterating over many values in [0.01,...,0.99] and selecting the one with the best results. 
 
-We also have an expectation in the gradient expression that we need to address.  The expectation $\mathbb E_{\tau \sim \pi_\theta}$ we need to take is approximated with a summation over _each_ trajectory. This is commonly called Monte-Carlo approximation. Effectively, we are generating the right hand side as in line 8 in the code below, by sampling a trajectory (line 4) and estimating its return (line 7) in a completely model-free fashion i.e. without assuming any knowledge of the transition and reward functions. This is implemented next:
+We also have an expectation in the gradient expression that we need to address.  The expectation $\mathbb E_{\tau \sim \pi_\theta}$ we need to take is approximated with a summation over _each_ trajectory aka a Monte-Carlo approximation. Effectively, we are generating the right hand side as in line 8 in the code below, by sampling a trajectory (line 4) and estimating its return (line 7) in a completely model-free fashion i.e. without assuming any knowledge of the transition and reward functions. This is implemented next:
 
 1: Initialize learning rate $\alpha$
 
@@ -56,11 +56,11 @@ We also have an expectation in the gradient expression that we need to address. 
 
 11: end for
 
-It is important that a trajectory is discarded after each parameter update—it cannot be reused. This is because REINFORCE is an _on-policy_ algorithm. Intuitively an on-policy algorithm "learns on the job". This is evidently seen in line 10 where the parameter update equation uses the policy gradient that itself (line 8) directly depends on action probabilities $π_θ(a_t | s_t)$ generated by the _current_ policy $π_θ$ only and not some past policy $π_{θ′}$. Correspondingly, the return $G_t(τ)$ where $τ ~ π_θ$ must also be generated from $π_θ$, otherwise the action probabilities will be adjusted based on returns that the policy wouldn’t have generated.
+It is important that a trajectory is discarded after each parameter update—it cannot be reused. This is because REINFORCE is an _on-policy_ algorithm just like the MC it "learns on the job". This is evidently seen in line 10 where the parameter update equation uses the policy gradient that itself (line 8) directly depends on action probabilities $π_θ(a_t | s_t)$ generated by the _current_ policy $π_θ$ only and not some past policy $π_{θ′}$. Correspondingly, the return $G_t(τ)$ where $τ ~ π_θ$ must also be generated from $π_θ$, otherwise the action probabilities will be adjusted based on returns that the policy wouldn’t have generated.
 
 ### Policy Network
 
-One of the key ingredients that DRL introduces is the policy network that is approximated with a DNN eg. a fully connected neural network with a number of hidden layers that is hyper-parameter (e.g. 2 RELU). 
+One of the key ingredients that REINFORCE introduces is the policy network that is approximated with a DNN eg. a fully connected neural network with a number of hidden layers that is hyper-parameter (e.g. 2 RELU layers). 
 
 1: Given a policy network ``net``, a ``Categorical`` (multinomial) distribution class, and a ``state``
 
