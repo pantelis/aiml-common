@@ -1,120 +1,11 @@
 ---
-title: Generative Modeling and Continuous Variational Auto Encoders (VAE)
-draft: true
-weight: 220
+title: ELBO Optimization
 ---
 
-# Generative Modeling and  Continuous Variational Auto Encoders (VAE)
+# ELBO Optimization
 
-We have seen in the treatment of [CNNs]({{<ref "../../cnn/cnn-intro" >}}) that they can generate features that are suitable for the classification or regression task at hand using the labels to guide the maximization of the log-likelihod function. Here we are looking at the problem where we need features that are suitable for generating data from the input distribution without necessarily having labels. In this setting we will look deeper into a major family of variational inference: the VAE. Variational Autoencoders (VAEs) are popular generative models being used in many different domains, including collaborative filtering, image compression, reinforcement learning, and generation of music and sketches.
+## MNIST Example
 
-## Generative Modeling and Approximate Inference
-
-In generative modeling we want to model the generative distribution of the observed variables $\mathbf x$, $p(\mathbf x)$ [^1]. 
-
-[^1]: Following [this tutorial](https://arxiv.org/pdf/1906.02691.pdf) we adopt the compact notation that serializes into one vector $\mathbf x$ all the observed random variables. 
-
-Take for example a set of images that depict a pendulum excited by a force. We would like to generative the successive frames of the pendulum swinging behavior and we do so we are assisted by a set of latent variables $\mathbf z$ that represent the underlying laws of physics. Generative modeling is especially well suited for 
-
-1. Testing out hypotheses about the underlying rules that generated the observed data. Such rules can also offer interpretable models. 
-2. Ability to capture causal relationships, since the ability of a factor to generate data very close to the ones observed offers a strong indication of such relationship.
-3. Semi-supervised classification where the generated data are very close to already labeled data and therefore can improve classification model accuracy. 
-
-One of the main methods of generative approximate inference is _variational inference_ and VAE is a modified instantiation of such inference and it involves: (a) deep latent variable models and (b) inference models both learned using stochastic gradient descent. Before we go deeper into what VAE is, its worth motivating the discussion as to why it came to be the solution to the generative problem we face.   
-
-In probabilistic modeling we usually make use of latent variables $\mathbf z$, variables that are not observed but can be used to build suitable representational constraints in our models, and a set of parameters $\theta$ that parametrize the latent variable model $p(\mathbf x, \mathbf z | \mathbf \theta)$. Since, 
-
-$$p(\mathbf x | \mathbf \theta) =  \sum_{\mathbf z} p(\mathbf x, \mathbf z | \mathbf \theta) $$
-
-to generate new data whose marginal is ideally identical to the true but unknown target distribution we need to be able to sample from $p(\mathbf x, \mathbf z | \mathbf \theta)$.
-
-The introduction of the latent variables can be represented as directed graph abd we have seen in the [probabilistic graphical models]({{<ref "../../pgm/pgm-intro">}}) introduction, the representation as directed graph allows the factorization of the joint distribution 
-
-$$p(\mathbf x_1, \mathbf x_2, \dots, \mathbf x_M | \mathbf \theta) = \prod_{j=1}^M p(\mathbf x_j | Pa(\mathbf x_j))$$
-
-where $Pa()$ is the set of parent nodes that the variable $\mathbf x_j$ is dependent on (has directed edges with). 
-
-Consider our simple PGM, shown below: 
-
-![vae-pgm](images/vae-pgm.png#center)
-*Probabilistic Graphical Model from [here](https://arxiv.org/pdf/1606.05908.pdf)*
-
-To generate from the marginal we need to implement a generative model that is a direct consequence of the chain and total probability rules. 
-
-$$ p(\mathbf x | \mathbf \theta)  = \sum_{\mathbf z} p(\mathbf x| \mathbf z ; \mathbf \theta) p(\mathbf z | \theta)$$ 
-
-The elements of this model are $p(\mathbf x| \mathbf z ; \mathbf \theta)$ and the $p(\mathbf z | \theta)$ that is often called the _prior distribution_ over $\mathbf z$. One of the methods of generating such samples is to start from a very easy to sample distribution and use function approximation that maps _variables_ to the distribution _parameters_ over these variables. One of the best function approximators that scale very well for the, usually large, dataset sizes we face are Deep Neural Networks (DNNs). When DNNs are used, we say that we implement a  _deep latent variable model_ that involves the following two steps: 
-
-$$ \mathbf \eta = f_{DNN}(Pa(\mathbf x))$$
-$$p(\mathbf x_j | Pa(\mathbf x_j), \mathbf \theta) = p(\mathbf x | \mathbf \eta, \mathbf \theta)$$
-
-In deep latent variable models of the form we are concerned with, we select an easy to sample from, prior distribution
-
-$$ p(\mathbf z) = Normal(0, \sigma^2 I)$$
-
-and let the DNN implement the mapping
-
-$$ \mathbf \eta = f_{DNN}(\mathbf z)$$
-$$p(\mathbf x, \mathbf \theta) = p(\mathbf x | \mathbf \eta, \mathbf \theta)$$
-
-However we are facing the following situation: _Even with DNNs aka when we let the DNN "design" the right feature coordinates in the latent space [^2], we are still facing an intractable computationally model in trying to estimate the marginal distribution $p(\mathbf x | \mathbf \theta)$_.  
-
-[^2]: Note that the features that the DNN captures are not interpretable as the intuitively understood features that humans consider. For the MNIST dataset for example, humans will consider the slant of each digit, thinner strokes etc.
-
-To understand why, consider the MNIST dataset and the problem of generating handwritten digits that look like that. We can sample from $p(\mathbf z | \theta)$ generating a large number of samples $\{z_1, \dots , z_k}$, since the DNN provided all the parameters of this distribution.  We can then compute $p(\mathbf x) = \frac{1}{k} \sum_i p(\mathbf x|z_i)$. The problem is that we need a very large number of such samples in high dimensional spaces such as images (for MNIST is 28x28 dimensions) . Most of the samples $\mathbf z_i$ will result into negligible $p(\mathbf x|z_i)$ and therefore won't contribute to the estimate of the $p(\mathbf x)$. This is the problem that VAE addresses. The key idea behind its design is that of _inference_ of the right latent space that when sampled, results into a computation and optimization of the marginal distribution with far less effort than before. 
-
-## The Variational Auto Encoder (VAE)
-The 'right'  latent space is the one that makes the distribution $p(\mathbf z| \mathbf \theta)$ the most likely to produce $\mathbf x$. We are therefore introducing a stage that complements the aforementioned _generative model or decoder_ given by $p(\mathbf x| \mathbf z ; \mathbf \theta) p(\mathbf z | \theta)$. 
-
-This stage is called the _recognition model or encoder_ and is given by $p(\mathbf z| \mathbf x ; \mathbf \theta)$. The premise is this: the posterior $p(\mathbf z | \mathbf x ; \mathbf \theta)$ will result into a much more meaningful and compact latent space $\mathbf z$ than the prior $p(\mathbf z | \mathbf \theta)$. This encoding though, calls for sampling from a posterior that is itself intractable. We then need to use an approximation to such distribution: $q(\mathbf z| \mathbf x ; \mathbf \phi)$ and we call this the _inference model_ that approximates the recognition model and help us optimize the marginal likelihood. 
-
-The VAE encoder-decoder spaces are clearly shown below. The picture shows the more compact space that is defined by the encoder. 
-
-![vae](images/vae-spaces.png#center)
-*VAE spaces and distributions (from [here](https://arxiv.org/pdf/1906.02691.pdf))*
-
-The architecture of VAE includes four main components as shown below:
-
-![vae](images/vae-architecture.png#center)
-*VAE Architecture (from [here](https://arxiv.org/pdf/1906.02691.pdf))*
-
-Similar to the generative model, the inference model can be, in general, a PGM of the form:
-
-$$q(\mathbf z | \mathbf x ; \mathbf \phi) = \prod_{j=1}^M q(\mathbf z_j | Pa(\mathbf z_j), \mathbf x ; \mathbf \phi)$$
-
-and this, similarly to the generative model, can be parametrized with a $DNN_{enc}(\phi)$. More specifically we obtain the approximation using the following construction:
-
-$$ (\bm \mu,  \log \bm \Sigma ) = DNN_{enc}(\mathbf x, \bm \phi)$$
-$$q(\mathbf z| \mathbf x ; \mathbf \phi) = N(\mathbf z; \bm \mu, \textsf{diag} \mathbf \Sigma) )$$
-
-The $DNN_{enc}$ implements amortized variational inference, that is, it estimates the posterior parameters over a batch of datapoints and this offers significant boost in the parameter learning. 
-
-Following the treatment in our [background probability chapter]({{<ref "../../ml-math/info-theory" >}}), we have met the concept of relative entropy or KL divergence that measures the "distance" between two distributions referenced on one of them. 
-
-$$KL(q||p)= \mathbb{E}[\log q(\mathbf x) - \ln p(\mathbf x)] = - \sum_{\mathbf x} q(\mathbf x) \log \frac{p(\mathbf x)}{q(\mathbf x)}$$
-
-We will use KL divergence to obtain a suitable loss function that will be used in the optimization of this approximation via the $DNN_{enc}$ network. Ultimately we are trying to minimize the KL divergence between the true posterior $p(\mathbf z| \mathbf x ; \mathbf \theta)$ and the approximate posterior $q(\mathbf z | \mathbf x ; \mathbf \phi)$  
-
-$$KL(q(\mathbf z | \mathbf x ; \mathbf \phi) || p(\mathbf z | \mathbf \theta)) = - \sum_{\mathbf z}  q(\mathbf z | \mathbf x ; \mathbf \phi) \log \frac{p(\mathbf z | \mathbf x; \mathbf \theta))}{p(\mathbf z | \mathbf x ; \mathbf \phi)}$$
-$$=  - \sum_{\mathbf z}  q(\mathbf z | \mathbf x ; \mathbf \phi) \log \frac{\frac{p(\mathbf z , \mathbf x; \mathbf \theta))}{p(\mathbf x)}}{q(\mathbf z | \mathbf x ; \mathbf \phi)} = - \sum_{\mathbf z} q(\mathbf z | \mathbf x ; \mathbf \phi) \log \Big[ \frac{p(\mathbf z , \mathbf x; \mathbf \theta))}{q(\mathbf z | \mathbf x ; \mathbf \phi)} \frac{1}{p(\mathbf x)}\Big]$$
-$$=- \sum_{\mathbf z} q(\mathbf z | \mathbf x ; \mathbf \phi) \Big[ \log \frac{p(\mathbf z , \mathbf x; \mathbf \theta))}{q(\mathbf z | \mathbf x ; \mathbf \phi)} - \log p(\mathbf x) \Big] $$
-$$=  -\sum_{\mathbf z} q(\mathbf z | \mathbf x ; \mathbf \phi) \log \frac{p(\mathbf z , \mathbf x; \mathbf \theta))}{q(\mathbf z | \mathbf x ; \mathbf \phi)} + \sum_{\mathbf z} q(\mathbf z | \mathbf x ; \mathbf \phi) \log p(\mathbf x) $$
-$$=  -\sum_{\mathbf z} q(\mathbf z | \mathbf x ; \mathbf \phi) \log \frac{p(\mathbf z , \mathbf x; \mathbf \theta))}{q(\mathbf z | \mathbf x ; \mathbf \phi)} + \log p(\mathbf x) \sum_{\mathbf z} q(\mathbf z | \mathbf x ; \mathbf \phi) $$
-$$= -\sum_{\mathbf z} q(\mathbf z | \mathbf x ; \mathbf \phi) \log \frac{p(\mathbf z , \mathbf x; \mathbf \theta))}{q(\mathbf z | \mathbf x ; \mathbf \phi)} + \log p(\mathbf x)$$
-$$⇒\log p(\mathbf x) = KL(q(\mathbf z | \mathbf x ; \mathbf \phi) || p(\mathbf z | \mathbf \theta)) + \underbrace{\sum_{\mathbf z} q(\mathbf z | \mathbf x ; \mathbf \phi) \log \frac{p(\mathbf z , \mathbf x; \mathbf \theta))}{q(\mathbf z | \mathbf x ; \mathbf \phi)}}_{\text{L = Evidence Lower Bound (ELBO)}}$$
-
-The bracketed $\mathcal L(q, \phi)$ quantity is called Evidence Lower Bound and is a functional of the distribution $q$ and a function of the parameters $\phi$. Why its a lower bound of the log-likelihood (evidence) function  $\log p(\mathbf x)$ and why its a useful quantity to consider?
-
-Answering the last question first, we maximize the likelihood by effectively maximizing the $\mathcal L(q, \phi, \theta)$ since $KL(q(\mathbf z | \mathbf x ; \mathbf \phi) || p(\mathbf z | \mathbf \theta)) \ge 0$ by definition with zero only when $q(\mathbf z | \mathbf x ; \mathbf \phi) = p(\mathbf z | \mathbf \theta))$. Since
-
-$$\mathcal L(q, \phi, \theta) =  \log p(\mathbf x) - KL(q(\mathbf z | \mathbf x ; \mathbf \phi) || p(\mathbf z | \mathbf \theta)) \le \log p(\mathbf x)$$. This is illustrated bellow:
-
-![Bishop](images/Figure9.11.png#center)
-*KL represents the tightness of the ELBO bound - From Bishop's book* 
-
-As the figure above shows $KL(q(\mathbf z | \mathbf x ; \mathbf \phi) || p(\mathbf z | \mathbf \theta))$ represents the tightness of the ELBO $\mathcal L(q, \phi, \theta)$ since the closest the approximation becomes the smaller the gap between ELBO and the log likelihood. Maximizing the ELBO withe respect to $(\phi, \theta)$ will achieve "two birds with one stone" situation: it will maximize the marginal log likelihood that is used for data generation _and_ minimize the KL divergence improving the approximation in the encoder. On top of that, the ELBO allows joint optimization with respect to all the parameters $\phi$ and $\theta$ using SGD. This is described next via an example. 
-
-### ELBO Optimization and MNIST Example
 The following example is taken from the examples code of the excellent [Tensorflow Probability API](https://github.com/tensorflow/probability/blob/master/tensorflow_probability/examples/vae.py) and is very instructive. 
 
 ```python3
@@ -203,16 +94,8 @@ The following example is taken from the examples code of the excellent [Tensorfl
     which can be run with
     `python -m tensorboard.main --logdir=MODEL_DIR`
 
-    #### References
 
-    [1]: Diederik Kingma and Max Welling. Auto-Encoding Variational Bayes. In
-        _International Conference on Learning Representations_, 2014.
-        https://arxiv.org/abs/1312.6114
-    [2]: Yuri Burda, Roger Grosse, Ruslan Salakhutdinov. Importance Weighted
-        Autoencoders. In _International Conference on Learning Representations_,
-        2015.
-        https://arxiv.org/abs/1509.00519
-    """
+"""
 
     from __future__ import absolute_import
     from __future__ import division
