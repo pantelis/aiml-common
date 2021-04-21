@@ -20,8 +20,15 @@ Add to the report of a section that documents your own results and comment on th
  
 ## Task 3 (40 points)
 
-Familiarize yourself with Generative Adversarial Networks (GANs) and document a new approach that replaces the VAE with a GAN. (10 points) 
-Repeat the experiment in the car racing environment. Add to the report what improvements (if any) you observed from the transition to GAN in terms of performance. (30 points)
+Familiarize yourself with Generative Adversarial Networks (GANs). Example destinations: 
+
+1. [this practical tutorial](https://www.tensorflow.org/tutorials/generative/dcgan) 
+2. [this introductory treatment](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
+
+Document [a new approach that combines the VAE with a GAN](https://arxiv.org/abs/1512.09300) (20 points) 
+
+Repeat the experiment in the car racing environment. There are [multiple implementations](https://researchcode.com/code/1905459208/autoencoding-beyond-pixels-using-a-learned-similarity-metric/) of the VAE/GAN approach. Add to the report what improvements (if any) you observed from the transition to GAN in terms of performance (20 points) 
+
 
 ### Notes: 
 
