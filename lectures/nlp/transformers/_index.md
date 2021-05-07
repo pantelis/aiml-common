@@ -1,10 +1,7 @@
 ---
-title: Transformers
+title: Transformers Workshop
 ---
 
-# Transformers
-
-This section is under development.
-
+# Transformers Workshop
 
 <iframe src="http://nlp.seas.harvard.edu/2018/04/03/attention.html" width="100%" height="1000px;"></iframe>
