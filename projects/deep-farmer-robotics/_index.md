@@ -10,11 +10,12 @@ In a world that that is quickly changing from the evolving weather to new requir
 
 In this project you will develop a robotic AI agent in AWS Robomaker that kills individual weeds with laser.  The agent must be developed in AWS Robomaker for the ROS2 Foxy distribution.  
 
-## Weed Perception system
+## Weed perception system
 
-The perception system of the agent includes a weed detection pipeline powered by [this dataset](https://www.nature.com/articles/s41598-018-38343-3) You will use a pipeline similar to [this](https://medium.com/pytorch/ai-for-ag-production-machine-learning-for-agriculture-e8cfdb9849a1)
+The perception system of the agent includes a weed detection pipeline powered by [this dataset](https://www.nature.com/articles/s41598-018-38343-3) You will use a pipeline similar to [this](https://medium.com/pytorch/ai-for-ag-production-machine-learning-for-agriculture-e8cfdb9849a1). Your task is to replicate the results presented in terms of performance (eg. F1 score) and author a report explaining the implementation and the challenges you met. 
 
-## Navigation Perception System
+## Navigation perception system
+
 TBD
 
 ## ROS2 Robot Model
