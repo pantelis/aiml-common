@@ -52,17 +52,25 @@ The figure below shows the corresponding posterior distribution $p(\mathcal{C}_1
 
 <!-- As we said, with logistic regression **we skip the assumption about the class-conditional densities** as they add parameters to our problem that grow  quadratic to the number of dimensions and we attempt to find the $n$ parameters of the model directly (the number of features) and sure enough we will use ML to do so.  -->
 
-By repeating the classical steps in ML methodology i.e. writing down the expression of the likelihood function (this will now be a product of binomials), we can write down the negative log likelihood function as, 
+By repeating the classical steps in ML methodology i.e. writing down the expression of the likelihood function (this will now be a product of binomials), we can write down the negative log likelihood function for the binary case as, 
 
-$$L(\mathbf{w}) = - \ln p(\mathbf{y},\mathbf{w}) = - \sum_{i=1}^m \{y_i \ln \hat{y}_i + (1-y_i) \ln (1-\hat{y}_i) \}$$
+{{<hint info>}}
+$$L(\mathbf{w}) = L(y, \hat{y}) = - \ln p(\mathbf{y},\mathbf{w}) = - \big[ \sum_{i=1}^m \{y_i \ln \hat{y}_i + (1-y_i) \ln (1-\hat{y}_i) \} \big]$$
  
-which is called **cross entropy loss function** - probably the most widely used error function (in classification as well as regression) due to its information theoretic roots. Its shape is shown in the figure below. It is also known as log-loss.
+which is called **cross entropy loss function** - probably the most widely used error function (in classification as well as regression) due to its information theoretic roots. 
+{{</hint>}}
+
+Its shape is shown in the figure below for an example case where the $y=1$. It is also known as log-loss.
 
 ![cross-entropy](images/cross-entropy-binary.png)
 
-Minimizing the error function with respect to $\mathbf{w}$ by taking its gradient 
+_CE Loss vs predicted probability for class "1"_
+
+The behavior of the loss function is telling: it heavily penalizes confident wrong decisions. Notice its exponential rise when the probability $\hat{y}$ of the class "1" is close to 0.0 which means that the classifier predicted with high confidence the opposite class that the ground truth.   On the other hand, when the probability of $\hat y$ is close to 1.0, which means that the classifier predicts the class "1" with confidence, we exhibit minimal loss and in the limit zero loss.
+
+Minimizing the error function with respect to $\mathbf{w}$ requires calculating its gradient, 
 
 $$\nabla L = \sum_{i=1}^m (\hat{y}_i - y_i) x_i$$
 
-that defines the batch gradient decent algorithm. We can then readily convert this algorithm to SGD by considering mini-batch updates.
+The expression above defines the batch gradient decent algorithm. We can then readily convert this algorithm to SGD by considering mini-batch updates for any mini-batch size (usually delegated as a hyperparameter). 
 

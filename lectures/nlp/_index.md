@@ -1,7 +1,6 @@
 ---
-title: Lecture 11 - Natural Language Processing
+title: Natural Language Processing
 draft: false
-weight: 130
 ---
 
 # Natural Language Processing
@@ -18,6 +17,6 @@ We start though by augmenting the overall [agent architecture]({{<ref "../ai-int
 
 After going over the next few sections the rationale behind the assignment of these blocks in the corresponding subsystems of the agent will be made apparent to you. To start with explaining the approach we will follow here, similar to what took place in the ML field in general, classical methods in NLP are largely superseded by deep learning architectures. Our focus will be towards the later deep architectures and the changes that took place after 2012. On the other hand we need to cover certain stages that are common to both approaches - these stages are processing the text to allow representation learning stages to be able to function.  
 
-> Most of the material presented here are from the sources below:
->> * [CS224n: Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/) - see also the [2019 version of the video lectures](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
->> * [Natural Language Processing in Action](https://www.amazon.com/Natural-Language-Processing-Action-Understanding/dp/1617294632). This book takes a hands on perspective to NLP. It uses both nltk (originally targeting students and researchers) and spacy (originally targeting development for production) for implementing some of the stages of the NLP pipelines.
+Most of the material presented here are from the sources below:
+> * [CS224n: Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/) - see also the [2019 version of the video lectures](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
+> * [Natural Language Processing in Action](https://www.amazon.com/Natural-Language-Processing-Action-Understanding/dp/1617294632). This book takes a hands on perspective to NLP. It uses both nltk (originally targeting students and researchers) and spacy (originally targeting development for production) for implementing some of the stages of the NLP pipelines.
