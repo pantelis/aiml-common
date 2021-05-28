@@ -8,7 +8,7 @@ title: Probability Theory - Assignment A
 
 A data scientist develops a model of the mortality probability distribution function 
 
-$$p(t) = 3 \times 10^{-9} t^2(100-t^2),  0 \le t \le 100 ~\text{years}$$
+$$p(t) = 3 \times 10^{-9} t^2(100-t)^2,  0 \le t \le 100 ~\text{years}$$
 
 $p(t)$ is 0.0 outside the above range of $t$.
 
