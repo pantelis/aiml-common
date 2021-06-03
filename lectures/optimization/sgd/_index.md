@@ -68,6 +68,6 @@ The main advantage of Mini-batch GD over Stochastic GD is that you can get a per
 
 ## Digging further
 
-For an overview of optimization theory please go through Ian Goodfellow's chapter 4 below. Stochastic gradient descent is treated also in section 5.9.
+For an overview of optimization theory please go through Ian Goodfellow's chapter 4 below. Stochastic gradient descent is treated also in section 5.9 of this free book. For an overview of the various algorithms appart from SGD see [this](https://ruder.io/optimizing-gradient-descent/index.html) blog post. 
 
 <iframe src="https://www.deeplearningbook.org/contents/numerical.html" width="800" height="1200"></iframe>
