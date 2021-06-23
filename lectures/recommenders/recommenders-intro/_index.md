@@ -5,14 +5,14 @@ index: Recommenders Introduction
 # Recommender System Introduction
 
 > NOTE: Most of the material presented here is taken from the book [Practical Recommender Systems.](https://www.amazon.com/Practical-Recommender-Systems-Kim-Falk/dp/1617292702) and [Isinkaye, 2015](https://www.sciencedirect.com/science/article/pii/S1110866515000341)
+> [developers.google.com](https://developers.google.com/machine-learning/recommendation) provides also a good introductory treatment in recommendation systems. 
  
 ![netflix](images/netflix.jpg#center)
-
-Can you imagine Netflix without the catalogue of movies that are popular to your own part of the woods? 
+_Netflix landing page (browser)_ 
 
 All web players such as retailers and content providers offer a huge selection of products and services, with unprecedented opportunities to meet a variety of special needs and tastes. Matching your interests and tastes with the most appropriate information (e.g. products) is key to enhancing user satisfaction and loyalty. Therefore,  have become interested in recommender systems, which analyze patterns of user interest in a domain (e.g. shopping) to provide personalized recommendations that suit a user’s taste. 
 
-More broadly, recommender systems can be seen as decision maker for information presented to users under complex information environments:  _uncertain contexts_. In this way, a recommender system is an _AI agent_ that maximizes the utility of the entity that gets to deploy it. In the case of Netflix, the utility is a function of customer retainability which is itself depends on the customer happiness expressed implicitly or explicitly via the ratings of the content that she watched. 
+More broadly, recommender systems can be seen as decision maker for information presented to users under complex information environments:  _uncertain contexts_. In this way, a recommender system is an _AI agent_ that maximizes the utility of the entity that gets to deploy it. In the case of Netflix, the utility is a function of customer retainability which is itself depends on the customer happiness expressed implicitly or explicitly via the ratings of the content that she watched. An implicit positive rating can be signaled when a user selects and finishes the content.  
 
 ![ranking-system-netflix](images/ranking-system-netflix.jpg#center)
 *A recommender for example for content would be a ranking system that considers all information available including the content and the user and returns ranked suggestions to the user related to objects that she should consume. We can distinguishing three phases of information retrieval, learning (prediction), ranking. In this case the recommendation system works mostly offline (batch).*
@@ -25,11 +25,11 @@ More broadly, recommender systems can be seen as decision maker for information 
 ### Content-based Filtering
 
 ![content-filtering-concept](images/content-filtering-concept.jpg#center)
-*The elements of content filtering. In content-based filtering technique, recommendation is made based on the user profiles using features extracted from the content of the items the user has evaluated in the past.*
+*The elements of content-based filtering. In content-based filtering technique, recommendation is made based on the similarity between items to recommend items similar to what the user likes. We gradually build a profile as the user interacts with the content.*
 
 ### Memory-based Collaborative Filtering (CF)
 
-The items that were already rated by the user before play a relevant role in searching for a neighbor that shares appreciation with her. Memory-based CF can howe
+The items that were already rated by the user before, play a relevant role in searching for a neighbor that shares appreciation with her. 
 
 ![collaborative-filtering](images/collaborative-filtering.jpg#center)
 *Matrix representation of Collaborative Filtering.*
@@ -37,7 +37,7 @@ The items that were already rated by the user before play a relevant role in sea
 #### User-based CF 
 
 ![cf-pipeline](images/cf-pipeline.jpg#center)
-*Collaborative Filtering pipeline. In user-based collaborative filtering technique calculates similarity between users by comparing their ratings on the same item, and it then computes the predicted rating for an item by the active user as a weighted average of the ratings of the item by users similar to the active user where weights are the similarities of these users with the target item. *
+*Collaborative Filtering pipeline. In user-based collaborative filtering technique calculates similarity between users by comparing their ratings on the same item, and it then computes the predicted rating for an item by the active user as a weighted average of the ratings of the item by users similar to the active user where weights are the similarities of these users with the target item.*
 
 #### Item-based CF 
 
