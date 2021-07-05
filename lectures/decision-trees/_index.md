@@ -104,6 +104,14 @@ When we use decision trees for regression, the entropy is replaced with the usua
 
 ![unsupervised-training](images/unsupervised-training.png#center) -->
 
+## Example
+
+A DT applied in the area of cybersecurity. 
+
+![](images/DT1.jpg)
+
+![](images/DT2.jpg)
+
 
 ## References
 
