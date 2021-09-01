@@ -19,9 +19,9 @@ where $r(x)$ is a function that creates embeddings. Both $f$ and $r$ are arbitra
 
 ### Debiasing Metrics
 
-| Fairness Metric    | Description    |
-| --- | --- |
-| Demographic Parity    |  This means that the predicted label $\hat y$ is independent of the feature $z$. |
-| | Mathematically this metric is:$p(\hat y) = p(\hat y \| z)$ | 
-| Equality of Odds  also known as positive rate parity  | Conditioned on $y$, $\hat y$ and $z$ are independent.     |
-| Equality of Opportunity    |     |
+| Fairness Metric                                      | Description                                                                     |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Demographic Parity                                   | This means that the predicted label $\hat y$ is independent of the feature $z$. |
+|                                                      | Mathematically this metric is:$p(\hat y) = p(\hat y \| z)$                      |
+| Equality of Odds  also known as positive rate parity | Conditioned on $y$, $\hat y$ and $z$ are independent.                           |
+| Equality of Opportunity                              |                                                                                 |
