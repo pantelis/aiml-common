@@ -31,7 +31,7 @@ b. Find the probability that switch $S_i$ is open given that an input signal is 
 
 Make yourself familiar with the [multinomial distribution](https://en.wikipedia.org/wiki/Multinomial_distribution#:~:text=In%20probability%20theory%2C%20the%20multinomial,sided%20die%20rolled%20n%20times.)
 
-a. Calculate the probability of the counts of outcome "2" if the possible **equally probable** outcomes are all integer numbers between 1 and 10 and we performed $n=1000$ trials.  
+a. Each trial involves throwing a die with 10 faces/sides. All faces are equally probable aka the die is not biased. Calculate the probability of the counts of outcome "2" if we performed $n=1000$ trials.  
 
 b. Simulate n independent trials of the multinoulli (categorical distribution) compliant to the specification of (a).  Plot the probability in (a) as a function of n independent trials (n=10-1000).  Write your conclusions with respect to the behavior of the estimated probability as $n$ increases. 
 
