@@ -55,10 +55,10 @@ When using Anaconda:
     $ conda create -n p38 python=3.8 anaconda
     $ conda activate py38
 
-This creates a fresh Python 3.7 environment called `py37` (you can change the name if you want to), and it activates it. This environment contains all the scientific libraries that come with Anaconda. This includes all the libraries we will need (NumPy, Matplotlib, Pandas, Jupyter and a few others), except for TensorFlow, so let's install it:
+This creates a fresh Python 3.8 environment called `py38` (you can change the name if you want to), and it activates it. This environment contains all the scientific libraries that come with Anaconda. This includes all the libraries we will need (NumPy, Matplotlib, Pandas, Jupyter and a few others), except for TensorFlow, so let's install it:
 
-    $ conda install -n py37 -c conda-forge tensorflow
-    $ conda install -n py37 -c conda-forge tensorflow-gpu (if you have a computer with an NVIDIA GPU which is a must have).
+    $ conda install -n py38 -c conda-forge tensorflow
+    $ conda install -n py38 -c conda-forge tensorflow-gpu (if you have a computer with an NVIDIA GPU which is a must have).
 
 This installs the latest version of TensorFlow available for Anaconda (which is usually *not* the latest TensorFlow version) in the `py37` environment (fetching it from the `conda-forge` repository). 
 
@@ -67,7 +67,7 @@ Next, you can optionally install Jupyter extensions. These are useful to have ni
 
 ```
 pip install jupyter_contrib_nbextensions # with standard pip
-conda install -n py37 -c conda-forge jupyter_contrib_nbextensions # with anaconda
+conda install -n py38 -c conda-forge jupyter_contrib_nbextensions # with anaconda
 ```
 
 If you want to use the Jupyter extensions (optional, they are mainly useful to have nice tables of contents), you first need to install them:
@@ -103,3 +103,10 @@ In addition, almost no data science project starts in vacuum - there is almost a
 5. In the window that pops up select Github. Accept the requested additional permission request for your NJIT gmail account. After Github and Colab connects you will be able to see the forked repo from your drop down menu of Repository. You will also see all the notebooks that start with a number e.g 01_the_machine_learning_landscape.ipynb. The number indicates the chapter number. 
 6. Select to open the 01-*.ipynb notebook by clicking on it. You should see the notebook in your own colab account. Any change will be persisted in your github. 
 7. Run the first cell. If you havent used Notebooks before, people with little programming experience will fall in love with them especially at this stage where you dont need to type new code. For a tutorial on how to use the notebooks in colab or in general open and run the notebook [Welcome to Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb).
+
+## External Tools and Databases
+
+### Elastic Search Environment Setup
+
+For projects work you may need to install ES. Please note you are responsible for setting up the environment. For example to set up ES in Win10 you may follow [this](https://www.youtube.com/watch?v=hzaG2Uq60uw) guide but bear in mind that we cannot support any IT issues you may encounter in your laptop. You may decide to set up a development environment in AWS cloud 9 that is linux based for a small fee or taking advantage the free tier for _new_ AWS accounts (which is not free if you need EC2 instances outside of what the free tier provides).
+
