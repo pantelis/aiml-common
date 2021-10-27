@@ -6,7 +6,7 @@ title: Reverse Visual Search
 
 In many domains we are interested in finding artifacts that are similar to a query artifact. In this project you are going to implement a system that can find artifacts when the queries are visual.  The type of queries you will test your system on are images of faces (30 points) and videos of people (40 points). You will also document your approach clearly showing advantages over the baseline - the documentation is worth 30 points but to earn them you need to write in the markdown (\*.md) or restructured text (\*.rst) formats. 
 
-In the following we use the term person of inrerest (PoI) to indicate the person that we reverse search on images and videos. The PoI may be present together with others in the datasets but the system should be able to retrieve the images / videos that the PoI is in in all conditions minus complete occlusion of the face.  See bonus points for partial occlusion. 
+In the following we use the term person of interest (PoI) to indicate the person that we reverse search on images and videos. The PoI may be present together with others in the datasets but the system should be able to retrieve the images / videos that the PoI is in in all conditions minus complete occlusion of the face.  See bonus points for partial occlusion. 
 
 ## Datasets
 
