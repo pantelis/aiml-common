@@ -1,10 +1,8 @@
 ---
-title: CNN Example
-weight: 65
-draft: false
+title: CNN Example Architectures
 ---
 
-# CNN Examples
+# CNN Example Architectures
 
 This is a very high level view of practical structures of CNNs before the advent of more innovative architectures such as ResNets. 
 
@@ -21,7 +19,7 @@ The example CNN architecture above has the following layers:
 * FC (i.e. fully-connected) layer, also known as a dense layer, will compute the class scores, resulting in volume of size [1x1x10], where each of the 10 numbers correspond to a class score, such as among the 10 categories of the CIFAR-10 dataset that we are showing here. 
 
 
-## [VGG](https://arxiv.org/pdf/1409.1556.pdf) Network
+## [VGG](https://arxiv.org/pdf/1409.1556.pdf) Networks
 
 The VGG networks from Oxford were the first to use much smaller 3×3 filters in each convolutional layers. They have shown that multiple 3×3 convolution in sequence can emulate the effect of larger receptive fields, for examples 5×5 and 7×7. The VGG configuration is shown below:
 
@@ -155,25 +153,4 @@ vgg_16.default_image_size = 224
 # Alias
 vgg_d = vgg_16
 ```
-
-## Seeing is Believing but also Engineering
-
-Given the 'black box' nature of CNNs, we need to be familiar with the tooling needed to visualize their internal representations. 
-
-{{<hint info>}}
-You must run step by step the notebook below to fully understand what kind of transformations the convolutional layers are performing. It uses simpler and VGG16 networks. 
-{{</hint>}}
-
-<iframe src="https://nbviewer.jupyter.org/github/pantelis/deep-learning-with-python-notebooks/blob/master/5.4-visualizing-what-convnets-learn.ipynb" width="900" height="1200"></iframe>
-
-
-### Grad-CAM
-
-One of the most popular visualization methods is the Gradient weighted Class Activation Mapping ([Grad-CAM](http://gradcam.cloudcv.org/)) that uses the class-specific gradient information flowing into the final convolutional layer of a CNN to produce a coarse localization map of the important regions in the image. 
-
-![gradcam](images/gradcam.png#center)
-_GradCAM block diagram_
-
-![gradcam-result](images/gradcam-result.png#center)
-_[Results of GradCAM](https://www.kaggle.com/nguyenhoa/dog-cat-classifier-gradcam-with-tensorflow-2-0) for ResNet50 training on ImageNet__
 

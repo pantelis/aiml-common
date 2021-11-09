@@ -6,8 +6,7 @@ title: CNN Classification Workshop
 
 This notebook by F. Chollet's original text is limited in describing the code - please consult the book for further explanations and figures. 
 
-<iframe src="https://nbviewer.jupyter.org/github/fchollet/deep-learning-with-python-notebooks/blob/master/5.2-using-convnets-with-small-datasets.ipynb" width="900" height="1200"></iframe>
+NOTE: Click [here](https://colab.research.google.com/github/onietosi/deep-learning-with-python-notebooks/blob/master/5.2-using-convnets-with-small-datasets.ipynb) if the notebook below does not open in Github pages. 
 
-## ResNets and BN
+<iframe src="https://colab.research.google.com/github/onietosi/deep-learning-with-python-notebooks/blob/master/5.2-using-convnets-with-small-datasets.ipynb" width="900" height="1200"></iframe>
 
-https://colab.research.google.com/github/davidcpage/cifar10-fast/blob/master/batch_norm_post.ipynb

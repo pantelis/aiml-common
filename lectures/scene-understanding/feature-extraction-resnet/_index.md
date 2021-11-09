@@ -42,3 +42,8 @@ During the lecture we will go through [this](https://arxiv.org/pdf/1605.06431.pd
 ResNets introduced below - are commonly used as feature extractors for object detection. They are not the only ones but these networks are the obvious / typical choice today and they can also be used in real time video streaming applications achieving significant throughput e.g. 20 frames per second. 
 
 <iframe width="560" height="315" src="http://kaiminghe.com/icml16tutorial/icml2016_tutorial_deep_residual_networks_kaiminghe.pdf"></iframe>
+
+## ResNets and Batch Normalization
+
+[This notebook](https://colab.research.google.com/github/davidcpage/cifar10-fast/blob/master/batch_norm_post.ipynb) is very instructive of what now is considered a canonical new ResNet block that includes batch normalization.
+
