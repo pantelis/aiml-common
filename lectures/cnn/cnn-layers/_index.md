@@ -1,7 +1,5 @@
 ---
-title: CNN Architectures  
-draft: false
-weight: 64
+title: CNN Layers  
 ---
 
 # CNN Architectures
