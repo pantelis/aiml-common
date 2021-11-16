@@ -2,6 +2,7 @@
 title: CNN-RNN Assignment
 ---
 
+![](images/embedding.gif)
 # CNN-RNN Assignment
 
 ## Fashion MNIST Classification with RNNs (25 points) 
