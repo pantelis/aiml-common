@@ -1,6 +1,5 @@
 ---
 title: K-means Clustering 
-weight: 10
 ---
 
 # K-means Clustering 

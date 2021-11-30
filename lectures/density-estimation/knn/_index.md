@@ -1,7 +1,5 @@
 ---
 title: k-Nearest Neighbors (kNN) Classification
-weight: 5
-draft: false
 ---
 
 # k-Nearest Neighbors (kNN) Classification
@@ -37,16 +35,12 @@ As screws go through the conveyor depth, manufacturing defects cause each screw 
 In a sightly more formal setting, and to be able to address far more complex decision boundaries than the above, we are given data points in a training set $D = \{(x_i,y_i)\}, i=\{1, ..., m\}$ and we are asked to classify points that are in the test set. The only variable of the kNN algorithm is the number $k$ which is the number of nearest neighbors that we consider in the classification decision. An example for two classes is shown in the figures below for two cases of $k$. The plot corresponds to the case we have two features like before $x_1, x_2$.
 
 ![knn-dataset](images/Figure2.27b.png#center)
-*k=1*
+*Decision boundary for k=1*
 
 ![knn-dataset](images/Figure2.27a.png#center)
-*Closest data points for k=3$
+*The point to be classified is the black diamond and the closest data points for $k=3$ are also shown.*
 
-The algorithm effectively positions a *sphere* on the data point we want to classify whose radius is large as the it needs to be to enclose $k$ closest points irrespectively of their class. Obviously for the dimensions of the examples above, the sphere is a circle. As expected, we see that $k$ affects the degree of smoothing, so that small $k$ produces many small regions of each class, whereas large $k$ leads to fewer larger regions. In essence the algorithm for $k>1$, considers a majority vote between the $k$ closest points to the point we need to classify with ties broken at random.  
+The algorithm effectively positions a *sphere* on the data point we want to classify whose radius is large as the it needs to be to enclose $k$ closest points _irrespectively_ of their class. Obviously for the dimensions of the examples above, the sphere is a circle. As expected, we see that $k$ affects the degree of smoothing, so that small $k$ produces many small regions of each class, whereas large $k$ leads to fewer larger regions. In essence the algorithm for $k>1$, considers a majority vote between the $k$ closest points to the point we need to classify with ties broken at random.  
 
 One of the limitations of the knn algorithm is the requirement that the dataset $D$ is stored in memory and that the algorithm itself is dependent on efficient search algorithms that allow it to go over the data and find the nearest neighbors. There are solutions to both of these problems though and if implemented properly we get to be able to train for fairly complex decision boundaries that generalize well, without the complexity associated with learning parametric models. In practice, approximate nearest neighbor problems in high dimensions are solved with dedicated libraries such as Annoy [cite](https://github.com/spotify/annoy) and FAISS [cite](https://github.com/facebookresearch/faiss). Others  are benchmarked [cite](https://github.com/erikbern/ann-benchmarks). 
 
-## kNN Demo
-[This](http://vision.stanford.edu/teaching/cs231n-demos/knn/) page allows you to interact with the knn algorithm. Due to its nature, it is highly recommended to spend some time moving data points and understanding the resulting decision regions for a given model complexity (k). Understand the binary L1 classification first and then move to more complicated cases. 
-
-<iframe src="http://vision.stanford.edu/teaching/cs231n-demos/knn/" width="100%" height="1000px;"></iframe>
