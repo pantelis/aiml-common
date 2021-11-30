@@ -1,6 +1,5 @@
 ---
 title: Natural Language Processing
-draft: false
 ---
 
 # Natural Language Processing

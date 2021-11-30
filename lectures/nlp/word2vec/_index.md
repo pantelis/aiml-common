@@ -84,9 +84,20 @@ Training for large vocabularies can be quite computationally intensive.  At the 
 
 <!-- For a more hands on treatment on word2vec see the blog posts by Chris McCormick [cite](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/). -->
 
+{{< hint warning >}}
+Mind the important difference between learning a representation that from the context across the corpus and the _application_ of that representation. Word2Vec are applied _context-free_.  After training, a single $\mathbf W$ matrix will be used. This means that the word 'bank' will be encoded using the same dense vector  irrespectively when it is located close to 'river' or 'food' or 'deposit'. 
+
+_Contextual representations_ are addressed in a separate section. 
+
+{{</hint>}}
+
+## References
+
+1. [Word2Vec Parameter Learning Explained](https://arxiv.org/abs/1411.2738)
+
+
 
 [^1]: The other method is called Continuous Bag of Words (CBOW) and its the reverse of the skip-gram method: it predicts the center word from the words around it. Skip-gram works well with small corpora and rare terms while CBOW shows higher accuracies for frequent words and is faster to train [ref](https://www.manning.com/books/natural-language-processing-in-action). 
 
 [^2]: You don't come across papers with 10K citations very often. 
-
 

@@ -83,7 +83,7 @@ The key point to notice in the backpropagation in recurrence $t-1$ is the juncti
 
 $$\nabla_{\bm h_{t-1}}L_{t-1} \leftarrow \nabla_{\bm h_{t-1}}L_{t-1} + \nabla_{\bm h_{t-1}}L_t $$ 
 
-Ian Goodfellow's book section 10.2.2 provides the exact equations - please note that you need to know only the intuition behind computational graphs for RNNs. In practice BPTT is truncated to avoid having to do one full forward pass and one full reverse pass through the training dataset of a e.g. [language model]({{<ref "../../nlp/language-models">}}) that is usually very large, to do a single gradient update. 
+Ian Goodfellow's book section 10.2.2 provides the exact equations - please note that you need to know only the intuition behind computational graphs for RNNs. In practice BPTT is truncated to avoid having to do one full forward pass and one full reverse pass through the training dataset of a e.g. [language model]({{<ref "../../nlp/rnn-language-models">}}) that is usually very large, to do a single gradient update. 
 
 
 ## Vanishing or exploding gradients
