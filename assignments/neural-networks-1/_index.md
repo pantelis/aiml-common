@@ -1,19 +1,10 @@
 ---
-title: Neural Network Assignment
+title: Neural Network Assignment 1
 ---
 
-# Neural Networks Assignment
+# Neural Networks Assignment 1
 
-## Backpropagation (20 points)
-
-Assuming that $x \in \R^n$, backpropagate the following network to find 
-
-$$\frac{\partial L}{\partial \mathbf w}$$
-
-
-![](images/neuron-ce.png)
-
-## Tensorflow Playground (60 points. 10 points per question)
+## Problem Set 1 (60 points. 10 points per question)
 
 The TensorFlow Playground is a handy neural network simulator built by the TensorFlow team. In this exercise, you will train several binary classifiers in just a few clicks, and tweak the model’s architecture and its hyperparameters to gain some intuition on how neural networks work and what their hyperparameters do. 
 
@@ -29,9 +20,16 @@ The TensorFlow Playground is a handy neural network simulator built by the Tenso
 
 6. Select the spiral dataset (the bottom-right dataset under “DATA”), and change the network architecture to have four hidden layers with eight neurons each. Notice that training takes much longer and often gets stuck on plateaus for long periods of time. Also notice that the neurons in the highest layers (on the right) tend to evolve faster than the neurons in the lowest layers (on the left). Can you explain how this may be related to gradient flow through the network? 
 
-## Tensorflow API (20 points)
+## Problem Set 2  (20 points)
 
-1. (5 points) Submit your notebook URL that allows the notebook [here](https://pantelis.github.io/cs301/docs/common/lectures/cnn/cnn-example-architectures/cnn-classification-workshop/) to be executed. 
+1. (5 points) Submit your notebook URL that allows the notebook [here](../lectures/cnn/cnn-example-architectures/cnn-classification-workshop/) to be executed. 
 
 2. (15 points) Start reducing the number of cats in the dataset and plot the accuracy of the predicting the cat class as the population of cats becomes 90%, 70%, 50%, 30%, 10% of the original. For each population size present the hyperparameter optimized result using [AutoKeras](https://autokeras.com). Explain your findings. 
 
+## Problem Set 3 (25 points
+0
+Assuming that $x \in \R^n$, backpropagate the following network to find 
+
+$$\frac{\partial L}{\partial \mathbf w}$$
+
+![](images/neuron-ce.png)

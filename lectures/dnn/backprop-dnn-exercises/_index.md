@@ -1,9 +1,4 @@
----
-title: Backpropagation DNN exercises
----
-
 # Backpropagation DNN exercises
-
 
 <img src="images/tensorflow.gif" width="60%">
 
