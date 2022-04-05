@@ -6,7 +6,7 @@ title: Word2Vec Workshop
 
 ## Example
 
-```{admonition}
+```{note}
 The following example is from [here](https://iksinc.online/tag/skip-gram-model/).
 ```
 
@@ -58,7 +58,7 @@ The probability in bold is for the chosen target word 'cat'. Given the target ve
 
 This [self-contained implementation](https://nathanrooy.github.io/posts/2018-03-22/word2vec-from-scratch-with-python-and-numpy) is instructive and you should [go through it](https://github.com/nathanrooy/word2vec-from-scratch-with-python/blob/master/word2vec.py) to understand the word2vec embedding. 
 
-{{< details "Word2Vec" "..." >}}
+
 ```python
 #   Nathan A. Rooy
 #   Simple word2vec from scratch with Python
@@ -253,9 +253,8 @@ training_data = w2v.generate_training_data(settings, corpus)
 # train word2vec model
 w2v.train(training_data)
 
-#--- END ----------------------------------------------------------------------+
 ```
-{{</details>}}
+
 
 ## Tensorflow tutorial notebook
 

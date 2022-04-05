@@ -6,7 +6,7 @@ title: Collaborative Robotics
 
 You are a co-founder in a startup called PodGrocer, a company that deploys pods to selected host sites such as electric vehicle charging stations, mall parking lots and can also attach to existing supermarket stores. Each pod was constructed by modifying a standard shipping container and is cooled by latest technology green energy backed up by the host site power feeds. 
 
-```{admonition}
+```{note}
 The shipping container sized pod is irrelevant for this project but its provided here as they are routinely used as building blocks for larger and sometimes movable structures. 
 ```
 

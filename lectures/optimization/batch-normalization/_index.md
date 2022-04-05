@@ -62,7 +62,7 @@ without (right). For the unnormalized network, the gradients are distributed wit
 ![learning-rate-bn](images/learning-rate-bn.png)
 _BN allows us to learn much faster and operate efficiently at deeper architectures compared to without_
 
-{{<hint>}}
+```{note}
 Consider running [this excellent notebook](https://colab.research.google.com/github/davidcpage/cifar10-fast/blob/master/batch_norm_post.ipynb#scrollTo=a22VPg31CLSM) together with [this paper](https://arxiv.org/abs/1806.02375). 
 
  ```

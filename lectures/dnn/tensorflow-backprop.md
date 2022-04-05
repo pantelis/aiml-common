@@ -14,7 +14,7 @@ To be able to follow the notebook you need to make sure you have reviewed first 
 * [Tensors](https://www.tensorflow.org/guide/tensor)
 * [Variables](https://www.tensorflow.org/guide/variable)
 
-{{<hint warning>}}
+```{warning}
 **How to Run**: Click the yellow button found under the title "Run in Google Colab". 
 ```
 

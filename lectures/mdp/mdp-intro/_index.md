@@ -13,7 +13,7 @@ We start by reviewing the agent-environment interface with this evolved notation
 ![agent-env-interface](images/agent-env-interface.png)
 *Agent-Environment Interface*
 
-```{admonition}
+```{note}
 
 The following table summarizes the notation and contains useful definitions that we will use to describe required concepts later.  With capital letters we denote the random variables involved and with small letters their specific realizations (values) - for example $S_t$ is the random state variable and $s_t$ is the actual state at time $t$. 
 
@@ -69,7 +69,7 @@ $$\mathcal P^a_{ss^\prime} = p[S_{t+1}=s^\prime | S_t=s, A_t=a ]$$
 
 where one dimension represents the action space and the other two constitute a state transition probability matrix. 
 
-{{<hint>}}
+```{note}
 **Example**: 
 
 Can you determine the state transition tensor for the 4x3 Gridworld ?  

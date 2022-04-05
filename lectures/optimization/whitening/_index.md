@@ -4,7 +4,7 @@ title: The whitening operator
 
 # The whitening operator
 
-```{admonition}
+```{note}
 Some of material in this section have been borrowed from [CS231n](https://cs231n.github.io/neural-networks-2/) 
 ```
 

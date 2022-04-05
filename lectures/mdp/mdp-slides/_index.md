@@ -6,7 +6,6 @@ draft: false
 ## Gurudutt Hosangadi, Bell Labs, NJ
 ## April 6th, 2020
 
----
 
 ## PLAN
 
@@ -16,7 +15,6 @@ draft: false
 * Reinforcement Learning 
 
 
----
 
 
 # Part 1/4: REVIEW
@@ -26,7 +24,7 @@ Note:
 we begin with review
 
 
-----
+
 
 
 ### Agents
@@ -44,7 +42,7 @@ $4$ main categories depending on how percepts are mapped to actions:
 * **Utility based agent**: uses current perceptive, a model of the world, set of goals it is trying to achieve and utility of outcomes to take action
 
 
-----
+
 
 ### Example: Mars lander
 
@@ -57,7 +55,7 @@ Suppose that the mars lander needs to pick up 1 sample of each different looking
 
 **What would be the outcome of the different types of agents?**
 
-----
+
 
 
 ### Mars Lander - continued
@@ -75,7 +73,7 @@ Suppose that the mars lander needs to pick up 1 sample of each different looking
 <!-- .element: class="fragment" -->
 
 
-----
+
 
 ### Mars lander - continued
 
@@ -91,7 +89,7 @@ Assume that the Lander comes across an obstruction.
 
 <!-- .element: class="fragment" -->
 
-----
+
 
 ### Mars lander - continued
 
@@ -103,7 +101,7 @@ Assume that the Lander comes across an obstruction.
 * will pick the path with the best utility. 
 <!-- .element: class="fragment" -->
 
-----
+
 
 ### Environments 
 
@@ -120,7 +118,7 @@ Assume that the Lander comes across an obstruction.
 * Otherwise it is non-deterministic.
 
 
-----
+
 
 
 ### Environments - continued
@@ -142,7 +140,7 @@ Assume that the Lander comes across an obstruction.
 
 
 
-----
+
 
 ### Handling uncertainty
 
@@ -162,7 +160,7 @@ $P_{posterior} = \frac{likelihood \cdot prior}{evidence}$
 
 
 
-----
+
 
 
 ### Handling uncertainty - example 
@@ -175,7 +173,7 @@ $P(open/e) = \frac{P(e/open)P(open)}{P(e)}$
 ![](./images/bayes.png)<!-- .element width="500px" -->
 
 
-----
+
 
 ### Decision Theory
 
@@ -186,7 +184,7 @@ $P(open/e) = \frac{P(e/open)P(open)}{P(e)}$
 * Utility theory describes what the agent wants
 * Decision theory puts the two together to describe what the agent should do i.e $ = $ Utility Theory + Probability Theory
 
-----
+
 
 ### Decision Networks
 
@@ -195,7 +193,7 @@ $P(open/e) = \frac{P(e/open)P(open)}{P(e)}$
 ![](./images/decision.png)<!-- .element width="850px" -->
 
 
-----
+
 
 ### Decision Networks - continued
 
@@ -209,7 +207,7 @@ $P(open/e) = \frac{P(e/open)P(open)}{P(e)}$
 
 # PART 2/4: Sequential Decisions and MDP 
 
-----
+
 
 ### A Sequential Decision Problem: Maze
 
@@ -223,7 +221,7 @@ $P(open/e) = \frac{P(e/open)P(open)}{P(e)}$
 * **reward** or punishment received when a state is reached    
 
 
-----
+
 
 ### Maze - continued
 
@@ -240,7 +238,7 @@ $$U(s_0,s_1,...,s_T)=R(s_0)+R(s_1)+...+R(s_T)$$
 * Question: Find sequence of actions from current state to goal (green oval) that maximizes utility?
 <!-- .element: class="fragment" -->
 
-----
+
 
 ### MAZE with no uncertainty: Utility 
 
@@ -248,7 +246,7 @@ $$U(s_0,s_1,...,s_T)=R(s_0)+R(s_1)+...+R(s_T)$$
 ![Sequence of action for each starting state that maximizes utility](./images/grid-fixed-plan.png) <!-- .element width="800px" -->
 * What we are looking for is a **policy** which recommends the action to be taken when in a given state
 
-----
+
 
 ### MAZE with no uncertainty: Policy
 
@@ -262,7 +260,7 @@ $$U(s_0,s_1,...,s_T)=R(s_0)+R(s_1)+...+R(s_T)$$
 
 $$U^{\pi}(s) =  R(s) + \gamma R(s_1) + \gamma^{2} R(s_2) + ...$$
 
-----
+
 
 
 ### MAZE with no uncertainty: Policy  
@@ -277,7 +275,7 @@ $$U^{\pi}(s) =  R(s) + \gamma R(s_1) + \gamma^{2} R(s_2) + ...$$
 	* $\pi^*(s_{32})=$ ???
 	* $\pi^*(s_{11})=$ ???
 
-----
+
 
 ### Markov Decision Process (MDP) 
 
@@ -293,7 +291,7 @@ $$U^{\pi}(s) =  R(s) + \gamma R(s_1) + \gamma^{2} R(s_2) + ...$$
     * reward function $r_t=R(s_t)$ 
 
 
-----
+
 
 ### MDP Transition Model
 
@@ -309,7 +307,7 @@ $$U^{\pi}(s) =  R(s) + \gamma R(s_1) + \gamma^{2} R(s_2) + ...$$
 	* Each edge is the probability of transition
 
 
-----
+
 
 ### Utility for MDP
 
@@ -322,7 +320,7 @@ $$U^{\pi}(s) =  R(s) + \gamma R(s_1) + \gamma^{2} R(s_2) + ...$$
 
 $U(s) = R(s) + \gamma \sum_{s^{'}} P(s^{'}| s,a)U(s^{'})$ 
 
-----
+
 
 ### Utility for MDP - continued
 
@@ -335,7 +333,7 @@ $$ U(s_{33})   =   R(s_{33}) +  \gamma (P(s_{43} | s_{33}, \rightarrow)  U(s_{43
 
  $$U(s_{33}) = R(s_{33}) + \gamma ( (0.8 \times U(s_{43})) + (0.1 \times U(s_{33})) + (0.1 \times U(s_{23})))$$
 
-----
+
 
 ### Policy for MDP
 
@@ -354,13 +352,13 @@ $$\pi^{*}(s) = \underset{a}{\arg \max}(\sum_{s^{'}} P(s^{'}| s,a)U^{*}(s^{'}))$$
   
   * The set of $|S|$ equations for $\pi^*(s)$ cannot be solved directly as it is dependent on unknown $U^*(s)$.
 
-----
+
 
 ### Optimal Policy for MDP
 
 ![Optimal Policy and Utilities for Maze](./images/policy-utiltiy.png)<!-- .element width="800px" -->
 
-----
+
 
 ### Value Iteration 
 
@@ -378,7 +376,7 @@ $$V_{t+1}(s) \leftarrow R(s) + \gamma \underset{a}{ \max} \left[ \sum_{s^{'}} P(
 ![val-iter-initial](./images/val-iter-initial.png)
 *Initialize value estimates to $0$*
 
-----
+
 
 ### Value Iteration 
 
@@ -389,7 +387,7 @@ $$V_{t+1}(s) \leftarrow R(s) + \gamma \underset{a}{ \max} \left[ \sum_{s^{'}} P(
 
 ![States to consider for value iteration](./images/val-iter-step1-states.png)
 
-----
+
 
 ### Value Iteration (t=0)
 
@@ -403,7 +401,7 @@ $$V_{t+1}(s_{33}) = -0.04 + P(s_{43}|s_{33},\rightarrow)U(s_{43})+P(s_{33}|s_{33
 
 $$V_{t+1}(s_{33}) =   -0.04 + 0.8 \times 1 + 0.1 \times 0 + 0.1 \times 0 = 0.76 $$
 
-----
+
 
 ### Value Iteration (t=1)
 
@@ -419,7 +417,7 @@ $$V_{t+1}(s_{23}) =  -0.04 + P(s_{33}|s_{23},\rightarrow)U_t(s_{23})+P(s_{23}|s_
 $$V_{t+1}(s_{32}) =  -0.04 + P(s_{33}|s_{32},\uparrow)U_t(s_{33})+P(s_{42}|s_{32},\uparrow)U_t(s_{42}) +P(s_{32}|s_{32},\uparrow)U_t(s_{32})$$
 $$V_{t+1}(s_{32}) = -0.04 + 0.8 \times 0.76 + 0.1 \times -1 + 0.1 \times 0= 0.468$$
 
-----
+
 
 ### Value Iteration (t=2)
 
@@ -433,7 +431,7 @@ and eventually all states have correct value estimates
 
 ![Optimal Policy and Utilities for Maze](./images/policy-utiltiy.png)
 
-----
+
 
 ### Value Iteration - Convergence
 
@@ -448,7 +446,7 @@ and eventually all states have correct value estimates
 
 * For the maze problem, convergence is reached within 5 to 10  iterations
 
-----
+
 
 ### Policy Iteration
 
@@ -466,7 +464,7 @@ and eventually all states have correct value estimates
 
 ![Policy iteration(source: sutton, chap 4)](./images/policy-iter.PNG)<!-- .element width="225px" -->
 
-----
+
 
 ### Policy Iteration for Grid World
 
@@ -481,7 +479,7 @@ and eventually all states have correct value estimates
 ![policy-iter-1](images/policy-iter-1.PNG)
 *Initial values and policy for policy iteration*
 
-----
+
 
 ### Policy Iteration (Step 1)
 
@@ -498,7 +496,7 @@ $$ \ldots $$
 
 ![policy-iter-value](images/policy-iter-2.PNG)
 
-----
+
 
 ### Policy Iteration (step 2)
 
@@ -518,11 +516,8 @@ $$\pi(s_{6}) =  \underset{a}{max}[\frac{1}{4}U(S_2)| \uparrow,
 
 ![policy-iter-value](images/policy-iter-3.PNG)
 
----
  
 # PART 3/4: POMDPs 
-
-----
 
 ### Partially Observable MDPs
 
@@ -531,7 +526,7 @@ $$\pi(s_{6}) =  \underset{a}{max}[\frac{1}{4}U(S_2)| \uparrow,
 
 ![POMDP](images/pomdp.png)
 
-----
+
 
 ### POMDP Parameters
 
@@ -548,7 +543,7 @@ $$\pi(s_{6}) =  \underset{a}{max}[\frac{1}{4}U(S_2)| \uparrow,
 * The belief state $b$ also satisfies the Markov property
 
 
-----
+
 
 ### POMDP versus other models
  
@@ -557,7 +552,7 @@ $$\pi(s_{6}) =  \underset{a}{max}[\frac{1}{4}U(S_2)| \uparrow,
 [source](https://www.cs.cmu.edu/~ggordon/780-fall07/lectures/POMDP_lecture.pdf)
 
 
-----
+
 
 ### POMDP Example
 
@@ -566,73 +561,73 @@ $$\pi(s_{6}) =  \underset{a}{max}[\frac{1}{4}U(S_2)| \uparrow,
 * We want to find the optimal policy...i.e. what is the best action the person should take?
 
 
-----
+
 
 ### POMDP Example - Transition Probabilities
 
 * The "Listen" action does not change the tiger location
 
 | $P(s^{'}$\| $s, Listen)$ | TL  | TR  |
-| ------------------------ | --- | --- |
+|  | --- | --- |
 | TL                       | 1.0 | 0   |
 | TR                       | 0   | 1.0 |
 
 * The "open-left" or "open-right" action resets the problem in which case the tiger can be on the left or right with equal probability
 
 | $P(s^{'}$\| $s, open-right)$ | TL  | TR  |
-| ---------------------------- | --- | --- |
+|  | --- | --- |
 | TL                           | 0.5 | 0   |
 | TR                           | 0   | 0.5 |
 
 | $P(s^{'}$ \| $s, open-left)$ | TL  | TR  |
-| ---------------------------- | --- | --- |
+|  | --- | --- |
 | TL                           | 0.5 | 0   |
 | TR                           | 0   | 0.5 |
 
 
-----
+
 
 ### POMDP Example - Observation Probabilities
 
 * Only the "Listen" action is informative 
 
 | $P(e$ \| $s, Listen)$ | TL   | TR   |
-| --------------------- | ---- | ---- |
+| - |  |  |
 | TL                    | 0.85 | 0.15 |
 | TR                    | 0.15 | 0.85 |
 
 * Any observation without the "listen" action is uninformative
 
 | $P(e$ \| $s, open-right)$ | TL  | TR  |
-| ------------------------- | --- | --- |
+| - | --- | --- |
 | TL                        | 0.5 | 0   |
 | TR                        | 0   | 0.5 |
 
 | $P(e$ \| $s, open-left)$ | TL  | TR  |
-| ------------------------ | --- | --- |
+|  | --- | --- |
 | TL                       | 0.5 | 0   |
 | TR                       | 0   | 0.5 |
 
-----
+
 
 ### POMDP Example - Immediate Rewards 
 
 * "Listen" action results in a small penalty 
 
 | $R(s)$ \| $Listen$ |     |
-| ------------------ | --- |
+| -- | --- |
 | TL                 | -1  |
 | TR                 | -1  |
 
 * Opening the wrong door results in large penalty 
 
 | $R(s)$ \| $open-left$ |      |
-| --------------------- | ---- |
+| - |  |
 | TL                    | -100 |
 | TR                    | +10  |
 
 | $R(s)$ \| $open-right$ |      |
-| ---------------------- | ---- |
+| -- |  |
 | TL                     | +10  |
 | TR                     | -100 |
 
@@ -640,7 +635,7 @@ $$\pi(s_{6}) =  \underset{a}{max}[\frac{1}{4}U(S_2)| \uparrow,
 
 * b(left) versus b(right)
 
-----
+
 
 ### POMDP as a Belief-state MDP
 
@@ -657,7 +652,7 @@ $$\pi(s_{6}) =  \underset{a}{max}[\frac{1}{4}U(S_2)| \uparrow,
 		* Set the current belief state to $b^{'}(s^{'})$ given by 
   $$b^{'}(s^{'}) = \alpha P(e|s^{'}) \sum_{s} P(s^{'}|s,a)b(s)$$
 
-----
+
 
 ### Solving POMDP
 
@@ -672,7 +667,7 @@ where $\tau(e,b,a)$ is the transition function for the belief state.
 	* Policy Tree
 	* Piecewise linear and convex property of the value function
 
-----
+
 
 ### Solving the tiger problem - 1-step horizon
 
@@ -682,14 +677,14 @@ where $\tau(e,b,a)$ is the transition function for the belief state.
 ![Tiger Problem](images/tiger-1.png)
 *The Tiger Problem*
 
-----
+
 
 ### Solving the tiger problem - 1-step horizon
 
 * Determine expected utility for each possible action for different belief distributions
 
 | action | expected utility for  $\rho=0.5$        | expected utility for $\rho=0.4$         |
-| ------ | --------------------------------------- | --------------------------------------- |
+| -- | --- | --- |
 | LEFT   | $0.5 \times -100 + 0.5 \times 10 = -45$ | $0.4 \times -100 + 0.6 \times 10 = -36$ |
 | RIGHT  | $-45$                                   | $0.6 \times -100 + 0.4 \times 10 = -56$ |
 | LISTEN | $-1$                                    | $-1$                                    |
@@ -702,7 +697,7 @@ where $\tau(e,b,a)$ is the transition function for the belief state.
 
 ![Optimal policy for 1-step horrizon](./images/tiger-1step.png)
 
-----
+
 
 ### Solving the tiger problem - t-step horrizon
 
@@ -716,7 +711,7 @@ where $\tau(e,b,a)$ is the transition function for the belief state.
 		* the tiger would be randomly placed behind one of the doors and the agent's belief state would be reset to $(0.5, 0.5)$. 
 		* The agent would be left with no information about the tiger's location and with one action remaining.
 
-----
+
 
 ### Solving the tiger problem - t-step horrizon
 
@@ -729,7 +724,7 @@ where $\tau(e,b,a)$ is the transition function for the belief state.
 
 NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9. 
 
-----
+
 
 ### Introduction
 
@@ -745,7 +740,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 
 
 
-----
+
 
 ### Learning
 
@@ -760,7 +755,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 	* *reinforcements* i.e. rewards or punishments - reinforcement learning
 	* observes example input-output pairs and learns the mapping functions - supervised learning
 
-----
+
 
 ### Utility, Value, Action-Value, Action-Utility, Q functions
 
@@ -772,7 +767,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 * You get the value function by taking the expection of the action-value function over the set of actions i.e. $V^{\pi}(s) = \underset{a}{E}[Q(s,a)]$
 
 
-----
+
 
 ### Reinforcement Learning 
 * Reinforcement learning is learning what to do i.e. how to map situations to actions so as to maximize a numerical reward signal. The learner must discover which actions yield the most reward by trying them. 
@@ -783,7 +778,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 ![](./images/agent-env-interface.png)<!-- .element width="450px" -->
 
 
-----
+
 
 ### Reinforcement Learning as MDP
 
@@ -798,7 +793,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 	* value function $V^{\pi}$  or action value function $Q^{\pi}(s,a)$
 	* environment model $P(s^{'} | s,a)$
 
-----
+
 
 ### Deep RL
 * use neural networks as function approximators to learn the functions
@@ -812,7 +807,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 		* high variance
 		* sample inefficient
 
-----
+
 
 ### Deep RL - **Value Based Methods** 
 
@@ -825,7 +820,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 	* no guarantee of convergence to optimal policy
 	* most methods are for discrete action spaces though recently QT-OPT has been proposed which can handle continuous spaces
 
-----
+
 
 ### Deep RL - **Model Based Methods** 
 
@@ -839,7 +834,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 	* learning the model can be difficult as typically real world environments can have a large state and action space
 	* predictions depend on the accuracy of the model 
 
-----
+
 
 ### Taxonomy of RL algorithms
 
@@ -847,7 +842,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 ![Overview of RL algorithms](./images/rl-taxonomy.png)<!-- .element width="800px" -->
 
 
-----
+
 
 ### Off policy versus on policy
 
@@ -864,7 +859,7 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 	* more memory may be required to store data
 
 
-----
+
 
 ### Deep Learning 
 
@@ -881,4 +876,3 @@ NOTE: Reinforcement Learning and Deep RL (DRL) are covered in Lecture 9.
 	* since current state and actions that an agent takes affect the future states, the iid assumption between samples for neural network training no longer holds and this affects the rate of convergence.
 
 
-----
