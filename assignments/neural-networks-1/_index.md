@@ -1,8 +1,8 @@
 ---
-title: Neural Network Assignment 1
+title: Neural Network Assignment
 ---
 
-# Neural Networks Assignment 1
+# Neural Networks Assignment
 
 ## Problem Set 1 (60 points. 10 points per question)
 
@@ -26,8 +26,8 @@ The TensorFlow Playground is a handy neural network simulator built by the Tenso
 
 2. (15 points) Start reducing the number of cats in the dataset and plot the accuracy of the predicting the cat class as the population of cats becomes 90%, 70%, 50%, 30%, 10% of the original. For each population size present the hyperparameter optimized result using [AutoKeras](https://autokeras.com). Explain your findings. 
 
-## Problem Set 3 (25 points
-0
+## Problem Set 3 (25 points)
+
 Assuming that $x \in \R^n$, backpropagate the following network to find 
 
 $$\frac{\partial L}{\partial \mathbf w}$$
