@@ -20,7 +20,7 @@ Assuming a linear classifier of $g(\mathbf x) = \mathbf w^T \phi(\mathbf x) + b$
 
 Just like in the perceptron case, since 
 
-$$y( \mathbf x_i ) = \begin{cases}>0 & \text{if} \ y_i = +1, \\\\ <0 & \text{if} \ y_i = -1 \end{cases}$$
+$$y( \mathbf x_i ) = \begin{cases}>0 & \text{if} \ y_i = +1, \\ <0 & \text{if} \ y_i = -1 \end{cases}$$
 
 for all training data we have,
 
