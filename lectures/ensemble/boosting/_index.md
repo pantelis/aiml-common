@@ -33,7 +33,7 @@ $$\mathtt{data} = \{ (\mathbf{x}_1, y_1), \dots, (\mathbf{x}_m, y_m) \}$$
 | 185    | yes   | yes    | no  | yes        |
 | 168    | yes   | no     | yes | yes        |
 
-We assume that the label $y \in \{+1, -1}$ instead of 0 or 1 with loss of generality. This is a binary classification problem but the method is equally applicable to multi-class problems. 
+We assume that the label $y \in {+1, -1}$ instead of 0 or 1 with loss of generality. This is a binary classification problem but the method is equally applicable to multi-class problems. 
 
 AdaBoost calls a given weak learner repeatedly in a series of rounds $t=1, \dots, T$, each weak learner is denoted by $h_t$ - the weak hypothesis that each learner evaluates. In this example case, we can elect a hypothesis set from the family of decision trees and the specific hypothesis we will use is a decision tree with single split (depth = 1) called decision stump. 
 
