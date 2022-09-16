@@ -4,7 +4,7 @@
 
 Unmanned Surface Vehicles (USV) are heavily researched at present for both civilian and defense applications. You will participate in the VRX 2022 competition and immerse yourself in a virtual environment in ROS (and in the future ROS2) while at the same time learn the domain of maritime navigation. 
 
-To navigate a robot and complete you will be implement the whole stack of an AI agent from perception to thruster control. 
+To navigate a robot and complete you will be implement the whole stack of an AI agent from perception to thruster control. Please note that this project is only open to students with at least a 3080 RTX card hosted by a capable desktop computer with 32GB of RAM. You can also use AWS resources (Robomaker) for this project but be warned that the cost may be appreciable. For students without access to such compute resource, there will be another project published on this site. 
 
 
 ## System Setup
@@ -28,6 +28,7 @@ Follow the instructions in [here](https://github.com/osrf/vrx/wiki/system_setup_
 
 ## Deliverables
 
-Deliver on as many tasks as you can. Each task accounts for 20 points with Task 6 being optional. Task 6 can be used as an extra credit to increase you8r chances to max out the 100 points you can be granted for the project in this course.
+Each task accounts for 16.667 points with Task 6 being optional. Task 6 can be used as an extra credit to increase your chances to max out the 100 points you can be granted for the project in this course.
 
-You can split tasks between team members but understand that there are dependencies. Please shoot a video of your screen after a successful (or not successful) completion of a task.
+You can split tasks between team members but understand that there are dependencies. Please shoot a video of your screen after a successful (or your best possible outcome) completion of a task and upload it to youtube. Submit a Github URL to the repository and include a Github collaborators your professor and the TAs. Your repo should include extensive documentation of each task authored in jupyter-book site format.  Each task should be authored in a separate chapter and should include the author name. 
+
