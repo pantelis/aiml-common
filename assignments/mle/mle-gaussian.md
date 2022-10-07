@@ -13,6 +13,7 @@ The above notebook presents an array of data points called `data` and plots seve
 Repeat for the regression problem given (20 points for a correct implementation and 30 points for adequate explanation). 
 
 ## References
+
 1. [Maximum Likelihood Estimation of Gaussian Parameters](http://jrmeyer.github.io/machinelearning/2017/08/18/mle.html)
 
 
