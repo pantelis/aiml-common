@@ -1,4 +1,4 @@
-# Separating Perception and Reasoning
+# Separating Perception and Reasoning in VQA
 
 Purely symbolic approaches to artificial intelligence are inherently relational. Practitioners define
 the relations between symbols using the language of logic and mathematics, and then reason about
@@ -41,7 +41,7 @@ PS: Those that have exposure to 3D world modeling tooling such as NVIDIA's Omniv
 
 The [CLEVR dataset](https://knowyourdata-tfds.withgoogle.com/#tab=STATS&dataset=clevr) is a synthetic photorealistic 3D dataset. You will apply the [NeuroSymbolic VQA](https://arxiv.org/pdf/1810.02338.pdf) approach to it. Feel free to consult the implementation of the approach [here](https://github.com/kexinyi/ns-vqa) but you need to bring up your own repo that can demonstrate the technique (see below) with the latest versions of the frameworks of your choice. 
 
-In all the items below, include descriptions of all impediments you will face in your attempt to replicate the results. When the paper gives you options, always select the least possible number of examples, questions etc. to ensure that the code runs in your environment. Test only for the CLEVR dataset. 
+In all the items below, include descriptions of all impediments you will face in your attempt to replicate the results. When the paper gives you options, always select the least possible number of examples, questions etc. to ensure that the code runs in your environment. Test and obtain results only for the CLEVR dataset. 
 
 ### Scene Parser (10 points)
 
