@@ -2,7 +2,7 @@
 
 This project will walk you through the development of a complete machine learning pipeline from annotation to producing performance results of a network that performs semantic segmentation in the so called small data regime i.e. when the annotated examples per category are very few.  
 
-You have been hired in the data science team at Home Depot and you are tasked to semantically segment objects shown in the so called buyers guide videos. You are to segment only objects that their customers can purchase in their stores. 
+You have been hired in the data science team at Home Depot and you are tasked to semantically segment objects shown in the so called "buyers guide" videos. You are to segment only objects that their customers can purchase in their stores. 
 
 **If you miss a milestone deadline you will be forfeited the corresponding points.**
 
@@ -18,11 +18,11 @@ Submit a github repository with a branch titled 'milestone-1' with the readme fi
 
 1. Go to the [HD site](https://www.homedepot.com/c/alp/diy-projects-and-ideas-ab/azzz-ab) and in the left panel select the home area (room) you have been assigned: 
 
-    1. kitchen, 
-    2. bathroom, 
-    3. bedroom, 
-    4. living room, 
-    5. basement.
+    1. [kitchen](https://www.youtube.com/watch?v=cc0Sy4VpfT0) 
+    2. [bathroom](https://www.youtube.com/watch?v=-Nkm58wSiKg) 
+    3. [bedroom](https://www.youtube.com/watch?v=2mnShtGjRXM), 
+    4. [garage](https://www.youtube.com/watch?v=AvKxzw5bjuc), 
+    5. [basement](https://www.youtube.com/watch?v=gdcFrD-7hcI).
    
 Project Team 1 is assigned home area 1 (Kitchen) just like Project Team 6, Project Team 3 is assigned home area 3 (Bedroom) just like Project Team 8 and so on ... 
 
