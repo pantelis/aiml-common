@@ -32,9 +32,8 @@ Project Team 1 is assigned home area 1 (Kitchen) just like Project Team 6, Proje
 .. youtube:: poup0NZ2D40
 ```
 
-Bookmark the HD video you used as you will use it later. 
 
-3. You will need to scrape using [beautiful soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) or retrieve using the [Google Custom Search API](https://developers.google.com/custom-search/v1/overview) (better solution), 100 images of each of the selected product categories. Make sure you select products that are not included on the video, meaning if a specific sink is shown on the video, you srape / search different but similar sinks. 
+2. You will need to scrape using [beautiful soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) or retrieve using the [Google Custom Search API](https://developers.google.com/custom-search/v1/overview) (better solution), 100 images of each of the selected product categories. Make sure you select products that are not included on the video, meaning if a specific sink is shown on the video, you srape / search different but similar sinks. 
 
 Submit a Github branch titled 'data-acquisition' and a markdown file called data-acquisition.md containing the code that achieve the milestone and a `pytest` test  file that can show that the code works. 
 
@@ -50,7 +49,7 @@ Submit a Github branch titled 'annotation' containing the annotated dataset in M
 
 ## Milestone 4: Semantic Segmentation (40 points, by 11/28)
 
-Use [this](https://github.com/ashleve/lightning-hydra-template) template or an equivalent template if you are using Tensorflow to implement a semantic segmentation pipeline based on either MaskRCNN (project team number is odd number) or UNet (project team number is even)  that will successfully segment the selected objects on the input video (see Milestone 2).
+Use [this](https://github.com/ashleve/lightning-hydra-template) template or an equivalent template if you are using Tensorflow to implement a semantic segmentation pipeline based on either MaskRCNN (project team number is odd number) or UNet (project team number is even)  that will successfully segment the selected objects on the input room video.
 
 You can use frameworks such as https://github.com/facebookresearch/detectron2 for this task. 
 
