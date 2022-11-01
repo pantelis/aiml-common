@@ -13,12 +13,13 @@ In linear regression, we have seen a simple dataset from an unknown non-linear t
 
 We could have chosen other sets as well:  
 
-![polynomial-basis](images/Figure6.1b.png)
+![Gaussian-basis](images/Figure6.1b.png)
 *Gaussian basis functions*
 
 In classification, we have seen lastly logistic regression which despite the non-linear (probabilistic) interpretation of its output it is still a linear classifier as it presents a linear decision boundary - linear in the feature space $(\mathbf{w}^T\mathbf{x})$. Which posses the question: what we do when we have a problem that has a non-linear decision boundary? The answer is via the concept of **kernels** that we describe next.
 
 ## Motivation
+
 Lets revisit the perceptron algorithm where we started from $\mathbf{w}=\mathbf{0}$ (or a random vector) and we visited each and every example, changing the direction of the decision boundary when we met a miss-classified example. In the plots of that lecture for example we have seen that after two misclassified examples (the green circled examples indexed 9 and 6) the algorithm converged to a final $\mathbf{w}$. Note that the indices9 and 6 selected here are arbitrary. These two steps can be written as:
 
 $\mathbf{w}^{(1)} = \mathbf{w}^{(0)} + \mathbf{x}^{(9)}$
@@ -31,7 +32,7 @@ For non-linear decision boundaries, the straightforward approach we can take is 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3liCbRZPrZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In the visualization above we added the feature $\mathbf{x}^2$ and therefore expanded the feature space $\phi$ to $\{\mathbf{x}, \mathbf{x}^2\}$ and surely in the expanded space there is a linear decision boundary (a plane) that can separate the previously the linearly inseparable classes. Moreover this plane can be found by various linear classification methods and for the perceptron we can then using the same reasoning as above we can end up with a sparse representation for the weight that is normal to the plane and can be written as:
+In the visualization above we added the feature $\mathbf{x}^2$ and therefore expanded the feature space $\phi$ to $\{\mathbf{x}, \mathbf{x}^2\}$ and surely in the expanded space there is a linear decision boundary (a plane) that can separate the previously linearly inseparable classes. Moreover this plane can be found by various linear classification methods and for the perceptron we can then using the same reasoning as above we can end up with a sparse representation for the weight that is normal to the plane and can be written as:
 
 $\{\phi(\mathbf{x}^{(k)}), ..., \phi(\mathbf{x}^{(d)})\}$
 
