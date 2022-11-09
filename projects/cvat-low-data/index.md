@@ -6,7 +6,7 @@ You have been hired in the data science team at Home Depot and you are tasked to
 
 **If you miss a milestone deadline you will be forfeited the corresponding points.**
 
-## Milestone 1: Environment Preparation (10 points by 10/21)
+## Milestone 1: Environment Preparation (10 points)
 
 In this stage you will be working with CVAT - you need to install CVAT locally to your laptop/desktop and we urge you to follow the docker setup instructions [here](https://opencv.github.io/cvat/docs/administration/basics/installation/)
 
@@ -14,7 +14,7 @@ PS: You can also create an account on the cvat.ai site but we dont offer any gua
 
 Submit a github repository with a branch titled 'milestone-1' with the readme file containing the CVAT installation instructions you followed and a screenshot of your computer of the login screen. Add as collaborator the TA.
 
-## Milestone 2: Data Acquisition (20 points by 11/1)
+## Milestone 2: Data Acquisition (20 points)
 
 1. Go to the [HD site](https://www.homedepot.com/c/alp/diy-projects-and-ideas-ab/azzz-ab) and in the left panel select the home area (room) you have been assigned: 
 
@@ -37,7 +37,7 @@ Project Team 1 is assigned home area 1 (Kitchen) just like Project Team 6, Proje
 
 Submit a Github branch titled 'data-acquisition' and a markdown file called data-acquisition.md containing the code that achieve the milestone and a `pytest` test  file that can show that the code works. 
 
-## Milestone 3: Annotation (20 points, by 11/10)
+## Milestone 3: Annotation (20 points)
 
 1. Upload the images in your CVAT instance and annotate all object categories. This is a manual step and you will need to use the [DEXTR cutter](https://cvlsegmentation.github.io/dextr/). 
 
@@ -47,7 +47,7 @@ Ensure that the annotations can be read and seen by the [fiftyone tool](https://
 
 Submit a Github branch titled 'annotation' containing the annotated dataset in MS COCO format and a markdown file called annotation.md containing the DEXTR description and the link with the 1000 annotated images (10 product categories x 100 images per category. You can collaborate with other teams on the annotation task to share the load. 
 
-## Milestone 4: Semantic Segmentation (40 points, by 11/28)
+## Milestone 4: Semantic Segmentation (40 points)
 
 Use [this](https://github.com/ashleve/lightning-hydra-template) template or an equivalent template if you are using Tensorflow to implement a semantic segmentation pipeline based on either MaskRCNN (project team number is odd number) or UNet (project team number is even)  that will successfully segment the selected objects on the input room video.
 
@@ -58,7 +58,7 @@ Ensure you describe how you tuned and what values you ended up using for the [ne
 Submit a Github branch titled 'segmentation' containing  the segmentation code and a  markdown file called segmentation.md containing the full description of the semantic segmentation network you used and the performance results you got. 
 
 
-## Milestone 5: Documentation (10 points by 12/7) 
+## Milestone 5: Documentation (10 points) 
 
 Use [Jupyterbook](https://jupyterbook.org/en/stable/intro.html) to bundle together all the markdown files and publish the project in html - do not commit your html build in github.
 
