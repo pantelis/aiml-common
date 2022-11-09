@@ -1,6 +1,6 @@
-# Automated Annotation for Small Data Regime Learning in Videos
+# Transfer Learning for Custom Datasets in the Small-Data Regime
 
-This project will walk you through the development of a complete machine learning pipeline from annotation to producing performance results of a network that performs semantic segmentation in the so called small data regime i.e. when the annotated examples per category are very few.  
+This project will walk you through the development of a complete transfer learning pipeline from annotation to producing performance results of a network that performs semantic segmentation in the so called small data regime i.e. when the annotated examples per category are very few.  
 
 You have been hired in the data science team at Home Depot and you are tasked to semantically segment objects shown in the so called "buyers guide" videos. You are to segment only objects that their customers can purchase in their stores. 
 
