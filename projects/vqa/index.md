@@ -18,7 +18,7 @@ The first approach is based on relation networks and is considered a milestone i
 
 ![](images/relation-networks.png)
 
-In this project you will create Relation Networks that can act as plugins to state of the art video understanding systems offering not just the ability to answer questions regarding a scene but also influence the representations they generate by considering relationships between objects.   In [this seminal paper](https://arxiv.org/pdf/1706.01427.pdf) the authors present their method that can reveal relations between objects from a variety of representational formats. 
+In this project you will create Relation Networks that can act as plugins to state of the art video understanding systems offering not just the ability to answer questions regarding a scene but also influence the representations they generate by considering relationships between objects.   In [this seminal paper](https://arxiv.org/pdf/1706.01427.pdf) the authors present their method that can reveal relations between objects from a variety of representational formats. You can start with [this repo](https://github.com/kimhc6028/relational-networks). 
 
 ### Describe the RN (20 points)
 
