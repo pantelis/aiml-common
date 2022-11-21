@@ -1,7 +1,3 @@
----
-title: Word2Vec Workshop
----
-
 # Word2Vec Workshop
 
 ## Example
