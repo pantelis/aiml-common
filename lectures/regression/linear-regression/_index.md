@@ -187,7 +187,7 @@ plt.show()
 
 Lets reflect on the MSE and how model complexity gives raise to various generalization errors. 
 
-$$MSE = \mathbb{E}[\hat{y}_i - y_i)^2] = \mathrm{Bias}(\hat{y}_i)^2 + \mathrm{Var}(\hat{y}_i)$$
+$$MSE = \mathbb{E}[(\hat{y}_i - y_i)^2] = \mathrm{Bias}(\hat{y}_i)^2 + \mathrm{Var}(\hat{y}_i)$$
 
 which means that the [MSE captures both bias and variance](https://en.wikipedia.org/wiki/Mean_squared_error) of the estimated target variables and as shown in the plots above, increasing model capacity can really increase the variance of $\hat{y}$. We have seen that as the $\mathbf{w}$ is trying to exactly fit, or memorize, the data, it minimizes the bias (in fact for model complexity M=9 the bias is 0) but it also exhibits significant variability that is itself translated to $\hat{y}$. Although the definition of model *capacity* is far more rigorous, we will broadly associate complexity with capacity and borrow the figure below from Ian Goodfellow's book to demosntrate the tradeoff between bias and variance. What we have done with regularization is to find the $\lambda$ that minimized generalization error aka. find the optimal model capacity. 
 
