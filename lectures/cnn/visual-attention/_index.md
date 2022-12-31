@@ -1,8 +1,4 @@
----
-title: Attention Mechanisms in CNNs
-draft: true
-weight: 68
----
+# Attention Mechanisms in CNNs
 
 Attention is intuitively understood from our every day perception  experience - we tend to focus our sight into certain parts of the image with high resolution while assigning lower resolution to parts of the image that is not interesting for the task at hand. Such weighting of the input features that we perceive can be mirrored in CNNs with a structure that we call _attention map_.  
 

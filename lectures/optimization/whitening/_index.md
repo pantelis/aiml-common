@@ -1,8 +1,4 @@
----
-title: The whitening operator
----
-
-# The whitening operator
+# Data Preprocessing
 
 ```{note}
 Some of material in this section have been borrowed from [CS231n](https://cs231n.github.io/neural-networks-2/) 
@@ -10,9 +6,7 @@ Some of material in this section have been borrowed from [CS231n](https://cs231n
 
 Designing and training a network using SGD and backprop requires making seemingly arbitrary choices such as the types and number of neurons, layers, learning rates, training and test datasets etc. These choices can be critical yet there is no full proof recipe for deciding them because they are naturally problem and data dependent. However there are heuristics and some underlying theory that can help a practitioner to make better choices. 
 
-Perhaps one of the most important methods for accelerating training as described in [this paper](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf) is the _whitening_ operation. We describe the operation first and then couple it to the training process in a dedicated section.
-
-This operation involves three main steps as described next. 
+Perhaps one of the most important methods for accelerating training as described in [this paper](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf) is the _whitening_ operation. This operation involves three main steps as described next. 
 
 ## Preprocessing
 

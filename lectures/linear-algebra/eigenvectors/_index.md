@@ -1,7 +1,3 @@
----
-title: Eigenvectors and Eigenvalues
----
-
 # Eigenvectors and Eigenvalues
 
 > Most of the material in this section was borrowed from [this excellent series of Essence of Linear Algebra youtube videos](https://www.youtube.com/watch?v=fNk_zzaMoSs) 
