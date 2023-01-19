@@ -12,7 +12,7 @@ This course will be using Jupyter notebooks and we will be using the **free** CP
 
 ### Kaggle (Option 2)
 
-You can use Kaggle as an alternative to Colab for all your projects. You guessed it right - all the projects in this course are in fact Kaggle competitions.  You can login with your gmail account. You can install by following the directions [here](https://github.com/Kaggle/kaggle-api) the Kaggle command line interface (CLI).  Not only you will get to compete (your ranking relative to others does not matter per se), but as you improve your knowledge over time you can revisit these competitions and see how your score improves.  There is one catch though - Colab offers more GPU time and it comes with a 2nd tier of service for a few dollars per month. This can be handy for the heavier projects.  
+You can use Kaggle as an alternative to Colab for all your projects. You guessed it right - all the projects in this course are in fact Kaggle competitions.  You can login with your gmail account. You can install by following the directions [here](https://github.com/Kaggle/kaggle-api) the Kaggle command line interface (CLI).  Not only you will get to compete (your ranking relative to others does not matter per se), but as you improve your knowledge over time you can revisit these competitions and see how your score improves.  There is one catch though - Colab offers more GPU time and it comes with multiple tiers of service for a few dollars per month. This can be handy for the heavier projects.  
 
 ### On your own machine or AWS EC2 (Option 3)
 
@@ -20,9 +20,13 @@ Please note that the [AWS Deep Learning AMIs](https://docs.aws.amazon.com/dlami/
 
 You need to create an isolated Python environment dedicated to this course. This is recommended as it makes it possible to have a different environment for each project, with potentially different libraries and library versions
 
-#### Setup your virtual environment with standard Python (recommended for AWS EC2)
+#### Setup your virtual environment with standard Python
 
-To install virtualenv
+Follow the instructions [here](https://python-poetry.org/docs/) to install Poetry and [follow up with the basic usage instructions](https://python-poetry.org/docs/basic-usage/). Managing dependencies is one of the key challenges in data science. Poetry is a tool that helps you manage your dependencies.
+
+Please ensure that you have used the virtualenvs.in-project configuration variable to create virtual environments **within** your project directory and that you know how to use .gitignore to avoid committing your virtual environment to your git repository.
+
+<!-- To install virtualenv
 ```
 python3 -m pip install --user -U virtualenv
 ```
@@ -86,8 +90,10 @@ This should open up your browser, and you should see Jupyter's tree view, with t
 
 Note: you can also visit [http://localhost:8888/nbextensions](http://localhost:8888/nbextensions) to activate and configure Jupyter extensions.
 
-```
+``` -->
+
 ## Git / Github
+
 Git is the defacto standard when it comes to code version control. Learning basic git commands takes less than half an hour. However, to install git and understand the principle behind git, please go over Chapters 1 and 2 of the [ProGit book](https://git-scm.com/book/en/v2).
 
 As we have discussed in the class you need to be able to publish your work in Github so you need to create a Github account. Then you will use the git client for your operating system to interact with github and iterate on your projects.  You may be using Kaggle or Colab hosted notebooks but the underlying technology that powers such web-frontends when it comes to committing the code and seeing version numbers in your screen is git.
