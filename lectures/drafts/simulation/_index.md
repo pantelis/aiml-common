@@ -1,8 +1,3 @@
----
-title: Embodied AI Simulation
-draft: true
----
-
 # Embodied AI Simulation
 
 
