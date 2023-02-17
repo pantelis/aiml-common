@@ -1,4 +1,4 @@
-# Logistic Regression Assignment
+# Logistic Regression 
 
 You are interviewing with Google's data science team having the responsibility of predicting the Click Through Rate (CTR) of ads they place on multiple web properties. Your hiring manager keen on testing you out, suggests to download [this dataset](https://www.kaggle.com/competitions/avazu-ctr-prediction/data) and asks you to code up a model that predicts the CTR based on Logistic Regression. 
 

@@ -17,7 +17,5 @@ NOTE: To do this step, read [this blog post](https://towardsdatascience.com/unde
 
 RUBRIC: 
 
-1. If you provide just the plots/code, you will be granted 50% of the points. To win the remaining 50% you will need clear documentation (see below). 
-2. We need to see a clear explanation of all the stages of developing (1) and (2) above which means that you need to explain the code in a way that the writeup is understood by fellow students. 
-3. Type inline with your Colab notebook your tutorial explanations. Equations can be typed in markdown using Latex syntax notation.  If you prefer plain Python you can also include markdown as a separate file but you do need to ensure that all plots are inline to that markdown document and are parsed correctly by Github. 
-4. Submit by sharing the Colab or Github with the TA. 
+1. We need to see a clear explanation of all the stages of developing (1) and (2) above which means that you need to explain the code in a way that the writeup is understood by fellow students. 
+2. Type inline with your Colab notebook your tutorial explanations. Equations can be typed in markdown using Latex syntax notation.  If you prefer plain Python you can also include markdown as a separate file but you do need to ensure that all plots are inline to that markdown document and are parsed correctly by Github. 
