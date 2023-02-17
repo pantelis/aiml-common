@@ -20,9 +20,9 @@ Ultimately this task has to result to a dataframe that you will use for the trai
 
 ## Logistic Regression (40 points)
 
-Write **from scratch** the logistic regression solution to the prediction problem that can work with Stochastic Gradient Descent (SGD). You can only use pandas and numpy to do so. 
+Implement the logistic regression solution to the prediction problem that can work with Stochastic Gradient Descent (SGD). 
 
-Show clearly all equations of the gradient and include comments in either markdown or Python (inline to code) explaining every stage of processing. Also, highlight any enhancements you may have done to improve performance such as regularization. 
+Show clearly all equations of the gradient and include comments in either markdown or Python (inline to code) explaining every stage of processing. Also, highlight any enhancements you may have done to improve performance. 
 
 ## Performance Results (20 points)
 
