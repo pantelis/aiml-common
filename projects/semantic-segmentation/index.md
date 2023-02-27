@@ -2,7 +2,7 @@
 
 ![](satellites.jpeg)
 
-You have been hired in the data science team at NASA and you are tasked to semantically segment objects that can be seen from space. 
+You have been hired in the data science team at NASA and you are tasked to semantically segment objects that can be seen from space.  **You need to use PyTorch for this project.**
 
 **If you miss a milestone deadline you will be forfeited the corresponding points.**
 
@@ -26,13 +26,14 @@ You are given a seed repo for this project located [here](https://github.com/bns
 ```
 
 2. Run the segmentation and produce plots of (a) 10 segmented images from the validation set (b) training and validation loss vs epochs, (b) Precision and Recall values  
+   
 3. Submit the github repository URL with a branch titled 'milestone-2' and with the docs/ folder containing the markdown file baseline-performance.md where you explain in 2 pages including figures UNet and in separate pages the results obtained. 
 
 ## Milestone 3: Hyperparameter Optimization 
 
 You are now tasked to improve baseline performance. 
 
-1. Retrieve your team number from Canvas and consult the following table:
+1. Consult the following table:
 
 | Index | Method |
 | --- | --- | 
@@ -46,7 +47,7 @@ You are now tasked to improve baseline performance.
 | 8 | GP | 
 | 9 | DNGO | 
 
-Team 1 is assigned method 1, ... Team 10 is assigned method 1, Team 11 is assigned method 2, etc.. Empty teams in canvas are also assigned their corresponding index - be careful to assign yourself the right method index and check with the adjacent team(s) to yours to be sure. 
+Use your student ID last digit to select the method. For example if your student ID is 12345678 then you will use the 8th method in the table.
 
 2. Incorporate the Hyperparameter Optimization (HPO) method in your code and run the code to obtain the best (a) 10 segmented images from the validation set (b) training and validation loss vs epochs, (b) Precision and Recall values   
 
@@ -63,9 +64,7 @@ You are now tasked to do compress your model to fit a computer that may not have
 3. Run the code to obtain the student's network (a) 10 segmented images from the validation set (b) training and validation loss vs epochs, (b) Precision and Recall values 
 4. Submit the github repository URL with a branch titled 'milestone-4' and with the docs/ folder containing the markdown file knowledge-distillation.md where you explain in 2 pages including figures the method and in separate pages the results obtained. 
 
-## Milestone 5 (optional): Neural Architecture Search
-
-**If you are in the PyTorch platform**.
+## Milestone 5: Neural Architecture Search
 
 1. Review the [seminal paper](https://arxiv.org/abs/1808.05377). 
 
