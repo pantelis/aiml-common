@@ -14,6 +14,26 @@ NOTE: SHAP is also [implemented in Google Cloud Platform](https://cloud.google.c
 
 Your tasks are as follows:
 
+
+
+### Milestone 1: (Week 1, 10 points)
+
+Learn the basics of docker by watching the following video:
+
+
+```{eval-rst}
+
+..youtube:: pTFZFxd4hOI
+
+```
+
+If you are on Windows you will need to follow [these instructions](https://docs.docker.com/desktop/windows/wsl/) and install [Docker Desktop](https://www.docker.com/products/docker-desktop) and [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10). 
+
+Independent of your OS, you may want to use [VS Code IDE](https://code.visualstudio.com/) if you have no IDE experience before. 
+
+Submit the github repository URL with a branch titled 'milestone-1' with the README.md file containing the installation instructions you followed and a screenshot of your docker container terminal prompt. Add as collaborator the TA.
+
+
 1. Checkout [this notebook](https://slundberg.github.io/shap/notebooks/Census%20income%20classification%20with%20XGBoost.html)
 2. Make it work in Colab - produce in other words all the graphs that the author showcased. (15 points)
 3. Understand  the Tree SHAP method and write a 4 page summary of your intuition of **how** it is offering interpretability in ensemble methods  (35 points)

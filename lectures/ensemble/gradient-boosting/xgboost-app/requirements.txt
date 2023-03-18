@@ -1,0 +1,9 @@
+jupyter
+notebook
+xgboost
+nbclassic
+nbconvert
+panel
+nbformat
+jupyter_contrib_nbextensions
+jupyter_bokeh

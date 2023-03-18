@@ -36,6 +36,7 @@ So lets assume you define as a _window_ data between `collection_start_date` and
 Use the Twitter API and Python libraries that can access it to bring tweets you consider as relevant to the price prediction. 
 
 1. You need to implement a tweet feed filter that will an encoder that will embed each tweet in a vector space and allow you to determine its sentiment (15 points)
+
 2. You are also responsible for figuring out how to transform (eg average) the sentiments themselves so that they can be used by the price predictor (15 points)   
 
 

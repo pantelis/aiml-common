@@ -1,1 +1,23 @@
-assignments/mle/.ipynb_checkpoints/mle_exponential_linear_regression-checkpoint.ipynb
+.ipynb_checkpoints/
+__MACOSX/
+balloon/
+train/
+.*
+
+dogscats
+
+
+# models and data
+*.pb
+*.h5
+
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+variables.data*
+variables.index*

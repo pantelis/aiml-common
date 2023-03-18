@@ -1,7 +1,3 @@
----
-title: Reverse Visual Search
----
-
 # Reverse Visual Search
 
 In many domains we are interested in finding artifacts that are similar to a query artifact. In this project you are going to implement a system that can find artifacts when the queries are visual.  The type of queries you will test your system on are images of faces (30 points) and videos of people. You will also document your approach clearly showing advantages over the baseline. 
@@ -14,7 +10,7 @@ In the following we use the term person of interest (PoI) to indicate the person
 
 ## Reverse Image Search - Baseline (30 points)
 
-You will use [this](https://aws.amazon.com/blogs/machine-learning/building-a-visual-search-application-with-amazon-sagemaker-and-amazon-es/) reverse image search system as an example system that you will replicate its functionality using libraries. Please do not use the AWS managed  services detailed in this system as you will exhaust your AWS credits. At the end of this task you have documented the components of a reverse image search system and have implemented a baseline system for faces that will be used to obtain a **baseline performance for LFW**. 
+You will use [this](https://aws.amazon.com/blogs/machine-learning/building-a-visual-search-application-with-amazon-sagemaker-and-amazon-es/) reverse image search system as an example system that you will replicate its functionality using libraries. Please do not use the AWS managed  services detailed in this system as you will exhaust your AWS credits. At the end of this task you have documented the components of a reverse image search system and have implemented a baseline system for faces that will be used to obtain a **baseline performance for LFW**.
 
 ## Reverse Image Search Improvement (30 points)
 
