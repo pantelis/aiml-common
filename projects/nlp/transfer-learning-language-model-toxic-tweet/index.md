@@ -20,7 +20,7 @@ In this milestone you will learn the basics of docker and create a development e
 
 ```{eval-rst}
 
-..youtube:: pTFZFxd4hOI
+.. youtube:: pTFZFxd4hOI
 
 ```
 
@@ -41,7 +41,7 @@ After watching this video, you will be able to create a sentiment analysis app u
 
 ```{eval-rst}
 
-..youtube:: 8hOzsFETm4I
+.. youtube:: 8hOzsFETm4I
 
 ```
 
@@ -60,7 +60,7 @@ The following video will show you how to finetune a language model using the [Hu
 
 ```{eval-rst}
 
-..youtube:: GSt00_-0ncQ
+.. youtube:: GSt00_-0ncQ
 
 ```
 You will use [this dataset](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge) to develop the required classifier.  You’re challenged to build a multi-headed model that’s capable of detecting different types of of toxicity like threats, obscenity, insults, and identity-based hate better than Perspective’s current models. 

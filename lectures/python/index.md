@@ -5,7 +5,7 @@ Below is a list of recommended resources that will teach you quickly Python. You
 
 ## Basic Python
 
-CS50p is the most popular way to learn basic Python. Accessible [here](https://cs50.harvard.edu/python/2022/) and in edX. 
+Harvard's CS50p is the most popular way to learn basic Python. Accessible [here](https://cs50.harvard.edu/python/2022/) and in edX. 
 
 
 ## Python and Data Science 

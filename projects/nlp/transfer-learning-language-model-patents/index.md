@@ -1,6 +1,6 @@
 # Can I Patent This?
 
-![](uspto.png)
+![](images/uspto.png)
 
 **If you miss a milestone deadline you will be forfeited the corresponding points. Deadlines are quoted here as a week number - check your LMS about actual dates.**
 
@@ -19,7 +19,7 @@ In this milestone you will learn the basics of docker and create a development e
 
 ```{eval-rst}
 
-..youtube:: pTFZFxd4hOI
+.. youtube:: pTFZFxd4hOI
 
 ```
 
@@ -40,7 +40,7 @@ After watching this video, you will be able to create a sentiment analysis app u
 
 ```{eval-rst}
 
-..youtube:: 8hOzsFETm4I
+.. youtube:: 8hOzsFETm4I
 
 ```
 
@@ -59,7 +59,7 @@ The following video will show you how to finetune a language model using the [Hu
 
 ```{eval-rst}
 
-..youtube:: GSt00_-0ncQ
+.. youtube:: GSt00_-0ncQ
 
 ```
 

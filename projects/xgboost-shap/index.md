@@ -1,8 +1,4 @@
----
-title: Interpretable Trees
----
-
-# Interpretable Trees
+# Interpretable Data Science wirth TreeSHAP
 
 {{%youtube -taOhqkiuIo%}}
 
@@ -14,12 +10,9 @@ NOTE: SHAP is also [implemented in Google Cloud Platform](https://cloud.google.c
 
 Your tasks are as follows:
 
-
-
 ### Milestone 1: (Week 1, 10 points)
 
 Learn the basics of docker by watching the following video:
-
 
 ```{eval-rst}
 
