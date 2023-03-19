@@ -21,3 +21,5 @@ ipython_config.py
 
 variables.data*
 variables.index*
+
+data/
