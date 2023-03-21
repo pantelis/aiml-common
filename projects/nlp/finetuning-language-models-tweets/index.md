@@ -44,7 +44,7 @@ Develop a streamlit application that allows the user to enter a text, select a p
 
 Deploy the streamlite app in [HuggingFace streamlit spaces](https://huggingface.co/docs/hub/spaces-sdks-streamlit) after you create a free account. 
 
-Submit the github repository URL with a branch titled 'milestone-3' with the README.md file containing the link to the deployed HF space where the app must be clearly prepopulated with a sample text and the TA will only have to press the submit button for the app to display the sentiment result.
+Submit the github repository URL with a branch titled 'milestone-2' with the README.md file containing the link to the deployed HF space where the app must be clearly prepopulated with a sample text and the TA will only have to press the submit button for the app to display the sentiment result.
 
 
 ### Milestone 3: Finetuning Language Models (Week 5, 40 points)
@@ -61,7 +61,7 @@ You will use [this dataset](https://www.kaggle.com/c/jigsaw-toxic-comment-classi
 
 The classifier will be developed using a pretrained language model of your choice (e.g. bert, roberta, etc). You can use the GPU in Google Colab to do the training. 
 
-Submit the github repository URL with a branch titled 'milestone-4' with the README.md file containing the link to the deployed HF space where the app must be clearly prepopulated with a drop down menu to select  the application filing number (or any unique identifier that will allow you to retreieve the patent sections you selected), the app must then show in minimally two text boxes the eg abstract and eg claims and the TA will only have to press the submit button for the app to display the patentability score.
+Submit the github repository URL with a branch titled 'milestone-3' with the README.md file containing the link to the deployed HF space where the app must be clearly prepopulated with a drop down menu to select finetuned model and a table that the app must then show in minimally three columns. One is the column of each tweet (or a portion of it) and other two columns will be the highest toxicity class and its probability. 
 
 ### Milestone 4: Documentation and Video Production (Week 6, 20 points)
 
