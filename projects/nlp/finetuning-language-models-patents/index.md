@@ -18,9 +18,7 @@ You are fired by USPTO to work on introducting AI into the organization. You are
 In this milestone you will learn the basics of docker and create a development environment. All AI and data science projects are developed in containers. Learn the basics of docker (the most conmmon container format) by watching the following video:
 
 ```{eval-rst}
-
 .. youtube:: pTFZFxd4hOI
-
 ```
 
 If you are on Windows you will need to follow [these instructions](https://docs.docker.com/desktop/windows/wsl/) and install [Docker Desktop](https://www.docker.com/products/docker-desktop) and [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10). 
@@ -39,9 +37,7 @@ The purpose of this task is to take you through the process of creating a stream
 After watching this video, you will be able to create a sentiment analysis app using Streamlit and various pretrained models. The pretrained models are available in the [HuggingFace model hub](https://huggingface.co/models).
 
 ```{eval-rst}
-
 .. youtube:: 8hOzsFETm4I
-
 ```
 
 Develop a streamlit application that allows the user to enter a text, select a pretrained model and get the sentiment analysis of the text. Use the [HuggingFace transformers](https://huggingface.co/transformers/) library just like in the video to do so. 
@@ -58,9 +54,7 @@ Merge the earlier branch into the main branch and create a new branch titled 'mi
 The following video will show you how to finetune a language model using the [HuggingFace transformers](https://huggingface.co/transformers/) library. Consult the [HuggingFace documentation](https://huggingface.co/docs/transformers/v4.27.1/en/training#finetune-a-pretrained-model) for more details.
 
 ```{eval-rst}
-
 .. youtube:: GSt00_-0ncQ
-
 ```
 
 You consult [this publication](https://arxiv.org/abs/2207.04043) and [the Harvard USPTO patent dataset](https://github.com/suzgunmirac/hupd) to develop the required classifier. You only need to do the finetuning using a small subset of the dataset that corresponds to all patent applications submitted in Jan 2016. You are free to select and test various sections of the patent application but abstract and claims, intuitively, are the most relevant. You can use the GPU in Google Colab to do the training. 

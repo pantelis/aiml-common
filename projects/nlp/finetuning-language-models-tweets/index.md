@@ -13,15 +13,12 @@ Discussing things you care about can be difficult. The threat of abuse and haras
 The Conversation AI team, a research initiative founded by Jigsaw and Google (both a part of Alphabet) are working on tools to help improve online conversation. One area of focus is the study of negative online behaviors, like toxic comments (i.e. comments that are rude, disrespectful or otherwise likely to make someone leave a discussion). So far they’ve built a range of publicly available models served through the Perspective API, including toxicity. But the current models still make errors, and they don’t allow users to select which types of toxicity they’re interested in finding (e.g. some platforms may be fine with profanity, but not with other types of toxic content).
 
 
-
 ### Milestone 1: (Week 1, 20 points)
 
 In this milestone you will learn the basics of docker and create a development environment. All AI and data science projects are developed in containers. Learn the basics of docker (the most conmmon container format) by watching the following video:
 
 ```{eval-rst}
-
 .. youtube:: pTFZFxd4hOI
-
 ```
 
 If you are on Windows you will need to follow [these instructions](https://docs.docker.com/desktop/windows/wsl/) and install [Docker Desktop](https://www.docker.com/products/docker-desktop) and [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10). 
@@ -40,9 +37,7 @@ The purpose of this task is to take you through the process of creating a stream
 After watching this video, you will be able to create a sentiment analysis app using Streamlit and various pretrained models. The pretrained models are available in the [HuggingFace model hub](https://huggingface.co/models).
 
 ```{eval-rst}
-
 .. youtube:: 8hOzsFETm4I
-
 ```
 
 Develop a streamlit application that allows the user to enter a text, select a pretrained model and get the sentiment analysis of the text. Use the [HuggingFace transformers](https://huggingface.co/transformers/) library just like in the video to do so. 
@@ -59,10 +54,9 @@ Merge the earlier branch into the main branch and create a new branch titled 'mi
 The following video will show you how to finetune a language model using the [HuggingFace transformers](https://huggingface.co/transformers/) library. Consult the [HuggingFace documentation](https://huggingface.co/docs/transformers/v4.27.1/en/training#finetune-a-pretrained-model) for more details.
 
 ```{eval-rst}
-
 .. youtube:: GSt00_-0ncQ
-
 ```
+
 You will use [this dataset](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge) to develop the required classifier.  You’re challenged to build a multi-headed model that’s capable of detecting different types of of toxicity like threats, obscenity, insults, and identity-based hate better than Perspective’s current models. 
 
 The classifier will be developed using a pretrained language model of your choice (e.g. bert, roberta, etc). You can use the GPU in Google Colab to do the training. 
