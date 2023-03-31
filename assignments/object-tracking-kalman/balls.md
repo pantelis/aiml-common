@@ -26,6 +26,7 @@ In this task you will use a CNN-based object detector to bound box all `ball` in
 
 The detector outputs can be used to obtain the centroid(s) of the `ball` instances across time. You can assign a suitable starting state in the 1st frame of the video and obtain the predicted trajectory of the object during both visible and occluded frames. You need to superpose your predicted position of the object in each frame and the raw frame and store a sequence of all frames (generate a video).  Ensure that you explain thoroughly the code. 
 
-```{note}
-You can use OpenCV (`import cv2`) for only the satellite parts of this assignment - Use numpy, or better, jax to code the Kalman filter. You need to submit the assignment either as a notebook URL or a Github URL. 
-```
+Please note that you *can* use the [filterpy](https://filterpy.readthedocs.io/en/latest/#) library to implement the Kalman filter.
+
+
+
