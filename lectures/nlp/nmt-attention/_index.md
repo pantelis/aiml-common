@@ -47,3 +47,5 @@ The two figures below showcase what it happening in two different time instances
 
 ![seq2seq-attention](images/seq2seq-attention-step5.png)
 *Attention in seq2seq neural machine translation - time step 6* 
+
+
