@@ -14,11 +14,12 @@ All such concepts were covered in earlier chapters.
 
 In the transformer architecture we 
 
-1. Eliminate all recurrent connections, therefore allowing the model to be trained and produce inference results in parallel.
+1. Eliminate all recurrent connections, therefore allowing the model to be trained and produce inference results much faster.
 
 2. Continue to use attention mechanisms to allow the model to focus on the most relevant parts of the input sequence. 
     * This means that the encoder output will be a weighted sum of all inputs (all words of the sequence), where the weights are computed by an attention mechanism called _self-attention_. The name indicates that the encoder will attend to itself, i.e. it will compute the weights based on the input sequence itself.
 
+At a very high level, we will introduce an attention layer that for each input token will reveal predicates that connect these input words to all others. Such connectivity will be manifested by calculating a set of weights  as shown in the figure below. 
 
 ![](images/self-attention-visualization.png)
 
@@ -105,7 +106,7 @@ See [here](https://theaisummer.com/positional-embeddings/) for an explanation of
 
 ## Resources
 
-An interesting video for the many attention mechanisms that are the roots of self-attention found in transformers. 
+1. An interesting video for the many attention mechanisms that are the roots of self-attention found in transformers. 
 
 ```{eval-rst}
 
@@ -113,3 +114,10 @@ An interesting video for the many attention mechanisms that are the roots of sel
 
 ```
 
+2. In terms of NLP we just scratched the surface here. Watch the following video to review some of the challenges NLP researchers face (circa 2020) and the rise of natural language generation (NLG) with the earlier GPT-2 and GPT-3 models. The presentation contains some key papers as well. 
+
+```{eval-rst}
+
+.. youtube:: G5lmya6eKtc
+
+```

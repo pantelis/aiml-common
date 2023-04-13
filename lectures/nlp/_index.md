@@ -1,7 +1,3 @@
----
-title: Natural Language Processing
----
-
 # Natural Language Processing
 
 ![national-library-greece](images/national-library-greece.jpg)
