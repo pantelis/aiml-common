@@ -23,3 +23,11 @@ variables.data*
 variables.index*
 
 data/
+s2s/
+*.zip
+_about.txt
+fra.txt
+attention_weights
+hun_eng*
+source_tokenizer.json
+target_tokenizer.json
