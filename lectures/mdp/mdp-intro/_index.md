@@ -16,7 +16,7 @@ The following table summarizes the notation and contains useful definitions that
 |          $A_t$           | agent action at time step $t$, $a \in \mathcal{A}$ the finite set of actions                                 |
 | $R_{t+1} \in \mathbb{R}$ | numerical reward sent by the environment after taking action $A_t$ and transition to next state $S_{t+1}=s'$ |
 |           $t$            | time step index associated with each experience that is defined as the tuple ($S_t, A_t, R_{t+1}$).          |
-|           $T$            | maximum time step beyond which the interaction terminates                                                    |
+|           $T$            | final time step beyond which the interaction terminates                                                    |
 |        _episode_         | the time horizon from $t=0$ to $T-1$                                                                         |
 |          $\tau$          | _trajectory_ - the sequence of experiences over an episode                                                   |
 |          $G_t$           | _return_ - the total discounted rewards from time step $t$ - it will be qualified shortly.                   |
@@ -29,14 +29,18 @@ In fully observed MDP problems, the agent *perceives fully* the environment stat
 ```{warning}
 Note that Markov processes are sometimes erroneously called _memoryless_ but in any MDP above we can incorporate memory aka dependence in more than one state over time by cleverly defining the state $S_t$ as a container of a number of states. For example, $S_t = \left[ S_t=s, S_{t-1} = s^\prime \right]$ can still define an Markov transition using $S$ states. The transition model 
 
-$$p(S_t | S_{t-1}) = p(s_t, s_{t-1} | s_{t-1}, s_{t-2}) = p(s_t|s_{t-1}, s_{t-2})$$ is called the 2nd-order Markov chain. 
+$$p(S_t | S_{t-1}) = p(s_t, s_{t-1} | s_{t-1}, s_{t-2}) = p(s_t|s_{t-1}, s_{t-2})$$ 
 
-DeepMind's Q-learning algorithm playing pac-man converts the non-MDP problem to MDP by accumulating four frames instead of one. With a single frame the problem was not MDP since the state of all players could not be known - with a single frame the pacman could not know if the monster was moving towards it or nor for example. With a number of frames we get to know all the information needed to survive.    
+is called the 2nd-order Markov chain. 
+
+DeepMind's Q-learning algorithm playing pac-man converts the non-MDP problem to MDP by accumulating four frames instead of one. With a single frame the problem was not MDP since the state of all players could not be known - with a single frame the pacman could not know if the monster was moving towards it or nor for example. With a number of frames we get to know all the information needed to act optimally on this game.    
 ```
 
 ### MDP Loop
 
 We define a Markov Decision Process as the 5-tuple $\mathcal M = <\mathcal S, \mathcal P, \mathcal R, \mathcal A, \gamma>$ that produces a sequence of experiences $(S_t, A_t, R_{t+1}), (S_{t+1}, A_{t+1}, R_{t+2}), ...$.  The MDP (event) loop is shown below:
+
+
 
 ![mdp-loop](images/mdp-loop.png)
 _This generic interface between the agent and the environment captures many problems outside of pure MDP including RL. The environment's state in non-MDP problems can be experienced via sensor observations and the agent will build its own state estimate internally_
@@ -48,7 +52,7 @@ The four foundational ingredients of MDP are:
 1. Policy, 
 2. Reward, 
 3. Value function and 
-4. Model of the environment (optionally). 
+4. Model of the environment. 
 
 These are obtained from the _dynamics_ of the _finite_ MDP process. 
 
