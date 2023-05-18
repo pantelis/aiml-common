@@ -1,8 +1,6 @@
----
-title: Collaborative Robotics
----
-
 # Collaborative Robotics
+
+**This project was initially given as a class project for my unfortunate NYU AI 2021 graduate-level students. Suprisingly they were able to pull through.**
 
 You are a co-founder in a startup called PodGrocer, a company that deploys pods to selected host sites such as electric vehicle charging stations, mall parking lots and can also attach to existing supermarket stores. Each pod was constructed by modifying a standard shipping container and is cooled by latest technology green energy backed up by the host site power feeds. 
 
@@ -12,7 +10,14 @@ The shipping container sized pod is irrelevant for this project but its provided
 
 The system in operation is shown in the following video
 
-{{<youtube n5G3KfE8PVc>}}
+
+```{eval-rst}
+
+.. youtube:: n5G3KfE8PVc
+   :width: 100%
+   :height: 400
+   :align: center
+```
 
 How the company generates revenue: 
 
@@ -62,17 +67,8 @@ Write a markdown report where you explain your design of the planner in Task 2 a
 
 #### Notes: 
 
-{{<hint alert>}}
+```{note}
 To help plan the tasks amongst the team members please use Trello (login with your nyu account). Submit your Trello boards with your project.  
 
 Note that the points are assigned per task completion and are relatively independent on the implementation complexity. Therefore start simple and make sure you submit all completed tasks rather than spending time on the ultimate path planner and miss the deadline.  
-```
-
-
-{{<hint warning "WARNING">}}
-
-Consider using AWS Robomaker for this project (ROS2 distribution). 
-
-Note to all students using AWS resources provided for this project. You are **entirely** responsible to limit the use of p2.xlarge instances that consumes on-demand 1$/h and use CPU instances when possible. Invest in understanding docker containers so you do not suffer catastrophic failures when working in a cloud environment (the norm in practice).  You are responsible for not exceeding your budget.
-
 ```
