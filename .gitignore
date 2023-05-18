@@ -31,3 +31,4 @@ attention_weights
 hun_eng*
 source_tokenizer.json
 target_tokenizer.json
+*.tgz
