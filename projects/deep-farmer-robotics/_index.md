@@ -1,12 +1,16 @@
----
-title: Deep Farmer Robotics
----
-
 # Deep Farmer Robotics
 
 In a world that that is quickly changing from the evolving weather to new requirements or demands for truly  organic products with no chemicals, there is a need to innovate quickly in the field of weeding - one of the most important and expensive activities farmers face today. 
 
-{{<youtube "ZdcgvreJLqk">}}
+
+```{eval-rst}
+
+.. youtube:: ZdcgvreJLqk
+   :width: 100%
+   :height: 400
+   :align: center
+   :class: border
+```
 
 In this project you will develop a robotic AI agent in AWS Robomaker that kills individual weeds with laser.  The agent must be developed in AWS Robomaker for the ROS2 Foxy distribution.  
 
