@@ -1,7 +1,3 @@
----
-title: ML Pipelines 
----
-
 # ML Pipelines 
 
 As we have seen from the syllabus, this course approaches the subject from an applied perspective - this means teaching concepts but at the same time looking how these concepts are applied in the industry to solve real world problems. In this respect here we take an architecture driven approach, presenting the components in a form of a software stack but also how the components are mechanized in what we call **Pipelines** to provide the required utility to applications. For a complete overview of real world ML pipelines used today we will go through [this paper that describes a production grade pipeline](http://stevenwhang.com/tfx_paper.pdf).
@@ -37,11 +33,12 @@ As we have seen from the syllabus, this course approaches the subject from an ap
 Contrast this to an organizational structure that isolates researchers from product development.  What about Alphabet's X https://x.company/ ?
 
 ## Landscape of the data science ecosystem
-Due to the complexity and common interest to addresses industrial players are partnering to define and implement the necessary components for the complete automation of AI pipelines.  This work is going in within the [Linux Foundation AI (sub)Foundation](https://landscape.lfai.foundation/fullscreen=yes) amongst many other open source communities.
+
+Due to the complexity and common interest to addresses industrial players are partnering to define and implement the necessary components for the complete automation of AI pipelines.  This work is going in within the [Linux Foundation AI (sub)Foundation](https://landscape.lfai.foundation/) amongst many other open source communities.
 
 <section class="bg-apple">
               <div class="wrap">
-          <iframe width="2120" height="630" src="https://landscape.lfdl.io/format=landscape&fullscreen=yes" frameborder="0" allowfullscreen></iframe>
+          <iframe width="2120" height="630" src="https://landscape.lfai.foundation/" frameborder="0" allowfullscreen></iframe>
           </div>
 </section>
 

@@ -1,8 +1,4 @@
----
-title: The Variational Auto Encoder (VAE)
----
-
-# The Variational Auto Encoder (VAE)
+# VAE Architecture
 
 The 'right'  latent space is the one that makes the distribution $p(\mathbf z| \mathbf \theta)$ the most likely to produce $\mathbf x$. We are therefore introducing a stage that complements the aforementioned _generative model or decoder_ given by $p(\mathbf x| \mathbf z ; \mathbf \theta) p(\mathbf z | \theta)$. 
 

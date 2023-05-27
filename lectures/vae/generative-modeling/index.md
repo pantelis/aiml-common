@@ -1,7 +1,3 @@
----
-title: Generative Modeling and Approximate Inference
----
-
 # Generative Modeling and Approximate Inference
 
 In generative modeling we want to model the generative distribution of the observed variables $\mathbf x$, $p(\mathbf x)$ [^1]. 
@@ -55,4 +51,4 @@ However we are facing the following situation: _Even with DNNs when we use DNN t
 
 [^2]: Note that the features that the DNN captures are not interpretable as the intuitively understood features that humans consider. For the MNIST dataset for example, humans will consider the slant of each digit, thinner strokes etc.
 
-To understand why, consider the MNIST dataset and the problem of generating handwritten digits that look like that. We can sample from $p(\mathbf z | \theta)$ generating a large number of samples $\{z_1, \dots , z_k}$, since the DNN provided all the parameters of this distribution.  We can then compute $p(\mathbf x) = \frac{1}{k} \sum_i p(\mathbf x|z_i)$. The problem is that we need a very large number of such samples in high dimensional spaces such as images (for MNIST is 28x28 dimensions) . Most of the samples $\mathbf z_i$ will result into negligible $p(\mathbf x|z_i)$ and therefore won't contribute to the estimate of the $p(\mathbf x)$. This is the problem that VAE addresses. The key idea behind its design is that of _inference_ of the right latent space that when sampled, results into a computation and optimization of the marginal distribution with far less effort than before. 
+To understand why, consider the MNIST dataset and the problem of generating handwritten digits that look like that. We can sample from $p(\mathbf z | \theta)$ generating a large number of samples $\{z_1, \dots , z_k\}$, since the DNN provided all the parameters of this distribution.  We can then compute $p(\mathbf x) = \frac{1}{k} \sum_i p(\mathbf x|z_i)$. The problem is that we need a very large number of such samples in high dimensional spaces such as images (for MNIST is 28x28 dimensions) . Most of the samples $\mathbf z_i$ will result into negligible $p(\mathbf x|z_i)$ and therefore won't contribute to the estimate of the $p(\mathbf x)$. This is the problem that VAE addresses. The key idea behind its design is that of _inference_ of the right latent space that when sampled, results into a computation and optimization of the marginal distribution with far less effort than before. 

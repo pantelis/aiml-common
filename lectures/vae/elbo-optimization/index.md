@@ -1,7 +1,3 @@
----
-title: ELBO Optimization
----
-
 # ELBO Optimization
 
 ## MNIST Example
