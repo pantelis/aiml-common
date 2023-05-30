@@ -25,6 +25,8 @@ variables.index*
 data/
 s2s/
 *.zip
+*.zip.*
+
 _about.txt
 fra.txt
 attention_weights
