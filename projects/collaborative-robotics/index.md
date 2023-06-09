@@ -1,7 +1,5 @@
 # Collaborative Robotics
 
-**This project was initially given as a class project for my unfortunate NYU AI 2021 graduate-level students. Suprisingly they were able to pull through.**
-
 You are a co-founder in a startup called PodGrocer, a company that deploys pods to selected host sites such as electric vehicle charging stations, mall parking lots and can also attach to existing supermarket stores. Each pod was constructed by modifying a standard shipping container and is cooled by latest technology green energy backed up by the host site power feeds. 
 
 ```{note}
@@ -33,15 +31,14 @@ See [this video](https://www.youtube.com/watch?v=IqYk0dFcZgc&t=2s) for more deta
 
 In this project you will perform certain tasks to ensure that the pod is able to perform its required robotic functionality and function as a system. The implementation must be resilient and therefore the system must be distributed across many nodes supported by the ROS as well as use a number of AWS managed services. Usage of AWS managed services are not required for this project.  
 
-The Robot Operating System (ROS) is a set of software libraries and tools for building robot applications. From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project. And it’s all open source. [Here](https://docs.ros.org/en/foxy/index.html) you will find the official documentation on ROS 2, the newest version of ROS that you will use.
+The Robot Operating System (ROS) is a set of software libraries and tools for building robot applications. From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project. And it’s all open source. [Here](https://docs.ros.org/en/humble/index.html) you will find the official documentation on ROS 2, the newest version of ROS that you will use.
  
  The functionality is divided into subsystems such as the planner responsible for computing a path to the goal state and other navigation control subsystems such as recovery and localization. 
 
-The task you need to do is to implement and use the above subsystems to coordinate the transfer of pallets inside a pod. For all tasks below please consult the [wiki pages](https://github.com/pantelis-robotics/aws-warehouse/wiki) as well. Students that have significant contributions to the wiki way will be considered for extra credit points.  For example, students can add Win10, mac and AWS robomaker platform details. 
 
 ### Task 1 (10 points) 
 
-Execute the docker installation scripts in [this gude](http://jderobot.github.io/RoboticsAcademy/exercises/MobileRobots/multi_robot_amazon_warehouse/) and bring up the environment. See the wiki for details. 
+Execute the docker installation scripts in [this gude](http://jderobot.github.io/RoboticsAcademy/exercises/MobileRobots/multi_robot_amazon_warehouse/) and bring up the environment. 
 
 ### Task 2 (30 points)
 
