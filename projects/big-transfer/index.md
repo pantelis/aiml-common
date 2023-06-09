@@ -1,7 +1,3 @@
----
-title: Big Transfer
----
-(project:big-transfer)=
 # Big Transfer 
 
 In this project you will look at a general representation learning method called [Big Transfer](https://arxiv.org/pdf/1912.11370.pdf) that was found that is particularly good in specialized small label downstream tasks. 
