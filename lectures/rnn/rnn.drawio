@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2023-04-04T15:12:52.116Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.77.0 Chrome/102.0.5005.196 Electron/19.1.11 Safari/537.36" etag="9cVQZRE4FfUe0zlpCGjg" version="21.1.4" type="embed" pages="7">
+<mxfile host="65bd71144e" modified="2023-07-10T11:41:05.351Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.80.0 Chrome/108.0.5359.215 Electron/22.3.14 Safari/537.36" etag="4f7tT4SzYq754pQl9IyA" version="21.6.1" type="embed" pages="7">
     <diagram id="v3NK2iJtWiV4ewWRPjDE" name="recursion">
-        <mxGraphModel dx="1077" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="1" shadow="0">
+        <mxGraphModel dx="1121" dy="405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="1" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -741,7 +741,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="dR-Z09akiUHCFEwbGus6" name="LSTM">
-        <mxGraphModel dx="1077" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="1" shadow="0">
+        <mxGraphModel dx="1121" dy="405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="1" shadow="0">
             <root>
                 <mxCell id="Izs31WgHb809S4Ef_ud6-0"/>
                 <mxCell id="Izs31WgHb809S4Ef_ud6-1" parent="Izs31WgHb809S4Ef_ud6-0"/>
@@ -762,7 +762,7 @@
                         <mxPoint x="460" y="810" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="Izs31WgHb809S4Ef_ud6-2" value="$$\sigma(\mathbf W, \mathbf U, \mathbf b)$$" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;fillColor=none;strokeColor=#82b366;strokeWidth=5;" parent="Izs31WgHb809S4Ef_ud6-1" vertex="1">
+                <mxCell id="Izs31WgHb809S4Ef_ud6-2" value="$$\tanh(\mathbf W, \mathbf U, \mathbf b)$$" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=14;fillColor=none;strokeColor=#82b366;strokeWidth=5;" parent="Izs31WgHb809S4Ef_ud6-1" vertex="1">
                     <mxGeometry x="480" y="670" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="Izs31WgHb809S4Ef_ud6-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;strokeColor=#000000;fontSize=14;" parent="Izs31WgHb809S4Ef_ud6-1" source="Izs31WgHb809S4Ef_ud6-3" target="Izs31WgHb809S4Ef_ud6-6" edge="1">
@@ -774,7 +774,7 @@
                 <mxCell id="Izs31WgHb809S4Ef_ud6-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;strokeColor=#000000;fontSize=14;" parent="Izs31WgHb809S4Ef_ud6-1" source="Izs31WgHb809S4Ef_ud6-4" target="Izs31WgHb809S4Ef_ud6-3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="Izs31WgHb809S4Ef_ud6-4" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;$$g_t=\tanh(\mathbf W_g, \mathbf U_g, \mathbf b_g)$$&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;fillColor=#d5e8d4;strokeColor=#006600;strokeWidth=1;" parent="Izs31WgHb809S4Ef_ud6-1" vertex="1">
+                <mxCell id="Izs31WgHb809S4Ef_ud6-4" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;$$g_t=\sigma(\mathbf W_g, \mathbf U_g, \mathbf b_g)$$&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;fillColor=#d5e8d4;strokeColor=#006600;strokeWidth=1;" parent="Izs31WgHb809S4Ef_ud6-1" vertex="1">
                     <mxGeometry x="635" y="550" width="140" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="Izs31WgHb809S4Ef_ud6-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;strokeColor=#000000;fontSize=14;" parent="Izs31WgHb809S4Ef_ud6-1" source="Izs31WgHb809S4Ef_ud6-8" edge="1">
@@ -900,7 +900,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="lnScK9QnEiu61Emdgvj9" name="LSTM-high-level">
-        <mxGraphModel dx="817" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="1" shadow="0">
+        <mxGraphModel dx="1121" dy="405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="1" shadow="0">
             <root>
                 <mxCell id="Y1q_z3fYerJlI4DKX37C-0"/>
                 <mxCell id="Y1q_z3fYerJlI4DKX37C-1" parent="Y1q_z3fYerJlI4DKX37C-0"/>
