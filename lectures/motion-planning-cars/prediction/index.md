@@ -1,7 +1,3 @@
----
-title: Prediction 
----
-
 # Online Prediction
 
 To understand the motion prediction subsystem, we can use an example. Our ego agent arrives in an T-shaped intersection and perceives that there is another agent approaches from the left. The other agent may be doing two things:
