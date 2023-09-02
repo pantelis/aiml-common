@@ -1,0 +1,19 @@
+;;!domain: blocksworld
+;;!problem: blocks
+
+0.00100: (unstack blue green)
+0.00200: (putdown blue)
+0.00300: (unstack pink brown)
+0.00400: (putdown pink)
+0.00500: (unstack brown yellow)
+0.00600: (putdown brown)
+0.00700: (unstack green red)
+0.00800: (putdown green)
+0.00900: (pickup red)
+0.01000: (stack red brown)
+0.01100: (pickup green)
+0.01200: (stack green red)
+0.01300: (pickup yellow)
+
+; Makespan: 0.013000000000000001
+; Metric: 0.013000000000000001
