@@ -1,7 +1,3 @@
----
-title: Dynamic Programming Algorithms - Policy Iteration
----
-
 # Policy Iteration
 
 In this section we develop dynamic programming algorithms for the so called _planning_ problem (which is RL without learning) where we are dealing with a _perfectly known MDP_. 
