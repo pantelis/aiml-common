@@ -1,4 +1,4 @@
-# Drone tracking using Kalman Filters
+# UAV Detection and Tracking
 
 Multi-Object Tracking (MOT) is a core visual ability that humans poses to perform kinetic tasks and coordinate other tasks. The AI community has recognized the importance of MOT via a series of [competitions](https://motchallenge.net). 
 
