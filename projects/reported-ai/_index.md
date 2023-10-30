@@ -33,7 +33,7 @@ The deliverable is the django web site that will display the news and the integr
 
 ## Semantic Search
 
-1. You will be subscribe to transcription Kafka topics and  encode each transcription summary into a vector (embedding). See [this artcle](https://medium.com/version-1/vector-based-semantic-search-using-elasticsearch-48d7167b38f5) on how to do that in Elastic Search. 
+1. You will be subscribe to transcription Kafka topics and  encode each transcription summary into a vector (embedding). See [this artcle](https://medium.com/version-1/vector-based-semantic-search-using-elasticsearch-48d7167b38f5) on how to do that in Elastic Search. Please note that as of the last few years, OpenSearch (the fork of ElasticSearch) has become the defacto standard for semantic search.
 
 2. You will be offering via the django app the ability to the users to perform the semantic search and retrieve relevant transcriptions to keyword queries.
 
