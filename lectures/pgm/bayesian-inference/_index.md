@@ -17,23 +17,7 @@ The Bayesian framework allows the introduction of priors $p(\mathbf w | \mathcal
 
 For example,a medical patient is exhibiting symptoms x, y and z. There are a number of diseases that could be causing all of them, but only a single disease is present. A doctor (the expert) has a _belief_ about the underlying disease, but a second doctor may have a slightly different _belief_.
 
-## Probabilistic Graphical Models 
 
-Let us now look at a representation, _the probabilistic graphical model (pgm)_ (also called Bayesian network when the priors are captured) that can be used to capture the _structure_ of such beliefs and in general capture dependencies between the random variables involved in the modeling of a problem. We can use such representations to efficiently compute such beliefs and, in general, compute conditional probabilities. For now we will limit the modeling horizon to just one snapshot in time - later we will expand to capture problems that include time $t$ as a variable. 
-
-By convention we represent in PGMs as directed graphs, with nodes being the random variables involved in the model and directed edges indicating a parent child relationship, with the arrow pointing to a child, representing that the child nodes are _probabilistically conditioned on the parent(s)_. 
-
-In a hypothetical example of a joint distribution with $K=7$ random variables, 
-
-<img src="images/Figure8.2.png" width="250" align="center">
-
-The PGM above represents the joint distribution $p(x_1, x_2, ..., x_7)=p(x_1)p(x_2)p(x_3)p(x_4|x_1, x_2, x_3)p(x_5|x_1, x_3) p(x_6|x_4)p(x_7|x_4, x_5)$. In general, 
-
-$$p(\mathbf x)= \prod_{k=1}^K p(x_k | \mathtt{pa}_k)$$
-
-where $\mathtt{pa}_k$ is the set of parents of node $x_k$.
-
-Note that we have assumed that our model does _not_ have variables involved in directed cycles and therefore we call such graphs Directed Acyclic Graphs (DAGs). 
 
 
 ### Bayesian approach vs Maximum Likelihood
