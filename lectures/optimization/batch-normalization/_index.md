@@ -1,8 +1,3 @@
----
-title: Batch Normalization
----
-
-
 # Batch Normalization
 
 ## Why whitening helps

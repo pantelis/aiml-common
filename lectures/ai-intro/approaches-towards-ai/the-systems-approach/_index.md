@@ -1,6 +1,9 @@
 ---
-title: A systems approach to AI
-weight: 2
+title: Predicting user behavior
+nextjs:
+  metadata:
+    title: Predicting user behavior
+    description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
 # A systems approach to AI
