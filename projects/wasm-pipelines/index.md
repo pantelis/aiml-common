@@ -36,7 +36,10 @@ The Gstreamer pipeline will be configured and controlled by [the Dear ImGui Bund
 
 For a browser experioenec see [this demo](https://traineq.org/ImGuiBundle/emscripten/bin/demo_imgui_bundle.html). 
 
-More specifically we need the capabilities of the Node Editor that allows gstreamer pipelines to be specified in the browser visually **and** for the user to be able to test the pipeline in the browser or using remote processing nodes in the cloud.
+More specifically we need the capabilities of the Node Editor that allows gstreamer pipelines to be specified in the browser visually. 
+
+There is an [demo of this](https://www.youtube.com/watch?v=xqWDQs47HGE) but the repo is not provided.  In a desktop native app (as this video shows) the gstreamer visual editor will work as expected.  In a WASM environment, the visual editor pipeline maybe displayed in the browser but the internals of Gstreamer may not work aka the pipeline wont execute in the wasm env (see task 2). So the implementation for this tak has only the visual editing component in the browser but the execution is still being done using the C-language executable. One environment that this can be used in Jupyter notebooks where you can have the pipeline editor in one cell as shown [here](https://www.youtube.com/watch?v=QQIC7lpHono) and the gstreamer pipeline execute in another cell as shown [here]( https://github.com/sean-halpin/gstreamer_jupyter/blob/master/notebooks/intro.ipynb). 
+
 
 ![](images/node-gui.png)
 
@@ -46,9 +49,11 @@ The Dear ImGui Bundle python SDK allows the UI to be coded in Python.
 
 ### Task 2A: Familiarization with WebAssembly
 
-The implementation is being done here  https://fluendo.com/en/blog/gstwasm-gstreamer-for-the-web/ and the effort is described in [this video](https://gstconf.ubicast.tv/videos/gstwasm-gstreamer-for-the-web/). 
+In this task, the gstreamer pipeline is executed in the WASM sandbox. We can have  one pipeline per WASM sandbox (suitable for a browser execution) or one gstreamer element mapped to a WASM sandbox (suitable for scaling to the serverless cloud environments).
 
-Webassembly runtimes such as [wasmtime](https://wasmtime.dev/) or serverless platforms such as  [cloudflare workers](https://developers.cloudflare.com/workers/runtime-apis/webassembly/) or [AWS Lambda](https://aws.amazon.com/lambda/) can be used. 
+The implementation is being done [here](https://fluendo.com/en/blog/gstwasm-gstreamer-for-the-web/) and the effort is presented in [this video](https://gstconf.ubicast.tv/videos/gstwasm-gstreamer-for-the-web/). 
+
+Webassembly runtimes such as [wasmtime](https://wasmtime.dev/) or serverless platforms such as  [cloudflare workers](https://developers.cloudflare.com/workers/runtime-apis/webassembly/) or [AWS Lambda](https://aws.amazon.com/lambda/) can be used for the cloud demo. 
 
 This section will be updated to reflect the results of the prototype that help us define appropriate runtime for this project. 
 
