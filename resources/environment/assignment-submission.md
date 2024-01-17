@@ -13,7 +13,7 @@ Obvioulsy, replace cs301 with your course number. Please comply to all lower cas
 Do **not** create the repository before watching the video below that although refers to a specific course (CS370) it is applicable to all courses. 
 
 
-```{youtube} 9LQhwETCdwY
+```{youtube} bPB26gpFdlg
 :height: 400px
 :width: 600px
 :align: center
