@@ -1,7 +1,3 @@
----
-title: Introduction  to Deep Learning 
----
-
 # Introduction  to Deep Learning 
 
 ## Deep Neural Networks (DNNs) 

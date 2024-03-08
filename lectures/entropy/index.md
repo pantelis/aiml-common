@@ -27,29 +27,3 @@ $H(p) = - [p \ln p + (1-p) \ln(1-p)]$
 
 As you can see the maximum entropy is when the outcome is most unpredictable i.e. when a 1 can show up with uniform probability (in this case equal probability to a 0). Entropy has widespread implications as it measures our uncertainty in terms of the length of the message/code that we need to communicate the outcome across. Taking to the limit if we were certain about an event (deterministic outcome) we would need 0 bits or require to send any message at all. 
 
-## Relative entropy or KL divergence
-
-```{eval-rst}
-.. youtube:: SxGYPqCgJWM
-    :width: 560
-    :height: 315
-    :align: center
-```
-
-In many settings we need to have a metric that compares two probability distributions $\{P(x),Q(x)\}$ in terms of their "distance" from each other (the quotes will be explained shortly). This is given by the quantity known as *relative entropy* or *KL divergence*. 
-
-$$KL(P||Q)= \mathbb{E}[\ln P(x) - \ln Q(x)]$$
-
-If the two distributions are identical, $KL=0$ - in general however $KL(P||Q) \ge 0$. One key element to understand is that $KL$ is not a true distance metric as its asymmetric. 
-
-![KL-asymmetry](images/KL-asymmetry.png)
-
-
-
-Very close to the relative entropy is probably one of the most used information theoretic concepts in ML: **the cross-entropy**. We will motivate cross entropy via a diagram shown below,
-
-![entropy-relations](images/entropy-relations.png)
-
-## Digging further
-
-If you are a visual learner, [the visual information theory](http://colah.github.io/posts/2015-09-Visual-Information/#fn4) blog post is a better starting point to the above.  [MacKay's book (Chapter 2)](https://www.inference.org.uk/itprnn/book.pdf) is an instructive introduction to probability and information theory concepts and you can test your understanding by doing the exercises in that chapter.
